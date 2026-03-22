@@ -1,4 +1,4 @@
-# شاهنامه شاه طهماسپ — Shahnama of Shah Tahmasp
+# شاهنامه شاه طهماسب — Shahnama of Shah Tahmasp
 ## RDF / OWL Knowledge Graph
 
 > A LOUD & FAIR knowledge graph representing the **Shahnama of Shah Tahmasp** (c. 1522–1535 CE) — one of the most magnificent illustrated manuscripts in the history of Islamic art — modelled in OWL 2, aligned to CIDOC-CRM 7.1, Linked Art, IIIF Presentation API 3, and the Getty Vocabularies.
@@ -45,7 +45,7 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 
 | Attribute | Detail |
 |---|---|
-| **Title** | Shahnama of Shah Tahmasp (*شاهنامه شاه طهماسپ*) |
+| **Title** | Shahnama of Shah Tahmasp (*شاهنامه شاه طهماسب*) |
 | **Also known as** | The Houghton Shahnameh |
 | **Produced** | c. 1522–1535 CE |
 | **Origin** | Tabriz, Safavid Persia |
