@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1360" viewBox="0 0 680 2080" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+
+  <!-- Color palette — light mode hardcoded for export -->
+  <!-- Purple: fill #EEEDFE / stroke #534AB7 / text #3C3489 -->
+  <!-- Teal:   fill #E1F5EE / stroke #0F6E56 / text #085041 -->
+  <!-- Coral:  fill #FAECE7 / stroke #993C1D / text #712B13 -->
+  <!-- Amber:  fill #FAEEDA / stroke #854F0B / text #633806 -->
+  <!-- Green:  fill #EAF3DE / stroke #3B6D11 / text #27500A -->
+  <!-- Blue:   fill #E6F1FB / stroke #185FA5 / text #0C447C -->
+  <!-- Gray:   fill #F1EFE8 / stroke #5F5E5A / text #444441 -->
+</defs>
+
+<!-- ══ BACKGROUND ══ -->
+<rect width="680" height="2080" fill="#FAFAF8"/>
+
+<!-- ══ HEADER BANNER ══ -->
+<rect x="0" y="0" width="680" height="78" fill="#3C3489"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="17" fill="#EEEDFE" x="340" y="26" text-anchor="middle">Shahnama of Shah Tahmasp</text>
+<text font-family="Arial,sans-serif" font-size="13" fill="#AFA9EC" x="340" y="46" text-anchor="middle">MDHN Ontology v3.0.0 — RDF/OWL Knowledge Graph</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#7F77DD" x="340" y="64" text-anchor="middle">http://example.com/mdhn/ontology#  ·  CIDOC-CRM 7.1  ·  IIIF Presentation API 3  ·  Linked Art  ·  Getty Vocabularies  ·  Wikidata</text>
+
+<!-- ══ SECTION 1: CLASS HIERARCHY ══ -->
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="102">Class hierarchy</text>
+<line x1="20" y1="107" x2="660" y2="107" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<!-- Manuscript -->
+<rect x="250" y="116" width="180" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#3C3489" x="340" y="132" text-anchor="middle" dominant-baseline="central">mdhn:Manuscript</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#534AB7" x="340" y="149" text-anchor="middle" dominant-baseline="central">Unique illuminated codex</text>
+
+<!-- Manuscript → Folio -->
+<line x1="340" y1="158" x2="340" y2="176" stroke="#534AB7" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+<!-- Folio -->
+<rect x="250" y="176" width="180" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#3C3489" x="340" y="192" text-anchor="middle" dominant-baseline="central">mdhn:Folio</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#534AB7" x="340" y="209" text-anchor="middle" dominant-baseline="central">Physical folio side</text>
+
+<!-- Subclass bar -->
+<line x1="340" y1="218" x2="340" y2="234" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="88" y1="234" x2="592" y2="234" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="190" y="230" text-anchor="middle">rdfs:subClassOf</text>
+
+<!-- Recto -->
+<rect x="28" y="234" width="120" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="88" y="250" text-anchor="middle" dominant-baseline="central">Recto</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="88" y="267" text-anchor="middle" dominant-baseline="central">Front (r)</text>
+
+<!-- Verso -->
+<rect x="173" y="234" width="120" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="233" y="250" text-anchor="middle" dominant-baseline="central">Verso</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="233" y="267" text-anchor="middle" dominant-baseline="central">Back (v)</text>
+
+<!-- AlternateFolio -->
+<rect x="318" y="234" width="136" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="386" y="250" text-anchor="middle" dominant-baseline="central">AlternateFolio</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="386" y="267" text-anchor="middle" dominant-baseline="central">Variant version</text>
+
+<!-- OttomanAnnotation -->
+<rect x="474" y="234" width="148" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#3C3489" x="548" y="250" text-anchor="middle" dominant-baseline="central">OttomanAnnotation</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="548" y="267" text-anchor="middle" dominant-baseline="central">Ottoman-era leaf</text>
+
+<!-- ContentElement (dashed link from Folio) -->
+<line x1="340" y1="158" x2="580" y2="158" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="580" y1="158" x2="580" y2="296" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<rect x="480" y="296" width="180" height="42" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#085041" x="570" y="312" text-anchor="middle" dominant-baseline="central">mdhn:ContentElement</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="570" y="329" text-anchor="middle" dominant-baseline="central">Artistic / textual unit</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="558" y="276" text-anchor="middle">hasContentElement</text>
+<line x1="580" y1="296" x2="570" y2="296" stroke="#0F6E56" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+<!-- ContentElement subclasses bar -->
+<line x1="570" y1="338" x2="570" y2="354" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="490" y1="354" x2="650" y2="354" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="490" y="354" width="72" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#085041" x="526" y="368" text-anchor="middle" dominant-baseline="central">Painting</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="526" y="383" text-anchor="middle" dominant-baseline="central">E36 Visual</text>
+
+<rect x="572" y="354" width="78" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#085041" x="611" y="368" text-anchor="middle" dominant-baseline="central">Illumination</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="611" y="383" text-anchor="middle" dominant-baseline="central">Gilded decor</text>
+
+<!-- FigureCrop -->
+<line x1="526" y1="394" x2="526" y2="414" stroke="#0F6E56" stroke-width="0.5" marker-end="url(#arrow)"/>
+<rect x="458" y="414" width="136" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#085041" x="526" y="428" text-anchor="middle" dominant-baseline="central">FigureCrop</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="526" y="443" text-anchor="middle" dominant-baseline="central">IIIF region extract</text>
+<text font-family="Arial,sans-serif" font-size="9" fill="#888780" x="540" y="410">subClassOf</text>
+
+<!-- Agent -->
+<rect x="20" y="296" width="150" height="42" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#712B13" x="95" y="312" text-anchor="middle" dominant-baseline="central">mdhn:Agent</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="95" y="329" text-anchor="middle" dominant-baseline="central">Actor / participant</text>
+<line x1="95" y1="338" x2="95" y2="354" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="30" y1="354" x2="200" y2="354" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="20" y="354" width="68" height="40" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="54" y="368" text-anchor="middle" dominant-baseline="central">Person</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="54" y="383" text-anchor="middle" dominant-baseline="central">Real person</text>
+
+<rect x="98" y="354" width="68" height="40" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="132" y="368" text-anchor="middle" dominant-baseline="central">Organization</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="132" y="383" text-anchor="middle" dominant-baseline="central">Workshop</text>
+
+<line x1="132" y1="394" x2="132" y2="414" stroke="#993C1D" stroke-width="0.5" marker-end="url(#arrow)"/>
+<rect x="80" y="414" width="104" height="40" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="132" y="428" text-anchor="middle" dominant-baseline="central">GLAMHolder</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="132" y="443" text-anchor="middle" dominant-baseline="central">Museum / library</text>
+<text font-family="Arial,sans-serif" font-size="9" fill="#888780" x="132" y="410" text-anchor="middle">subClassOf</text>
+
+<rect x="176" y="354" width="74" height="40" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="213" y="368" text-anchor="middle" dominant-baseline="central">EpicEntity</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="213" y="383" text-anchor="middle" dominant-baseline="central">Epic character</text>
+
+<!-- IconographicEntity -->
+<rect x="230" y="296" width="190" height="42" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#633806" x="325" y="312" text-anchor="middle" dominant-baseline="central">IconographicEntity</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="325" y="329" text-anchor="middle" dominant-baseline="central">Depicted concept</text>
+<line x1="325" y1="338" x2="325" y2="354" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="255" y1="354" x2="440" y2="354" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="255" y="354" width="72" height="40" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#633806" x="291" y="368" text-anchor="middle" dominant-baseline="central">Narrative</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="291" y="383" text-anchor="middle" dominant-baseline="central">Episode</text>
+
+<rect x="335" y="354" width="72" height="40" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#633806" x="371" y="368" text-anchor="middle" dominant-baseline="central">Legendary</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="371" y="383" text-anchor="middle" dominant-baseline="central">Character</text>
+
+<rect x="415" y="354" width="72" height="40" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#633806" x="451" y="368" text-anchor="middle" dominant-baseline="central">Mythological</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="451" y="383" text-anchor="middle" dominant-baseline="central">Creature</text>
+
+<!-- Provenance classes -->
+<rect x="20" y="476" width="168" height="42" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#27500A" x="104" y="492" text-anchor="middle" dominant-baseline="central">OwnershipInterval</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="104" y="509" text-anchor="middle" dominant-baseline="central">E8 Acquisition</text>
+
+<rect x="202" y="476" width="160" height="42" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#27500A" x="282" y="492" text-anchor="middle" dominant-baseline="central">PaintingRegister</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="282" y="509" text-anchor="middle" dominant-baseline="central">E31 Document</text>
+
+<rect x="376" y="476" width="148" height="42" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#27500A" x="450" y="492" text-anchor="middle" dominant-baseline="central">RegisterEntry</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="450" y="509" text-anchor="middle" dominant-baseline="central">Expected painting</text>
+
+<rect x="538" y="476" width="124" height="42" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#27500A" x="600" y="492" text-anchor="middle" dominant-baseline="central">TransferType</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="600" y="509" text-anchor="middle" dominant-baseline="central">Gift / purchase…</text>
+
+<line x1="362" y1="497" x2="376" y2="497" stroke="#3B6D11" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="9" fill="#888780" x="369" y="491" text-anchor="middle">hasPart</text>
+
+<!-- Linguistic classes -->
+<rect x="20" y="550" width="150" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#0C447C" x="95" y="566" text-anchor="middle" dominant-baseline="central">LinguisticObject</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="95" y="583" text-anchor="middle" dominant-baseline="central">Text content</text>
+
+<rect x="180" y="550" width="110" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#0C447C" x="235" y="566" text-anchor="middle" dominant-baseline="central">PoeticText</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="235" y="583" text-anchor="middle" dominant-baseline="central">Verse</text>
+
+<rect x="300" y="550" width="100" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#0C447C" x="350" y="566" text-anchor="middle" dominant-baseline="central">ProseText</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="350" y="583" text-anchor="middle" dominant-baseline="central">Prose passage</text>
+
+<rect x="410" y="550" width="100" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#0C447C" x="460" y="566" text-anchor="middle" dominant-baseline="central">Inscription</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="460" y="583" text-anchor="middle" dominant-baseline="central">Painted text</text>
+
+<rect x="520" y="550" width="140" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#0C447C" x="590" y="566" text-anchor="middle" dominant-baseline="central">IlluminatedUnwan</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="590" y="583" text-anchor="middle" dominant-baseline="central">Chapter heading</text>
+
+<!-- ══ SECTION 2: OBJECT PROPERTY MAP ══ -->
+<line x1="0" y1="616" x2="680" y2="616" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="634">Object property map</text>
+<line x1="20" y1="639" x2="660" y2="639" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<!-- Manuscript -->
+<rect x="260" y="652" width="160" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#3C3489" x="340" y="668" text-anchor="middle" dominant-baseline="central">Manuscript</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#534AB7" x="340" y="685" text-anchor="middle" dominant-baseline="central">mdhn:Manuscript</text>
+
+<line x1="340" y1="694" x2="340" y2="720" stroke="#534AB7" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="360" y="712">hasFolio</text>
+
+<!-- Folio -->
+<rect x="260" y="720" width="160" height="42" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#3C3489" x="340" y="736" text-anchor="middle" dominant-baseline="central">Folio</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#534AB7" x="340" y="753" text-anchor="middle" dominant-baseline="central">mdhn:Folio</text>
+
+<!-- keptIn -->
+<line x1="420" y1="741" x2="490" y2="741" stroke="#993C1D" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="455" y="736" text-anchor="middle">keptIn</text>
+<rect x="490" y="720" width="120" height="42" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#712B13" x="550" y="736" text-anchor="middle" dominant-baseline="central">GLAMHolder</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="550" y="753" text-anchor="middle" dominant-baseline="central">Institution</text>
+
+<!-- IIIF Manifest -->
+<line x1="260" y1="741" x2="178" y2="741" stroke="#5F5E5A" stroke-width="0.5" marker-end="url(#arrow)"/>
+<rect x="28" y="720" width="150" height="42" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#444441" x="103" y="736" text-anchor="middle" dominant-baseline="central">IIIF Manifest</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#5F5E5A" x="103" y="753" text-anchor="middle" dominant-baseline="central">xsd:anyURI</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="210" y="736" text-anchor="middle">hasIIIFManifest</text>
+
+<!-- hasContentElement -->
+<line x1="340" y1="762" x2="340" y2="800" stroke="#0F6E56" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="370" y="786">hasContentElement</text>
+
+<!-- ContentElement -->
+<rect x="255" y="800" width="170" height="42" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#085041" x="340" y="816" text-anchor="middle" dominant-baseline="central">ContentElement</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="340" y="833" text-anchor="middle" dominant-baseline="central">Painting / text / illum.</text>
+
+<!-- hasPainter -->
+<line x1="255" y1="821" x2="180" y2="821" stroke="#993C1D" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="218" y="816" text-anchor="middle">hasPainter</text>
+<rect x="28" y="800" width="152" height="42" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#712B13" x="104" y="816" text-anchor="middle" dominant-baseline="central">Person</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="104" y="833" text-anchor="middle" dominant-baseline="central">Artist / scribe / poet</text>
+
+<!-- depicts -->
+<line x1="425" y1="821" x2="490" y2="821" stroke="#854F0B" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="458" y="816" text-anchor="middle">depicts</text>
+<rect x="490" y="800" width="162" height="42" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#633806" x="571" y="816" text-anchor="middle" dominant-baseline="central">Iconographic</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="571" y="833" text-anchor="middle" dominant-baseline="central">Entity</text>
+
+<!-- hasFigureCrop -->
+<line x1="340" y1="842" x2="340" y2="876" stroke="#0F6E56" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="370" y="863">hasFigureCrop</text>
+<rect x="255" y="876" width="170" height="42" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#085041" x="340" y="892" text-anchor="middle" dominant-baseline="central">FigureCrop</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="340" y="909" text-anchor="middle" dominant-baseline="central">IIIF region extract</text>
+
+<!-- representsEntity -->
+<path d="M425 897 Q470 870 490 860" fill="none" stroke="#854F0B" stroke-width="0.5" stroke-dasharray="3 2" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="472" y="872">representsEntity</text>
+
+<!-- iiifRegionURL -->
+<line x1="255" y1="897" x2="178" y2="897" stroke="#5F5E5A" stroke-width="0.5" marker-end="url(#arrow)"/>
+<rect x="28" y="876" width="150" height="42" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#444441" x="103" y="892" text-anchor="middle" dominant-baseline="central">iiifRegionURL</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#5F5E5A" x="103" y="909" text-anchor="middle" dominant-baseline="central">xsd:string (IIIF img)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="210" y="892" text-anchor="middle">iiifRegionURL</text>
+
+<!-- hasPaintingRegister -->
+<path d="M420 673 L571 648" fill="none" stroke="#3B6D11" stroke-width="0.5" stroke-dasharray="3 2" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="508" y="650">hasPaintingRegister</text>
+<rect x="490" y="648" width="162" height="42" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#27500A" x="571" y="664" text-anchor="middle" dominant-baseline="central">PaintingRegister</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="571" y="681" text-anchor="middle" dominant-baseline="central">268 entries checklist</text>
+
+<!-- hasOwnershipInterval -->
+<path d="M260 673 L96 660" fill="none" stroke="#3B6D11" stroke-width="0.5" stroke-dasharray="3 2" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="168" y="656" text-anchor="middle">hasOwnershipInterval</text>
+<rect x="20" y="648" width="152" height="42" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#27500A" x="96" y="664" text-anchor="middle" dominant-baseline="central">Ownership</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="96" y="681" text-anchor="middle" dominant-baseline="central">Interval</text>
+
+<!-- nextFolio self loop -->
+<path d="M420 741 Q470 760 420 780" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 2" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="480" y="768">nextFolio</text>
+
+<!-- ══ SECTION 3: DATATYPE PROPERTIES ══ -->
+<line x1="0" y1="940" x2="680" y2="940" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="958">Datatype properties</text>
+<line x1="20" y1="963" x2="660" y2="963" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="20" y="970" width="640" height="28" rx="4" fill="#D3D1C7"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#2C2C2A" x="120" y="988" text-anchor="middle" dominant-baseline="central">Property</text>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#2C2C2A" x="320" y="988" text-anchor="middle" dominant-baseline="central">Domain</text>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#2C2C2A" x="492" y="988" text-anchor="middle" dominant-baseline="central">Range</text>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#2C2C2A" x="618" y="988" text-anchor="middle" dominant-baseline="central">Notes</text>
+
+<line x1="220" y1="970" x2="220" y2="1264" stroke="#D3D1C7" stroke-width="0.3"/>
+<line x1="420" y1="970" x2="420" y2="1264" stroke="#D3D1C7" stroke-width="0.3"/>
+<line x1="564" y1="970" x2="564" y2="1264" stroke="#D3D1C7" stroke-width="0.3"/>
+
+<rect x="20" y="998" width="640" height="22" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1013" text-anchor="middle" dominant-baseline="central">folioNumber</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1013" text-anchor="middle" dominant-baseline="central">Folio</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1013" text-anchor="middle" dominant-baseline="central">xsd:string</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1013" text-anchor="middle" dominant-baseline="central">"20v", "7r"</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1035" text-anchor="middle" dominant-baseline="central">hasIIIFManifest</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1035" text-anchor="middle" dominant-baseline="central">Folio</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1035" text-anchor="middle" dominant-baseline="central">xsd:anyURI</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1035" text-anchor="middle" dominant-baseline="central">IIIF manifest</text>
+
+<rect x="20" y="1042" width="640" height="22" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1057" text-anchor="middle" dominant-baseline="central">iiifRegionURL</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1057" text-anchor="middle" dominant-baseline="central">FigureCrop</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1057" text-anchor="middle" dominant-baseline="central">xsd:string</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1057" text-anchor="middle" dominant-baseline="central">Region URL</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1079" text-anchor="middle" dominant-baseline="central">attributionCertainty</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1079" text-anchor="middle" dominant-baseline="central">ContentElement</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1079" text-anchor="middle" dominant-baseline="central">xsd:string</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1079" text-anchor="middle" dominant-baseline="central">certain/disputed…</text>
+
+<rect x="20" y="1086" width="640" height="22" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1101" text-anchor="middle" dominant-baseline="central">startVerse / endVerse</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1101" text-anchor="middle" dominant-baseline="central">LinguisticObject</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1101" text-anchor="middle" dominant-baseline="central">xsd:string</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1101" text-anchor="middle" dominant-baseline="central">Verse range</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1123" text-anchor="middle" dominant-baseline="central">entryFolioNumber</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1123" text-anchor="middle" dominant-baseline="central">RegisterEntry</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1123" text-anchor="middle" dominant-baseline="central">xsd:string</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1123" text-anchor="middle" dominant-baseline="central">Register label</text>
+
+<rect x="20" y="1130" width="640" height="22" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1145" text-anchor="middle" dominant-baseline="central">ownershipStart</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1145" text-anchor="middle" dominant-baseline="central">OwnershipInterval</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1145" text-anchor="middle" dominant-baseline="central">xsd:gYear</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1145" text-anchor="middle" dominant-baseline="central">Year began</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1167" text-anchor="middle" dominant-baseline="central">ownershipEnd</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1167" text-anchor="middle" dominant-baseline="central">OwnershipInterval</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1167" text-anchor="middle" dominant-baseline="central">xsd:gYear</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1167" text-anchor="middle" dominant-baseline="central">Year ended</text>
+
+<rect x="20" y="1174" width="640" height="22" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1189" text-anchor="middle" dominant-baseline="central">ownershipStartDate</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1189" text-anchor="middle" dominant-baseline="central">OwnershipInterval</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1189" text-anchor="middle" dominant-baseline="central">xsd:date</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1189" text-anchor="middle" dominant-baseline="central">Precise date</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1211" text-anchor="middle" dominant-baseline="central">ownershipEndDate</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1211" text-anchor="middle" dominant-baseline="central">OwnershipInterval</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1211" text-anchor="middle" dominant-baseline="central">xsd:date</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1211" text-anchor="middle" dominant-baseline="central">Precise date</text>
+
+<rect x="20" y="1218" width="640" height="22" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1233" text-anchor="middle" dominant-baseline="central">transferType</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1233" text-anchor="middle" dominant-baseline="central">OwnershipInterval</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1233" text-anchor="middle" dominant-baseline="central">TransferType</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1233" text-anchor="middle" dominant-baseline="central">gift/purchase…</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="120" y="1255" text-anchor="middle" dominant-baseline="central">wikidataItem</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="320" y="1255" text-anchor="middle" dominant-baseline="central">owl:Thing</text>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="492" y="1255" text-anchor="middle" dominant-baseline="central">WikidataEntity</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="618" y="1255" text-anchor="middle" dominant-baseline="central">skos:exactMatch</text>
+
+<rect x="20" y="998" width="640" height="266" rx="4" fill="none" stroke="#D3D1C7" stroke-width="0.5"/>
+
+<!-- ══ SECTION 4: STANDARDS ══ -->
+<line x1="0" y1="1280" x2="680" y2="1280" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="1298">Standards alignment</text>
+<line x1="20" y1="1303" x2="660" y2="1303" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="20" y="1312" width="130" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="85" y="1330" text-anchor="middle" dominant-baseline="central">CIDOC-CRM 7.1</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="85" y="1349" text-anchor="middle" dominant-baseline="central">E8, E31, E36 mapped</text>
+
+<rect x="160" y="1312" width="130" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#085041" x="225" y="1330" text-anchor="middle" dominant-baseline="central">IIIF API 3</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="225" y="1349" text-anchor="middle" dominant-baseline="central">Manifest + region URLs</text>
+
+<rect x="300" y="1312" width="130" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#712B13" x="365" y="1330" text-anchor="middle" dominant-baseline="central">Linked Art</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="365" y="1349" text-anchor="middle" dominant-baseline="central">la: prefix imported</text>
+
+<rect x="440" y="1312" width="100" height="48" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#633806" x="490" y="1330" text-anchor="middle" dominant-baseline="central">Getty AAT</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="490" y="1349" text-anchor="middle" dominant-baseline="central">skos:exactMatch</text>
+
+<rect x="550" y="1312" width="110" height="48" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#27500A" x="605" y="1330" text-anchor="middle" dominant-baseline="central">Wikidata</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="605" y="1349" text-anchor="middle" dominant-baseline="central">wikidataItem Q-IDs</text>
+
+<rect x="20" y="1370" width="90" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#0C447C" x="65" y="1388" text-anchor="middle" dominant-baseline="central">SKOS</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="65" y="1407" text-anchor="middle" dominant-baseline="central">Labels &amp; matches</text>
+
+<rect x="120" y="1370" width="120" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#0C447C" x="180" y="1388" text-anchor="middle" dominant-baseline="central">Dublin Core</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="180" y="1407" text-anchor="middle" dominant-baseline="central">dcterms metadata</text>
+
+<rect x="250" y="1370" width="100" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#0C447C" x="300" y="1388" text-anchor="middle" dominant-baseline="central">PROV-O</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="300" y="1407" text-anchor="middle" dominant-baseline="central">Provenance chain</text>
+
+<rect x="360" y="1370" width="110" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#0C447C" x="415" y="1388" text-anchor="middle" dominant-baseline="central">Web Annot.</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="415" y="1407" text-anchor="middle" dominant-baseline="central">oa: annotations</text>
+
+<rect x="480" y="1370" width="80" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#0C447C" x="520" y="1388" text-anchor="middle" dominant-baseline="central">FOAF</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="520" y="1407" text-anchor="middle" dominant-baseline="central">Agents</text>
+
+<rect x="570" y="1370" width="90" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#0C447C" x="615" y="1388" text-anchor="middle" dominant-baseline="central">OWL 2</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#185FA5" x="615" y="1407" text-anchor="middle" dominant-baseline="central">Full ontology</text>
+
+<!-- ══ SECTION 5: SAMPLE INSTANCES ══ -->
+<line x1="0" y1="1438" x2="680" y2="1438" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="1456">Sample instance data — six documented folios</text>
+<line x1="20" y1="1461" x2="660" y2="1461" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="20" y="1470" width="194" height="76" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="117" y="1488" text-anchor="middle" dominant-baseline="central">Folio 7r (Recto)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="117" y="1506" text-anchor="middle" dominant-baseline="central">Firdausi meets court poets</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="117" y="1522" text-anchor="middle" dominant-baseline="central">Painter: Aqa Mirak</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="117" y="1538" text-anchor="middle" dominant-baseline="central">Aga Khan Museum</text>
+
+<rect x="224" y="1470" width="194" height="76" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="321" y="1488" text-anchor="middle" dominant-baseline="central">Folio 20v (Verso)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="321" y="1506" text-anchor="middle" dominant-baseline="central">Court of Kayumars</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="321" y="1522" text-anchor="middle" dominant-baseline="central">Painter: Sultan Muhammad</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="321" y="1538" text-anchor="middle" dominant-baseline="central">Aga Khan Museum</text>
+
+<rect x="428" y="1470" width="232" height="76" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#3C3489" x="544" y="1488" text-anchor="middle" dominant-baseline="central">Folio 21v (Verso)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="544" y="1506" text-anchor="middle" dominant-baseline="central">Hushang Slays the Black Div</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="544" y="1522" text-anchor="middle" dominant-baseline="central">Painter: Sultan Muhammad</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="544" y="1538" text-anchor="middle" dominant-baseline="central">S.C. Welch Family Collection</text>
+
+<rect x="20" y="1556" width="194" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#085041" x="117" y="1574" text-anchor="middle" dominant-baseline="central">Folio 22v (Verso)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="117" y="1592" text-anchor="middle" dominant-baseline="central">The Feast of Sada</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="117" y="1608" text-anchor="middle" dominant-baseline="central">Painter: Sultan Muhammad</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="117" y="1624" text-anchor="middle" dominant-baseline="central">Metropolitan Museum of Art</text>
+
+<rect x="224" y="1556" width="194" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#085041" x="321" y="1574" text-anchor="middle" dominant-baseline="central">Folio 23v (Verso)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="321" y="1592" text-anchor="middle" dominant-baseline="central">Tahmuras Defeats the Divs</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="321" y="1608" text-anchor="middle" dominant-baseline="central">Painter: Sultan Muhammad</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#0F6E56" x="321" y="1624" text-anchor="middle" dominant-baseline="central">Metropolitan Museum of Art</text>
+
+<rect x="428" y="1556" width="232" height="76" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#633806" x="544" y="1574" text-anchor="middle" dominant-baseline="central">Folio 38v (Verso)</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="544" y="1592" text-anchor="middle" dominant-baseline="central">Faranak Sends Gifts to Faridun</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="544" y="1608" text-anchor="middle" dominant-baseline="central">Painter: Qadimi</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="544" y="1624" text-anchor="middle" dominant-baseline="central">Khalili Collection</text>
+
+<!-- ══ SECTION 6: PROVENANCE TIMELINE ══ -->
+<line x1="0" y1="1654" x2="680" y2="1654" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="1672">Manuscript provenance timeline</text>
+<line x1="20" y1="1677" x2="660" y2="1677" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<line x1="40" y1="1730" x2="640" y2="1730" stroke="#888780" stroke-width="1.5"/>
+
+<line x1="80" y1="1724" x2="80" y2="1736" stroke="#888780" stroke-width="2"/>
+<rect x="30" y="1686" width="110" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#3C3489" x="85" y="1702" text-anchor="middle" dominant-baseline="central">Safavid library</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#534AB7" x="85" y="1719" text-anchor="middle" dominant-baseline="central">1522 – 1568</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="85" y="1748" text-anchor="middle">Tabriz / Qazvin</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="85" y="1762" text-anchor="middle">Shah Tahmasp I</text>
+
+<line x1="240" y1="1724" x2="240" y2="1736" stroke="#888780" stroke-width="2"/>
+<rect x="180" y="1686" width="120" height="40" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="240" y="1702" text-anchor="middle" dominant-baseline="central">Topkapi Palace</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#993C1D" x="240" y="1719" text-anchor="middle" dominant-baseline="central">1568 – 1903</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="240" y="1748" text-anchor="middle">Istanbul</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="240" y="1762" text-anchor="middle">Sultan Selim II</text>
+<line x1="140" y1="1730" x2="180" y2="1730" stroke="#888780" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="160" y="1724" text-anchor="middle">gift</text>
+
+<line x1="400" y1="1724" x2="400" y2="1736" stroke="#888780" stroke-width="2"/>
+<rect x="320" y="1686" width="160" height="40" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#27500A" x="400" y="1702" text-anchor="middle" dominant-baseline="central">Houghton Collection</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#3B6D11" x="400" y="1719" text-anchor="middle" dominant-baseline="central">1959 – 1972</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="400" y="1748" text-anchor="middle">A.A. Houghton Jr.</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="400" y="1762" text-anchor="middle">purchase</text>
+<line x1="300" y1="1730" x2="320" y2="1730" stroke="#888780" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="310" y="1724" text-anchor="middle">purch.</text>
+
+<line x1="560" y1="1724" x2="560" y2="1736" stroke="#888780" stroke-width="2"/>
+<rect x="490" y="1686" width="144" height="40" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#633806" x="562" y="1702" text-anchor="middle" dominant-baseline="central">30+ Institutions</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#854F0B" x="562" y="1719" text-anchor="middle" dominant-baseline="central">1972 – present</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="562" y="1748" text-anchor="middle">Met, Aga Khan,</text>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="562" y="1762" text-anchor="middle">Khalili…</text>
+<line x1="480" y1="1730" x2="490" y2="1730" stroke="#888780" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="485" y="1724" text-anchor="middle">dispersal</text>
+
+<!-- ══ SECTION 7: ROLE HIERARCHY ══ -->
+<line x1="0" y1="1790" x2="680" y2="1790" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="1808">Artist role sub-property hierarchy</text>
+<line x1="20" y1="1813" x2="660" y2="1813" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="260" y="1822" width="160" height="36" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#712B13" x="340" y="1844" text-anchor="middle" dominant-baseline="central">artisttHasRole</text>
+
+<line x1="340" y1="1858" x2="340" y2="1874" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="60" y1="1874" x2="620" y2="1874" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="340" y="1870" text-anchor="middle">rdfs:subPropertyOf</text>
+
+<rect x="20" y="1874" width="90" height="36" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="65" y="1896" text-anchor="middle" dominant-baseline="central">hasAuthor</text>
+
+<rect x="120" y="1874" width="100" height="36" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="170" y="1896" text-anchor="middle" dominant-baseline="central">hasScriber</text>
+
+<rect x="230" y="1874" width="100" height="36" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="280" y="1896" text-anchor="middle" dominant-baseline="central">hasPainter</text>
+
+<rect x="340" y="1874" width="120" height="36" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#712B13" x="400" y="1896" text-anchor="middle" dominant-baseline="central">hasIlluminator</text>
+
+<rect x="470" y="1874" width="160" height="36" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#712B13" x="550" y="1896" text-anchor="middle" dominant-baseline="central">hasWorkshop_director</text>
+
+<text font-family="Arial,sans-serif" font-size="11" fill="#888780" x="340" y="1924" text-anchor="middle">Each role has an owl:inverseOf participatesAs{Role} on mdhn:Person</text>
+
+<!-- ══ LEGEND ══ -->
+<line x1="0" y1="1944" x2="680" y2="1944" stroke="#B4B2A9" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#2C2C2A" x="20" y="1962">Legend</text>
+<line x1="20" y1="1967" x2="660" y2="1967" stroke="#B4B2A9" stroke-width="0.5"/>
+
+<rect x="20" y="1976" width="14" height="14" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="42" y="1986" dominant-baseline="central">Manuscript / Folio hierarchy</text>
+
+<rect x="200" y="1976" width="14" height="14" rx="3" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="222" y="1986" dominant-baseline="central">Content elements (Painting, FigureCrop)</text>
+
+<rect x="460" y="1976" width="14" height="14" rx="3" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="482" y="1986" dominant-baseline="central">Agents (Person, Organization)</text>
+
+<rect x="20" y="2000" width="14" height="14" rx="3" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="42" y="2010" dominant-baseline="central">Iconographic entities</text>
+
+<rect x="230" y="2000" width="14" height="14" rx="3" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="252" y="2010" dominant-baseline="central">Provenance (Register, Ownership)</text>
+
+<rect x="480" y="2000" width="14" height="14" rx="3" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="502" y="2010" dominant-baseline="central">Text / linguistic objects</text>
+
+<line x1="20" y1="2032" x2="60" y2="2032" stroke="#534AB7" stroke-width="0.8" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="68" y="2032" dominant-baseline="central">Object property (direct)</text>
+
+<line x1="230" y1="2032" x2="270" y2="2032" stroke="#888780" stroke-width="0.8" stroke-dasharray="4 2" marker-end="url(#arrow)"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="278" y="2032" dominant-baseline="central">Optional / derived property</text>
+
+<line x1="450" y1="2032" x2="490" y2="2032" stroke="#B4B2A9" stroke-width="0.8" stroke-dasharray="2 2"/>
+<text font-family="Arial,sans-serif" font-size="11" fill="#3d3d3a" x="498" y="2032" dominant-baseline="central">rdfs:subClassOf (taxonomy)</text>
+
+<!-- ══ FOOTER ══ -->
+<rect x="0" y="2052" width="680" height="28" fill="#F1EFE8"/>
+<text font-family="Arial,sans-serif" font-size="10" fill="#888780" x="340" y="2069" text-anchor="middle" dominant-baseline="central">MDHN Ontology v3.0.0 · CC BY 4.0 · github.com/MehranDHN/Shahnama-Of-Shah-Tahmsap · Based on Dickson &amp; Welch, The Houghton Shahnameh (1981)</text>
+
+</svg>
