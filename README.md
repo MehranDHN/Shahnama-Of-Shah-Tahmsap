@@ -88,6 +88,7 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 **Version:** 3.0.0  
 **Prefix:** `mdhn:` → `http://example.com/mdhn/ontology#`
 
+![Ontology Infographic](ontology-infographic.svg)
 ### Namespace Architecture
 
 The ontology uses a carefully structured set of prefixes that separate the **schema** (`mdhn:`) from **resource instances** (a family of `mdhnr:` sub-prefixes). This design keeps local names short, readable, and non-colliding:
