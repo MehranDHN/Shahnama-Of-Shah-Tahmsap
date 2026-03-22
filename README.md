@@ -245,7 +245,7 @@ The `resources.ttl` file provides sample instance data covering **six folios** f
 | `23v` | Tahmuras Defeats the Divs | Sultan Muhammad | Metropolitan Museum of Art |
 | `38v` | Faranak Sends Gifts to Faridun | Qadimi | Khalili Collection |
 
-![Sample Data Graph](sampledata.png)
+![Sample Data Graph](SampleData.png)
 The sample data also encodes:
 - **Three ownership intervals** for the manuscript: Safavid Royal Library (1522–1568), Topkapı Palace Library (1568–1903), and the Arthur A. Houghton Jr. collection (1959–1972).
 - **27 named epic entities** including Keyumars, Hushang, Faridun, Siamak, Tahmuras, Iraj, Salm, Tur, and various *div* figures.
