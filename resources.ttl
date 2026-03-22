@@ -1,0 +1,576 @@
+# ── Project namespaces ────────────────────────────────────────────────────────
+@prefix mdhn:     <http://example.com/mdhn/ontology#> .
+
+# Resource sub-namespaces — each gets its own prefix for clean local names
+@prefix mdhnr:    <http://example.com/mdhn/resource/> .
+@prefix foliotype: <http://example.com/mdhn/resource/folioType/> .
+@prefix illumtype: <http://example.com/mdhn/resource/illumType/> .
+@prefix role:      <http://example.com/mdhn/resource/role/> .
+@prefix xfertype:  <http://example.com/mdhn/resource/transferType/> .
+@prefix script:    <http://example.com/mdhn/resource/script/> .
+@prefix agent:     <http://example.com/mdhn/resource/agent/> .
+@prefix place:     <http://example.com/mdhn/resource/place/> .
+@prefix repo:      <http://example.com/mdhn/resource/repo/> .
+@prefix folio:     <http://example.com/mdhn/resource/folio/> .
+@prefix leaf:      <http://example.com/mdhn/resource/leaf/> .
+@prefix manifest:  <http://example.com/mdhn/resource/manifest/> .
+@prefix painting:  <http://example.com/mdhn/resource/painting/> .
+@prefix illum:     <http://example.com/mdhn/resource/illum/> .
+@prefix text:      <http://example.com/mdhn/resource/text/> .
+@prefix episode:   <http://example.com/mdhn/resource/episode/> .
+@prefix character: <http://example.com/mdhn/resource/character/> .
+@prefix motif:     <http://example.com/mdhn/resource/motif/> .
+@prefix crop:      <http://example.com/mdhn/resource/crop/> .
+@prefix register:  <http://example.com/mdhn/resource/register/> .
+@prefix entry:     <http://example.com/mdhn/resource/entry/> .
+@prefix event:     <http://example.com/mdhn/resource/event/> .
+@prefix air:       <http://example.com/mdhn/resource/air/> .
+@prefix ownership: <http://example.com/mdhn/resource/ownership/> .
+@prefix timespan:  <http://example.com/mdhn/resource/timespan/> .
+@prefix concept:   <http://example.com/mdhn/resource/concept/> .
+@prefix annot:     <http://example.com/mdhn/resource/annot/> .
+
+# ── W3C standards ─────────────────────────────────────────────────────────────
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix schema:  <https://schema.org/> .
+
+# ── CIDOC-CRM 7.1 ─────────────────────────────────────────────────────────────
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+
+# ── Linked Art ────────────────────────────────────────────────────────────────
+@prefix la:     <https://linked.art/ns/terms/> .
+
+# ── IIIF Presentation API 3 ───────────────────────────────────────────────────
+@prefix iiif:   <http://iiif.io/api/presentation/3#> .
+
+# ── Getty Vocabularies ────────────────────────────────────────────────────────
+@prefix aat:    <http://vocab.getty.edu/aat/> .
+@prefix tgn:    <http://vocab.getty.edu/tgn/> .
+@prefix ulan:   <http://vocab.getty.edu/ulan/> .
+
+# ── Wikidata ──────────────────────────────────────────────────────────────────
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix wdt:    <http://www.wikidata.org/prop/direct/> .
+
+
+
+mdhn:manuscript_shahnama_shah_tahmasp a mdhn:Manuscript , owl:NamedIndividual ;
+    mdhn:aatConcept aat:300028569 ;
+    mdhn:hasOwnershipInterval mdhn:houghton_collection , mdhn:ottoman_topkapi , mdhn:safavid_library ;
+    mdhn:hasPaintingRegister mdhn:painting_Index ;
+    mdhn:wikidataItem wd:Q3114572, wd:Q64675957 ;
+    dcterms:created "1522/1535" ;
+    rdfs:comment """The Houghton Shahnama. Royal Persian manuscript produced 
+    c. 1522-1535 CE in Tabriz under Shah Tahmasp I. Contains 268 full-page paintings. 
+    Now dispersed across 30+ collections."""@en ;
+    rdfs:label "Shahnama of Shah Tahmasp"@en , "شاهنامه شاه طهماسپ"@fa ;
+    skos:related wd:Q8279 .
+
+mdhn:gift         a mdhn:TransferType ; rdfs:label "Gift"@en , "هدیه"@fa .
+mdhn:purchase     a mdhn:TransferType ; rdfs:label "Purchase"@en , "خرید"@fa .
+mdhn:auction      a mdhn:TransferType ; rdfs:label "Auction"@en , "حراج"@fa .
+mdhn:confiscation a mdhn:TransferType ; rdfs:label "Confiscation"@en , "مصادره"@fa .
+mdhn:bequest      a mdhn:TransferType ; rdfs:label "Bequest"@en , "وصیت"@fa .
+mdhn:dispersal    a mdhn:TransferType ; rdfs:label "Dispersal (folio removal)"@en , "جداسازی برگ"@fa .
+mdhn:deposit      a mdhn:TransferType ; rdfs:label "Deposit / Loan"@en , "امانت"@fa .       
+
+mdhn:painting_Index a mdhn:PaintingRegister ;
+    mdhn:registerFor mdhn:manuscript_shahnama_shah_tahmasp ;
+    dcterms:description """Complete checklist of the 268 identified paintings. 
+    Each entry links to a folio resource if the painting is located and digitised, 
+    or remains unlinked if the painting is missing or unaccounted for."""@en ;
+    dcterms:source "Dickson, Martin B. and Welch, Stuart Cary. The Houghton Shahnameh. 1981."@en ;
+    rdfs:label "Authoritative register of 268 paintings — Shahnama of Shah Tahmasp"@en , "فهرست معتبر ۲۶۸ نگاره — شاهنامه شاه طهماسپ"@fa .    
+
+mdhn:safavid_library
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Safavid Royal Library (Tabriz / Qazvin)"@en ;
+    mdhn:owner        mdhn:shah_tahmasp ;
+    mdhn:ownershipStart "1522"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1568"^^xsd:gYear ;
+    mdhn:transferType   mdhn:gift ;
+    rdfs:comment  "Gifted to Ottoman Sultan Selim II in 1568."@en .
+
+mdhn:ottoman_topkapi
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Topkapi Palace Library"@en ;
+    mdhn:owner        mdhn:sultan_selim_ii ;
+    mdhn:ownershipStart "1568"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1903"^^xsd:gYear ;
+    mdhn:transferType   mdhn:gift ;
+    rdfs:comment  "Held in Topkapı. Ottoman annotations added during this period."@en .
+
+mdhn:houghton_collection
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Arthur A. Houghton Jr. collection"@en ;
+    mdhn:owner        mdhn:arthur_houghton ;
+    mdhn:ownershipStart "1959"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1972"^^xsd:gYear ;
+    mdhn:transferType   mdhn:purchase ;
+    rdfs:comment  "Purchased; 78 folios donated to the Metropolitan Museum of Art; remainder sold."@en .
+
+mdhn:arthur_houghton
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Arthur A. Houghton Jr."@en ;
+    mdhn:wikidataItem wd:Q562846 .    
+
+mdhn:sultan_selim_ii
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Sultan Selim II"@en, "سلطان سلیم دوم"@fa ;
+    mdhn:wikidataItem wd:Q81672 . 
+
+mdhn:shah_tahmasp
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Shah Tahmasp I"@en , "شاه طهماسپ اول"@fa ;
+    mdhn:ulanAgent ulan:500344029 ;
+    mdhn:wikidataItem wd:Q221500 .  
+
+mdhn:Ferdowsi
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Ferdowsi"@en , "فردوسی"@fa ;
+    mdhn:wikidataItem wd:Q43459 . 
+
+mdhn:AbuMansurDaqiqi
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Abu Mansur Daqiqi"@en , "ابو منصور دقيقی"@fa ;
+    mdhn:wikidataItem wd:Q538902 . 
+mdhn:Unsuri
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Unsuri"@en , "عنصری"@fa ;
+    mdhn:wikidataItem wd:Q32842 . 
+
+mdhn:Asjadi
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Asjadi"@en , "عسجدی"@fa ;
+    mdhn:wikidataItem wd:Q4807055 . 
+
+mdhn:Sultan_Muhammad
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Sultan Muhammad"@en , "سلطان محمد"@fa ;
+    mdhn:wikidataItem wd:Q6712884 . 
+
+mdhn:Aqa_Mīrak
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Āqā Mīrak"@en , "آقا ميرک"@fa ;
+    mdhn:wikidataItem wd:Q4056503 .   
+mdhn:Qadimi
+    a mdhn:Person, owl:NamedIndividual ;
+    rdfs:label "Qadimi"@en , "قديمی"@fa ;
+    mdhn:wikidataItem wd:Q113680330 . 
+
+mdhn:Faridun
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Faridun"@en , "فريدون"@fa ;
+    mdhn:wikidataItem wd:Q1150281. 
+
+mdhn:Faranak
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Faranak"@en , "فرانک"@fa ;
+    mdhn:wikidataItem wd:Q137687. 
+
+mdhn:Salm
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Salm"@en , "سلم"@fa ;
+    mdhn:wikidataItem wd:Q3543323. 
+
+mdhn:Tur
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Tur"@en , "تور"@fa ;
+    mdhn:wikidataItem wd:Q3543320.
+
+mdhn:Iraj
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Iraj"@en , "ايرج"@fa ;
+    mdhn:wikidataItem wd:Q1300562. 
+
+mdhn:Arnavaz
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "TArnavazr"@en , "ارنواز"@fa ;
+    mdhn:wikidataItem wd:Q5744657.
+
+mdhn:Shahrnaz
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Shahrnaz"@en , "شهرناز"@fa ;
+    mdhn:wikidataItem wd:Q5662082.                    
+
+mdhn:Tahmuras
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Tahmuras"@en , "طهمورث"@fa ;
+    mdhn:wikidataItem wd:Q519239. 
+
+mdhn:Keyumars
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Keyumars"@en , "کيومرث"@fa ;
+    mdhn:wikidataItem wd:Q1077286. 
+
+mdhn:Siamak
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Siamak"@en , "سيامک"@fa ;
+    mdhn:wikidataItem wd:Q1551577. 
+
+mdhn:Hushang
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Hushang"@en , "هوشنگ"@fa ;
+    mdhn:wikidataItem wd:Q1638892.             
+
+mdhn:Div1
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 1"@en , "ديو اول"@fa ;
+    mdhn:wikidataItem wd:Q1157107.  
+
+mdhn:Div2
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 2"@en , "ديو دوم"@fa ;
+    mdhn:wikidataItem wd:Q1157107. 
+
+mdhn:Div3
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 3"@en , "ديو سوم"@fa ;
+    mdhn:wikidataItem wd:Q1157107. 
+mdhn:Div4
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 4"@en , "ديو چهارم"@fa ;
+    mdhn:wikidataItem wd:Q1157107. 
+
+mdhn:Div1_21v
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 1 21v"@en , "ديو"@fa ;
+    mdhn:wikidataItem wd:Q1157107. 
+
+mdhn:Div2_21v
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 2 21v"@en , "ديو"@fa ;
+    mdhn:wikidataItem wd:Q1157107.  
+
+mdhn:Div3_21v
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 3 21v"@en , "ديو"@fa ;
+    mdhn:wikidataItem wd:Q1157107.  
+
+mdhn:Div4_21v
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Div 4 21v"@en , "ديو"@fa ;
+    mdhn:wikidataItem wd:Q1157107.  
+
+mdhn:Angle1_21v
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Angle 1 21v"@en , "فرشته"@fa ;
+    mdhn:wikidataItem wd:Q235113. 
+mdhn:Angle2_21v
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Angle 2 21v"@en , "فرشته"@fa ;
+    mdhn:wikidataItem wd:Q235113.                         
+
+mdhn:BlackDiv
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Black Div"@en , "ديو سياه"@fa ;
+    mdhn:wikidataItem wd:Q5599492.                  
+
+
+# -- Folio 20v -----------------------------------------------------
+mdhn:RE_20v a mdhn:RegisterEntry;
+    rdfs:label "The Court of Kayumars"@en, "پادشاهی کيومرث"@fa;
+    rdfs:comment "According to Firdausi, the very idea of kingship originated with King Kayumars, who ruled for thirty years, overseeing a peaceable kingdom in which men wore leopard-skin robes and wild animals grew tame. In this utopia Kayumars had one secret enemy, the evil Ahriman, whose envy drove him to incite his own son, the Black Div, to murder Siyamak, the son of Kayumars. Before the assassination took place, the angel Surush warned Kayumars of Ahriman’s plot"@en;
+    mdhn:entryFolioNumber "20v";
+    mdhn:entryPartOf mdhn:painting_Index. 
+
+mdhn:Folio20v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio21v ;
+   mdhn:keptIn mdhn:Aga_Khan_Museum;
+   mdhn:hasContentElement mdhn:Painting20v, mdhn:Poems20v;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-20v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_20v.
+
+mdhn:Painting20v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:KeyumarsFig20v, mdhn:SiamakFig20v ;
+   mdhn:hasNarrativeEpisode mdhn:TahmurasDefeatsKingdomOfKeyumars;
+   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:BlackDiv;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:wikidataItem wd:Q64689329 ;
+   mdhn:hasPainter mdhn:Sultan_Muhammad .
+
+mdhn:TahmurasDefeatsKingdomOfKeyumars a mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138719971 .  
+
+mdhn:Poems20v a mdhn:LinguisticObject;
+  mdhn:startVerse "75";
+  mdhn:endVerse "85".
+
+mdhn:KeyumarsFig20v a mdhn:FigureCrop;
+   rdfs:label "Keyumars cropped figure from f20v"@en;
+   mdhn:hasReferredTo mdhn:Keyumars;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/332,517,120,165/max/0/default.jpg". 
+
+mdhn:SiamakFig20v a mdhn:FigureCrop;
+   rdfs:label "Siamak cropped figure from f20v"@en;
+   mdhn:hasReferredTo mdhn:Siamak;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/489,642,106,133/max/0/default.jpg". 
+
+# -- Folio 21v -----------------------------------------------------
+mdhn:RE_21v a mdhn:RegisterEntry;
+    rdfs:label "Hushang Slavs the Black Div"@en, "کشته شدن ديو سياه به دست هوشنگ"@fa;
+    rdfs:comment "On the orders of his grandfather Hushang avenges the murder of his father, Siyamak, and wages war against Ahriman and his dirs (demons) with an army of lions, wolves, leopards, and angels."@en;
+    mdhn:entryFolioNumber "21v";
+    mdhn:entryPartOf mdhn:painting_Index.
+
+mdhn:Folio21v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio22v ;
+   mdhn:keptIn mdhn:S_C_Welch_Family_Collection;
+   mdhn:hasContentElement mdhn:Painting21v, mdhn:Poems21v; 
+   mdhn:wikidataItem wd:Q131281679; 
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-21v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_21v.  
+
+mdhn:Painting21v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:HushangFig21v, mdhn:BlackDivFig21v, mdhn:Div1_21v,mdhn:Div2_21v, mdhn:Div3_21v, mdhn:Div4_21v, mdhn:Angle1_21v, mdhn:Angle1_21v;
+   mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
+   mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:hasPainter mdhn:Sultan_Muhammad .  
+
+mdhn:HushangSlaysTheBlackDiv a mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138757163 .  
+
+mdhn:Poems21v a mdhn:LinguisticObject;
+  mdhn:startVerse "278";
+  mdhn:endVerse "282".  
+
+mdhn:HushangFig21v a mdhn:FigureCrop;
+   rdfs:label "Hushang cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Hushang;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/508,1280,195,129/max/0/default.jpg". 
+
+mdhn:BlackDivFig21v a mdhn:FigureCrop;
+   rdfs:label "Black Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:BlackDiv;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/522,1370,343,204/max/0/default.jpg". 
+
+mdhn:Div1_21v a mdhn:FigureCrop;
+   rdfs:label "Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Div5;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/253,1462,176,244/max/0/default.jpg". 
+mdhn:Div2_21v a mdhn:FigureCrop;
+   rdfs:label "Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Div5;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/710,1637,219,208/max/0/default.jpg". 
+mdhn:Div3_21v a mdhn:FigureCrop;
+   rdfs:label "Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Div5;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/240,1239,268,227/max/0/default.jpg". 
+mdhn:Div421v a mdhn:FigureCrop;
+   rdfs:label "Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Div5;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/657,1228,275,151/max/0/default.jpg". 
+
+mdhn:Angle1_21v a mdhn:FigureCrop;
+   rdfs:label "Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Div5;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/238,949,474,188/max/0/default.jpg". 
+
+mdhn:Angle2_21v a mdhn:FigureCrop;
+   rdfs:label "Div cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Div5;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/524,926,136,100/max/0/default.jpg". 
+# -- Folio 22v -----------------------------------------------------
+mdhn:RE_22v a mdhn:RegisterEntry;
+    rdfs:label "The Feast of Sada"@en, "جشن سده"@fa;
+    rdfs:comment "Hushang succeeds Keyumars and presides over the development of metalworking and animal husbandry. When he throws a rock, striking a boulder, and sparks turn to flame, he recognizes fire as a divine gilt and initiates the feast of Sada to celebrate this discovery."@en;
+    mdhn:entryFolioNumber "22v";
+    mdhn:entryPartOf mdhn:painting_Index.
+
+mdhn:Folio22v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio23v ;
+   mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
+   mdhn:hasContentElement mdhn:Painting22v, mdhn:Poems22v; 
+   mdhn:wikidataItem wd:Q29385197; 
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-22v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_22v.  
+
+mdhn:Painting22v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:HushangFig22v;
+   mdhn:hasNarrativeEpisode mdhn:HushangInFeastOfSada;
+   mdhn:hasReferredTo mdhn:Hushang;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:hasPainter mdhn:Sultan_Muhammad .      
+
+mdhn:HushangInFeastOfSada a mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138757360 .  
+
+mdhn:Poems22v a mdhn:LinguisticObject;
+  mdhn:startVerse "296";
+  mdhn:endVerse "302".  
+
+mdhn:HushangFig22v a mdhn:FigureCrop;
+   rdfs:label "Hushang cropped figure from f22v"@en;
+   mdhn:hasReferredTo mdhn:Hushang;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-22v%2F22v.jpg/954,1390,378,445/max/0/default.jpg". 
+
+
+# -- Folio 38v -----------------------------------------------------
+mdhn:RE_38v a mdhn:RegisterEntry;
+    rdfs:label "The Court of Faridun, his mother Faranak sends gifts to her son"@en, "ارسال هدايا از سوی فرانک به پسران فريدون"@fa;
+    rdfs:comment "When the news of Faridun's enthronement spreads, his mother, Faranak, sends Arabian horses, gold, gems, and other gifts. Notables the world over offer gifts and journey to pay homage to the new king."@en;
+    mdhn:entryFolioNumber "38v";
+    mdhn:entryPartOf mdhn:painting_Index. 
+
+mdhn:Folio38v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio39v ;
+   mdhn:keptIn mdhn:Khalili_Collection;
+   mdhn:hasContentElement mdhn:Painting38v, mdhn:Poems38v;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-38v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_38v.  
+
+mdhn:Painting38v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:FereydunFig38v ;
+   mdhn:hasReferredTo mdhn:Faridun, mdhn:Faranak, mdhn:Salm, mdhn:Tur, mdhn:Iraj;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:wikidataItem wd:Q64689329 ;
+   mdhn:hasPainter mdhn:Qadimi . 
+
+mdhn:Poems38v a mdhn:LinguisticObject;
+  mdhn:startVerse "204";
+  mdhn:endVerse "214".  
+
+mdhn:FereydunFig38v a mdhn:FigureCrop;
+   rdfs:label "Fereydun cropped figure from f38v"@en;
+   mdhn:hasReferredTo mdhn:Faridun;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-38v%2FFolio38v.jpg/420,943,160,246/max/0/default.jpg". 
+
+
+# -- Folio 7r -----------------------------------------------------
+mdhn:RE_7r a mdhn:RegisterEntry;
+    rdfs:label "Firdausi Encounters the Court Poets of Ghazua"@en, "رويارويی فردوسی با شعرای دربار غزنه"@fa;
+    rdfs:comment "On his way to seek the patronage of Sultan Mahmud of Ghazna for the Shabana, Firdausi encounters three of the sultan\'s poets, who test his poctic skills before allowing him to join them"@en;
+    mdhn:entryFolioNumber "7r";
+    mdhn:entryPartOf mdhn:painting_Index.
+
+mdhn:Folio7r a mdhn:Recto;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio10r ;
+   mdhn:keptIn mdhn:Aga_Khan_Museum;
+   mdhn:hasContentElement mdhn:Painting7r, mdhn:ProseText7r;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-7r/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_7r.  
+
+mdhn:Painting7r a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:FirdowsiFig7r ,
+                      mdhn:AbuMansurDaqiqiFig7r,
+                      mdhn:UnsuriFig7r,
+                      mdhn:AsjadiFig7r;
+  mdhn:hasReferredTo  mdhn:Firdowsi,
+                      mdhn:AbuMansurDaqiqi,
+                      mdhn:Unsuri,
+                      mdhn:Asjadi;                     
+   mdhn:hasWorkshop_director  mdhn:Aqa_Mīrak ;
+   mdhn:wikidataItem wd:Q64689329 ;
+   mdhn:hasPainter mdhn:Aqa_Mīrak .  
+
+mdhn:FirdowsiFig7r a mdhn:FigureCrop;
+   rdfs:label "Firdowsi cropped figure from f7r"@en;
+   mdhn:hasReferredTo  mdhn:Firdowsi;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-7r%2FFolio7r.jpg/314,802,118,236/max/0/default.jpg". 
+
+mdhn:AbuMansurDaqiqiFig7r a mdhn:FigureCrop;
+   rdfs:label "Abu-Mansur Daqiqi cropped figure from f7r"@en;
+   mdhn:hasReferredTo  mdhn:AbuMansurDaqiqi;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-7r%2FFolio7r.jpg/622,648,127,151/max/0/default.jpg".  
+
+mdhn:UnsuriFig7r a mdhn:FigureCrop;
+   rdfs:label "Unsuri cropped figure from f7r"@en;
+   mdhn:hasReferredTo  mdhn:Unsuri;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-7r%2FFolio7r.jpg/715,744,143,177/max/0/default.jpg". 
+
+mdhn:AsjadiFig7r a mdhn:FigureCrop;
+   rdfs:label "Asjadi cropped figure from f7r"@en;
+   mdhn:hasReferredTo  mdhn:Asjadi;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-7r%2FFolio7r.jpg/489,682,110,164/max/0/default.jpg".                
+
+mdhn:ProseText7r a mdhn:LinguisticObject;
+  rdfs:label "Plain text appear in folio 7r"@en.  
+
+# -- Folio 23v -----------------------------------------------------
+mdhn:RE_23v a mdhn:RegisterEntry;
+    rdfs:label "Tahmuras Defeats the Divs"@en, "هزيمت ديوها به دست طهمورث"@fa;
+    rdfs:comment "Tahmuras, shown here galloping across a meadow, defeated the divs (demons), in exchange for their lives, they taught him the art of writing. This work is attributed to Sultan Muhammad, the master painter and chief administrator of the first generation of artists of this manuscript"@en;
+    mdhn:entryFolioNumber "23v";
+    mdhn:entryPartOf mdhn:painting_Index.
+
+mdhn:Folio23v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio24v ;   
+   mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
+   mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-23v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_23v. 
+
+mdhn:Painting23v a mdhn:Painting;
+   mdhn:hasNarrativeEpisode mdhn:TahmurasDefeatsDivs;
+   mdhn:hasFigureCrop mdhn:TahmurasFigure23v ,
+                      mdhn:Div1Figure23v,
+                      mdhn:Div2Figure23v,
+                      mdhn:Div3Figure23v,
+                      mdhn:Div4Figure23v;
+   mdhn:hasReferredTo mdhn:Tahmuras, mdhn:Div1, mdhn:Div2, mdhn:Div3, mdhn:Div4;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:hasPainter mdhn:Sultan_Muhammad .
+
+mdhn:TahmurasDefeatsDivs a mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138676508 .   
+
+mdhn:TahmurasFigure23v a mdhn:FigureCrop;
+   rdfs:label "Tahmuras cropped figure from f23v"@en;
+   mdhn:hasReferredTo mdhn:Tahmuras;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/875,1372,579,536/max/0/default.jpg".
+
+mdhn:Div1Figure23v a mdhn:FigureCrop;
+   rdfs:label "Div1 cropped figure from f23v"@en;
+   mdhn:hasReferredTo mdhn:Div1;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/416,1582,497,451/max/0/default.jpg".
+
+mdhn:Div2Figure23v a mdhn:FigureCrop;
+   rdfs:label "Divs2 cropped figure from f23v"@en;
+   mdhn:hasReferredTo mdhn:Div2;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/771,2074,195,373/max/0/default.jpg".
+
+mdhn:Div3Figure23v a mdhn:FigureCrop;
+   rdfs:label "Div3 cropped figure from f23v"@en;
+   mdhn:hasReferredTo mdhn:Div3;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/318,2019,299,426/max/0/default.jpg".
+
+mdhn:Div4Figure23v a mdhn:FigureCrop;
+   rdfs:label "Div4 cropped figure from f23v"@en;
+   mdhn:hasReferredTo mdhn:Div4;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/923,1847,333,306/max/0/default.jpg".
+
+mdhn:Poems23v a mdhn:LinguisticObject;
+  mdhn:startVerse "112";
+  mdhn:endVerse "124".
+
+mdhn:Folio23v a mdhn:Folio. 
+mdhn:Folio24v a mdhn:Folio. 
+mdhn:Folio10r a mdhn:Folio.  
+mdhn:Folio39v a mdhn:Folio.   
+
+
+mdhn:Tehran_Museum_of_Contemporary_Art a mdhn:GLAMHolder.
+mdhn:Metropolitan_Museum_of_Art a mdhn:GLAMHolder.
+mdhn:Aga_Khan_Museum a mdhn:GLAMHolder.
+mdhn:Cincinnati_Art_Museum a mdhn:GLAMHolder.
+mdhn:Khalili_Collection a mdhn:GLAMHolder.
+mdhn:S_C_Welch_Family_Collection a mdhn:GLAMHolder.
+
+    
+
+    

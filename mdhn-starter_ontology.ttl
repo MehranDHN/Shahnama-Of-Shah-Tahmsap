@@ -1,0 +1,658 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# MDHN ONTOLOGY — Shahnama of Shah Tahmasp Knowledge Graph
+# Base IRI  : http://example.com/mdhn/
+# Ontology  : http://example.com/mdhn/ontology#  (prefix mdhn:)
+# Resources : http://example.com/mdhn/resource/  (prefix mdhnr:)
+# Version   : 3.0.0
+#
+# URI / local-name convention
+# ─────────────────────────────
+# • Hierarchy in the IRI path is expressed with /  (part of base URI, not local name)
+#   e.g. mdhnr:folio/20v  →  <http://example.com/mdhn/resource/folio/20v>
+# • Compound local names use _ (underscore) exclusively — never - or camelCase breaks
+#   e.g. mdhnr:folioType_painted, mdhnr:role_workshop_director
+# • CRM classes already use _ (E22_Human-Made_Object) — we follow that convention
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Project namespaces ────────────────────────────────────────────────────────
+@prefix mdhn:     <http://example.com/mdhn/ontology#> .
+
+# Resource sub-namespaces — each gets its own prefix for clean local names
+@prefix mdhnr:    <http://example.com/mdhn/resource/> .
+@prefix foliotype: <http://example.com/mdhn/resource/folioType/> .
+@prefix illumtype: <http://example.com/mdhn/resource/illumType/> .
+@prefix role:      <http://example.com/mdhn/resource/role/> .
+@prefix script:    <http://example.com/mdhn/resource/script/> .
+@prefix agent:     <http://example.com/mdhn/resource/agent/> .
+@prefix place:     <http://example.com/mdhn/resource/place/> .
+@prefix repo:      <http://example.com/mdhn/resource/repo/> .
+@prefix folio:     <http://example.com/mdhn/resource/folio/> .
+@prefix leaf:      <http://example.com/mdhn/resource/leaf/> .
+@prefix manifest:  <http://example.com/mdhn/resource/manifest/> .
+@prefix painting:  <http://example.com/mdhn/resource/painting/> .
+@prefix illum:     <http://example.com/mdhn/resource/illum/> .
+@prefix text:      <http://example.com/mdhn/resource/text/> .
+@prefix episode:   <http://example.com/mdhn/resource/episode/> .
+@prefix character: <http://example.com/mdhn/resource/character/> .
+@prefix motif:     <http://example.com/mdhn/resource/motif/> .
+@prefix crop:      <http://example.com/mdhn/resource/crop/> .
+@prefix register:  <http://example.com/mdhn/resource/register/> .
+@prefix entry:     <http://example.com/mdhn/resource/entry/> .
+@prefix event:     <http://example.com/mdhn/resource/event/> .
+@prefix air:       <http://example.com/mdhn/resource/air/> .
+@prefix timespan:  <http://example.com/mdhn/resource/timespan/> .
+@prefix concept:   <http://example.com/mdhn/resource/concept/> .
+@prefix annot:     <http://example.com/mdhn/resource/annot/> .
+
+# ── W3C standards ─────────────────────────────────────────────────────────────
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix schema:  <https://schema.org/> .
+
+# ── CIDOC-CRM 7.1 ─────────────────────────────────────────────────────────────
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+
+# ── Linked Art ────────────────────────────────────────────────────────────────
+@prefix la:     <https://linked.art/ns/terms/> .
+
+# ── IIIF Presentation API 3 ───────────────────────────────────────────────────
+@prefix iiif:   <http://iiif.io/api/presentation/3#> .
+
+# ── Getty Vocabularies ────────────────────────────────────────────────────────
+@prefix aat:    <http://vocab.getty.edu/aat/> .
+@prefix tgn:    <http://vocab.getty.edu/tgn/> .
+@prefix ulan:   <http://vocab.getty.edu/ulan/> .
+
+# ── Wikidata ──────────────────────────────────────────────────────────────────
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix wdt:    <http://www.wikidata.org/prop/direct/> .
+
+
+
+
+<http://example.com/mdhn/ontology> a owl:Ontology ;
+    dcterms:created "2026-03-12"^^xsd:date ;
+    dcterms:creator mdhn:mehran ;
+    dcterms:description """OWL ontology (v3) for the LOUD/FAIR knowledge graph of the 
+    Shahnama of Shah Tahmasp (c. 1522–1535). Introduces: consistent underscore URI 
+    convention; IIIFManifest applicable to all resource types; FigureCrop class for 
+    character extractions from high-resolution IIIF images; PaintingRegister and 
+    RegisterEntry for tracking the authoritative list of 268 paintings and highlighting 
+    missing/unlocated folios."""@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:subject wd:Q3114572 , wd:Q8279 ;
+    dcterms:title "MDHN Ontology — Shahnama of Shah Tahmasp Knowledge Graph"@en , "هستان‌شناسی MDHN — دانش‌گراف شاهنامه شاه طهماسپ"@fa ;
+    owl:versionIRI <http://example.com/mdhn/ontology/3.0.0> ;
+    owl:versionInfo "3.0.0" .
+
+mdhn:Manuscript a owl:Class ;
+    rdfs:comment "A unique illuminated codex — the top-level physical object."@en ;
+    rdfs:label "Manuscript"@en , "نسخه خطی"@fa ;
+    skos:exactMatch aat:300028569 .
+
+mdhn:Folio a owl:Class ;
+    rdfs:comment """A physical Folio (recto or verso), modelled as an 
+    independent resource. ALL subclasses inherit mdhn:hasIIIFManifest."""@en ;
+    rdfs:label "Folio"@en , "صفحه"@fa .
+
+mdhn:Recto a owl:Class ;
+    rdfs:label "Recto"@en , "روی"@fa ;
+    rdfs:subClassOf mdhn:Folio ;
+    skos:note "Front (right-hand) side of a leaf — labelled 'r'."@en .
+
+mdhn:Verso a owl:Class ;
+    rdfs:comment "Back (left-hand) side of a leaf — labelled 'v'."@en ;
+    rdfs:label "Verso"@en , "پشت"@fa ;
+    rdfs:subClassOf mdhn:Folio .
+
+mdhn:AlternateFolio a owl:Class ;
+    rdfs:comment "A replacement or variant version of a canonical folio position."@en ;
+    rdfs:label "Alternate Folio"@en , "صفحه جایگزین"@fa ;
+    rdfs:subClassOf mdhn:Folio .
+
+mdhn:OttomanAnnotationLeaf a owl:Class ;
+    rdfs:comment "Separate leaf attached in the Ottoman period bearing handwritten notes."@en ;
+    rdfs:label "Ottoman Annotation Leaf"@en , "برگ الحاقی عثمانی"@fa ;
+    rdfs:subClassOf mdhn:Folio .
+
+mdhn:FolioType a owl:Class ;
+    rdfs:label "Folio Type"@en , "نوع برگ"@fa .
+
+mdhn:GLAMHolder a owl:Class ;
+    rdfs:subClassOf mdhn:Organization ;
+    rdfs:label "GLAMHolder"@en , "محل نگهداری"@fa .    
+
+mdhn:ContentElement a owl:Class ;
+    rdfs:comment "Any intellectual or artistic unit carried on a folio side."@en ;
+    rdfs:label "Content Element"@en , "عنصر محتوایی"@fa .
+
+mdhn:Painting
+    a owl:Class ;
+    rdfs:subClassOf mdhn:ContentElement ;
+    rdfs:subClassOf crm:E36_Visual_Item ;
+    rdfs:label   "Painting"@en , "نگاره"@fa ;
+    skos:exactMatch aat:300033799 .
+
+mdhn:Illumination a owl:Class ;
+    rdfs:label "Illumination"@en , "تذهیب"@fa ;
+    rdfs:subClassOf mdhn:ContentElement ;
+    skos:exactMatch aat:300053433 .
+
+mdhn:LinguisticObject a owl:Class ;
+    rdfs:label "Linguistic Object"@en , "متن زبانی"@fa ;
+    rdfs:subClassOf mdhn:ContentElement .
+
+mdhn:PoeticText a owl:Class ;
+    rdfs:label "Poetic Text"@en , "متن منظوم"@fa ;
+    skos:exactMatch aat:300026366 .
+
+mdhn:ProseText a owl:Class ;
+    rdfs:label "Prose Text"@en , "متن منثور"@fa .
+
+mdhn:WikidataEntity a owl:Class ;
+    rdfs:label "Wikidata Entity"@en , "مدخل ويکی ديتا"@fa .    
+
+    
+
+mdhn:Inscription a owl:Class ;
+    rdfs:label "Inscription"@en , "کتیبه"@fa ;
+    skos:exactMatch aat:300028702 .
+
+mdhn:FigureCrop a owl:Class ;
+    rdfs:subClassOf mdhn:Painting ;
+    rdfs:comment """A cropped region extracted from a high-resolution IIIF image of a 
+    painting folio, isolating a specific character, creature, or depicted object. 
+    Linked to a Painting via mdhn:isExtractedFrom, to an IconographicEntity via 
+    mdhn:representsEntity, and may carry its own IIIF Image API region URI and 
+    a dedicated IIIF Manifest for the crop."""@en ;
+    rdfs:label "Figure Crop"@en , "برش شخصیت"@fa ;
+    skos:exactMatch aat:300404983 .
+
+mdhn:isExtractedFrom a owl:ObjectProperty ;
+    rdfs:comment "Links a FigureCrop to the Painting from which it was isolated."@en ;
+    rdfs:domain mdhn:FigureCrop ;
+    rdfs:label "is extracted from"@en , "برگرفته از"@fa ;
+    rdfs:range mdhn:Painting ;
+    owl:inverseOf mdhn:hasFigureCrop .
+
+mdhn:hasFigureCrop a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "has figure crop"@en , "دارای برش شخصیت"@fa ;
+    rdfs:range mdhn:FigureCrop ;
+    owl:inverseOf mdhn:isExtractedFrom .
+
+mdhn:representsEntity a owl:ObjectProperty ;
+    rdfs:comment "The iconographic entity (character, creature, object) isolated by this crop."@en ;
+    rdfs:domain mdhn:FigureCrop ;
+    rdfs:label "represents entity"@en , "نمایانگر موجودیت"@fa ;
+    rdfs:range mdhn:IconographicEntity .
+
+mdhn:IconographicEntity a owl:Class ;
+    rdfs:comment """A concept depicted in a painting: character, episode, motif, or 
+    symbolic element. Each should be reconciled to or created as a Wikidata item.
+    New items: wdt:P361 (part of) → wd:Q8279 and wd:Q3114572."""@en ;
+    rdfs:label "Iconographic Entity"@en , "موجودیت نگاره‌شناختی"@fa .
+
+mdhn:iiifRegionURL a owl:DatatypeProperty ;
+    rdfs:comment """Full IIIF Image API URL with region parameter:
+    https://server/image-id/{x,y,w,h}/full/0/default.jpg
+    or using named region: https://server/image-id/pct:{x,y,w,h}/full/0/default.jpg"""@en ;
+    rdfs:domain mdhn:FigureCrop ;
+    rdfs:label "IIIF Image API region URI"@en ;
+    rdfs:range xsd:string .
+
+mdhn:PaintingRegister
+    a owl:Class ;
+    rdfs:subClassOf crm:E31_Document ;
+    rdfs:label   "Painting Register"@en , "فهرست نگاره‌ها"@fa ;
+    rdfs:comment """The authoritative checklist of all 268 paintings of the Shahnama of 
+    Shah Tahmasp, associated to the manuscript. Tracks which paintings are located (linked 
+    to folio resources) and which are missing or unaccounted for."""@en .    
+
+mdhn:RegisterEntry a owl:Class ;
+    rdfs:comment """One entry in the PaintingRegister corresponding to a single expected 
+    painting. Carries the folio number, title, description, and GLAM holder from the 
+    authoritative list. May be linked to an actual mdhn:Painting resource via 
+    mdhn:linkedPainting; absence of that link signals a MISSING painting."""@en ;
+    rdfs:label "Register Entry"@en , "ردیف فهرست صفحات"@fa .
+
+mdhn:keptIn a owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "keptIn"@en , "محفوظ در"@fa ;
+    rdfs:range mdhn:GLAMHolder .
+
+mdhn:keepsFolio a owl:ObjectProperty ;
+    rdfs:domain mdhn:GLAMHolder ;
+    rdfs:label "keepsFolio"@en ;
+    rdfs:range mdhn:Folio ;
+    owl:inverseOf mdhn:keptIn .    
+
+mdhn:hasRegisterEntry a owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "has register entry"@en , "دارای ردیف فهرست"@fa ;
+    rdfs:range mdhn:RegisterEntry .
+    
+
+mdhn:isEntryOf a owl:ObjectProperty ;
+    rdfs:domain mdhn:RegisterEntry ;
+    rdfs:label "is entry of"@en ;
+    rdfs:range mdhn:Folio ;
+    owl:inverseOf mdhn:hasRegisterEntry .
+
+mdhn:entryFolioNumber a owl:DatatypeProperty ;
+    rdfs:comment "Folio number as recorded in the authoritative list, e.g. '65r'."@en ;
+    rdfs:domain mdhn:RegisterEntry ;
+    rdfs:label "entry folio number"@en , "شماره برگ در فهرست"@fa ;
+    rdfs:range xsd:string .
+
+mdhn:NarrativeEpisode a owl:Class ;
+    rdfs:label "Narrative Episode"@en , "روایت"@fa ;
+    rdfs:subClassOf mdhn:IconographicEntity .
+
+mdhn:LegendaryCharacter a owl:Class ;
+    rdfs:label "Legendary Character"@en , "شخصیت اسطوره‌ای"@fa ;
+    rdfs:subClassOf mdhn:IconographicEntity .
+
+mdhn:HistoricalFigure a owl:Class ;
+    rdfs:label "Historical Figure"@en , "شخصیت تاریخی"@fa ;
+    rdfs:subClassOf mdhn:IconographicEntity .
+
+mdhn:MythologicalCreature a owl:Class ;
+    rdfs:label "Mythological Creature"@en , "موجود اسطوره‌ای"@fa ;
+    rdfs:subClassOf mdhn:IconographicEntity .
+
+mdhn:wikidataItem a owl:ObjectProperty ;
+    rdfs:label "Wikidata item"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range  mdhn:WikidataEntity ;
+    rdfs:subPropertyOf skos:exactMatch .
+
+mdhn:hasOwnershipInterval
+    a owl:ObjectProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range  mdhn:OwnershipInterval ;
+    rdfs:label  "has ownership interval"@en , "دارای دوره مالکیت"@fa .  
+
+mdhn:OwnershipInterval
+    a owl:Class ;
+    rdfs:subClassOf crm:E8_Acquisition ;
+    rdfs:label   "Ownership Interval"@en , "دوره مالکیت"@fa ;
+    rdfs:comment "A period of ownership of the manuscript or a dispersed folio."@en .  
+
+mdhn:TransferType
+    a owl:Class ;
+    rdfs:label "Transfer Type"@en .
+
+ 
+
+mdhn:owner
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf crm:P22_transferred_title_to ;
+    rdfs:domain mdhn:OwnershipInterval ;
+    rdfs:range  mdhn:Agent ;
+    rdfs:label  "owner"@en , "مالک"@fa .
+
+mdhn:ownershipStart
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf crm:P82a_begin_of_the_begin ;
+    rdfs:domain mdhn:OwnershipInterval ;
+    rdfs:range  xsd:gYear ;
+    rdfs:label  "ownership start year"@en , "آغاز مالکیت"@fa .
+
+mdhn:ownershipEnd
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf crm:P82b_end_of_the_end ;
+    rdfs:domain mdhn:OwnershipInterval ;
+    rdfs:range  xsd:gYear ;
+    rdfs:label  "ownership end year"@en , "پایان مالکیت"@fa .
+
+mdhn:ownershipStartDate
+    a owl:DatatypeProperty ;
+    rdfs:domain mdhn:OwnershipInterval ;
+    rdfs:range  xsd:date ;
+    rdfs:label  "ownership start date (precise)"@en .
+
+mdhn:ownershipEndDate
+    a owl:DatatypeProperty ;
+    rdfs:domain mdhn:OwnershipInterval ;
+    rdfs:range  xsd:date ;
+    rdfs:label  "ownership end date (precise)"@en .
+
+mdhn:transferType
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:OwnershipInterval ;
+    rdfs:range  mdhn:TransferType ;
+    rdfs:label  "transfer type"@en .        
+
+mdhn:Agent a owl:Class ;
+    rdfs:label "Agent"@en , "کارگزار"@fa .
+
+mdhn:Person a owl:Class ;
+    rdfs:label "Person"@en , "شخص"@fa ;
+    rdfs:subClassOf mdhn:Agent .
+
+mdhn:EpicEntity a owl:Class ;
+    rdfs:label "Epic Entity"@en , "شخصيت اساطيری"@fa ;
+    rdfs:subClassOf mdhn:Agent .    
+
+mdhn:Organization a owl:Class ;
+    rdfs:label "Organization / Workshop"@en , "سازمان / کارگاه"@fa ;
+    rdfs:subClassOf mdhn:Agent .
+
+
+
+
+
+mdhn:hasIIIFManifest a owl:ObjectProperty ;
+    rdfs:comment """Applicable to ALL resource types: Manuscript, Folio (Recto, Verso, 
+    AlternateFolio, OttomanAnnotationLeaf), FigureCrop, and ContentElement."""@en ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "has IIIF Manifest"@en ;
+    rdfs:range xsd:anyURI .
+
+mdhn:folioNumber a owl:DatatypeProperty ;
+    rdfs:comment "Canonical folio number + side, e.g. '20v', '65r'."@en ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "folio number"@en , "شماره صفحه"@fa ;
+    rdfs:range xsd:string .
+
+mdhn:nextFolio a owl:FunctionalProperty , owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "next folio"@en ;
+    rdfs:range mdhn:Folio ;
+    owl:inverseOf mdhn:previousFolio .
+
+mdhn:previousFolio a owl:FunctionalProperty , owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "previous folio"@en ;
+    rdfs:range mdhn:Folio .
+
+mdhn:hasContentElement a owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "has content element"@en , "دارای عنصر محتوایی"@fa ;
+    rdfs:range mdhn:ContentElement .
+
+mdhn:hasInscription a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "Content element has inscription"@en , "دارای  کتيبه"@fa ;
+    rdfs:range mdhn:Inscription . 
+
+mdhn:appearsIn a owl:ObjectProperty ;
+    rdfs:domain mdhn:Inscription ;
+    rdfs:label "Inscription appears In Element"@en , "کتيبه متعلق است به"@fa ;
+    rdfs:range mdhn:Painting ;
+    owl:inverseOf mdhn:isAlternateVersionOf .       
+
+   
+
+mdhn:hasAlternateVersion a owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "has alternate version"@en , "دارای صفحه جایگزین"@fa ;
+    rdfs:range mdhn:AlternateFolio ;
+    owl:inverseOf mdhn:isAlternateVersionOf .
+
+mdhn:isAlternateVersionOf a owl:ObjectProperty ;
+    rdfs:domain mdhn:AlternateFolio ;
+    rdfs:label "is alternate version of"@en ;
+    rdfs:range mdhn:Folio .
+
+mdhn:attributionCertainty a owl:DatatypeProperty ;
+    rdfs:comment "Values: 'certain' | 'probable' | 'possible' | 'disputed' | 'unknown'."@en ;
+    rdfs:domain mdhn:ContentElement ;
+    rdfs:label "attribution certainty"@en ;
+    rdfs:range xsd:string .
+
+mdhn:startVerse  a owl:DatatypeProperty ;
+    rdfs:comment "Sequential start Verse no"@en ;
+    rdfs:domain mdhn:LinguisticObject ;
+    rdfs:label "startVerse"@en ;
+    rdfs:range xsd:string . 
+
+mdhn:endVerse  a owl:DatatypeProperty ;
+    rdfs:comment "Sequential end Verse no"@en ;
+    rdfs:domain mdhn:LinguisticObject ;
+    rdfs:label "endVerse"@en ;
+    rdfs:range xsd:string .         
+
+mdhn:depicts a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "depicts"@en , "تصویر می‌کند"@fa ;
+    rdfs:range mdhn:IconographicEntity .
+
+mdhn:hasNarrativeEpisode a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "has narrative episode"@en ;
+    rdfs:range mdhn:NarrativeEpisode ;
+    rdfs:subPropertyOf mdhn:depicts .
+
+mdhn:episodeAppearsIn a owl:ObjectProperty ; 
+    rdfs:domain mdhn:NarrativeEpisode ;
+    rdfs:range  mdhn:Painting ;
+    rdfs:label  "episodeAppearsIn"@en ;
+    owl:inverseOf mdhn:hasNarrativeEpisode . 
+
+mdhn:hasReferredTo a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "has referred to"@en ;
+    rdfs:range mdhn:EpicEntity ;
+    rdfs:subPropertyOf mdhn:depicts .    
+
+mdhn:personaAppearsIn a owl:ObjectProperty ; 
+    rdfs:domain mdhn:EpicEntity ;
+    rdfs:range  mdhn:Painting ;
+    rdfs:label  "persona appears in"@en ;
+    owl:inverseOf mdhn:hasReferredTo .     
+
+mdhn:personaAppearsIn a owl:ObjectProperty ; 
+    rdfs:domain mdhn:EpicEntity ;
+    rdfs:range  mdhn:FigureCrop ;
+    rdfs:label  "persona appears in"@en ;
+    owl:inverseOf mdhn:hasReferredTo .        
+      
+
+mdhn:hasLinguisticObject a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "has Linguistic Object"@en ;
+    rdfs:range mdhn:LinguisticObject ;
+    rdfs:subPropertyOf mdhn:depicts .
+
+mdhn:LinguisticObjectAppearIn a owl:ObjectProperty ; 
+    rdfs:domain mdhn:LinguisticObject ;
+    rdfs:range  mdhn:Painting ;
+    rdfs:label  "Linguistic Object Appear In"@en ;
+    owl:inverseOf mdhn:hasNarrativeEpisode .          
+
+mdhn:entryPartOf
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:RegisterEntry ;
+    rdfs:range  mdhn:PaintingRegister ;
+    rdfs:label  "Entry is part of root registry"@en .
+
+mdhn:registryHasPart a owl:ObjectProperty ; 
+    rdfs:domain mdhn:PaintingRegister ;
+    rdfs:range  mdhn:RegisterEntry ;
+    rdfs:label  "Root registry has entry"@en ;
+    owl:inverseOf mdhn:entryPartOf .  
+
+mdhn:registerFor
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:PaintingRegister ;
+    rdfs:range  mdhn:Manuscript ;
+    rdfs:label  "Root register for manuscript"@en ;
+    owl:inverseOf mdhn:hasPaintingRegister .
+
+mdhn:hasPaintingRegister
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:Manuscript ;
+    rdfs:range  mdhn:PaintingRegister ;
+    rdfs:label  "has painting register"@en , "دارای فهرست نگاره‌ها"@fa . 
+
+
+
+
+mdhn:anEpisodeOf
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:NarrativeEpisode  ;
+    rdfs:range  mdhn:Manuscript ;
+    rdfs:label  "An Episode Of"@en , "روايتی از شاهنامه"@fa .  
+
+mdhn:hasEpisode
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:Manuscript;
+    rdfs:range  mdhn:NarrativeEpisode  ;
+    rdfs:label  "has Episode"@en ;
+    owl:inverseOf mdhn:anEpisodeOf . 
+
+mdhn:hasSubEpisode
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:NarrativeEpisode;
+    rdfs:range  mdhn:NarrativeEpisode  ;
+    rdfs:label  "has sub Episode"@en . 
+
+ mdhn:belongToBiggerEpisode
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:NarrativeEpisode;
+    rdfs:range  mdhn:NarrativeEpisode  ;
+    rdfs:label  "belongs to bigger episode"@en ;
+    owl:inverseOf mdhn:hasSubEpisode .             
+           
+
+mdhn:illuminated a mdhn:FolioType ;
+    rdfs:label "Illuminated"@en , "مذهّب"@fa ;
+    skos:exactMatch aat:300053433 .
+
+mdhn:painted a mdhn:FolioType ;
+    rdfs:label "Painted"@en , "نگاره‌دار"@fa ;
+    skos:exactMatch aat:300033618 .
+
+mdhn:text_only a mdhn:FolioType ;
+    rdfs:label "Text only"@en , "متن صرف"@fa ;
+    skos:exactMatch aat:300028577 .
+
+mdhn:mixed a mdhn:FolioType ;
+    rdfs:label "Mixed (text + image)"@en , "مختلط"@fa .
+
+mdhn:double_page_spread a mdhn:FolioType ;
+    rdfs:label "Double-page spread"@en , "صفحه‌آرایی دو برگی"@fa ;
+    skos:exactMatch aat:300264743 .
+
+mdhn:unvan a mdhn:FolioType ;
+    rdfs:label "Unvan (heading illumination)"@en , "عنوان"@fa ;
+    skos:exactMatch aat:300072478 .
+
+mdhn:sarlowh a mdhn:FolioType ;
+    rdfs:label "Sarlowh (chapter heading)"@en , "سرلوح"@fa .
+
+mdhn:colophon a mdhn:FolioType ;
+    rdfs:label "Colophon"@en , "انجامه"@fa ;
+    skos:exactMatch aat:300028800 .
+
+mdhn:ottoman_annotation a mdhn:FolioType ;
+    rdfs:label "Ottoman annotation leaf"@en , "برگ یادداشت عثمانی"@fa .
+
+mdhn:flyleaf a mdhn:FolioType ;
+    rdfs:label "Flyleaf"@en , "برگ سفید"@fa .
+
+mdhn:IlluminatedUnwan a owl:Class ;
+    rdfs:label "IlluminatedUnwan"@en , "عنوان مذهب"@fa ;
+    rdfs:subClassOf mdhn:ContentElement ;
+    skos:exactMatch aat:300053430 .    
+
+mdhn:Shamseh a owl:Class ;
+    rdfs:label "Shamseh"@en , "شمسه"@fa ;
+    rdfs:subClassOf mdhn:ContentElement ;
+    skos:exactMatch aat:300022430 .
+
+mdhn:depictsEntity a owl:ObjectProperty ;
+    rdfs:comment "The iconographic entity (character, creature, object) isolated by this painting."@en ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "depicts entity"@en , "ارائه ای از موجودیت"@fa ;
+    rdfs:range mdhn:IconographicEntity .
+
+
+
+mdhn:artisttHasRole a owl:ObjectProperty ;
+    rdfs:domain mdhn:ContentElement ;
+    rdfs:label "has agent"@en ;
+    rdfs:range mdhn:Person .
+
+    
+mdhn:hasAuthor a owl:ObjectProperty ;
+    rdfs:subPropertyOf mdhn:artisttHasRole ;
+    rdfs:label "Author or Poet"@en , "شاعر"@fa .
+
+ mdhn:participatesAsAuthor a owl:ObjectProperty ;
+    rdfs:label  "participatesAsAuthor"@en ;
+    owl:inverseOf mdhn:hasAuthor .      
+
+mdhn:hasScriber a owl:ObjectProperty ;
+    rdfs:subPropertyOf mdhn:artisttHasRole ;
+    rdfs:label "Scribe / Calligrapher"@en , "کاتب"@fa .
+
+ mdhn:participatesAsScriber a owl:ObjectProperty ;
+    rdfs:label  "participatesAsScriber"@en ;
+    owl:inverseOf mdhn:hasScriber .        
+
+mdhn:hasPainter a owl:ObjectProperty ;
+    rdfs:subPropertyOf mdhn:artisttHasRole ;    
+    rdfs:label "Painter"@en , "نگارگر"@fa .
+
+ mdhn:participatesAsPainter a owl:ObjectProperty ;
+    rdfs:label  "participatesAsPainter"@en ;
+    rdfs:domain mdhn:Person;
+    rdfs:range mdhn:ContentElement;      
+    owl:inverseOf mdhn:hasPainter .     
+
+mdhn:hasIlluminator a owl:ObjectProperty ;
+    rdfs:subPropertyOf mdhn:artisttHasRole ;
+    rdfs:label "Illuminator"@en , "مذهّب"@fa .
+
+ mdhn:participatesAsIlluminator a owl:ObjectProperty ;
+    rdfs:label  "participatesAsIlluminator"@en ;
+    owl:inverseOf mdhn:hasIlluminator .     
+
+mdhn:hasWorkshop_director a owl:ObjectProperty ;
+    rdfs:subPropertyOf mdhn:artisttHasRole ;
+    rdfs:label "Workshop Director"@en , "کتابدار / رئیس کارگاه"@fa .
+
+ mdhn:participatesAsWorkshop_director a owl:ObjectProperty ;
+    rdfs:label  "participatesAsWorkshop_director"@en ;
+    rdfs:domain mdhn:Person;
+    rdfs:range mdhn:ContentElement  ;    
+    owl:inverseOf mdhn:hasWorkshop_director .     
+
+mdhn:hasBinder a owl:ObjectProperty ;
+    rdfs:subPropertyOf mdhn:artisttHasRole ;
+    rdfs:label "Bookbinder"@en , "صحاف"@fa .
+
+ mdhn:participatesAsBinder  a owl:ObjectProperty ;
+    rdfs:label  "participatesAsBinder"@en ;
+    owl:inverseOf mdhn:hasBinder .      
+
+
+mdhn:hasFolio a owl:ObjectProperty ;
+    rdfs:domain mdhn:Manuscript ;
+    rdfs:label "has Folio"@en , "دارای برگ"@fa ;
+    rdfs:range mdhn:Folio ;
+    owl:inverseOf mdhn:isFolioOf .
+
+mdhn:isFolioOf a owl:ObjectProperty ;
+    rdfs:domain mdhn:Folio ;
+    rdfs:label "is folio of"@en ;
+    rdfs:range mdhn:Manuscript .
+
+mdhn:elementBelongsTo a owl:ObjectProperty ;
+    rdfs:domain mdhn:ContentElement ;
+    rdfs:label "element belongs to"@en ;
+    rdfs:range mdhn:Folio ;
+    owl:inverseOf mdhn:hasContentElement .
+
+
+
