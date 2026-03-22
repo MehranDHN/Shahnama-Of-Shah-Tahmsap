@@ -39,6 +39,8 @@ The manuscript's subsequent history is as remarkable as its creation. Gifted to 
 
 This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compliant knowledge graph of the manuscript. It encodes the physical object, its folios, paintings, illuminations, textual content, iconographic entities, narrative episodes, legendary characters, and provenance history in a machine-readable, interoperable RDF/OWL format.
 
+![Whole process as a pipeline](iiif-rdf-knowledge-factory.svg)
+
 ---
 
 ## The Manuscript
