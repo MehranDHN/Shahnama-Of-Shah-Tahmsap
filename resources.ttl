@@ -296,6 +296,7 @@ mdhn:Painting20v a mdhn:Painting;
    mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:BlackDiv;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:wikidataItem wd:Q64689329 ;
+   mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
 
 mdhn:TahmurasDefeatsKingdomOfKeyumars a mdhn:NarrativeEpisode;
@@ -336,6 +337,7 @@ mdhn:Painting21v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
    mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .  
 
 mdhn:HushangSlaysTheBlackDiv a mdhn:NarrativeEpisode;
@@ -402,6 +404,7 @@ mdhn:Painting22v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:HushangInFeastOfSada;
    mdhn:hasReferredTo mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .      
 
 mdhn:HushangInFeastOfSada a mdhn:NarrativeEpisode;
@@ -437,6 +440,7 @@ mdhn:Painting38v a mdhn:Painting;
    mdhn:hasReferredTo mdhn:Faridun, mdhn:Faranak, mdhn:Salm, mdhn:Tur, mdhn:Iraj;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:wikidataItem wd:Q64689329 ;
+   mdhn:attributionCertainty "probable"@en;
    mdhn:hasPainter mdhn:Qadimi . 
 
 mdhn:Poems38v a mdhn:LinguisticObject;
@@ -475,6 +479,7 @@ mdhn:Painting7r a mdhn:Painting;
                       mdhn:Asjadi;                     
    mdhn:hasWorkshop_director  mdhn:Aqa_Mīrak ;
    mdhn:wikidataItem wd:Q64689329 ;
+   mdhn:attributionCertainty "probable"@en;
    mdhn:hasPainter mdhn:Aqa_Mīrak .  
 
 mdhn:FirdowsiFig7r a mdhn:FigureCrop;
