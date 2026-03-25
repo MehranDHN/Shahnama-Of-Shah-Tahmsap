@@ -39,6 +39,7 @@ The manuscript's subsequent history is as remarkable as its creation. Gifted to 
 
 This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compliant knowledge graph of the manuscript. It encodes the physical object, its folios, paintings, illuminations, textual content, iconographic entities, narrative episodes, legendary characters, and provenance history in a machine-readable, interoperable RDF/OWL format.
 
+ 
 ![Whole process as a pipeline](iiif-rdf-knowledge-factory.svg)
 
 ---
@@ -84,6 +85,7 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 
 ---
 
+The ongoing process of uploading the folios to internet archive is mandantory. The IA acts as a repository to integrate all available digital representaiion of folios even those with alternative versions. So one folio may have multiple representation with the selected best available resolution as primary image.
 [Images repository of folios in Internet Archive](https://archive.org/search?query=genre%3A%22Shahnama+Shah+Tahmasp%22&sort=title)
 
 ## Ontology Walkthrough
