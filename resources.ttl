@@ -219,7 +219,12 @@ mdhn:Siamak
 mdhn:Hushang
     a mdhn:EpicEntity, owl:NamedIndividual ;
     rdfs:label "Hushang"@en , "هوشنگ"@fa ;
-    mdhn:wikidataItem wd:Q1638892.             
+    mdhn:wikidataItem wd:Q1638892.   
+
+mdhn:Zahhak
+    a mdhn:EpicEntity, owl:NamedIndividual ;
+    rdfs:label "Zahhak"@en , "ضحاک"@fa ;
+    mdhn:wikidataItem wd:Q1200843.                 
 
 mdhn:Div1_23v
     a mdhn:EpicEntity, owl:NamedIndividual ;
@@ -282,8 +287,53 @@ mdhn:Div1_24v
 mdhn:Div2_24v
     a mdhn:EpicEntity, owl:NamedIndividual ;
     rdfs:label "Div 2 24v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107.                      
+    mdhn:wikidataItem wd:Q1157107.
 
+# -- Folio 2v -----------------------------------------------------
+mdhn:RE_2v a mdhn:RegisterEntry;
+    rdfs:label "Left side of Doble page Illuminated frontispece"@en, "رويارويی فردوسی با شعرای دربار غزنه"@fa;
+    rdfs:comment "Left side opening illuminated page"@en;
+    mdhn:entryFolioNumber "2v";
+    mdhn:entryPartOf mdhn:painting_Index.
+
+mdhn:Folio2v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio3r ;
+   mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
+   mdhn:hasContentElement mdhn:Illumination2v, mdhn:ProseText2v;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-2v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_2v.  
+
+mdhn:Illumination2v a mdhn:Painting;                   
+   mdhn:hasWorkshop_director  mdhn:Aqa_Mīrak ;
+   mdhn:attributionCertainty "probable"@en;
+   mdhn:hasIlluminator mdhn:Aqa_Mīrak .  
+
+mdhn:ProseText2v a mdhn:LinguisticObject;
+  rdfs:label "Plain text and poems in left side of double page opening from 2v"@en.  
+
+# -- Folio 3r -----------------------------------------------------
+mdhn:RE_3r a mdhn:RegisterEntry;
+    rdfs:label "Right side of Doble page Illuminated frontispece"@en, "رويارويی فردوسی با شعرای دربار غزنه"@fa;
+    rdfs:comment "Right side opening illuminated page"@en;
+    mdhn:entryFolioNumber "3r";
+    mdhn:entryPartOf mdhn:painting_Index.
+
+mdhn:Folio3r a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio7r ;
+   mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
+   mdhn:hasContentElement mdhn:Illumination3r, mdhn:ProseText3r;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-3r/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_2v.  
+
+mdhn:Illumination3r a mdhn:Painting;                   
+   mdhn:hasWorkshop_director  mdhn:Aqa_Mīrak ;
+   mdhn:attributionCertainty "probable"@en;
+   mdhn:hasIlluminator mdhn:Aqa_Mīrak .  
+
+mdhn:ProseText3r a mdhn:LinguisticObject;
+  rdfs:label "Plain text and poems in right side of double page opening from 3r"@en.   
 # -- Folio 7r -----------------------------------------------------
 mdhn:RE_7r a mdhn:RegisterEntry;
     rdfs:label "Firdausi Encounters the Court Poets of Ghazua"@en, "رويارويی فردوسی با شعرای دربار غزنه"@fa;
@@ -494,6 +544,7 @@ mdhn:Folio23v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio24v ;   
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
    mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;  
+   mdhn:hasReferredTo mdhn:Tahmuras;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-23v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_23v. 
 
@@ -552,7 +603,8 @@ mdhn:Folio24v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio25v ;
    mdhn:keptIn mdhn:S_C_Welch_Family_Collection;
    mdhn:hasContentElement mdhn:Painting24v, mdhn:Poems24v; 
-   mdhn:wikidataItem wd:Q131281679; 
+   mdhn:wikidataItem wd:Q131253793; 
+   mdhn:hasReferredTo mdhn:Jamshid, mdhn:Zahhak;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-24v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_21v.  
 
