@@ -118,113 +118,156 @@ mdhn:houghton_collection
     rdfs:comment  "Purchased; 78 folios donated to the Metropolitan Museum of Art; remainder sold."@en .
 
 mdhn:arthur_houghton
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Arthur A. Houghton Jr."@en ;
     mdhn:wikidataItem wd:Q562846 .    
 
 mdhn:sultan_selim_ii
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Sultan Selim II"@en, "سلطان سلیم دوم"@fa ;
     mdhn:wikidataItem wd:Q81672 . 
 
 mdhn:shah_tahmasp
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Shah Tahmasp I"@en , "شاه طهماسپ اول"@fa ;
     mdhn:ulanAgent ulan:500344029 ;
     mdhn:wikidataItem wd:Q221500 .  
 
 mdhn:Ferdowsi
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Ferdowsi"@en , "فردوسی"@fa ;
     mdhn:wikidataItem wd:Q43459 . 
 
 mdhn:AbuMansurDaqiqi
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Abu Mansur Daqiqi"@en , "ابو منصور دقيقی"@fa ;
     mdhn:wikidataItem wd:Q538902 . 
 mdhn:Unsuri
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Unsuri"@en , "عنصری"@fa ;
     mdhn:wikidataItem wd:Q32842 . 
 
 mdhn:Asjadi
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Asjadi"@en , "عسجدی"@fa ;
     mdhn:wikidataItem wd:Q4807055 . 
 
 mdhn:Sultan_Muhammad
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Sultan Muhammad"@en , "سلطان محمد"@fa ;
     mdhn:wikidataItem wd:Q6712884 . 
 
 mdhn:Aqa_Mīrak
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Āqā Mīrak"@en , "آقا ميرک"@fa ;
     mdhn:wikidataItem wd:Q4056503 .   
 mdhn:Qadimi
-    a mdhn:Person, owl:NamedIndividual ;
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Qadimi"@en , "قديمی"@fa ;
     mdhn:wikidataItem wd:Q113680330 . 
 
 mdhn:Faridun
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Faridun"@en , "فريدون"@fa ;
     mdhn:wikidataItem wd:Q1150281. 
 
 mdhn:Faranak
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "Faranak"@en , "فرانک"@fa ;
     mdhn:wikidataItem wd:Q137687. 
 
 mdhn:Salm
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Salm"@en , "سلم"@fa ;
     mdhn:wikidataItem wd:Q3543323. 
 
 mdhn:Tur
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Tur"@en , "تور"@fa ;
     mdhn:wikidataItem wd:Q3543320.
 
 mdhn:Iraj
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Iraj"@en , "ايرج"@fa ;
     mdhn:wikidataItem wd:Q1300562. 
-
+mdhn:Jamshid
+    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Jamshid"@en , "جمشيد"@fa ;
+    fhkb:hasDaughter mdhn:Arnavaz, mdhn:Shahrnaz;
+    mdhn:wikidataItem wd:Q155755.
 mdhn:Arnavaz
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "TArnavazr"@en , "ارنواز"@fa ;
+    fhkb:isSpouseOf mdhn:Zahhak;
     mdhn:wikidataItem wd:Q5744657.
 
 mdhn:Shahrnaz
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "Shahrnaz"@en , "شهرناز"@fa ;
     mdhn:wikidataItem wd:Q5662082.                    
 
 mdhn:Tahmuras
-    a mdhn:EpicEntity, owl:NamedIndividual ;
-    rdfs:label "Tahmuras"@en , "طهمورث"@fa ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Tahmuras"@en , "طهمورث"@fa ; 
     mdhn:wikidataItem wd:Q519239. 
 
 mdhn:Keyumars
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Keyumars"@en , "کيومرث"@fa ;
+    fhkb:hasSon mdhn:Siamak;
     mdhn:wikidataItem wd:Q1077286. 
 
 mdhn:Siamak
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Siamak"@en , "سيامک"@fa ;
+    fhkb:hasSon mdhn:Hushang;
     mdhn:wikidataItem wd:Q1551577. 
 
 mdhn:Hushang
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Hushang"@en , "هوشنگ"@fa ;
     mdhn:wikidataItem wd:Q1638892.   
 
 mdhn:Zahhak
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Zahhak"@en , "ضحاک"@fa ;
-    mdhn:wikidataItem wd:Q1200843.                 
+    mdhn:wikidataItem wd:Q1200843. 
+
+mdhn:Sam
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Sam"@en , "سام"@fa ;
+    fhkb:hasSon mdhn:Zal;
+    mdhn:wikidataItem wd:Q2003157. 
+mdhn:Zal
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Zal"@en , "زال"@fa ;
+    fhkb:hasSon mdhn:Rostam, mdhn:Shaghad ;
+    mdhn:wikidataItem wd:Q144903.  
+mdhn:Rudaba
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Rudaba"@en , "رودابه"@fa ;
+    fhkb:isSpouseOf mdhn:Zal;
+    mdhn:wikidataItem wd:Q144903. 
+
+mdhn:Rostam
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Rostam"@en , "رستم"@fa ;
+    fhkb:hasSon mdhn:Sohrab;
+    mdhn:wikidataItem wd:Q60062.
+mdhn:Shaghad
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Shaghad"@en , "شغاد"@fa ;
+    mdhn:wikidataItem wd:Q3543285.          
+mdhn:Tahmina
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Tahmina"@en , "تهمينه"@fa ;
+    fhkb:isSpouseOf mdhn:Rostam;
+    fhkb:isMotherOf mdhn:Sohrab;
+    mdhn:wikidataItem wd:Q144903. 
+mdhn:Sohrab
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Sohrab"@en , "سهراب"@fa ;
+    mdhn:wikidataItem wd:Q2065184.  
 
 mdhn:Div1_23v
     a mdhn:EpicEntity, owl:NamedIndividual ;
