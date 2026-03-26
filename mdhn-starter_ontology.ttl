@@ -15,8 +15,8 @@
 # ═════════════════════════════════════════════════════════════════════════════
 
 # ── Project namespaces ────────────────────────────────────────────────────────
-@prefix mdhn:     <http://example.com/mdhn/ontology#> .
 
+@prefix mdhn: <http://example.com/mdhn/> .
 # Resource sub-namespaces — each gets its own prefix for clean local names
 @prefix mdhnr:    <http://example.com/mdhn/resource/> .
 @prefix foliotype: <http://example.com/mdhn/resource/folioType/> .
@@ -72,12 +72,12 @@
 
 # ── Wikidata ──────────────────────────────────────────────────────────────────
 @prefix wd:     <http://www.wikidata.org/entity/> .
-@prefix wdt:    <http://www.wikidata.org/prop/direct/> .
+
+# ── Family History Knowledge Base (FHKB) ──────────────────────────────────────
+@prefix fhkb: <http://www.example.com/genealogy.owl#> .
 
 
-
-
-<http://example.com/mdhn/ontology> a owl:Ontology ;
+mdhn:ontology a owl:Ontology ;
     dcterms:created "2026-03-12"^^xsd:date ;
     dcterms:creator mdhn:mehran ;
     dcterms:description """OWL ontology (v3) for the LOUD/FAIR knowledge graph of the 
