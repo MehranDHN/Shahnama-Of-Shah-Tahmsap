@@ -863,7 +863,7 @@ mdhn:Inscription5_77v a mdhn:Inscription;
    mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/433,1932,222,306/max/0/default.jpg".
 
 
-mdhn:MihrabHearsRudaba : mdhn:NarrativeEpisode;
+mdhn:MihrabHearsRudaba a mdhn:NarrativeEpisode;
    mdhn:wikidataItem wd:Q138801485.   
 # -- Folio 82v -----------------------------------------------------
 mdhn:RE_82v a mdhn:RegisterEntry;
