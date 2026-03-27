@@ -167,6 +167,11 @@ mdhn:Qadimi
     rdfs:label "Qadimi"@en , "قديمی"@fa ;
     mdhn:wikidataItem wd:Q113680330 . 
 
+mdhn:Abd_al_Aziz
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Abd al-Aziz"@en , "عبدالعزيز"@fa ;
+    mdhn:wikidataItem wd:Q21663724 .     
+
 mdhn:Faridun
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Faridun"@en , "فريدون"@fa ;
@@ -751,7 +756,115 @@ mdhn:FereydunFig38v a mdhn:FigureCrop;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-38v%2FFolio38v.jpg/420,943,160,246/max/0/default.jpg". 
 
 
+# -- Folio 76v -----------------------------------------------------
+mdhn:RE_76v a mdhn:RegisterEntry;
+    rdfs:label "Rudaba Confesses to Sindukht"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
+    rdfs:comment "After noticing the comings and goings of the woman who delivers the message that Sam consents to Zal and. Ruclaba's marriage, Sindukht falls into a fury, expecting the worst of her daughter. Then Rudaba confesses her love for Zal and announces that Sam has agreed to their union. Sindukht relents and begins plotting how to tell Mihrab and Manuchihr."@en;
+    mdhn:entryFolioNumber "76v";
+    mdhn:entryPartOf mdhn:painting_Index. 
 
+mdhn:Folio76v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio77v ;
+   mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
+   mdhn:hasReferredTo mdhn:Rudaba, mdhn:Sindukht, mdhn:Zal , mdhn:Mihrab, mdhn:Manuchehr;
+   mdhn:hasContentElement mdhn:Painting76v, mdhn:Poems76v, mdhn:IlluminatedUnwan76v  ;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-76v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_76v.  
+
+mdhn:Painting76v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:RudabaFig76v , mdhn:SindukhtFig76v;
+   mdhn:hasReferredTo mdhn:Rudaba, mdhn:Sindukht, mdhn:Zal;
+   mdhn:hasNarrativeEpisode mdhn:RudabaConfesses;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Abd_al_Aziz . 
+
+mdhn:Poems76v a mdhn:LinguisticObject;
+  mdhn:startVerse "2713";
+  mdhn:endVerse "2722".  
+
+mdhn:RudabaFig76v a mdhn:FigureCrop;
+   rdfs:label "Rudaba cropped figure from f76v"@en;
+   mdhn:hasReferredTo mdhn:Rudaba;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/848,2397,264,386/max/0/default.jpg". 
+
+mdhn:SindukhtFig76v a mdhn:FigureCrop;
+   rdfs:label "Sindukht cropped figure from f76v"@en;
+   mdhn:hasReferredTo mdhn:Sindukht;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/1200,2244,383,398/max/0/default.jpg". 
+
+mdhn:IlluminatedUnwan76v a mdhn:IlluminatedUnwan;
+   rdfs:label "Rudaba confesses about Zal to her mother"@en, "باز گفتن رودابه با مادرش حال زال را"@fa;
+   mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/724,501,848,284/max/0/default.jpg".
+
+mdhn:RudabaConfesses : mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138800292.
+
+# -- Folio 77v -----------------------------------------------------
+mdhn:RE_77v a mdhn:RegisterEntry;
+    rdfs:label "Mihrab Hears of Rudaba Folly"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
+    rdfs:comment "Mihrab comes to Sindukht's chamber, where she speaks poetically of death and the passage of time. She then tells him that Rudaba has lost her heart to Zal, prompting Mihrab to threaten to kill his daughter. Sindukht manages to calm him, but Mihrab worries that Manuchihr will never consent to this marriage."@en;
+    mdhn:entryFolioNumber "77v";
+    mdhn:entryPartOf mdhn:painting_Index. 
+
+mdhn:Folio77v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio78v ;
+   mdhn:keptIn mdhn:Private_Collection;
+   mdhn:hasReferredTo mdhn:Rudaba, mdhn:Sindukht, mdhn:Zal , mdhn:Mihrab, mdhn:Manuchehr;
+   mdhn:hasContentElement mdhn:Painting77v, mdhn:Poems77v; 
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-77v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_77v.  
+
+mdhn:Painting77v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:MihrabFig77v , mdhn:SindukhtFig77v;
+   mdhn:hasReferredTo mdhn:Mihrab, mdhn:Sindukht, mdhn:Rudaba, mdhn:Zal;
+   mdhn:hasNarrativeEpisode mdhn:MihrabHearsRudaba;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:hasInscription mdhn:Inscription1_77v, mdhn:Inscription2_77v, mdhn:Inscription3_77v; mdhn:Inscription4_77v, mdhn:Inscription5_77v;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Abd_al_Aziz . 
+
+mdhn:Poems77v a mdhn:LinguisticObject;
+  mdhn:startVerse "2740";
+  mdhn:endVerse "2741".  
+
+mdhn:MihrabFig77v a mdhn:FigureCrop;
+   rdfs:label "Mihrab cropped figure from f77v"@en;
+   mdhn:hasReferredTo mdhn:Mihrab;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/848,2397,264,386/max/0/default.jpg". 
+
+mdhn:SindukhtFig77v a mdhn:FigureCrop;
+   rdfs:label "Sindukht cropped figure from f77v"@en;
+   mdhn:hasReferredTo mdhn:Sindukht;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/1200,2244,383,398/max/0/default.jpg". 
+
+mdhn:Inscription1_77v a mdhn:Inscription;
+   rdfs:label "Inscription1 in Fig77v"@en;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/711,314,1077,129/max/0/default.jpg".
+
+
+mdhn:Inscription2_77v a mdhn:Inscription;
+   rdfs:label "Inscription2 in Fig77v"@en;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/723,1427,1078,109/1200,/0/default.jpg".
+
+
+mdhn:Inscription3_77v a mdhn:Inscription;
+   rdfs:label "Inscription3 in Fig77v"@en.;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/732,722,1049,155/max/0/default.jpg".
+
+mdhn:Inscription4_77v a mdhn:Inscription;
+   rdfs:label "Inscription4 in Fig77v"@en.;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/360,1449,362,334/1200,/0/default.jpg".
+
+mdhn:Inscription54_77v a mdhn:Inscription;
+   rdfs:label "Inscription5 in Fig77v"@en.;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/433,1932,222,306/max/0/default.jpg".
+
+
+mdhn:MihrabHearsRudaba : mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138801485.   
 # -- Folio 82v -----------------------------------------------------
 mdhn:RE_82v a mdhn:RegisterEntry;
     rdfs:label "One Blow, Sam Recounts How He Slew a Dragon"@en, "کشته شدن اژدها به دست سام و سبب لقب او به یک زخم"@fa;
@@ -762,11 +875,11 @@ mdhn:RE_82v a mdhn:RegisterEntry;
 mdhn:Folio82v a mdhn:Verso;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio83v ;
-   mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
+   mdhn:keptIn mdhn:Private_Collection;
    mdhn:hasReferredTo mdhn:Sam, mdhn:Manuchehr, mdhn:Dragon;
    mdhn:hasContentElement mdhn:Painting82v, mdhn:Poems82v;  
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-82v/manifest.json"; 
-   mdhn:hasRegisterEntry mdhn:RE_38v.  
+   mdhn:hasRegisterEntry mdhn:RE_82v.  
 
 mdhn:Painting82v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:SamFig82v , mdhn:DragonFig82v;
@@ -812,6 +925,7 @@ mdhn:National_Museum_of_Asian_Art a mdhn:GLAMHolder;
   mdhn:wikidataItem wd:Q105749808.
 mdhn:Museum_of_Islamic_Art_Doha a mdhn:GLAMHolder;
   mdhn:wikidataItem wd:Q1148353.
+mdhn:Private_Collection a mdhn:GLAMHolder. 
 
     
 
