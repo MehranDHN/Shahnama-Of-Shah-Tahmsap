@@ -561,7 +561,17 @@ mdhn:flyleaf a mdhn:FolioType ;
 mdhn:IlluminatedUnwan a owl:Class ;
     rdfs:label "IlluminatedUnwan"@en , "عنوان مذهب"@fa ;
     rdfs:subClassOf mdhn:ContentElement ;
-    skos:exactMatch aat:300053430 .    
+    skos:exactMatch aat:300053430 . 
+
+mdhn:mdhn:hasIiifIlluminatedURL a owl:ObjectProperty;
+    rdfs:domain mdhn:IlluminatedUnwan ;
+    rdfs:label "has IIIF cropped image"@en ;
+    rdfs:range xsd:anyURI . 
+
+mdhn:mdhn:hasIiifInscriptionURL a owl:ObjectProperty;
+    rdfs:domain mdhn:Inscription ;
+    rdfs:label "has IIIF cropped image"@en ;
+    rdfs:range xsd:anyURI .         
 
 mdhn:Shamseh a owl:Class ;
     rdfs:label "Shamseh"@en , "شمسه"@fa ;
