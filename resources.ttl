@@ -851,15 +851,15 @@ mdhn:Inscription2_77v a mdhn:Inscription;
 
 
 mdhn:Inscription3_77v a mdhn:Inscription;
-   rdfs:label "Inscription3 in Fig77v"@en.;
+   rdfs:label "Inscription3 in Fig77v"@en;
    mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/732,722,1049,155/max/0/default.jpg".
 
 mdhn:Inscription4_77v a mdhn:Inscription;
-   rdfs:label "Inscription4 in Fig77v"@en.;
+   rdfs:label "Inscription4 in Fig77v"@en;
    mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/360,1449,362,334/1200,/0/default.jpg".
 
-mdhn:Inscription54_77v a mdhn:Inscription;
-   rdfs:label "Inscription5 in Fig77v"@en.;
+mdhn:Inscription5_77v a mdhn:Inscription;
+   rdfs:label "Inscription5 in Fig77v"@en;
    mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-77v%2FFolio77v.jpg/433,1932,222,306/max/0/default.jpg".
 
 
