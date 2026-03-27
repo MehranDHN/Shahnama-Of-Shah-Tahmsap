@@ -379,14 +379,14 @@ mdhn:hasContentElement a owl:ObjectProperty ;
 
 mdhn:hasInscription a owl:ObjectProperty ;
     rdfs:domain mdhn:Painting ;
-    rdfs:label "Content element has inscription"@en , "دارای  کتيبه"@fa ;
+    rdfs:label "Painting has inscription"@en , "دارای  کتيبه"@fa ;
     rdfs:range mdhn:Inscription . 
 
 mdhn:appearsIn a owl:ObjectProperty ;
     rdfs:domain mdhn:Inscription ;
-    rdfs:label "Inscription appears In Element"@en , "کتيبه متعلق است به"@fa ;
+    rdfs:label "Inscription appears In Painting"@en , "کتيبه متعلق است به"@fa ;
     rdfs:range mdhn:Painting ;
-    owl:inverseOf mdhn:isAlternateVersionOf .       
+    owl:inverseOf mdhn:hasInscription .       
 
    
 
