@@ -168,186 +168,203 @@ mdhn:Qadimi
     mdhn:wikidataItem wd:Q113680330 . 
 
 mdhn:Faridun
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Faridun"@en , "فريدون"@fa ;
     fhkb:hasSon mdhn:Salm, mdhn:Tur, mdhn:Iraj;
     mdhn:wikidataItem wd:Q1150281. 
 
 mdhn:Faranak
-    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "Faranak"@en , "فرانک"@fa ;
     fhkb:isMotherOf mdhn:Faridun;
     mdhn:wikidataItem wd:Q137687. 
 
 mdhn:Salm
-    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Salm"@en , "سلم"@fa ;
     mdhn:wikidataItem wd:Q3543323. 
 
 mdhn:Tur
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Tur"@en , "تور"@fa ;
     mdhn:wikidataItem wd:Q3543320.
 
 mdhn:Iraj
-    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Iraj"@en , "ايرج"@fa ;
     mdhn:wikidataItem wd:Q1300562.
 
 mdhn:Jamshid
-    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Jamshid"@en , "جمشيد"@fa ;
     fhkb:hasDaughter mdhn:Arnavaz, mdhn:Shahrnaz;
     mdhn:wikidataItem wd:Q155755.
 
 mdhn:Arnavaz
-    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "TArnavazr"@en , "ارنواز"@fa ;
     fhkb:isSpouseOf mdhn:Zahhak;
     mdhn:wikidataItem wd:Q5744657.
 
 mdhn:Shahrnaz
-    a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "Shahrnaz"@en , "شهرناز"@fa ;
     mdhn:wikidataItem wd:Q5662082.                    
 
 mdhn:Tahmuras
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Tahmuras"@en , "طهمورث"@fa ; 
     fhkb:hasSon mdhn:Jamshid;    
     mdhn:wikidataItem wd:Q519239. 
 
 mdhn:Keyumars
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Keyumars"@en , "کيومرث"@fa ;
     fhkb:hasSon mdhn:Siamak;
     mdhn:wikidataItem wd:Q1077286. 
 
 mdhn:Siamak
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Siamak"@en , "سيامک"@fa ;
     fhkb:hasSon mdhn:Hushang;
     mdhn:wikidataItem wd:Q1551577. 
 
 mdhn:Hushang
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Hushang"@en , "هوشنگ"@fa ;
     fhkb:hasSon mdhn:Tahmuras;
     mdhn:wikidataItem wd:Q1638892.   
 
 mdhn:Zahhak
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Zahhak"@en , "ضحاک"@fa ;
     mdhn:wikidataItem wd:Q1200843. 
 
+mdhn:Manuchehr
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Manuchehr"@en , "منوچهر"@fa ;
+    fhkb:hasSon mdhn:Nowzar;
+    mdhn:wikidataItem wd:Q1376677. 
+
+mdhn:Nowzar
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Nowzar"@en , "نوذر"@fa ;
+    mdhn:wikidataItem wd:Q1338935.        
+
 mdhn:Sam
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Sam"@en , "سام"@fa ;
     fhkb:hasSon mdhn:Zal;
     mdhn:wikidataItem wd:Q2003157. 
 mdhn:Zal
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Zal"@en , "زال"@fa ;
     fhkb:hasSon mdhn:Rostam, mdhn:Shaghad ;
     mdhn:wikidataItem wd:Q144903.  
 mdhn:Rudaba
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
     rdfs:label "Rudaba"@en , "رودابه"@fa ;
     fhkb:isSpouseOf mdhn:Zal;
     fhkb:isMotherOf mdhn:Rostam;
     mdhn:wikidataItem wd:Q144903. 
 mdhn:Mihrab
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Mihrab"@en , "مهراب"@fa ;
     fhkb:hasDaughter mdhn:Rudaba;
     mdhn:wikidataItem wd:Q1383989. 
 mdhn:Sindukht
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
     rdfs:label "Sindukht"@en , "سيندخت"@fa ;
     fhkb:isSpouseOf mdhn:Mihrab;
     fhkb:isMotherOf mdhn:Rudaba;
     mdhn:wikidataItem wd:Q5665309.     
 
 mdhn:Rostam
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Rostam"@en , "رستم"@fa ;
     fhkb:hasSon mdhn:Sohrab;
     mdhn:wikidataItem wd:Q60062.
 mdhn:Shaghad
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Shaghad"@en , "شغاد"@fa ;
     mdhn:wikidataItem wd:Q3543285.          
 mdhn:Tahmina
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
     rdfs:label "Tahmina"@en , "تهمينه"@fa ;
     fhkb:isSpouseOf mdhn:Rostam;
     fhkb:isMotherOf mdhn:Sohrab;
     mdhn:wikidataItem wd:Q144903. 
 mdhn:Sohrab
-    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Sohrab"@en , "سهراب"@fa ;
     mdhn:wikidataItem wd:Q2065184.  
 
 mdhn:Div1_23v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 1"@en , "ديو اول"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div2_23v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 2"@en , "ديو دوم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div3_23v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 3"@en , "ديو سوم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 mdhn:Div4_23v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 4"@en , "ديو چهارم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div1_21v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 1 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div2_21v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 2 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div3_21v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 3 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div4_21v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 4 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Angle1_21v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Angle 1 21v"@en , "فرشته"@fa ;
     mdhn:wikidataItem wd:Q235113. 
 mdhn:Angle2_21v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Angle 2 21v"@en , "فرشته"@fa ;
     mdhn:wikidataItem wd:Q235113.                         
 
 mdhn:BlackDiv
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Black Div"@en , "ديو سياه"@fa ;
     mdhn:wikidataItem wd:Q5599492.  
 
+mdhn:Dragon
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    rdfs:label "Dragon"@en , "اژدها"@fa ;
+    mdhn:wikidataItem wd:Q7559. 
+    
+
 mdhn:Div1_24v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 1 24v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div2_24v
-    a mdhn:EpicEntity, owl:NamedIndividual ;
+    a mdhn:MythicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 2 24v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.
 
@@ -381,7 +398,7 @@ mdhn:RE_3r a mdhn:RegisterEntry;
     mdhn:entryFolioNumber "3r";
     mdhn:entryPartOf mdhn:painting_Index.
 
-mdhn:Folio3r a mdhn:Verso;
+mdhn:Folio3r a mdhn:Recto;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio7r ;
    mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
@@ -734,10 +751,51 @@ mdhn:FereydunFig38v a mdhn:FigureCrop;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-38v%2FFolio38v.jpg/420,943,160,246/max/0/default.jpg". 
 
 
+
+# -- Folio 82v -----------------------------------------------------
+mdhn:RE_82v a mdhn:RegisterEntry;
+    rdfs:label "One Blow, Sam Recounts How He Slew a Dragon"@en, "کشته شدن اژدها به دست سام و سبب لقب او به یک زخم"@fa;
+    rdfs:comment "In his letter to Manuchihr, Sam reminds the shah of his many battles against dirs in the service of Iran. He retells the story of his battle with the dragon of the River Kashaf, “as large as a mountain.” After shooting arrows into the dragon's maw, Sam bashed its skull with his ox head mace. This teat earned him the name 'One Blow' Sam."@en;
+    mdhn:entryFolioNumber "82v";
+    mdhn:entryPartOf mdhn:painting_Index. 
+
+mdhn:Folio82v a mdhn:Verso;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio83v ;
+   mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
+   mdhn:hasReferredTo mdhn:Sam, mdhn:Manuchehr, mdhn:Dragon;
+   mdhn:hasContentElement mdhn:Painting82v, mdhn:Poems82v;  
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-82v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_38v.  
+
+mdhn:Painting82v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:SamFig82v , mdhn:DragonFig82v;
+   mdhn:hasReferredTo mdhn:Sam, mdhn:Dragon;
+   mdhn:hasNarrativeEpisode mdhn:SamSlaysDragon;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:attributionCertainty "probable"@en;
+   mdhn:hasPainter mdhn:Qadimi . 
+
+mdhn:Poems82v a mdhn:LinguisticObject;
+  mdhn:startVerse "2968";
+  mdhn:endVerse "2976".  
+
+mdhn:SamFig82v a mdhn:FigureCrop;
+   rdfs:label "Sam cropped figure from f82v"@en;
+   mdhn:hasReferredTo mdhn:Sam;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/1412,2086,792,797/max/0/default.jpg". 
+mdhn:DragonFig82v a mdhn:FigureCrop;
+   rdfs:label "Dragon cropped figure from f82v"@en;
+   mdhn:hasReferredTo mdhn:Dragon;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/292,1578,1101,1315/max/0/default.jpg". 
+
+mdhn:SamSlaysDragon : mdhn:NarrativeEpisode;
+   mdhn:wikidataItem wd:Q138799749.
+
 mdhn:Folio25v a mdhn:Folio. 
 mdhn:Folio10r a mdhn:Folio.  
 mdhn:Folio39v a mdhn:Folio.   
-
+mdhn:Folio83v a mdhn:Folio. 
 
 mdhn:Tehran_Museum_of_Contemporary_Art a mdhn:GLAMHolder;
   mdhn:wikidataItem wd:Q1756399.
