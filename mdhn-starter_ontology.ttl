@@ -256,17 +256,7 @@ mdhn:NarrativeEpisode a owl:Class ;
     rdfs:label "Narrative Episode"@en , "روایت"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
-mdhn:LegendaryCharacter a owl:Class ;
-    rdfs:label "Legendary Character"@en , "شخصیت اسطوره‌ای"@fa ;
-    rdfs:subClassOf mdhn:IconographicEntity .
 
-mdhn:HistoricalFigure a owl:Class ;
-    rdfs:label "Historical Figure"@en , "شخصیت تاریخی"@fa ;
-    rdfs:subClassOf mdhn:IconographicEntity .
-
-mdhn:MythologicalCreature a owl:Class ;
-    rdfs:label "Mythological Creature"@en , "موجود اسطوره‌ای"@fa ;
-    rdfs:subClassOf mdhn:IconographicEntity .
 
 mdhn:wikidataItem a owl:ObjectProperty ;
     rdfs:label "Wikidata item"@en ;
@@ -345,6 +335,14 @@ mdhn:EpicEntity a owl:Class ;
 mdhn:Organization a owl:Class ;
     rdfs:label "Organization / Workshop"@en , "سازمان / کارگاه"@fa ;
     rdfs:subClassOf mdhn:Agent .
+
+mdhn:FictionalHuman a owl:Class ;
+    rdfs:label "Fictional Human"@en , "انسان اساطيری"@fa ;
+    rdfs:subClassOf mdhn:EpicEntity, mdhn:IconographicEntity.
+
+mdhn:MythicalAnimal a owl:Class ;
+    rdfs:label "MythicalAnimal"@en , "موجود اساطيری"@fa ;
+    rdfs:subClassOf mdhn:EpicEntity, mdhn:IconographicEntity .         
 
 
 
