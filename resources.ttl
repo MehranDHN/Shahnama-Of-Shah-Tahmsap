@@ -822,7 +822,7 @@ mdhn:Painting77v a mdhn:Painting;
    mdhn:hasReferredTo mdhn:Mihrab, mdhn:Sindukht, mdhn:Rudaba, mdhn:Zal;
    mdhn:hasNarrativeEpisode mdhn:MihrabHearsRudaba;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:hasInscription mdhn:Inscription1_77v, mdhn:Inscription2_77v, mdhn:Inscription3_77v; mdhn:Inscription4_77v, mdhn:Inscription5_77v;
+   mdhn:hasInscription mdhn:Inscription1_77v, mdhn:Inscription2_77v, mdhn:Inscription3_77v, mdhn:Inscription4_77v, mdhn:Inscription5_77v;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Abd_al_Aziz . 
 
