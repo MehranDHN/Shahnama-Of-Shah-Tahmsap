@@ -1,5 +1,5 @@
 # ── Project namespaces ────────────────────────────────────────────────────────
-@prefix mdhn:     <http://example.com/mdhn/ontology#> .
+@prefix mdhn: <http://example.com/mdhn/> .
 
 # Resource sub-namespaces — each gets its own prefix for clean local names
 @prefix mdhnr:    <http://example.com/mdhn/resource/> .
@@ -59,7 +59,8 @@
 # ── Wikidata ──────────────────────────────────────────────────────────────────
 @prefix wd:     <http://www.wikidata.org/entity/> .
 @prefix wdt:    <http://www.wikidata.org/prop/direct/> .
-
+# ── Family History Knowledge Base (FHKB) ──────────────────────────────────────
+@prefix fhkb: <http://www.example.com/genealogy.owl#> .
 
 
 mdhn:manuscript_shahnama_shah_tahmasp a mdhn:Manuscript , owl:NamedIndividual ;
@@ -169,11 +170,13 @@ mdhn:Qadimi
 mdhn:Faridun
     a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Faridun"@en , "فريدون"@fa ;
+    fhkb:hasSon mdhn:Salm, mdhn:Tur, mdhn:Iraj;
     mdhn:wikidataItem wd:Q1150281. 
 
 mdhn:Faranak
     a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "Faranak"@en , "فرانک"@fa ;
+    fhkb:isMotherOf mdhn:Faridun;
     mdhn:wikidataItem wd:Q137687. 
 
 mdhn:Salm
@@ -189,12 +192,14 @@ mdhn:Tur
 mdhn:Iraj
     a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Iraj"@en , "ايرج"@fa ;
-    mdhn:wikidataItem wd:Q1300562. 
+    mdhn:wikidataItem wd:Q1300562.
+
 mdhn:Jamshid
     a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Jamshid"@en , "جمشيد"@fa ;
     fhkb:hasDaughter mdhn:Arnavaz, mdhn:Shahrnaz;
     mdhn:wikidataItem wd:Q155755.
+
 mdhn:Arnavaz
     a mdhn:EpicEntity, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "TArnavazr"@en , "ارنواز"@fa ;
@@ -209,6 +214,7 @@ mdhn:Shahrnaz
 mdhn:Tahmuras
     a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Tahmuras"@en , "طهمورث"@fa ; 
+    fhkb:hasSon mdhn:Jamshid;    
     mdhn:wikidataItem wd:Q519239. 
 
 mdhn:Keyumars
@@ -226,6 +232,7 @@ mdhn:Siamak
 mdhn:Hushang
     a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Hushang"@en , "هوشنگ"@fa ;
+    fhkb:hasSon mdhn:Tahmuras;
     mdhn:wikidataItem wd:Q1638892.   
 
 mdhn:Zahhak
@@ -247,7 +254,19 @@ mdhn:Rudaba
     a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
     rdfs:label "Rudaba"@en , "رودابه"@fa ;
     fhkb:isSpouseOf mdhn:Zal;
+    fhkb:isMotherOf mdhn:Rostam;
     mdhn:wikidataItem wd:Q144903. 
+mdhn:Mihrab
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mihrab"@en , "مهراب"@fa ;
+    fhkb:hasDaughter mdhn:Rudaba;
+    mdhn:wikidataItem wd:Q1383989. 
+mdhn:Sindukht
+    a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Sindukht"@en , "سيندخت"@fa ;
+    fhkb:isSpouseOf mdhn:Mihrab;
+    fhkb:isMotherOf mdhn:Rudaba;
+    mdhn:wikidataItem wd:Q5665309.     
 
 mdhn:Rostam
     a mdhn:EpicEntity, owl:NamedIndividual, fhkb:Man;
