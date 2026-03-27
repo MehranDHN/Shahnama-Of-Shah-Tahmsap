@@ -22,12 +22,13 @@
    - [Object Properties](#object-properties)
    - [Datatype Properties](#datatype-properties)
    - [Standards Alignment](#standards-alignment)
-6. [Sample Data Overview](#sample-data-overview)
-7. [SPARQL Query Examples](#sparql-query-examples)
-8. [Getting Started](#getting-started)
-9. [Contributing](#contributing)
-10. [Citation](#citation)
-11. [License](#license)
+6. [Integrating Family History Knowledge Base (FHKB)](#Integrating-Family-History-Knowledge-Base-(FHKB)) 
+7. [Sample Data Overview](#sample-data-overview)
+8. [SPARQL Query Examples](#sparql-query-examples)
+9. [Getting Started](#getting-started)
+10. [Contributing](#contributing)
+11. [Citation](#citation)
+12. [License](#license)
 
 ---
 
@@ -85,7 +86,7 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 
 ---
 
-The ongoing process of uploading the folios to internet archive is mandantory. The IA acts as a repository to integrate all available digital representaiion of folios even those with alternative versions. So one folio may have multiple representation with the selected best available resolution as primary image.
+The ongoing process of uploading the folios to internet archive is mandantory. The IA acts as a repository to integrate all available digital representaiion of folios even those with alternative versions. So one folio may have multiple representation with the selected best available resolution as primary.
 [Images repository of folios in Internet Archive](https://archive.org/search?query=genre%3A%22Shahnama+Shah+Tahmasp%22&sort=title)
 
 ## Ontology Walkthrough
@@ -237,6 +238,67 @@ A period during which a specific agent held ownership of the manuscript or a dis
 | **FOAF** | `foaf:` prefix imported for agent descriptions |
 
 ---
+
+
+## Integrating Family History Knowledge Base (FHKB)
+
+This ontology already incorporates elements of the well-known **Family History Knowledge Base (FHKB)** — a classic OWL 2 DL example developed for teaching advanced ontology modeling and automated reasoning.
+
+The `fhkb:` namespace is declared and actively used in the sample data (`resources.ttl`) to model complex **kinship and lineage relationships**, especially among the legendary and epic characters from the *Shahnama* (e.g., Keyumars → Siamak → Hushang, Zal and Rudaba as spouses, Rostam as father of Sohrab, etc.).
+
+### How FHKB is Applied in This Repository
+
+- **Kinship Properties** (imported/adapted from FHKB patterns):
+  - `fhkb:hasSon`, `fhkb:hasDaughter`, `fhkb:isMotherOf`, `fhkb:isFatherOf`
+  - `fhkb:isSpouseOf`
+  - Sibling and cousin-style inferences (where applicable)
+  
+- **Epic Lineage Modeling**:
+  The heroic and royal family trees in Ferdowsi’s *Shahnameh* are represented using FHKB-style relations. This allows powerful OWL reasoning to infer additional family connections (e.g., uncles, grandparents, cousins) automatically from minimal asserted facts such as parentage and gender.
+
+- **Integration with Core Ontology**:
+  - Epic characters are instances of `mdhn:IconographicEntity` / `mdhn:LegendaryCharacter` (subclass of `mdhn:Agent`).
+  - These entities are linked to paintings via `mdhn:depicts` and `mdhn:hasNarrativeEpisode`.
+  - Figure crops (`mdhn:FigureCrop`) can be associated with specific family members for iconographic analysis.
+  - Historical persons (Shah Tahmasp, artists, owners) are modeled as `mdhn:Person` with provenance tracked through `mdhn:OwnershipInterval`.
+
+This hybrid approach combines:
+- **Provenance & Ownership** (CIDOC-CRM inspired `OwnershipInterval`, transfer types, dates)
+- **Genealogical Reasoning** (FHKB-style kinship axioms and property chains)
+
+### Advantages of Integrating Family History Knowledge Base
+
+1. **Automated Inference**  
+   From basic parent-child and spouse assertions, the reasoner can infer siblings, grandparents, uncles/aunts, cousins, and more complex relationships — reducing manual data entry and minimizing errors.
+
+2. **Rich Iconographic & Narrative Analysis**  
+   Researchers can query family relationships within depicted scenes (e.g., “Show all paintings where a father and son from the same lineage appear together”).
+
+3. **Extensibility for Historical Persons**  
+   The same FHKB patterns can be extended to real historical figures (Safavid and Ottoman royal families, artist workshops, patron lineages) for deeper provenance and social network studies.
+
+4. **OWL 2 Reasoning Power**  
+   Demonstrates advanced features such as property chains, symmetric/inverse properties, qualified cardinality restrictions, and disjointness — making the knowledge graph both educational and computationally powerful.
+
+5. **Interoperability & Reuse**  
+   Aligns with established genealogy ontologies and facilitates linking to external datasets (Wikidata, VIAF, or other FHKB-based graphs).
+
+6. **AI & Digital Humanities Readiness**  
+   Enables semantic queries, graph traversals, and machine learning applications on family trees intertwined with visual and textual content of the manuscript.
+
+7. **Provenance Enrichment**  
+   Connects ownership history (`OwnershipInterval`) with family lineage of owners, patrons, and artists, revealing dynastic, political, and cultural connections across centuries.
+
+8. **Scalability**  
+   The model supports gradual extension — start with epic characters, then add detailed royal genealogies or artist family networks without schema changes.
+
+By combining the **MDHN core ontology** with **FHKB kinship modeling**, this repository offers a unique, inference-rich knowledge graph that bridges art history, manuscript studies, epic literature, and genealogy.
+
+Future extensions may include:
+- Full Safavid and Ottoman royal family trees
+- Artist workshop lineages and master-apprentice relationships
+- Enhanced reasoning rules for complex kinship in Persian cultural context
+
 
 ## Sample Data Overview
 
