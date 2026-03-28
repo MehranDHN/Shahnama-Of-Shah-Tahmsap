@@ -72,6 +72,7 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 - **CIDOC-CRM aligned** — Core classes and properties are aligned to the CIDOC-CRM 7.1 museum standard, ensuring interoperability with cultural heritage data ecosystems.
 - **Bilingual** — All `rdfs:label` values are provided in both English (`@en`) and Persian/Farsi (`@fa`).
 - **Provenance-aware** — Manuscript ownership history is modelled at granular detail including transfer type, dates, and agents.
+- **FHKB (Family History Knowledge Base)** — formal OWL encoding of the *Shahnameh*'s dynastic genealogies
 
 ---
 
@@ -236,35 +237,203 @@ A period during which a specific agent held ownership of the manuscript or a dis
 | **PROV-O** | `prov:` prefix imported for provenance chain modelling |
 | **Web Annotation (OA)** | `oa:` prefix imported for annotation resources |
 | **FOAF** | `foaf:` prefix imported for agent descriptions |
+| **FHKB** | `fhkb:` prefix imported for Family History Knowledge Base|
 
 ---
 
 
 ## Integrating Family History Knowledge Base (FHKB)
 
-This ontology already incorporates elements of the well-known **Family History Knowledge Base (FHKB)** — a classic OWL 2 DL example developed for teaching advanced ontology modeling and automated reasoning.
 
-The `fhkb:` namespace is declared and actively used in the sample data (`resources.ttl`) to model complex **kinship and lineage relationships**, especially among the legendary and epic characters from the *Shahnama* (e.g., Keyumars → Siamak → Hushang, Zal and Rudaba as spouses, Rostam as father of Sohrab, etc.).
+> **This is a critical and foundational component of the project.** The narrative logic of the *Shahnameh* is inseparable from dynastic genealogy. Characters appear together in paintings precisely because of their kinship: Hushang avenges his father Siamak who was murdered by the Black Div; Faridun's three sons Salm, Tur, and Iraj divide the world before Salm and Tur murder Iraj in envy. Without a formal model of these relationships, the knowledge graph captures *who is depicted* but cannot explain *why they are depicted together*. The FHKB provides that missing explanatory layer.
 
-### How FHKB is Applied in This Repository
+### What is FHKB?
 
-- **Kinship Properties** (imported/adapted from FHKB patterns):
-  - `fhkb:hasSon`, `fhkb:hasDaughter`, `fhkb:isMotherOf`, `fhkb:isFatherOf`
-  - `fhkb:isSpouseOf`
-  - Sibling and cousin-style inferences (where applicable)
-  
-- **Epic Lineage Modeling**:
-  The heroic and royal family trees in Ferdowsi’s *Shahnameh* are represented using FHKB-style relations. This allows powerful OWL reasoning to infer additional family connections (e.g., uncles, grandparents, cousins) automatically from minimal asserted facts such as parentage and gender.
+The **Family History Knowledge Base** (`fhkb.ttl`) is a well-known OWL 2 ontology designed to model human genealogy as a benchmark for OWL reasoning. It defines a rich lattice of kinship classes and property chains from which a reasoner can infer extended family relationships automatically:
 
-- **Integration with Core Ontology**:
-  - Epic characters are instances of `mdhn:IconographicEntity` / `mdhn:LegendaryCharacter` (subclass of `mdhn:Agent`).
-  - These entities are linked to paintings via `mdhn:depicts` and `mdhn:hasNarrativeEpisode`.
-  - Figure crops (`mdhn:FigureCrop`) can be associated with specific family members for iconographic analysis.
-  - Historical persons (Shah Tahmasp, artists, owners) are modeled as `mdhn:Person` with provenance tracked through `mdhn:OwnershipInterval`.
+- `fhkb:Person` — root class; `fhkb:Man` and `fhkb:Woman` are disjoint subclasses defined via sex restrictions
+- `fhkb:Marriage` — reified marriage event with `fhkb:hasMalePartner` / `fhkb:hasFemalePartner`
+- Direct kinship: `fhkb:hasFather`, `fhkb:hasMother`, `fhkb:hasSon`, `fhkb:hasDaughter` (all functional)
+- Sibling relations: `fhkb:isSiblingOf` (symmetric, transitive), `fhkb:isBrotherOf`, `fhkb:isSisterOf`
+- Generational chains: `fhkb:hasGrandParent`, `fhkb:hasGreatGrandParent` defined as OWL property chains (`hasParent ∘ hasParent`, etc.)
+- Extended kin: `fhkb:hasUncle`, `fhkb:hasAunt`, `fhkb:isFirstCousinOf`, `fhkb:isSecondCousinOf`, `fhkb:isThirdCousinOf`
+- Ancestor closure: `fhkb:hasAncestor` (transitive), `fhkb:isAncestorOf`
 
-This hybrid approach combines:
-- **Provenance & Ownership** (CIDOC-CRM inspired `OwnershipInterval`, transfer types, dates)
-- **Genealogical Reasoning** (FHKB-style kinship axioms and property chains)
+The critical feature is **OWL property chain inference**: once `fhkb:hasFather` and `fhkb:hasMother` triples are asserted for a character, a reasoner automatically computes grandparents, great-grandparents, siblings, cousins, and the full ancestor graph without additional assertions.
+
+---
+
+### Integration Architecture
+
+![Mapping Shahnama Dynastic Kinship](/notebooklm/Mapping%20Shahnama%20Dynastic%20Kinship.png)
+
+
+The integration proceeds in three tiers:
+
+**Tier 1 — FHKB Ontology** provides the formal kinship axioms. The `fhkb:Person` hierarchy (Man/Woman via sex restrictions), the kinship object property lattice, and OWL 2 property chain axioms form a self-contained reasoning substrate.
+
+**Tier 2 — Integration Bridge** establishes the mappings between namespaces. The core assertion: `mdhn:EpicEntity` is treated as equivalent to `fhkb:Person` for genealogical reasoning. Any epic character can be typed as `fhkb:Man` or `fhkb:Woman` and linked via FHKB kinship properties, allowing the sex-restricted property chains to fire correctly.
+
+**Tier 3 — Knowledge Graph Enrichment** is the payoff: an OWL reasoner (HermiT, Pellet, or Stardog's built-in reasoner) infers the full dynastic lineage of every character, making all family relationships available as SPARQL-queryable triples and enabling iconographic queries grounded in genealogical explanation.
+
+---
+
+### Class and Property Mappings
+
+| MDHN concept | FHKB mapping | Notes |
+|---|---|---|
+| `mdhn:EpicEntity` | ≡ `fhkb:Person` | Via `owl:equivalentClass` |
+| Male epic characters | `rdf:type fhkb:Man` | e.g. Keyumars, Hushang, Faridun |
+| Female epic characters | `rdf:type fhkb:Woman` | e.g. Faranak, Arnavaz, Shahrnaz |
+| Father–son link | `fhkb:hasFather` | Functional property |
+| Mother–child link | `fhkb:hasMother` | Functional property |
+| Sibling bond | `fhkb:isSiblingOf` | Symmetric + transitive |
+| Spousal union | `fhkb:Marriage` + partners | Reified event |
+| Ancestor chain | `fhkb:hasAncestor` | Transitive; inferred |
+| Cousin relation | `fhkb:isFirstCousinOf` | Via property chain |
+
+---
+
+### Integration Example — The Mythological Dynasty (Turtle)
+
+The following snippet encodes the three-generation lineage from Keyumars to Hushang. After loading into a reasoner, `fhkb:hasGrandParent`, `fhkb:hasAncestor`, and `fhkb:isSiblingOf` triples are automatically inferred:
+
+```turtle
+@prefix mdhn: <http://example.com/mdhn/ontology#> .
+@prefix fhkb: <http://www.example.com/genealogy.owl#> .
+
+mdhn:Keyumars  a mdhn:EpicEntity, fhkb:Man .
+mdhn:Siamak    a mdhn:EpicEntity, fhkb:Man .
+mdhn:Hushang   a mdhn:EpicEntity, fhkb:Man .
+mdhn:Faridun   a mdhn:EpicEntity, fhkb:Man .
+mdhn:Faranak   a mdhn:EpicEntity, fhkb:Woman .
+mdhn:Salm      a mdhn:EpicEntity, fhkb:Man .
+mdhn:Tur       a mdhn:EpicEntity, fhkb:Man .
+mdhn:Iraj      a mdhn:EpicEntity, fhkb:Man .
+
+# Generation 1 → 2: Keyumars → Siamak
+mdhn:Siamak    fhkb:hasFather mdhn:Keyumars .
+
+# Generation 2 → 3: Siamak → Hushang
+mdhn:Hushang   fhkb:hasFather mdhn:Siamak .
+
+# Faridun's sons (the fratricidal triad)
+mdhn:Salm  fhkb:hasFather mdhn:Faridun ; fhkb:hasMother mdhn:Faranak .
+mdhn:Tur   fhkb:hasFather mdhn:Faridun ; fhkb:hasMother mdhn:Faranak .
+mdhn:Iraj  fhkb:hasFather mdhn:Faridun ; fhkb:hasMother mdhn:Faranak .
+```
+
+**Automatically inferred triples (no additional assertions needed):**
+- `mdhn:Hushang fhkb:hasGrandParent mdhn:Keyumars`
+- `mdhn:Hushang fhkb:hasAncestor mdhn:Keyumars`
+- `mdhn:Salm fhkb:isSiblingOf mdhn:Tur`
+- `mdhn:Salm fhkb:isBrotherOf mdhn:Iraj`
+- `mdhn:Tur fhkb:isSiblingOf mdhn:Iraj`
+
+---
+
+### SPARQL Queries — Genealogy-Aware
+
+Add `PREFIX fhkb: <http://www.example.com/genealogy.owl#>` to the base prefix block below.
+
+#### Q-G1 — Find all paintings depicting at least two sibling characters
+
+```sparql
+SELECT DISTINCT ?painting ?folioNumber ?char1Label ?char2Label
+WHERE {
+  ?painting a mdhn:Painting ;
+            mdhn:hasReferredTo ?char1 ;
+            mdhn:hasReferredTo ?char2 .
+  ?char1 fhkb:isSiblingOf ?char2 .
+  FILTER(?char1 != ?char2)
+  ?char1 rdfs:label ?char1Label . FILTER(LANG(?char1Label)="en")
+  ?char2 rdfs:label ?char2Label . FILTER(LANG(?char2Label)="en")
+  ?folio mdhn:hasContentElement ?painting ;
+         mdhn:folioNumber ?folioNumber .
+}
+ORDER BY ?folioNumber
+```
+
+#### Q-G2 — Find paintings depicting a character and any of their ancestors
+
+```sparql
+SELECT ?painting ?folioNumber ?characterLabel ?ancestorLabel
+WHERE {
+  ?painting a mdhn:Painting ;
+            mdhn:hasReferredTo ?character ;
+            mdhn:hasReferredTo ?ancestor .
+  ?character fhkb:hasAncestor ?ancestor .
+  FILTER(?character != ?ancestor)
+  ?character rdfs:label ?characterLabel . FILTER(LANG(?characterLabel)="en")
+  ?ancestor  rdfs:label ?ancestorLabel  . FILTER(LANG(?ancestorLabel)="en")
+  ?folio mdhn:hasContentElement ?painting ;
+         mdhn:folioNumber ?folioNumber .
+}
+ORDER BY ?folioNumber
+```
+
+#### Q-G3 — Retrieve the full dynastic lineage of a character by generation
+
+```sparql
+SELECT ?ancestor ?ancestorLabel ?generation
+WHERE {
+  {
+    SELECT ?ancestor (1 AS ?generation)
+    WHERE { mdhn:Hushang fhkb:hasParent ?ancestor . }
+  } UNION {
+    SELECT ?ancestor (2 AS ?generation)
+    WHERE { mdhn:Hushang fhkb:hasGrandParent ?ancestor . }
+  } UNION {
+    SELECT ?ancestor (3 AS ?generation)
+    WHERE { mdhn:Hushang fhkb:hasGreatGrandParent ?ancestor . }
+  }
+  ?ancestor rdfs:label ?ancestorLabel . FILTER(LANG(?ancestorLabel)="en")
+}
+ORDER BY ?generation
+```
+
+#### Q-G4 — Find all fraternal (sibling) co-appearance paintings
+
+```sparql
+SELECT ?painting ?folioNumber ?sib1Label ?sib2Label ?episodeLabel
+WHERE {
+  ?painting a mdhn:Painting ;
+            mdhn:hasReferredTo ?sib1 ;
+            mdhn:hasReferredTo ?sib2 .
+  ?sib1 fhkb:isBrotherOf ?sib2 .
+  FILTER(?sib1 != ?sib2)
+  OPTIONAL { ?painting mdhn:hasNarrativeEpisode ?ep . ?ep rdfs:label ?episodeLabel . FILTER(LANG(?episodeLabel)="en") }
+  ?sib1 rdfs:label ?sib1Label . FILTER(LANG(?sib1Label)="en")
+  ?sib2 rdfs:label ?sib2Label . FILTER(LANG(?sib2Label)="en")
+  ?folio mdhn:hasContentElement ?painting ;
+         mdhn:folioNumber ?folioNumber .
+}
+```
+
+#### Q-G5 — List all paintings where protagonist confronts an ancestrally related figure
+
+```sparql
+SELECT ?painting ?folioNumber ?heroLabel ?antagonistLabel
+WHERE {
+  ?painting a mdhn:Painting ;
+            mdhn:hasReferredTo ?hero ;
+            mdhn:hasReferredTo ?antagonist .
+  ?hero fhkb:hasAncestor ?antagonist .
+  FILTER(?hero != ?antagonist)
+  ?hero rdfs:label ?heroLabel . FILTER(LANG(?heroLabel)="en")
+  ?antagonist rdfs:label ?antagonistLabel . FILTER(LANG(?antagonistLabel)="en")
+  ?folio mdhn:hasContentElement ?painting ;
+         mdhn:folioNumber ?folioNumber .
+}
+ORDER BY ?folioNumber
+```
+
+---
+
+## Fine-Grained Iconography
+
+The existing iconographic model captures content at the level of narrative episodes, character co-occurrences, and IIIF figure crops. The richness of Safavid manuscript painting calls for a substantially more granular vocabulary. Below is the current state, followed by concrete proposals for enhancement.
+
 
 ### Advantages of Integrating Family History Knowledge Base
 
