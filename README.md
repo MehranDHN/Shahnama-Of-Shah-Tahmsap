@@ -763,6 +763,8 @@ ORDER BY ?folio
 
 - A SPARQL-capable triplestore such as [Apache Jena Fuseki](https://jena.apache.org/documentation/fuseki2/), [Oxigraph](https://github.com/oxigraph/oxigraph), or [Virtuoso](https://virtuoso.openlinksw.com/).
 - [RDFLib](https://rdflib.readthedocs.io/) (Python) for local parsing and querying without a server.
+- [Stardog Cloud Service](https://cloud.stardog.com) as a GraphDB Cloud service.
+- [Ontotext GraphDB](https://www.ontotext.com/products/graphdb/) A highly efficient and robust graph database with RDF and SPARQL support.
 
 ### Load with Jena Fuseki
 
@@ -804,6 +806,53 @@ results = g.query("""
 for row in results:
     print(row.folio, row.label)
 ```
+### Loading into Triplestores (Ontotext, Stardog, ...)
+
+The ontology and data are provided in **Turtle (.ttl)** format and can be loaded into any standards-compliant RDF triplestore. Below are detailed instructions for two popular options:
+
+#### Option A: Ontotext GraphDB (Free or Enterprise)
+
+1. Start GraphDB and open the Workbench (usually `http://localhost:7200`).
+2. Create a new **Repository** (recommended: GraphDB Free or GraphDB Enterprise with OWL 2 RL or OWL 2 QL ruleset for better reasoning support).
+3. Go to **Import → RDF** tab.
+4. **Import the Ontology first**:
+   - Select "Server files" or "Upload files".
+   - Upload `mdhn-starter_ontology.ttl`.
+   - Set **Target Graphs** to: `http://example.com/mdhn/ontology` (or leave default).
+   - Click **Import**.
+5. **Import the Sample Data**:
+   - Upload `resources.ttl`.
+   - Set **Target Graphs** to: `http://example.com/mdhn/data` (recommended separate named graph).
+   - Click **Import**.
+6. (Optional) Enable **Inference**:
+   - Go to **Setup → Rulesets** and select OWL 2 RL (or OWL 2 QL) if you want to take advantage of FHKB kinship reasoning and property chains.
+7. Explore the data using the SPARQL endpoint or GraphDB Visual Graph.
+
+#### Option B: Stardog Cloud (or Stardog Enterprise)
+
+1. Log in to your Stardog Cloud account and create a new **Database**.
+2. Go to the **Import** section (or use the Stardog Studio).
+3. **Import the Ontology**:
+   - Upload `mdhn-starter_ontology.ttl`.
+   - Choose **Turtle** format.
+   - Import into the default graph or a named graph `http://example.com/mdhn/ontology`.
+4. **Import the Sample Data**:
+   - Upload `resources.ttl`.
+   - Import into a separate named graph: `http://example.com/mdhn/data` (recommended).
+5. Enable **Reasoning**:
+   - In Database settings, turn on **Reasoning** and select **OWL 2 RL** (or DL) profile to activate FHKB family reasoning and ontology inferences.
+6. Use **Stardog Studio** or the SPARQL query interface to run the example queries provided above.
+
+### After Loading
+
+- Run a simple test query to verify everything is loaded correctly:
+
+```sparql
+SELECT (COUNT(?s) AS ?triples)
+WHERE {
+  ?s ?p ?o .
+}
+
 
 ### Validate the Ontology
 
