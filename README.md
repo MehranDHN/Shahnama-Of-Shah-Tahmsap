@@ -868,13 +868,15 @@ robot reason --reasoner HermiT \
 
 ## Contributing
 
-Contributions are warmly welcome. The project is actively extending coverage to all 268 paintings. Priority areas include:
+Contributions are warmly welcome. The project is actively extending coverage all folios specially all 268 paintings. Priority areas include:
 
+- **High resulotion shahnama folio images** — there is a [Internet Archive collection](https://archive.org/search?query=genre%3A%22Shahnama+Shah+Tahmasp%22&sort=title) intented to integrate images.
 - **Adding new folios** — following the pattern in `resources.ttl` for each painting register entry.
 - **Figure crops** — adding `mdhn:FigureCrop` resources with IIIF region coordinates for additional characters.
 - **GLAM reconciliation** — adding `rdfs:label` and external IRI links for all holding institutions.
 - **Character enrichment** — expanding the epic entity instances and their Wikidata links.
 - **Provenance extension** — documenting post-1972 dispersal ownership intervals for individual folios.
+- **Wikidata coverage** — decomposing structured machine consumable data about the Manuscript, artists, textual content, iconographic entities, narrative episodes, legendary characters, and provenance history.
 
 Please open an issue before submitting a pull request to discuss the proposed change. All data contributions must include appropriate `rdfs:label` values in both English (`@en`) and Persian (`@fa`).
 
