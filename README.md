@@ -911,3 +911,4 @@ You are free to share and adapt this material for any purpose, provided appropri
 ---
 
 *This project is dedicated to the painters, calligraphers, and illuminators of the Safavid royal atelier whose collective genius produced one of humanity's greatest artistic achievements.*
+In memory of Recent protests in Iran, starting in late December 2025 and accelerating in January 2026, resulted in a severe crackdown, with reports indicating thousands of fatalities.
