@@ -22,7 +22,7 @@
    - [Object Properties](#object-properties)
    - [Datatype Properties](#datatype-properties)
    - [Standards Alignment](#standards-alignment)
-6. [Integrating Family History Knowledge Base (FHKB)](#Integrating-Family-History-Knowledge-Base-(FHKB)) 
+6. [Integrating Family History Knowledge Base (FHKB)](#integrating-family-history-knowledge-base-fhkb) 
 7. [Sample Data Overview](#sample-data-overview)
 8. [SPARQL Query Examples](#sparql-query-examples)
 9. [Getting Started](#getting-started)
