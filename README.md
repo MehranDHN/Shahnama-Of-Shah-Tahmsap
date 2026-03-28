@@ -870,7 +870,7 @@ robot reason --reasoner HermiT \
 
 Contributions are warmly welcome. The project is actively extending coverage all folios specially all 268 paintings. Priority areas include:
 
-- **High resulotion shahnama folio images** — there is a [Internet Archive collection](https://archive.org/search?query=genre%3A%22Shahnama+Shah+Tahmasp%22&sort=title) intented to integrate images.
+- **High resulotion shahnama folio images** — there is an [Internet Archive collection](https://archive.org/search?query=genre%3A%22Shahnama+Shah+Tahmasp%22&sort=title) intented to integrate images.
 - **Adding new folios** — following the pattern in `resources.ttl` for each painting register entry.
 - **Figure crops** — adding `mdhn:FigureCrop` resources with IIIF region coordinates for additional characters.
 - **GLAM reconciliation** — adding `rdfs:label` and external IRI links for all holding institutions.
