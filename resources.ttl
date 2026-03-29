@@ -405,6 +405,14 @@ mdhn:Illumination2v a mdhn:Painting;
 mdhn:ProseText2v a mdhn:LinguisticObject;
   rdfs:label "Plain text and poems in left side of double page opening from 2v"@en.  
 
+
+# -- Folio 1r -----------------------------------------------------
+# Intentionaly left orphaned as no painting is identified for this folio, but the register entry is included to document the painting\'s existence and its current unlocated status.
+mdhn:RE_1r a mdhn:RegisterEntry;
+    rdfs:label "Entry for missing page"@en;
+    rdfs:comment "Can identify missing folios."@en;
+    mdhn:entryFolioNumber "1r";
+    mdhn:entryPartOf mdhn:painting_Index.
 # -- Folio 3r -----------------------------------------------------
 mdhn:RE_3r a mdhn:RegisterEntry;
     rdfs:label "Right side of Doble page Illuminated frontispece"@en, "رويارويی فردوسی با شعرای دربار غزنه"@fa;
@@ -420,7 +428,7 @@ mdhn:Folio3r a mdhn:Recto;
    mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
    mdhn:hasContentElement mdhn:Illumination3r, mdhn:ProseText3r;  
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-3r/manifest.json"; 
-   mdhn:hasRegisterEntry mdhn:RE_2v.  
+   mdhn:hasRegisterEntry mdhn:RE_3r.  
 
 mdhn:Illumination3r a mdhn:Painting;                   
    mdhn:hasWorkshop_director  mdhn:Aqa_Mīrak ;
@@ -514,8 +522,8 @@ mdhn:TahmurasDefeatsKingdomOfKeyumars a mdhn:NarrativeEpisode;
    mdhn:wikidataItem wd:Q138719971 .  
 
 mdhn:Poems20v a mdhn:LinguisticObject;
-  mdhn:startVerse "75";
-  mdhn:endVerse "85".
+  mdhn:startVerse 232;
+  mdhn:endVerse 236.
 
 mdhn:KeyumarsFig20v a mdhn:FigureCrop;
    rdfs:label "Keyumars cropped figure from f20v"@en;
@@ -540,26 +548,31 @@ mdhn:Folio21v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio22v ;
    mdhn:folioNumber 21;
    mdhn:keptIn mdhn:S_C_Welch_Family_Collection;
-   mdhn:hasContentElement mdhn:Painting21v, mdhn:Poems21v; 
+   mdhn:hasContentElement mdhn:Painting21v, mdhn:Poems21v, mdhn:IlluminatedUnwan21v; 
    mdhn:wikidataItem wd:Q131281679; 
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-21v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_21v.  
 
 mdhn:Painting21v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:HushangFig21v, mdhn:BlackDivFig21v, mdhn:Div1_Fig21v,mdhn:Div2_Fig21v, mdhn:Div3_Fig21v, mdhn:Div1_Fig21v, mdhn:Angle1_Fig21v, mdhn:Angle1_Fig21v;
-   mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
-   mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
-   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:attributionCertainty "certain"@en;
-   mdhn:hasPainter mdhn:Sultan_Muhammad .  
+      mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
+      mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
+      mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+      mdhn:attributionCertainty "certain"@en;
+      mdhn:hasPainter mdhn:Sultan_Muhammad . 
+
+mdhn:IlluminatedUnwan21v a mdhn:IlluminatedUnwan;
+   rdfs:label "Battle of Hushang against the Divs"@en, "جنگ هوشنگ"@fa;
+   mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/402,737,407,133/max/0/default.jpg".
+
 
 mdhn:HushangSlaysTheBlackDiv a mdhn:NarrativeEpisode;
    rdfs:label "Hushang Slays the Black Div"@en, "کشته شدن ديو سياه به دست هوشنگ"@fa;
    mdhn:wikidataItem wd:Q138757163 .  
 
 mdhn:Poems21v a mdhn:LinguisticObject;
-  mdhn:startVerse "278";
-  mdhn:endVerse "282".  
+  mdhn:startVerse 277;
+  mdhn:endVerse 289.  
 
 mdhn:HushangFig21v a mdhn:FigureCrop;
    rdfs:label "Hushang cropped figure from f21v"@en;
@@ -629,8 +642,8 @@ mdhn:HushangInFeastOfSada a mdhn:NarrativeEpisode;
    mdhn:wikidataItem wd:Q138757360 .  
 
 mdhn:Poems22v a mdhn:LinguisticObject;
-  mdhn:startVerse "296";
-  mdhn:endVerse "302".  
+  mdhn:startVerse 320;
+  mdhn:endVerse 333.  
 
 mdhn:HushangFig22v a mdhn:FigureCrop;
    rdfs:label "Hushang cropped figure from f22v"@en;
@@ -697,8 +710,8 @@ mdhn:Div4Figure23v a mdhn:FigureCrop;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/923,1847,333,306/max/0/default.jpg".
 
 mdhn:Poems23v a mdhn:LinguisticObject;
-  mdhn:startVerse "112";
-  mdhn:endVerse "124".
+  mdhn:startVerse 370;
+  mdhn:endVerse 381.
 
 # -- Folio 24v -----------------------------------------------------
 mdhn:RE_24v a mdhn:RegisterEntry;
@@ -717,7 +730,7 @@ mdhn:Folio24v a mdhn:Verso;
    mdhn:wikidataItem wd:Q131253793; 
    mdhn:hasReferredTo mdhn:Jamshid, mdhn:Zahhak;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-24v/manifest.json"; 
-   mdhn:hasRegisterEntry mdhn:RE_21v.  
+   mdhn:hasRegisterEntry mdhn:RE_24v.  
 
 mdhn:Painting24v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:JamshidFig24v, mdhn:Div1_Fig24v, mdhn:Div2_Fig24v;
@@ -728,8 +741,8 @@ mdhn:Painting24v a mdhn:Painting;
    mdhn:hasPainter mdhn:Sultan_Muhammad .  
 
 mdhn:Poems24v a mdhn:LinguisticObject;
-  mdhn:startVerse "214";
-  mdhn:endVerse "219".
+  mdhn:startVerse 421;
+  mdhn:endVerse 439.
 
 mdhn:JamshidFig24v a mdhn:FigureCrop;
    rdfs:label "Jamshid cropped figure from f24v"@en;
@@ -778,8 +791,8 @@ mdhn:Painting38v a mdhn:Painting;
    mdhn:hasPainter mdhn:Qadimi . 
 
 mdhn:Poems38v a mdhn:LinguisticObject;
-  mdhn:startVerse "204";
-  mdhn:endVerse "214".  
+  mdhn:startVerse 1076;
+  mdhn:endVerse 1083.  
 
 mdhn:FereydunFig38v a mdhn:FigureCrop;
    rdfs:label "Fereydun cropped figure from f38v"@en;
@@ -816,8 +829,8 @@ mdhn:Painting76v a mdhn:Painting;
    mdhn:hasPainter mdhn:Abd_al_Aziz . 
 
 mdhn:Poems76v a mdhn:LinguisticObject;
-  mdhn:startVerse "2713";
-  mdhn:endVerse "2722".  
+  mdhn:startVerse 2713;
+  mdhn:endVerse 2722.  
 
 mdhn:RudabaFig76v a mdhn:FigureCrop;
    rdfs:label "Rudaba cropped figure from f76v"@en;
@@ -865,8 +878,8 @@ mdhn:Painting77v a mdhn:Painting;
    mdhn:hasPainter mdhn:Abd_al_Aziz . 
 
 mdhn:Poems77v a mdhn:LinguisticObject;
-  mdhn:startVerse "2740";
-  mdhn:endVerse "2741".  
+  mdhn:startVerse 2740;
+  mdhn:endVerse 2741.  
 
 mdhn:MihrabFig77v a mdhn:FigureCrop;
    rdfs:label "Mihrab cropped figure from f77v"@en;
@@ -937,11 +950,11 @@ mdhn:Poems82v a mdhn:LinguisticObject;
 mdhn:SamFig82v a mdhn:FigureCrop;
    rdfs:label "Sam cropped figure from f82v"@en;
    mdhn:hasReferredTo mdhn:Sam;   
-   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/1412,2086,792,797/max/0/default.jpg". 
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/1434,2782,852,838/max/0/default.jpg". 
 mdhn:DragonFig82v a mdhn:FigureCrop;
    rdfs:label "Dragon cropped figure from f82v"@en;
    mdhn:hasReferredTo mdhn:Dragon;   
-   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/292,1578,1101,1315/max/0/default.jpg". 
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/311,2237,1188,1528/max/0/default.jpg". 
 
 mdhn:SamSlaysDragon : mdhn:NarrativeEpisode;
    rdfs:label "One Blow, Sam Recounts How He Slew a Dragon"@en, "کشته شدن اژدها به دست سام و سبب لقب او به یک زخم"@fa;
