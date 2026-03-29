@@ -364,6 +364,9 @@ ORDER BY ?folioNumber
 #### Q-G2 — Find paintings depicting a character and any of their ancestors
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?painting ?folioNumber ?characterLabel ?ancestorLabel
 WHERE {
   ?painting a mdhn:Painting ;
@@ -382,17 +385,20 @@ ORDER BY ?folioNumber
 #### Q-G3 — Retrieve the full dynastic lineage of a character by generation
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?ancestor ?ancestorLabel ?generation
 WHERE {
   {
     SELECT ?ancestor (1 AS ?generation)
-    WHERE { mdhn:Hushang fhkb:hasParent ?ancestor . }
+    WHERE { mdhn:Sohrab fhkb:hasParent ?ancestor . }
   } UNION {
     SELECT ?ancestor (2 AS ?generation)
-    WHERE { mdhn:Hushang fhkb:hasGrandParent ?ancestor . }
+    WHERE { mdhn:Sohrab fhkb:hasGrandParent ?ancestor . }
   } UNION {
     SELECT ?ancestor (3 AS ?generation)
-    WHERE { mdhn:Hushang fhkb:hasGreatGrandParent ?ancestor . }
+    WHERE { mdhn:Sohrab fhkb:hasGreatGrandParent ?ancestor . }
   }
   ?ancestor rdfs:label ?ancestorLabel . FILTER(LANG(?ancestorLabel)="en")
 }
