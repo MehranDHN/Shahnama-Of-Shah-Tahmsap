@@ -408,6 +408,9 @@ ORDER BY ?generation
 #### Q-G4 — Find all fraternal (sibling) co-appearance paintings
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?painting ?folioNumber ?sib1Label ?sib2Label ?episodeLabel
 WHERE {
   ?painting a mdhn:Painting ;
@@ -426,6 +429,9 @@ WHERE {
 #### Q-G5 — List all paintings where protagonist confronts an ancestrally related figure
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?painting ?folioNumber ?heroLabel ?antagonistLabel
 WHERE {
   ?painting a mdhn:Painting ;
