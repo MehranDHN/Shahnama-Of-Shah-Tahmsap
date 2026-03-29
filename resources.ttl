@@ -510,6 +510,7 @@ mdhn:Painting20v a mdhn:Painting;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
 
 mdhn:TahmurasDefeatsKingdomOfKeyumars a mdhn:NarrativeEpisode;
+   rdfs:label "The Court of Kayumars"@en, "پادشاهی کيومرث"@fa;
    mdhn:wikidataItem wd:Q138719971 .  
 
 mdhn:Poems20v a mdhn:LinguisticObject;
@@ -528,7 +529,7 @@ mdhn:SiamakFig20v a mdhn:FigureCrop;
 
 # -- Folio 21v -----------------------------------------------------
 mdhn:RE_21v a mdhn:RegisterEntry;
-    rdfs:label "Hushang Slavs the Black Div"@en, "کشته شدن ديو سياه به دست هوشنگ"@fa;
+    rdfs:label "Hushang Slays the Black Div"@en, "کشته شدن ديو سياه به دست هوشنگ"@fa;
     rdfs:comment "On the orders of his grandfather Hushang avenges the murder of his father, Siyamak, and wages war against Ahriman and his dirs (demons) with an army of lions, wolves, leopards, and angels."@en;
     mdhn:entryFolioNumber "21v";
     mdhn:entryPartOf mdhn:painting_Index.
@@ -553,6 +554,7 @@ mdhn:Painting21v a mdhn:Painting;
    mdhn:hasPainter mdhn:Sultan_Muhammad .  
 
 mdhn:HushangSlaysTheBlackDiv a mdhn:NarrativeEpisode;
+   rdfs:label "Hushang Slays the Black Div"@en, "کشته شدن ديو سياه به دست هوشنگ"@fa;
    mdhn:wikidataItem wd:Q138757163 .  
 
 mdhn:Poems21v a mdhn:LinguisticObject;
@@ -623,6 +625,7 @@ mdhn:Painting22v a mdhn:Painting;
    mdhn:hasPainter mdhn:Sultan_Muhammad .      
 
 mdhn:HushangInFeastOfSada a mdhn:NarrativeEpisode;
+   rdfs:label "The Feast of Sada"@en, "جشن سده"@fa;
    mdhn:wikidataItem wd:Q138757360 .  
 
 mdhn:Poems22v a mdhn:LinguisticObject;
