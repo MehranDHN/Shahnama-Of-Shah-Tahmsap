@@ -356,10 +356,10 @@ mdhn:hasIIIFManifest a owl:ObjectProperty ;
     rdfs:range xsd:anyURI .
 
 mdhn:folioNumber a owl:DatatypeProperty ;
-    rdfs:comment "Canonical folio number + side, e.g. '20v', '65r'."@en ;
+    rdfs:comment "Canonical folio number + side, e.g. '20', '65'."@en ;
     rdfs:domain mdhn:Folio ;
     rdfs:label "folio number"@en , "شماره صفحه"@fa ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:integer .
 
 mdhn:nextFolio a owl:FunctionalProperty , owl:ObjectProperty ;
     rdfs:domain mdhn:Folio ;
