@@ -338,17 +338,20 @@ mdhn:Iraj  fhkb:hasFather mdhn:Faridun ; fhkb:hasMother mdhn:Faranak .
 
 ### SPARQL Queries — Genealogy-Aware
 
-Add `PREFIX fhkb: <http://www.example.com/genealogy.owl#>` to the base prefix block below.
+Don't forget to Add specific namespaces linke `PREFIX fhkb: <http://www.example.com/genealogy.owl#>` to the base prefix block or mention them explicity.
 
-#### Q-G1 — Find all paintings depicting at least two sibling characters
+#### Q-G1 — Find all paintings depicting Father and Son relations
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT DISTINCT ?painting ?folioNumber ?char1Label ?char2Label
 WHERE {
   ?painting a mdhn:Painting ;
             mdhn:hasReferredTo ?char1 ;
             mdhn:hasReferredTo ?char2 .
-  ?char1 fhkb:isSiblingOf ?char2 .
+  ?char1 fhkb:hasSon ?char2 .
   FILTER(?char1 != ?char2)
   ?char1 rdfs:label ?char1Label . FILTER(LANG(?char1Label)="en")
   ?char2 rdfs:label ?char2Label . FILTER(LANG(?char2Label)="en")
