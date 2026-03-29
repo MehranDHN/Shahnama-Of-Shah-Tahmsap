@@ -554,6 +554,8 @@ ORDER BY ?fnumber
 Find every painting where Sultan Muhammad is recorded as the primary painter.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?painting ?folio ?episodeLabel
 WHERE {
   ?painting a mdhn:Painting ;
@@ -575,6 +577,8 @@ ORDER BY ?folio
 List all extracted figure crops, the painting they came from, the character they depict, and the direct IIIF image URL for each crop.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?crop ?cropLabel ?painting ?characterLabel ?regionURL
 WHERE {
   ?crop a mdhn:FigureCrop ;
@@ -597,6 +601,8 @@ ORDER BY ?painting
 Reconstruct the full chain of ownership for the manuscript, ordered chronologically.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?ownerLabel ?startYear ?endYear ?transferType
 WHERE {
   mdhn:manuscript_shahnama_shah_tahmasp
@@ -620,12 +626,15 @@ ORDER BY ?startYear
 Cross-reference all depicted legendary characters with their Wikidata Q-items for external enrichment.
 
 ```sparql
-SELECT DISTINCT ?characterLabel ?wikidataItem ?painting
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT DISTINCT ?characterLabel ?wikidataItem ?painting ?folio
 WHERE {
   ?painting a mdhn:Painting ;
             mdhn:hasReferredTo ?character .
   ?character a mdhn:EpicEntity ;
              rdfs:label ?characterLabel .
+  ?folio mdhn:hasContentElement ?painting.
   OPTIONAL { ?character mdhn:wikidataItem ?wikidataItem . }
   FILTER(LANG(?characterLabel) = "en")
 }
@@ -639,6 +648,8 @@ ORDER BY ?characterLabel
 Retrieve every painting in which the legendary figure Hushang appears, along with the folio, current institution, and the IIIF manifest for viewing.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?painting ?folioNumber ?institution ?manifest
 WHERE {
   ?painting a mdhn:Painting ;
@@ -654,11 +665,13 @@ WHERE {
 
 ---
 
-### Query 7 — List All Register Entries Without a Linked Painting (Missing Paintings)
+### Query 7 — List All Register Entries Without a Linked Painting (Missing Folio)
 
 Identify entries in the authoritative painting register that have not yet been linked to an actual folio resource — these represent folios that are missing, unlocated, or not yet digitised.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?entry ?entryLabel ?folioNumber
 WHERE {
   ?entry a mdhn:RegisterEntry ;
@@ -677,6 +690,8 @@ ORDER BY ?folioNumber
 For each folio's poetic or prose text, retrieve the verse range covered, useful for aligning paintings to specific passages in Ferdowsi's epic.
 
 ```sparql
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?folio ?textObject ?startVerse ?endVerse
 WHERE {
   ?folio a mdhn:Folio ;
@@ -695,6 +710,8 @@ ORDER BY xsd:integer(?startVerse)
 Aggregate how many paintings (based on linked folios) are held by each institution in the dataset, providing an overview of the dispersal pattern.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?institutionLabel (COUNT(?folio) AS ?folioCount)
 WHERE {
   ?folio a mdhn:Folio ;
@@ -713,6 +730,8 @@ ORDER BY DESC(?folioCount)
 Retrieve all narrative episodes recorded in the graph, the paintings they appear in, and their Wikidata identifiers for linked data enrichment.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?episodeLabel ?painting ?wikidataItem
 WHERE {
   ?painting a mdhn:Painting ;
@@ -731,6 +750,8 @@ ORDER BY ?episodeLabel
 Retrieve a comprehensive structured record for every painting, including painter, workshop director, depicted characters, narrative episode, verse range, IIIF manifest, and current location.
 
 ```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?painting ?painterLabel ?directorLabel ?episodeLabel
        ?characterLabel ?startVerse ?endVerse ?manifest ?institution
 WHERE {
@@ -767,6 +788,7 @@ ORDER BY ?painting ?characterLabel
 Walk the folio sequence chain to retrieve folios in order, enabling navigation through the manuscript's physical structure.
 
 ```sparql
+PREFIX mdhn: <http://example.com/mdhn/>
 SELECT ?folio ?nextFolio ?manifest ?nextManifest
 WHERE {
   ?folio a mdhn:Folio ;
