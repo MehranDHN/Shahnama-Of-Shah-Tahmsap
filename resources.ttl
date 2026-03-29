@@ -658,6 +658,7 @@ mdhn:Painting23v a mdhn:Painting;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
 
 mdhn:TahmurasDefeatsDivs a mdhn:NarrativeEpisode;
+rdfs:label "Tahmuras Defeats the Divs"@en, "هزيمت ديوها به دست طهمورث"@fa;
    mdhn:wikidataItem wd:Q138676508 .   
 
 mdhn:TahmurasFigure23v a mdhn:FigureCrop;
@@ -735,6 +736,7 @@ mdhn:Div2_Fig24v a mdhn:FigureCrop;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-24v%2FFolio_24v.jpg/794,1128,132,166/max/0/default.jpg". 
    
 mdhn:KingdomOfJJamshid a mdhn:NarrativeEpisode;
+   rdfs:label "The Court of Jamshid"@en, "بارگاه جمشيد"@fa;
    mdhn:wikidataItem wd:Q138724581 .  
 
 
@@ -819,6 +821,7 @@ mdhn:IlluminatedUnwan76v a mdhn:IlluminatedUnwan;
    mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/724,501,848,284/max/0/default.jpg".
 
 mdhn:RudabaConfesses : mdhn:NarrativeEpisode;
+   rdfs:label "Rudaba Confesses to Sindukht"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
    mdhn:wikidataItem wd:Q138800292.
 
 # -- Folio 77v -----------------------------------------------------
@@ -885,6 +888,7 @@ mdhn:Inscription5_77v a mdhn:Inscription;
 
 
 mdhn:MihrabHearsRudaba a mdhn:NarrativeEpisode;
+   rdfs:label "Mihrab Hears of Rudaba Folly"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
    mdhn:wikidataItem wd:Q138801485.   
 # -- Folio 82v -----------------------------------------------------
 mdhn:RE_82v a mdhn:RegisterEntry;
@@ -925,6 +929,7 @@ mdhn:DragonFig82v a mdhn:FigureCrop;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/292,1578,1101,1315/max/0/default.jpg". 
 
 mdhn:SamSlaysDragon : mdhn:NarrativeEpisode;
+   rdfs:label "One Blow, Sam Recounts How He Slew a Dragon"@en, "کشته شدن اژدها به دست سام و سبب لقب او به یک زخم"@fa;
    mdhn:wikidataItem wd:Q138799749.
 
 mdhn:Folio25v a mdhn:Folio. 
