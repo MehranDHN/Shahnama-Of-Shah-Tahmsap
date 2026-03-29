@@ -38,9 +38,9 @@
 
 ## Introduction
 
-The **Shahnama of Shah Tahmasp** — also known as the Houghton Shahnameh — is a royal Persian manuscript produced between approximately 1522 and 1535 CE at the Safavid court in Tabriz under the patronage of Shah Tahmasp I. It is widely regarded as the most ambitious illustrated book ever made, containing **268 full-page paintings** by the greatest masters of the Persian painterly tradition, including Sultan Muhammad, Āqā Mīrak, Qadimi, and many others. The text is the *Shahnameh* ("Book of Kings"), the Persian national epic composed by the poet Ferdowsi (c. 977–1010 CE).
+The **Shahnama of Shah Tahmasp** also known as the Houghton Shahnameh is a royal Persian manuscript produced between approximately 1522 and 1535 CE at the Safavid court in Tabriz under the patronage of Shah Tahmasp I. It is widely regarded as the most ambitious illustrated book ever made, containing **268 full-page paintings** by the greatest masters of the Persian painterly tradition, including Sultan Muhammad, Āqā Mīrak, Qadimi, and many others. The text is the *Shahnameh* ("Book of Kings"), the Persian national epic composed by the poet Ferdowsi (c. 977–1010 CE).
 
-The manuscript's subsequent history is as remarkable as its creation. Gifted to Ottoman Sultan Selim II in 1568, it was held in the Topkapı Palace Library for nearly four centuries before passing into the hands of American collector Arthur A. Houghton Jr. in 1959. Houghton eventually dispersed the manuscript — donating a portion of folios to the Metropolitan Museum of Art and selling the remainder — resulting in the manuscript's current state: **dispersed across 30+ institutions and private collections** worldwide.
+The manuscript's subsequent history is as remarkable as its creation. Gifted to Ottoman Sultan Selim II in 1568, it was held in the Topkapı Palace Library for nearly four centuries before passing into the hands of American collector Arthur A. Houghton Jr. in 1959. Houghton eventually dispersed the manuscript, donating a portion of folios to the Metropolitan Museum of Art and selling the remainder, resulting in the manuscript's current state: **dispersed across 30+ institutions and private collections** worldwide.
 
 This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compliant knowledge graph of the manuscript. It encodes the physical object, its folios, paintings, illuminations, textual content, iconographic entities, narrative episodes, legendary characters, and provenance history in a machine-readable, interoperable RDF/OWL format.
 
@@ -91,7 +91,7 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 
 ---
 
-The ongoing process of uploading the folios to internet archive is mandantory. The IA acts as a repository to integrate all available digital representaiion of folios even those with alternative versions. So one folio may have multiple representation with the selected best available resolution as primary.
+The ongoing process of uploading the folios to the Internet Archive is mandatory. The Internet Archive (IA) serves as a unified, IIIF-compliant repository that integrates all available digital representations of the folios, including alternative versions. As a result, a single folio may have multiple representations, with the highest-resolution version selected as the primary one.
 [Images repository of folios in Internet Archive](https://archive.org/search?query=genre%3A%22Shahnama+Shah+Tahmasp%22&sort=title)
 
 ## Ontology Walkthrough
@@ -125,7 +125,7 @@ The ontology uses a carefully structured set of prefixes that separate the **sch
 ### Core Classes
 
 #### `mdhn:Manuscript`
-The top-level physical object — a unique illuminated codex. Aligned to Getty AAT `aat:300028569`. There is one named individual of this class: `mdhn:manuscript_shahnama_shah_tahmasp`.
+The top-level physical object, a unique illuminated codex. Aligned to Getty AAT `aat:300028569`. There is one named individual of this class: `mdhn:manuscript_shahnama_shah_tahmasp`.
 
 #### `mdhn:Folio` and its Subclasses
 A physical folio (recto or verso), modelled as an independent resource. The `mdhn:Folio` class has four subclasses:
