@@ -533,15 +533,18 @@ PREFIX wd:    <http://www.wikidata.org/entity/>
 Retrieve all recorded folios, their folio-side labels, and the institution currently holding them.
 
 ```sparql
-SELECT ?folio ?label ?institution
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT *
 WHERE {
   ?folio a mdhn:Folio ;
          rdfs:label ?label ;
+         mdhn:folioNumber ?fnumber;
          mdhn:keptIn ?holder .
   ?holder rdfs:label ?institution .
-  FILTER(LANG(?label) = "en")
+  FILTER(LANG(?institution) = "en")
 }
-ORDER BY ?label
+ORDER BY ?fnumber
 ```
 
 ---
