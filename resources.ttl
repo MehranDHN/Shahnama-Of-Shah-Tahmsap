@@ -187,16 +187,19 @@ mdhn:Faranak
 mdhn:Salm
     a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Salm"@en , "سلم"@fa ;
+    fhkb:isBrotherOf mdhn:Tur, mdhn:Iraj;
     mdhn:wikidataItem wd:Q3543323. 
 
-mdhn:Tur
+   mdhn:Tur
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Tur"@en , "تور"@fa ;
+    fhkb:isBrotherOf mdhn:Salm, mdhn:Iraj;
     mdhn:wikidataItem wd:Q3543320.
 
 mdhn:Iraj
     a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Iraj"@en , "ايرج"@fa ;
+    fhkb:isBrotherOf mdhn:Salm, mdhn:Tur;
     mdhn:wikidataItem wd:Q1300562.
 
 mdhn:Jamshid
@@ -209,11 +212,13 @@ mdhn:Arnavaz
     a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "TArnavazr"@en , "ارنواز"@fa ;
     fhkb:isSpouseOf mdhn:Zahhak;
+    fhkb:isSisterOf mdhn:Shahrnaz;
     mdhn:wikidataItem wd:Q5744657.
 
 mdhn:Shahrnaz
     a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
     rdfs:label "Shahrnaz"@en , "شهرناز"@fa ;
+    fhkb:isSisterOf mdhn:Arnavaz;
     mdhn:wikidataItem wd:Q5662082.                    
 
 mdhn:Tahmuras
@@ -288,10 +293,12 @@ mdhn:Rostam
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Rostam"@en , "رستم"@fa ;
     fhkb:hasSon mdhn:Sohrab;
+    fhkb:isBrotherOf mdhn:Shaghad ;
     mdhn:wikidataItem wd:Q60062.
 mdhn:Shaghad
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Shaghad"@en , "شغاد"@fa ;
+    fhkb:isBrotherOf mdhn:Rostam ;
     mdhn:wikidataItem wd:Q3543285.          
 mdhn:Tahmina
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
@@ -749,6 +756,7 @@ mdhn:Folio38v a mdhn:Verso;
 
 mdhn:Painting38v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:FereydunFig38v ;
+   mdhn:hasNarrativeEpisode mdhn:The_Court_of_Faridun;
    mdhn:hasReferredTo mdhn:Faridun, mdhn:Faranak, mdhn:Salm, mdhn:Tur, mdhn:Iraj;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:wikidataItem wd:Q64689329 ;
@@ -764,7 +772,9 @@ mdhn:FereydunFig38v a mdhn:FigureCrop;
    mdhn:hasReferredTo mdhn:Faridun;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-38v%2FFolio38v.jpg/420,943,160,246/max/0/default.jpg". 
 
-
+mdhn:The_Court_of_Faridun a mdhn:NarrativeEpisode;
+   rdfs:label "The Court of Faridun"@en, "بارگاه فريدون"@fa;
+   mdhn:wikidataItem wd:Q138821815 .
 # -- Folio 76v -----------------------------------------------------
 mdhn:RE_76v a mdhn:RegisterEntry;
     rdfs:label "Rudaba Confesses to Sindukht"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
