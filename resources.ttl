@@ -388,6 +388,7 @@ mdhn:RE_2v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.
 
 mdhn:Folio2v a mdhn:Verso;
+   rdfs:label "Folio 2v"@en ;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio3r ;
    mdhn:folioNumber 2 ;
@@ -412,6 +413,7 @@ mdhn:RE_3r a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.
 
 mdhn:Folio3r a mdhn:Recto;
+   rdfs:label "Folio 3r"@en ;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio7r ;
    mdhn:folioNumber 7 ;
@@ -435,6 +437,7 @@ mdhn:RE_7r a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.
 
 mdhn:Folio7r a mdhn:Recto;
+   rdfs:label "Folio 7r"@en ;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio10r ;
    mdhn:folioNumber 7 ;
@@ -488,6 +491,7 @@ mdhn:RE_20v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index. 
 
 mdhn:Folio20v a mdhn:Verso;
+   rdfs:label "Folio 20v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio21v ;
    mdhn:folioNumber 21;
@@ -530,6 +534,7 @@ mdhn:RE_21v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.
 
 mdhn:Folio21v a mdhn:Verso;
+   rdfs:label "Folio 21v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio22v ;
    mdhn:folioNumber 21;
@@ -599,6 +604,7 @@ mdhn:RE_22v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.
 
 mdhn:Folio22v a mdhn:Verso;
+   rdfs:label "Folio 22v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio23v ;
    mdhn:folioNumber 22;
@@ -637,6 +643,7 @@ mdhn:RE_23v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.
 
 mdhn:Folio23v a mdhn:Verso;
+   rdfs:label "Folio 23v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio24v ;  
    mdhn:folioNumber 23; 
@@ -698,6 +705,7 @@ mdhn:RE_24v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index.  
 
 mdhn:Folio24v a mdhn:Verso;
+   rdfs:label "Folio 24v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio25v ;
    mdhn:folioNumber 24;
@@ -748,6 +756,7 @@ mdhn:RE_38v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index. 
 
 mdhn:Folio38v a mdhn:Verso;
+   rdfs:label "Folio 38v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio39v ;
    mdhn:folioNumber 38;
@@ -785,6 +794,7 @@ mdhn:RE_76v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index. 
 
 mdhn:Folio76v a mdhn:Verso;
+   rdfs:label "Folio 76v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio77v ;
    mdhn:folioNumber 76;
@@ -832,6 +842,7 @@ mdhn:RE_77v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index. 
 
 mdhn:Folio77v a mdhn:Verso;
+   rdfs:label "Folio 77v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio78v ;
    mdhn:folioNumber 77;
@@ -898,6 +909,7 @@ mdhn:RE_82v a mdhn:RegisterEntry;
     mdhn:entryPartOf mdhn:painting_Index. 
 
 mdhn:Folio82v a mdhn:Verso;
+   rdfs:label "Folio 82v"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio83v ;
    mdhn:folioNumber 82;
@@ -938,21 +950,30 @@ mdhn:Folio39v a mdhn:Folio.
 mdhn:Folio83v a mdhn:Folio. 
 
 mdhn:Tehran_Museum_of_Contemporary_Art a mdhn:GLAMHolder;
+rdfs:label "Tehran Museum of Contemporary Art"@en;
   mdhn:wikidataItem wd:Q1756399.
 mdhn:Metropolitan_Museum_of_Art a mdhn:GLAMHolder;
+  rdfs:label "Metropolitan Museum of Art"@en;
   mdhn:wikidataItem wd:Q160236.
 mdhn:Aga_Khan_Museum a mdhn:GLAMHolder;
+  rdfs:label "Aga Khan Museum"@en;
   mdhn:wikidataItem wd:Q4690937.
 mdhn:Cincinnati_Art_Museum a mdhn:GLAMHolder;
+  rdfs:label "Cincinnati Art Museum"@en;
   mdhn:wikidataItem wd:Q2970522.
 mdhn:Khalili_Collection a mdhn:GLAMHolder;
+   rdfs:label "Khalili Collection"@en;
   mdhn:wikidataItem wd:Q66455355.
-mdhn:S_C_Welch_Family_Collection a mdhn:GLAMHolder.
+mdhn:S_C_Welch_Family_Collection a mdhn:GLAMHolder;
+  rdfs:label "S. C. Welch Family Collection"@en.
 mdhn:National_Museum_of_Asian_Art a mdhn:GLAMHolder;
+  rdfs:label "National Museum of Asian Art"@en;
   mdhn:wikidataItem wd:Q105749808.
 mdhn:Museum_of_Islamic_Art_Doha a mdhn:GLAMHolder;
+  rdfs:label "Museum of Islamic Art Doha"@en;
   mdhn:wikidataItem wd:Q1148353.
-mdhn:Private_Collection a mdhn:GLAMHolder. 
+mdhn:Private_Collection a mdhn:GLAMHolder;
+  rdfs:label "Private Collection"@en.
 
     
 
