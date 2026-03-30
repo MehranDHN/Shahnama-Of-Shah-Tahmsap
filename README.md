@@ -800,6 +800,127 @@ ORDER BY ?folio
 ```
 
 ---
+### Query 13 — Counting of apperance of the characters in Cropped figures
+Cropped figure are special type of painting that each one of them exactly refers to one characters. This query counts number of appearances.
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT ?characterLabel ?character (COUNT(?crop) AS ?cropCount)
+WHERE {
+  ?crop a mdhn:FigureCrop ; mdhn:hasReferredTo ?character .
+  OPTIONAL { ?character rdfs:label ?characterLabel . FILTER(LANG(?characterLabel)="en") }
+}
+GROUP BY ?character ?characterLabel
+ORDER BY DESC(?cropCount)
+```
+---
+### Query 14 — Retrieve all folios held by a specific institution
+
+```sparql
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT ?folioNumber
+WHERE {
+  ?folio mdhn:keptIn mdhn:Metropolitan_Museum_of_Art ; mdhn:folioNumber ?folioNumber .
+}
+ORDER BY ?folioNumber
+```
+
+---
+### Query 15 — Find paintings depicting both Hushang and a Div
+
+```sparql
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT ?painting ?folioNumber
+WHERE {
+  ?painting a mdhn:Painting ; mdhn:hasReferredTo mdhn:Hushang ; mdhn:hasReferredTo ?div .
+  ?div a mdhn:MythicalAnimal .
+  ?folio mdhn:hasContentElement ?painting ; mdhn:folioNumber ?folioNumber .
+}
+```
+
+---
+### Query 16 — Retrieve all IIIF manifests with register entry descriptions
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT ?folioNumber ?manifest ?description
+WHERE {
+  ?folio mdhn:folioNumber ?folioNumber ; mdhn:hasIIIFManifest ?manifest .
+  OPTIONAL {
+    ?folio mdhn:hasRegisterEntry ?entry .
+    ?entry rdfs:comment ?description . FILTER(LANG(?description)="en")
+  }
+}
+ORDER BY ?folioNumber
+```
+---
+### Query 17 — List all persons involved in creation with their roles
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT DISTINCT ?personLabel ?role ?wikidataItem
+WHERE {
+  VALUES (?prop ?role) {
+    (mdhn:hasPainter "Painter")
+    (mdhn:hasWorkshop_director "Workshop Director")
+    (mdhn:hasIlluminator "Illuminator")
+    (mdhn:hasScriber "Scribe / Calligrapher")
+    (mdhn:hasAuthor "Author / Poet")
+  }
+  ?content ?prop ?person .
+  ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel)="en")
+  OPTIONAL { ?person mdhn:wikidataItem ?wikidataItem . }
+}
+ORDER BY ?role ?personLabel
+```
+
+---
+### Query 18 — Full summary card for a single folio
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT ?folioNumber ?type ?holder ?manifest ?painter ?episode ?verse_start ?verse_end
+WHERE {
+  BIND(mdhn:Folio20v AS ?folio)
+  ?folio mdhn:folioNumber ?folioNumber ; a ?type ; mdhn:keptIn ?holderUri ; mdhn:hasIIIFManifest ?manifest .
+  ?holderUri rdfs:label ?holder .
+  OPTIONAL {
+    ?folio mdhn:hasContentElement ?painting .
+    ?painting a mdhn:Painting .
+    OPTIONAL { ?painting mdhn:hasPainter ?p . ?p rdfs:label ?painter . }
+    OPTIONAL { ?painting mdhn:hasNarrativeEpisode ?ep . ?ep rdfs:label ?episode . FILTER(LANG(?episode)="en") }
+  }
+  OPTIONAL {
+    ?folio mdhn:hasContentElement ?text .
+    ?text a mdhn:LinguisticObject ; mdhn:startVerse ?verse_start ; mdhn:endVerse ?verse_end .
+  }
+}
+```
+---
+### Query 19 — Trace a character across all paintings (character filmography)
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mdhn: <http://example.com/mdhn/>
+SELECT ?characterLabel ?folioNumber ?episodeLabel ?painterLabel ?manifest
+WHERE {
+  BIND(mdhn:Hushang AS ?character)
+  ?character rdfs:label ?characterLabel . FILTER(LANG(?characterLabel)="en")
+  ?painting mdhn:hasReferredTo ?character .
+  ?folio mdhn:hasContentElement ?painting ;
+         mdhn:folioNumber ?folioNumber ;
+         mdhn:hasIIIFManifest ?manifest .
+  OPTIONAL { ?painting mdhn:hasNarrativeEpisode ?ep . ?ep rdfs:label ?episodeLabel . FILTER(LANG(?episodeLabel)="en") }
+  OPTIONAL { ?painting mdhn:hasPainter ?p . ?p rdfs:label ?painterLabel . }
+}
+ORDER BY ?folioNumber
+```
+
+---
 
 ## Getting Started
 
