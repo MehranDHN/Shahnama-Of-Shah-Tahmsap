@@ -256,7 +256,9 @@ mdhn:NarrativeEpisode a owl:Class ;
     rdfs:label "Narrative Episode"@en , "روایت"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
-
+mdhn:VisualAttribute a owl:Class ;
+    rdfs:label "Visual Attribute"@en , "ویژگی بصری"@fa ;
+    rdfs:subClassOf mdhn:IconographicEntity .
 
 mdhn:wikidataItem a owl:ObjectProperty ;
     rdfs:label "Wikidata item"@en ;
@@ -423,6 +425,12 @@ mdhn:depicts a owl:ObjectProperty ;
     rdfs:domain mdhn:Painting ;
     rdfs:label "depicts"@en , "تصویر می‌کند"@fa ;
     rdfs:range mdhn:IconographicEntity .
+
+mdhn:hasVisualAttribute  a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;
+    rdfs:label "has visual attribute"@en ;
+    rdfs:range mdhn:VisualAttribute ;
+    rdfs:subPropertyOf mdhn:depicts .    
 
 mdhn:hasNarrativeEpisode a owl:ObjectProperty ;
     rdfs:domain mdhn:Painting ;
