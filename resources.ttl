@@ -200,6 +200,7 @@ mdhn:Iraj
     a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
     rdfs:label "Iraj"@en , "ايرج"@fa ;
     fhkb:isBrotherOf mdhn:Salm, mdhn:Tur;
+    fhkb:hasSon mdhn:Manuchehr;
     mdhn:wikidataItem wd:Q1300562.
 
 mdhn:Jamshid
@@ -254,7 +255,14 @@ mdhn:Manuchehr
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Manuchehr"@en , "منوچهر"@fa ;
     fhkb:hasSon mdhn:Nowzar;
-    mdhn:wikidataItem wd:Q1376677. 
+    mdhn:wikidataItem wd:Q1376677.
+    
+mdhn:Mahafarid
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Mahafarid"@en , "مهافرید"@fa ;
+    fhkb:isSpouseOf mdhn:Iraj;
+    fhkb:ismotherOf mdhn:Manuchehr;
+    mdhn:wikidataItem wd:Q138829412.      
 
 mdhn:Nowzar
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
@@ -311,23 +319,46 @@ mdhn:Sohrab
     rdfs:label "Sohrab"@en , "سهراب"@fa ;
     mdhn:wikidataItem wd:Q2065184.  
 
+mdhn:Kaveh_the_Blacksmith
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Kaveh the Blacksmith"@en , "کاوه آهنگر"@fa ;
+    fhkb:hasSon mdhn:Qubad, mdhn:Qaran;
+    mdhn:wikidataItem wd:Q1128478. 
+mdhn:Qubad
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Qubad"@en , "قباد"@fa ;
+    fhkb:isBrotherOf mdhn:Qaran;
+    mdhn:wikidataItem wd:Q138830690. 
+mdhn:Qaran
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Qaran"@en , "قارن"@fa ;
+    fhkb:isBrotherOf mdhn:Qubad;
+    mdhn:wikidataItem wd:Q138831115. 
+
+mdhn:Barman
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Barman"@en , "بارمان"@fa ;
+    mdhn:wikidataItem wd:Q138832420.        
+         
+    
+
 mdhn:Div1_23v
     a mdhn:MythicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 1"@en , "ديو اول"@fa ;
+    rdfs:label "Div 1 23v"@en , "ديو اول"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div2_23v
     a mdhn:MythicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 2"@en , "ديو دوم"@fa ;
+    rdfs:label "Div 2 23v"@en , "ديو دوم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div3_23v
     a mdhn:MythicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 3"@en , "ديو سوم"@fa ;
+    rdfs:label "Div 3 23v"@en , "ديو سوم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 mdhn:Div4_23v
     a mdhn:MythicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 4"@en , "ديو چهارم"@fa ;
+    rdfs:label "Div 4 23v"@en , "ديو چهارم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div1_21v
@@ -459,7 +490,7 @@ mdhn:Painting7r a mdhn:Painting;
                       mdhn:AbuMansurDaqiqiFig7r,
                       mdhn:UnsuriFig7r,
                       mdhn:AsjadiFig7r;
-  mdhn:hasReferredTo  mdhn:Firdowsi,
+  mdhn:hasReferredTo  mdhn:Ferdowsi,
                       mdhn:AbuMansurDaqiqi,
                       mdhn:Unsuri,
                       mdhn:Asjadi;                     
@@ -944,8 +975,8 @@ mdhn:Painting82v a mdhn:Painting;
    mdhn:hasPainter mdhn:Qadimi . 
 
 mdhn:Poems82v a mdhn:LinguisticObject;
-  mdhn:startVerse "2968";
-  mdhn:endVerse "2976".  
+  mdhn:startVerse 2968;
+  mdhn:endVerse 2976.  
 
 mdhn:SamFig82v a mdhn:FigureCrop;
    rdfs:label "Sam cropped figure from f82v"@en;
@@ -988,8 +1019,13 @@ mdhn:National_Museum_of_Asian_Art a mdhn:GLAMHolder;
 mdhn:Museum_of_Islamic_Art_Doha a mdhn:GLAMHolder;
   rdfs:label "Museum of Islamic Art Doha"@en;
   mdhn:wikidataItem wd:Q1148353.
+mdhn:Victoria_and_Albert_Museum a mdhn:GLAMHolder;
+  rdfs:label "Victoria and Albert Museum"@en;
+  mdhn:wikidataItem wd:Q213322.  
 mdhn:Private_Collection a mdhn:GLAMHolder;
   rdfs:label "Private Collection"@en.
+mdhn:Sarikhani_Collection a mdhn:GLAMHolder;
+  rdfs:label "Sarikhani Collection"@en.  
 
     
 
