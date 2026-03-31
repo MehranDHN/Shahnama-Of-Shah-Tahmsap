@@ -491,15 +491,21 @@ Future extensions may include:
 ## Sample Data Overview
 
 The `resources.ttl` file provides sample instance data covering **six folios** from the manuscript's early sections, illustrating all major ontology patterns:
-
+![mermaid diagram](/mermaid-diagram.png)
 | Folio | Painting Subject | Painter | Current Location |
 |---|---|---|---|
+| `2v` | Left side of Doble page Illuminated frontispece | Āqā Mīrak | Tehran Museum of Contemporary Art |
+| `3r` | Right side of Doble page Illuminated frontispece | Āqā Mīrak | Tehran Museum of Contemporary Art |
 | `7r` | Firdausi Encounters the Court Poets of Ghazna | Āqā Mīrak | Aga Khan Museum |
 | `20v` | The Court of Kayumars | Sultan Muhammad | Aga Khan Museum |
 | `21v` | Hushang Slays the Black Div | Sultan Muhammad | S.C. Welch Family Collection |
 | `22v` | The Feast of Sada | Sultan Muhammad | Metropolitan Museum of Art |
 | `23v` | Tahmuras Defeats the Divs | Sultan Muhammad | Metropolitan Museum of Art |
+| `24v` | The Court of Jamshid | Sultan Muhammad | S.C. Welch Family Collection |
+| `25v` | The Death of King Mirdas | Sultan Muhammad | Khalili Collection |
+| `27v` | Zahhak Receives the Daughters of Jamshid | Sultan Muhammad | Khalili Collection |
 | `38v` | Faranak Sends Gifts to Faridun | Qadimi | Khalili Collection |
+| `76v` | Rudaba Confesses to Sindukht | Abd al Aziz  | Tehran Museum of Contemporary Art |
 
 ![Sample Data Graph](SampleData.png)
 The sample data also encodes:
