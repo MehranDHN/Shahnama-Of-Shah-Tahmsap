@@ -246,6 +246,12 @@ mdhn:Hushang
     fhkb:hasSon mdhn:Tahmuras;
     mdhn:wikidataItem wd:Q1638892.   
 
+mdhn:Mardas
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mardas"@en , "مرداس"@fa ;
+    fhkb:hasSon mdhn:Zahhak;
+    mdhn:wikidataItem wd:Q5665501. 
+
 mdhn:Zahhak
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Zahhak"@en , "ضحاک"@fa ;
@@ -341,75 +347,33 @@ mdhn:Barman
     mdhn:wikidataItem wd:Q138832420.        
          
     
+mdhn:Iblis
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Iblis"@en , "ابلیس"@fa ;
+    mdhn:wikidataItem wd:Q273101. 
 
-mdhn:Div1_23v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 1 23v"@en , "ديو اول"@fa ;
-    mdhn:wikidataItem wd:Q1157107.  
-
-mdhn:Div2_23v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 2 23v"@en , "ديو دوم"@fa ;
+mdhn:Div
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Div"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
-mdhn:Div3_23v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 3 23v"@en , "ديو سوم"@fa ;
-    mdhn:wikidataItem wd:Q1157107. 
-mdhn:Div4_23v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 4 23v"@en , "ديو چهارم"@fa ;
-    mdhn:wikidataItem wd:Q1157107. 
 
-mdhn:Div1_21v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 1 21v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107. 
-
-mdhn:Div2_21v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 2 21v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107.  
-
-mdhn:Div3_21v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 3 21v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107.  
-
-mdhn:Div4_21v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 4 21v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107.  
-
-mdhn:Angle1_21v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Angle 1 21v"@en , "فرشته"@fa ;
+mdhn:Angel
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Angel"@en , "فرشته"@fa ;
     mdhn:wikidataItem wd:Q235113. 
-mdhn:Angle2_21v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Angle 2 21v"@en , "فرشته"@fa ;
-    mdhn:wikidataItem wd:Q235113.                         
+                       
 
 mdhn:BlackDiv
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
     rdfs:label "Black Div"@en , "ديو سياه"@fa ;
     mdhn:wikidataItem wd:Q5599492.  
 
 mdhn:Dragon
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
     rdfs:label "Dragon"@en , "اژدها"@fa ;
     mdhn:wikidataItem wd:Q7559. 
-    
-
-mdhn:Div1_24v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 1 24v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107. 
-
-mdhn:Div2_24v
-    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
-    rdfs:label "Div 2 24v"@en , "ديو"@fa ;
-    mdhn:wikidataItem wd:Q1157107.
+   
 
 # -- Folio 2v -----------------------------------------------------
 mdhn:RE_2v a mdhn:RegisterEntry;
@@ -542,7 +506,7 @@ mdhn:Folio20v a mdhn:Verso;
 mdhn:Painting20v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:KeyumarsFig20v, mdhn:SiamakFig20v, mdhn:HushangFig20v;
    mdhn:hasNarrativeEpisode mdhn:TahmurasDefeatsKingdomOfKeyumars;
-   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang, mdhn:BlackDiv;
+   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang, mdhn:BlackDiv , mdhn:Div;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:wikidataItem wd:Q64689329 ;
    mdhn:attributionCertainty "certain"@en;
@@ -590,7 +554,7 @@ mdhn:Folio21v a mdhn:Verso;
    mdhn:hasRegisterEntry mdhn:RE_21v.  
 
 mdhn:Painting21v a mdhn:Painting;
-   mdhn:hasFigureCrop mdhn:HushangFig21v, mdhn:BlackDivFig21v, mdhn:Div1_Fig21v,mdhn:Div2_Fig21v, mdhn:Div3_Fig21v, mdhn:Div1_Fig21v, mdhn:Angle1_Fig21v, mdhn:Angle1_Fig21v;
+   mdhn:hasFigureCrop mdhn:HushangFig21v, mdhn:BlackDivFig21v, mdhn:Div1_Fig21v,mdhn:Div2_Fig21v, mdhn:Div3_Fig21v, mdhn:Div1_Fig21v, mdhn:Angel_Fig21v, mdhn:Angel2_Fig21v;
       mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
       mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
       mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
@@ -622,30 +586,30 @@ mdhn:BlackDivFig21v a mdhn:FigureCrop;
 
 mdhn:Div1_Fig21v a mdhn:FigureCrop;
    rdfs:label "Div cropped figure from f21v"@en;
-   mdhn:hasReferredTo mdhn:Div1_21v;   
+   mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/253,1462,176,244/max/0/default.jpg". 
 mdhn:Div2_Fig21v a mdhn:FigureCrop;
    rdfs:label "Div cropped figure from f21v"@en;
-   mdhn:hasReferredTo mdhn:Div2_21v;   
+   mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/710,1637,219,208/max/0/default.jpg". 
 
 mdhn:Div3_Fig21v a mdhn:FigureCrop;
    rdfs:label "Div cropped figure from f21v"@en;
-   mdhn:hasReferredTo mdhn:Div3_21v;   
+   mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/240,1239,268,227/max/0/default.jpg". 
 mdhn:Div4_Fig21v a mdhn:FigureCrop;
    rdfs:label "Div cropped figure from f21v"@en;
-   mdhn:hasReferredTo mdhn:Div4_21v;   
+   mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/657,1228,275,151/max/0/default.jpg". 
 
-mdhn:Angle1_Fig21v a mdhn:FigureCrop;
-   rdfs:label "Div cropped figure from f21v"@en;
-   mdhn:hasReferredTo mdhn:Angle1_21v;   
+mdhn:Angel_Fig21v a mdhn:FigureCrop;
+   rdfs:label "Angel cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Angel;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/238,949,474,188/max/0/default.jpg". 
 
-mdhn:Angle2_Fig21v a mdhn:FigureCrop;
-   rdfs:label "Div cropped figure from f21v"@en;
-   mdhn:hasReferredTo mdhn:Angle2_21v;   
+mdhn:Angel2_Fig21v a mdhn:FigureCrop;
+   rdfs:label "Angel cropped figure from f21v"@en;
+   mdhn:hasReferredTo mdhn:Angel;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/524,926,136,100/max/0/default.jpg". 
 # -- Folio 22v -----------------------------------------------------
 mdhn:RE_22v a mdhn:RegisterEntry;
@@ -727,22 +691,22 @@ mdhn:TahmurasFigure23v a mdhn:FigureCrop;
 
 mdhn:Div1Figure23v a mdhn:FigureCrop;
    rdfs:label "Div1 cropped figure from f23v"@en;
-   mdhn:hasReferredTo mdhn:Div1_23v;
+   mdhn:hasReferredTo mdhn:Div;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/416,1582,497,451/max/0/default.jpg".
 
 mdhn:Div2Figure23v a mdhn:FigureCrop;
    rdfs:label "Divs2 cropped figure from f23v"@en;
-   mdhn:hasReferredTo mdhn:Div2_23v;
+   mdhn:hasReferredTo mdhn:Div;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/771,2074,195,373/max/0/default.jpg".
 
 mdhn:Div3Figure23v a mdhn:FigureCrop;
    rdfs:label "Div3 cropped figure from f23v"@en;
-   mdhn:hasReferredTo mdhn:Div3_23v;
+   mdhn:hasReferredTo mdhn:Div;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/318,2019,299,426/max/0/default.jpg".
 
 mdhn:Div4Figure23v a mdhn:FigureCrop;
    rdfs:label "Div4 cropped figure from f23v"@en;
-   mdhn:hasReferredTo mdhn:Div4_23v;
+   mdhn:hasReferredTo mdhn:Div;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-23v%2F23v.jpg/923,1847,333,306/max/0/default.jpg".
 
 mdhn:Poems23v a mdhn:LinguisticObject;
@@ -787,17 +751,69 @@ mdhn:JamshidFig24v a mdhn:FigureCrop;
 
 mdhn:Div1_Fig24v a mdhn:FigureCrop;
    rdfs:label "Div cropped figure from f24v"@en;
-   mdhn:hasReferredTo mdhn:Div1_24v;   
+   mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-24v%2FFolio_24v.jpg/549,1126,207,171/max/0/default.jpg". 
 
 mdhn:Div2_Fig24v a mdhn:FigureCrop;
    rdfs:label "Div cropped figure from f24v"@en;
-   mdhn:hasReferredTo mdhn:Div2_24v;   
+   mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-24v%2FFolio_24v.jpg/794,1128,132,166/max/0/default.jpg". 
    
 mdhn:KingdomOfJJamshid a mdhn:NarrativeEpisode;
    rdfs:label "The Court of Jamshid"@en, "بارگاه جمشيد"@fa;
-   mdhn:wikidataItem wd:Q138724581 .  
+   mdhn:wikidataItem wd:Q138724581 . 
+
+# -- Folio 25v -----------------------------------------------------
+mdhn:RE_25v a mdhn:RegisterEntry;
+    rdfs:label "The Death of King Mirdas"@en, "کشته شدن مرداس"@fa;
+    rdfs:comment "The just king of Arabia, Mirdas(Mardas), has an ambitious son, Zahhak, who joins Iblis (Satan) in a plot to kill his father. Iblis orders a pit dug on the palace grounds, and when Mirdas seeks seclusion in the garden in the middle of the night, he falls into the pit and dies. "@en;
+    mdhn:entryFolioNumber "25v";
+    mdhn:entryPartOf mdhn:painting_Index.  
+
+mdhn:Folio25v a mdhn:Verso;
+   rdfs:label "Folio 25v"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio26v ;
+   mdhn:folioNumber 25;
+   mdhn:keptIn mdhn:Khalili_Collection;
+   mdhn:hasContentElement mdhn:Painting25v, mdhn:Poems25v; 
+   mdhn:wikidataItem wd:Q107663637; 
+   mdhn:hasReferredTo mdhn:Mirdas, mdhn:Zahhak, mdhn:Iblis;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-25v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_25v.  
+
+mdhn:Painting25v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:ZahhakFig25v, mdhn:IblisFig25v, mdhn:MirdasFig25v;
+   mdhn:hasNarrativeEpisode mdhn:KingdomOfJJamshid;
+   mdhn:hasReferredTo mdhn:Mirdas, mdhn:Zahhak, mdhn:Iblis;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Sultan_Muhammad .  
+
+
+
+mdhn:Poems25v a mdhn:LinguisticObject;
+  mdhn:startVerse 464;
+  mdhn:endVerse 484.
+
+mdhn:MirdasFig25v a mdhn:FigureCrop;
+   rdfs:label "Mirdas cropped figure from f25v"@en;
+   mdhn:hasReferredTo mdhn:Mardas;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-25v%2F25v.jpg/490,2078,403,359/max/0/default.jpg".
+
+   mdhn:IblisFig25v a mdhn:FigureCrop;
+      rdfs:label "Iblis cropped figure from f25v"@en;
+      mdhn:hasReferredTo mdhn:Iblis;   
+      mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-25v%2F25v.jpg/192,1464,212,312/max/0/default.jpg". 
+
+   mdhn:ZahhakFig25v a mdhn:FigureCrop;
+   rdfs:label "Zahhak cropped figure from f25v"@en;
+   mdhn:hasReferredTo mdhn:Zahhak;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-25v%2F25v.jpg/623,1431,248,395/max/0/default.jpg". 
+   
+mdhn:ZahhakKillsHisOwnFather a mdhn:NarrativeEpisode;
+   rdfs:label "Zahhak Kills His Own Father Mardas"@en, "کشته شدن مرداس با حيله ضحاک"@fa;
+   mdhn:wikidataItem wd:Q138841520 .      
 
 # -- Folio 27v -----------------------------------------------------
 mdhn:RE_27v a mdhn:RegisterEntry;
@@ -1051,7 +1067,7 @@ mdhn:SamSlaysDragon : mdhn:NarrativeEpisode;
    rdfs:label "One Blow, Sam Recounts How He Slew a Dragon"@en, "کشته شدن اژدها به دست سام و سبب لقب او به یک زخم"@fa;
    mdhn:wikidataItem wd:Q138799749.
 
-mdhn:Folio25v a mdhn:Folio. 
+mdhn:Folio26v a mdhn:Folio. 
 mdhn:Folio28v a mdhn:Folio. 
 mdhn:Folio10r a mdhn:Folio.  
 mdhn:Folio39v a mdhn:Folio.   
