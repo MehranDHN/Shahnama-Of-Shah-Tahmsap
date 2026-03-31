@@ -343,71 +343,71 @@ mdhn:Barman
     
 
 mdhn:Div1_23v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 1 23v"@en , "ديو اول"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div2_23v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 2 23v"@en , "ديو دوم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div3_23v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 3 23v"@en , "ديو سوم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 mdhn:Div4_23v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 4 23v"@en , "ديو چهارم"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div1_21v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 1 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div2_21v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 2 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div3_21v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 3 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Div4_21v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 4 21v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.  
 
 mdhn:Angle1_21v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Angle 1 21v"@en , "فرشته"@fa ;
     mdhn:wikidataItem wd:Q235113. 
 mdhn:Angle2_21v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Angle 2 21v"@en , "فرشته"@fa ;
     mdhn:wikidataItem wd:Q235113.                         
 
 mdhn:BlackDiv
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Black Div"@en , "ديو سياه"@fa ;
     mdhn:wikidataItem wd:Q5599492.  
 
 mdhn:Dragon
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Dragon"@en , "اژدها"@fa ;
     mdhn:wikidataItem wd:Q7559. 
     
 
 mdhn:Div1_24v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 1 24v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107. 
 
 mdhn:Div2_24v
-    a mdhn:MythicalAnimal, owl:NamedIndividual ;
+    a mdhn:MythologicalAnimal, owl:NamedIndividual ;
     rdfs:label "Div 2 24v"@en , "ديو"@fa ;
     mdhn:wikidataItem wd:Q1157107.
 
@@ -540,9 +540,9 @@ mdhn:Folio20v a mdhn:Verso;
    mdhn:hasRegisterEntry mdhn:RE_20v.
 
 mdhn:Painting20v a mdhn:Painting;
-   mdhn:hasFigureCrop mdhn:KeyumarsFig20v, mdhn:SiamakFig20v ;
+   mdhn:hasFigureCrop mdhn:KeyumarsFig20v, mdhn:SiamakFig20v, mdhn:HushangFig20v;
    mdhn:hasNarrativeEpisode mdhn:TahmurasDefeatsKingdomOfKeyumars;
-   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:BlackDiv;
+   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang, mdhn:BlackDiv;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:wikidataItem wd:Q64689329 ;
    mdhn:attributionCertainty "certain"@en;
@@ -565,6 +565,11 @@ mdhn:SiamakFig20v a mdhn:FigureCrop;
    rdfs:label "Siamak cropped figure from f20v"@en;
    mdhn:hasReferredTo mdhn:Siamak;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/489,642,106,133/max/0/default.jpg". 
+
+mdhn:HushangFig20v a mdhn:FigureCrop;
+   rdfs:label "Hushang cropped figure from f20v"@en;
+   mdhn:hasReferredTo mdhn:Hushang;   
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/205,582,90,180/max/0/default.jpg". 
 
 # -- Folio 21v -----------------------------------------------------
 mdhn:RE_21v a mdhn:RegisterEntry;
@@ -794,6 +799,61 @@ mdhn:KingdomOfJJamshid a mdhn:NarrativeEpisode;
    rdfs:label "The Court of Jamshid"@en, "بارگاه جمشيد"@fa;
    mdhn:wikidataItem wd:Q138724581 .  
 
+# -- Folio 27v -----------------------------------------------------
+mdhn:RE_27v a mdhn:RegisterEntry;
+    rdfs:label "Zahhak Receives the Daughters of Jamshid"@en, "دختران جمشيد در بارگاه ضحاک"@fa;
+    rdfs:comment "As Jamshid becomes increasingly prideful, Iran declines. Zahhak invades and kills Jamshid. During his thousand-year reign of terror, Zahhak takes Jamshid\'s two daughters as his wives."@en;
+    mdhn:entryFolioNumber "27v";
+    mdhn:entryPartOf mdhn:painting_Index.  
+
+mdhn:Folio27v a mdhn:Verso;
+   rdfs:label "Folio 27v"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio28v ;
+   mdhn:folioNumber 28;
+   mdhn:keptIn mdhn:Khalili_Collection;
+   mdhn:hasContentElement mdhn:Painting27v, mdhn:Poems27v, mdhn:Inscription1_27v, mdhn:Inscription2_27v;
+   mdhn:wikidataItem wd:Q107663638; 
+   mdhn:hasReferredTo mdhn:Jamshid, mdhn:Zahhak, mdhn:Shahrnaz, mdhn:Arnavaz;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-27v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_27v.  
+
+mdhn:Painting27v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:ZahhakFig27v, mdhn:JamshidDaughtersFig27v;
+   mdhn:hasNarrativeEpisode mdhn:Zahhak_and_Daughters_of_Jamshid;
+   mdhn:hasReferredTo mdhn:Zahhak, mdhn:Shahrnaz, mdhn:Arnavaz;
+   mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Sultan_Muhammad .  
+
+mdhn:Poems27v a mdhn:LinguisticObject;
+  mdhn:startVerse 576;
+  mdhn:endVerse 585.
+
+mdhn:ZahhakFig27v a mdhn:FigureCrop;
+   rdfs:label "Zahhak cropped figure from f27v"@en;
+   mdhn:hasReferredTo mdhn:Zahhak;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-27v%2FFolio27v.jpg/978,1511,354,459/max/0/default.jpg".
+
+mdhn:JamshidDaughtersFig27v a mdhn:FigureCrop;
+   rdfs:label "Jamshid's daughters cropped figure from f27v"@en;
+   mdhn:hasReferredTo mdhn:Shahrnaz, mdhn:Arnavaz;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-27v%2FFolio27v.jpg/711,1401,232,666/max/0/default.jpg". 
+
+mdhn:Inscription1_27v a mdhn:Inscription;
+   rdfs:label "Inscription1 in Fig27v"@en;
+   rdfs:comment "The rival had taken your Zulf, We left Zahhak to the trouble of the snakes."@en, "زلف ترا رقیب به گردن گرفته بود. ضحاک را به زحمت ماران گذاشتیم"@fa;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-27v%2FFolio27v.jpg/640,555,1032,182/max/0/default.jpg".
+
+mdhn:Inscription2_27v a mdhn:Inscription;
+   rdfs:label "Inscription2 in Fig27v"@en;
+   rdfs:comment "Great is the glory of the king"@en, "السلطان العظم"@fa;
+   mdhn:hasIiifInscriptionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-27v%2FFolio27v.jpg/375,1901,193,69/max/0/default.jpg".
+
+mdhn:Zahhak_and_Daughters_of_Jamshid a mdhn:NarrativeEpisode;
+   rdfs:label "Zahhak Receives the Daughters of Jamshid"@en, "دختران جمشيد در بارگاه ضحاک"@fa;
+   mdhn:wikidataItem wd:Q138841381 .     
+
 
 # -- Folio 38v -----------------------------------------------------
 mdhn:RE_38v a mdhn:RegisterEntry;
@@ -992,6 +1052,7 @@ mdhn:SamSlaysDragon : mdhn:NarrativeEpisode;
    mdhn:wikidataItem wd:Q138799749.
 
 mdhn:Folio25v a mdhn:Folio. 
+mdhn:Folio28v a mdhn:Folio. 
 mdhn:Folio10r a mdhn:Folio.  
 mdhn:Folio39v a mdhn:Folio.   
 mdhn:Folio83v a mdhn:Folio. 
