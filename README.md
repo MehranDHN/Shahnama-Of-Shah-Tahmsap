@@ -498,124 +498,124 @@ Future extensions may include:
 
 ## Semantic Architecture of the Material World
 
-### 1. The Prototypical Safavid Universe: Introduction and Strategic Context
+  ### 1. The Prototypical Safavid Universe: Introduction and Strategic Context
 
-The Shahnama of Shah Tahmasp constitutes the definitive "mirror for princes," functioning as a meticulously rendered repository of 16th-century Safavid material culture. While the text narrates the mythic history of ancient Iran, its 258 illustrations serve as the primary record of the contemporary Safavid world. 
+  The Shahnama of Shah Tahmasp constitutes the definitive "mirror for princes," functioning as a meticulously rendered repository of 16th-century Safavid material culture. While the text narrates the mythic history of ancient Iran, its 258 illustrations serve as the primary record of the contemporary Safavid world. 
 
-To capture the dense, multi-layered reality of these paintings, a semantic **RDF OWL** (Resource Description Framework Web Ontology Language) model is the superior methodology. This approach mandates the mapping of complex interdependencies between physical objects—such as gem-encrusted gold bottles—and their specific socio-cultural functions within courtly rituals. It transforms a flat gallery catalog into a queryable structure for understanding Safavid identity and royal protocol.
+  To capture the dense, multi-layered reality of these paintings, a semantic **RDF OWL** (Resource Description Framework Web Ontology Language) model is the superior methodology. This approach mandates the mapping of complex interdependencies between physical objects—such as gem-encrusted gold bottles—and their specific socio-cultural functions within courtly rituals. It transforms a flat gallery catalog into a queryable structure for understanding Safavid identity and royal protocol.
 
-Produced between 1522 and 1540, the manuscript emerged from the *kitabkhana* (royal library), a sophisticated scriptorium that synthesized the painting styles of Turkmen Tabriz and Timurid Herat. Under the successive directorships of Sultan Muhammad, Mir Musavvir, and Aqa Mirak—with general supervision from the elderly Bihzad—a team of specialists created a visual universe reflecting the refined tastes of the Safavid court. The project served as an incubator for two generations of artists, evolving from the expressive "Turkmen" style of Sultan Muhammad to the extreme precision and coloristic harmony of Aqa Mirak’s circle.
+  Produced between 1522 and 1540, the manuscript emerged from the *kitabkhana* (royal library), a sophisticated scriptorium that synthesized the painting styles of Tabriz and Timurid Herat. Under the successive directorships of Sultan Muhammad, Mir Musavvir, and Aqa Mira with general supervision from the elderly Bihzad a team of specialists created a visual universe reflecting the refined tastes of the Safavid court. The project served as an incubator for two generations of artists, evolving from the expressive "Tabriz" style of Sultan Muhammad to the extreme precision and coloristic harmony of Aqa Mirak’s circle.
 
-A defining characteristic of this visual record is the productive tension between historical anachronism and contemporary representation. Although the Shahnama chronicles ancient kings, Safavid artists depicted the tools, weapons, and textiles of their own era. This deliberate use of 16th-century material culture to illustrate prehistoric epics provides the ground truth for our ontological categorization: every object rendered is a contemporary Safavid "type." This synthesis of the mythic and the material forms the basis for a formal taxonomy of the objects identified within the manuscript.
+  A defining characteristic of this visual record is the productive tension between historical anachronism and contemporary representation. Although the Shahnama chronicles ancient kings, Safavid artists depicted the tools, weapons, and textiles of their own era. This deliberate use of 16th-century material culture to illustrate prehistoric epics provides the ground truth for our ontological categorization: every object rendered is a contemporary Safavid "type." This synthesis of the mythic and the material forms the basis for a formal taxonomy of the objects identified within the manuscript.
 
-### 2. Taxonomy of the Material World: Hierarchical Class Structures
+  ### 2. Taxonomy of the Material World: Hierarchical Class Structures
 
-Hierarchical classification is the essential mechanism for resolving the "myriad details" of the illustrations into a structured knowledge base. The ontology must distinguish between generic types and the highly specialized luxury items that defined the environment of the Safavid elite.
+  Hierarchical classification is the essential mechanism for resolving the "myriad details" of the illustrations into a structured knowledge base. The ontology must distinguish between generic types and the highly specialized luxury items that defined the environment of the Safavid elite.
 
-The following structure defines the primary RDF Class and Subclass hierarchy for the material world of Shah Tahmasp:
+  The following structure defines the primary RDF Class and Subclass hierarchy for the material world of Shah Tahmasp:
 
-- **Class:** `MaterialObject`
-  - **Subclass:** `Tableware` (Prototypical Folio: 638r)
-    - `Long-neckedBottle`: Spherical or ovoid body with a neck nearly the length of a man’s torso (see Folio 80v).
-    - `High-neckedJug`: Short jugs with bulbous bodies, wide necks, and lids; often used for water or wine service.
-    - `Low-rimmedPlatter`: Serving vessels used to support bottles and jugs.
-    - `DrinkingCup`: Individual vessels used for imbibing.
-  - **Subclass:** `MusicalInstrument` (Prototypical Folio: 60v)
-    - `Tambour` (Percussion)
-    - `Psaltery` (Stringed)
-    - `Flute` (Woodwind)
-    - `Dumbruk`: Specifically defined as a "single-ended drum."
-    - `SmallLyre` (Stringed)
-  - **Subclass:** `MilitaryEquipment`
-    - `Arms`: Includes the Mace (as seen in Folio 23v, where Tahmuras bashes a demon).
-    - `Armor`: Personal protection and horse trappings.
-  - **Subclass:** `DomesticGoods`
-    - `Textiles`: Includes carpets and bedrolls.
-    - `StatusIndicator`: Specifically identifies `LeopardSkinClothing` (Folio 20v), reserved for the court of Gayumars.
-  - **Subclass:** `ArchitecturalDecoration`
-    - `TiledInterior`: Precise geometric environments where a unique `TilePattern` defines each architectural element (Folio 516v).
-    - `GardenPavilion`: Structures utilized for festive gatherings (*Bazm*).
+  - **Class:** `MaterialObject`
+    - **Subclass:** `Tableware` (Prototypical Folio: 638r)
+      - `Long-neckedBottle`: Spherical or ovoid body with a neck nearly the length of a man’s torso (see Folio 80v).
+      - `High-neckedJug`: Short jugs with bulbous bodies, wide necks, and lids; often used for water or wine service.
+      - `Low-rimmedPlatter`: Serving vessels used to support bottles and jugs.
+      - `DrinkingCup`: Individual vessels used for imbibing.
+    - **Subclass:** `MusicalInstrument` (Prototypical Folio: 60v)
+      - `Tambour` (Percussion)
+      - `Psaltery` (Stringed)
+      - `Flute` (Woodwind)
+      - `Dumbruk`: Specifically defined as a "single-ended drum."
+      - `SmallLyre` (Stringed)
+    - **Subclass:** `MilitaryEquipment`
+      - `Arms`: Includes the Mace (as seen in Folio 23v, where Tahmuras bashes a demon).
+      - `Armor`: Personal protection and horse trappings.
+    - **Subclass:** `DomesticGoods`
+      - `Textiles`: Includes carpets and bedrolls.
+      - `StatusIndicator`: Specifically identifies `LeopardSkinClothing` (Folio 20v), reserved for the court of Gayumars.
+    - **Subclass:** `ArchitecturalDecoration`
+      - `TiledInterior`: Precise geometric environments where a unique `TilePattern` defines each architectural element (Folio 516v).
+      - `GardenPavilion`: Structures utilized for festive gatherings (*Bazm*).
 
-These hierarchical classes provide the scaffolding necessary to attach specific material properties that define the physical and social reality of each object.
+  These hierarchical classes provide the scaffolding necessary to attach specific material properties that define the physical and social reality of each object.
 
-### 3. Attribute Logic and Data Properties: Materials, Methods, and Decorations
+  ### 3. Attribute Logic and Data Properties: Materials, Methods, and Decorations
 
-In a robust RDF model, **Data Properties** distinguish between standard types and defined subgroups. It is strategically vital to distinguish between `RoyalLuxury` (gold, silver, zinc) and `MarketEmulation` (brass). While extant brass pieces suggest metalworkers emulated courtly luxury for the market, the ontology identifies gold vessels as exclusive markers of royal status.
+  In a robust RDF model, **Data Properties** distinguish between standard types and defined subgroups. It is strategically vital to distinguish between `RoyalLuxury` (gold, silver, zinc) and `MarketEmulation` (brass). While extant brass pieces suggest metalworkers emulated courtly luxury for the market, the ontology identifies gold vessels as exclusive markers of royal status.
 
-| Object Category       | Material Property          | Decorative Technique                  | Status Correlation   |
-|-----------------------|----------------------------|---------------------------------------|----------------------|
-| Long-necked Bottle    | Gold, Silver, Zinc         | Gem-encrusted, Niello, Gilded         | RoyalLuxury          |
-| High-necked Jug       | Brass                      | Incised, Silver/Gold Inlay            | MarketEmulation      |
-| Architectural Element | Ceramic (Tile), Stone      | Geometric patterning, Polychrome      | RoyalPatronage       |
-| Tableware/Platter     | Gold, Silver               | Fluting, Incised motifs               | RoyalLuxury          |
-| Mace                  | Steel, Iron                | Polished, Functional                  | MilitaryElite        |
+  | Object Category       | Material Property          | Decorative Technique                  | Status Correlation   |
+  |-----------------------|----------------------------|---------------------------------------|----------------------|
+  | Long-necked Bottle    | Gold, Silver, Zinc         | Gem-encrusted, Niello, Gilded         | RoyalLuxury          |
+  | High-necked Jug       | Brass                      | Incised, Silver/Gold Inlay            | MarketEmulation      |
+  | Architectural Element | Ceramic (Tile), Stone      | Geometric patterning, Polychrome      | RoyalPatronage       |
+  | Tableware/Platter     | Gold, Silver               | Fluting, Incised motifs               | RoyalLuxury          |
+  | Mace                  | Steel, Iron                | Polished, Functional                  | MilitaryElite        |
 
-The "luxury indicators"—specifically the encrustation of rubies, turquoise, pearls, and emeralds—function as critical semantic markers. Within this ontology, a `MaterialObject` linked to specific combinations of these gems denotes a high level of craftsmanship and status. For instance, while silver bottles appear in various scenes, kings are served exclusively from gold bottles. These material attributes act as ontological rules defining the hierarchical relationships between characters and their environment, transitioning naturally into the functional relationships within the *Bazm u Razm* cycle.
+  The "luxury indicators"—specifically the encrustation of rubies, turquoise, pearls, and emeralds—function as critical semantic markers. Within this ontology, a `MaterialObject` linked to specific combinations of these gems denotes a high level of craftsmanship and status. For instance, while silver bottles appear in various scenes, kings are served exclusively from gold bottles. These material attributes act as ontological rules defining the hierarchical relationships between characters and their environment, transitioning naturally into the functional relationships within the *Bazm u Razm* cycle.
 
-### 4. Relational Ontology: Modeling the Socio-Cultural Context (Bazm and Razm)
+  ### 4. Relational Ontology: Modeling the Socio-Cultural Context (Bazm and Razm)
 
-The primary relational framework for this model is the cycle of **Bazm u Razm** (feasting and fighting). These are structured social behaviors that dictate how objects are deployed. The RDF model utilizes **Object Properties** to define these active relationships.
+  The primary relational framework for this model is the cycle of **Bazm u Razm** (feasting and fighting). These are structured social behaviors that dictate how objects are deployed. The RDF model utilizes **Object Properties** to define these active relationships.
 
-**Defined Object Properties:**
+  **Defined Object Properties:**
 
-- `usedInEvent`: Connects `Tableware` or `MusicalInstrument` to a `Bazm` (Feasting) event.
-- `servedTo`: A restricted relationship connecting `GoldBottle` specifically to the King.
-- `isServedBy`: The inverse property of `servedTo`, connecting the King to a Servant (as seen in Folio 80v).
-- `depictsStatus`: Connects `GemEncrustedObject` or `LeopardSkin` to `RoyalStatus`.
-- `occupiesSetting`: Connects `MaterialObject` to `GardenPavilion` or `TiledInterior`.
+  - `usedInEvent`: Connects `Tableware` or `MusicalInstrument` to a `Bazm` (Feasting) event.
+  - `servedTo`: A restricted relationship connecting `GoldBottle` specifically to the King.
+  - `isServedBy`: The inverse property of `servedTo`, connecting the King to a Servant (as seen in Folio 80v).
+  - `depictsStatus`: Connects `GemEncrustedObject` or `LeopardSkin` to `RoyalStatus`.
+  - `occupiesSetting`: Connects `MaterialObject` to `GardenPavilion` or `TiledInterior`.
 
-A significant temporal constraint in the model is the "**Edict of Sincere Repentance**" (1532–33). Before this date, the model reflects public wine drinking and "wild revelry." The ontology employs the property `mdhn:postEdictStatus` to track the shift in behavior. While the Shah forswore alcohol, the model must account for "private indulgence." For example, Bahram Mirza’s repast (1540) illustrates that royal status allowed for the bypassing of religious constraints in private settings, shifting wine-related individuals like the `Long-neckedBottle` from public *Bazm* to private, indulgent events. This relational logic provides the final layer of complexity required for a formal OWL specification.
+  A significant temporal constraint in the model is the "**Edict of Sincere Repentance**" (1532–33). Before this date, the model reflects public wine drinking and "wild revelry." The ontology employs the property `mdhn:postEdictStatus` to track the shift in behavior. While the Shah forswore alcohol, the model must account for "private indulgence." For example, Bahram Mirza’s repast (1540) illustrates that royal status allowed for the bypassing of religious constraints in private settings, shifting wine-related individuals like the `Long-neckedBottle` from public *Bazm* to private, indulgent events. This relational logic provides the final layer of complexity required for a formal OWL specification.
 
-### 5. Formal RDF OWL Model Specification
+  ### 5. Formal RDF OWL Model Specification
 
-The following synthesis formalizes the preceding cultural and material analysis into a queryable semantic structure.
+  The following synthesis formalizes the preceding cultural and material analysis into a queryable semantic structure.
 
 
-#### 1. Class Definitions
-- `mdhn:MaterialObject`
-- `mdhn:Tableware` (Subclass of `MaterialObject`)
-- `mdhn:MusicalInstrument` (Subclass of `MaterialObject`)
-- `mdhn:RoyalPersonage`
-- `mdhn:CourtEvent` (Subclasses: `Bazm`, `Razm`, `PrivateRepast`)
-- `mdhn:StatusIndicator` (Subclass of `MaterialObject`)
+  #### 1. Class Definitions
+  - `mdhn:MaterialObject`
+  - `mdhn:Tableware` (Subclass of `MaterialObject`)
+  - `mdhn:MusicalInstrument` (Subclass of `MaterialObject`)
+  - `mdhn:RoyalPersonage`
+  - `mdhn:CourtEvent` (Subclasses: `Bazm`, `Razm`, `PrivateRepast`)
+  - `mdhn:StatusIndicator` (Subclass of `MaterialObject`)
 
-#### 2. Property Definitions
+  #### 2. Property Definitions
 
-**Object Properties:**
-- `mdhn:servedTo` (Domain: `mdhn:Tableware`, Range: `mdhn:RoyalPersonage`)
-- `mdhn:isServedBy` (Inverse of `servedTo`; Range: `mdhn:Servant`)
-- `mdhn:usedIn` (Domain: `mdhn:MaterialObject`, Range: `mdhn:CourtEvent`)
-- `mdhn:capturedAt` (Domain: `mdhn:MaterialObject`, Range: `mdhn:HistoricalEvent`)
+  **Object Properties:**
+  - `mdhn:servedTo` (Domain: `mdhn:Tableware`, Range: `mdhn:RoyalPersonage`)
+  - `mdhn:isServedBy` (Inverse of `servedTo`; Range: `mdhn:Servant`)
+  - `mdhn:usedIn` (Domain: `mdhn:MaterialObject`, Range: `mdhn:CourtEvent`)
+  - `mdhn:capturedAt` (Domain: `mdhn:MaterialObject`, Range: `mdhn:HistoricalEvent`)
 
-**Data Properties:**
-- `mdhn:hasMaterial` (Values: Gold, Silver, Brass, Zinc)
-- `mdhn:hasGemEncrustation` (Values: Rubies, Turquoise, Pearls, Emeralds)
-- `mdhn:contains` (Value: `mdhn:SpiritOfCinnamon`, Wine, Water)
-- `mdhn:postEdictStatus` (Values: Prohibited, PrivateIndulgence)
+  **Data Properties:**
+  - `mdhn:hasMaterial` (Values: Gold, Silver, Brass, Zinc)
+  - `mdhn:hasGemEncrustation` (Values: Rubies, Turquoise, Pearls, Emeralds)
+  - `mdhn:contains` (Value: `mdhn:SpiritOfCinnamon`, Wine, Water)
+  - `mdhn:postEdictStatus` (Values: Prohibited, PrivateIndulgence)
 
-#### 3. Individual Axioms (Examples)
+  #### 3. Individual Axioms (Examples)
 
-- **Individual:** `ZincWineBottle_Chaldiran`
-  - Type: `mdhn:Long-neckedBottle`
-  - `mdhn:hasMaterial`: "Zinc"
-  - `mdhn:hasGemEncrustation`: "Turquoise", "Rubies", "Emeralds"
-  - `mdhn:capturedAt`: "Battle of Chaldiran (1514)"
-  - `mdhn:status`: "Royal/Looted"
+  - **Individual:** `ZincWineBottle_Chaldiran`
+    - Type: `mdhn:Long-neckedBottle`
+    - `mdhn:hasMaterial`: "Zinc"
+    - `mdhn:hasGemEncrustation`: "Turquoise", "Rubies", "Emeralds"
+    - `mdhn:capturedAt`: "Battle of Chaldiran (1514)"
+    - `mdhn:status`: "Royal/Looted"
 
-- **Individual:** `GoldBottle_Folio385v`
-  - Type: `mdhn:Long-neckedBottle`
-  - `mdhn:hasMaterial`: "Gold"
-  - `mdhn:hasGemEncrustation`: "Rubies", "Turquoise", "Pearls"
-  - `mdhn:servedTo`: `mdhn:King_Individual`
-  - `mdhn:contains`: "Wine"
+  - **Individual:** `GoldBottle_Folio385v`
+    - Type: `mdhn:Long-neckedBottle`
+    - `mdhn:hasMaterial`: "Gold"
+    - `mdhn:hasGemEncrustation`: "Rubies", "Turquoise", "Pearls"
+    - `mdhn:servedTo`: `mdhn:King_Individual`
+    - `mdhn:contains`: "Wine"
 
-- **Individual:** `Dumbruk_BahramMirzaRepast`
-  - Type: `mdhn:MusicalInstrument`
-  - `mdhn:usedIn`: `mdhn:PrivateRepast_Event`
-  - `mdhn:postEdictStatus`: "PrivateIndulgence"
-  - `mdhn:contains`: `mdhn:SpiritOfCinnamon` (for associated tableware)
+  - **Individual:** `Dumbruk_BahramMirzaRepast`
+    - Type: `mdhn:MusicalInstrument`
+    - `mdhn:usedIn`: `mdhn:PrivateRepast_Event`
+    - `mdhn:postEdictStatus`: "PrivateIndulgence"
+    - `mdhn:contains`: `mdhn:SpiritOfCinnamon` (for associated tableware)
 
-This RDF model transforms the Shahnama of Shah Tahmasp into a multi-dimensional, queryable database. By formalizing the relationships between material luxury, temporal religious constraints, and social hierarchy, we move beyond mere art history into a comprehensive semantic architecture of 16th-century Persian life.
+  This RDF model transforms the Shahnama of Shah Tahmasp into a multi-dimensional, queryable database. By formalizing the relationships between material luxury, temporal religious constraints, and social hierarchy, we move beyond mere art history into a comprehensive semantic architecture of 16th-century Persian life.
 
 ## Sample Data Overview
 
