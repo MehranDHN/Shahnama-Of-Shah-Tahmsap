@@ -140,6 +140,15 @@ mdhn:Painting
     rdfs:label   "Painting"@en , "نگاره"@fa ;
     skos:exactMatch aat:300033799 .
 
+mdhn:ZoomedScene
+    a owl:Class ;
+    rdfs:subClassOf mdhn:ContentElement ;
+    rdfs:subClassOf crm:E36_Visual_Item ;
+    rdfs:label "Zoomed Scene"@en ;
+    rdfs:label "صحنه بزرگ‌نمایی‌شده"@fa ;
+    rdfs:comment "A cropped, magnified detail from a painting that isolates a specific narrative moment, character interaction, or iconographic element for detailed study. Typically published by institutions like the Metropolitan Museum for pedagogical or scholarly purposes."@en ;
+    skos:exactMatch aat:300404391 .  # details (visual works)    
+
 mdhn:Illumination a owl:Class ;
     rdfs:label "Illumination"@en , "تذهیب"@fa ;
     rdfs:subClassOf mdhn:ContentElement ;
@@ -174,6 +183,28 @@ mdhn:FigureCrop a owl:Class ;
     a dedicated IIIF Manifest for the crop."""@en ;
     rdfs:label "Figure Crop"@en , "برش شخصیت"@fa ;
     skos:exactMatch aat:300404983 .
+
+mdhn:hasZoomedScene
+    a owl:ObjectProperty ;
+    rdfs:domain mdhn:Painting ;  # NOT Folio - tighter binding
+    rdfs:range mdhn:ZoomedScene ;
+    rdfs:label "has zoomed scene"@en ;
+    rdfs:label "دارای صحنه بزرگ‌نمایی‌شده"@fa ;
+    rdfs:comment "Links a painting to a magnified detail extracted from it."@en .
+
+mdhn:isZoomedSceneOf
+    a owl:ObjectProperty ;
+    owl:inverseOf mdhn:hasZoomedScene ;
+    rdfs:domain mdhn:ZoomedScene ;
+    rdfs:range mdhn:Painting ;
+    rdfs:label "is zoomed scene of"@en, "بزرگ‌نمایی‌شده متعلق به"@fa .
+
+mdhn:iiifZoomedRegionURL
+    a owl:DatatypeProperty ;
+    rdfs:domain mdhn:ZoomedScene ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "IIIF zoomed region URL"@en ;
+    rdfs:comment "Full IIIF Image API URL with region, size, and quality parameters specifying the exact crop boundaries of this zoomed scene."@en .        
 
 mdhn:isExtractedFrom a owl:ObjectProperty ;
     rdfs:comment "Links a FigureCrop to the Painting from which it was isolated."@en ;
@@ -256,8 +287,8 @@ mdhn:NarrativeEpisode a owl:Class ;
     rdfs:label "Narrative Episode"@en , "روایت"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
-mdhn:VisualAttribute a owl:Class ;
-    rdfs:label "Visual Attribute"@en , "ویژگی بصری"@fa ;
+mdhn:MaterialObject a owl:Class ;
+    rdfs:label "Material Object"@en , "شیء مادی"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
 mdhn:wikidataItem a owl:ObjectProperty ;
@@ -342,8 +373,8 @@ mdhn:FictionalHuman a owl:Class ;
     rdfs:label "Fictional Human"@en , "انسان اساطيری"@fa ;
     rdfs:subClassOf mdhn:EpicEntity, mdhn:IconographicEntity.
 
-mdhn:MythicalAnimal a owl:Class ;
-    rdfs:label "MythicalAnimal"@en , "موجود اساطيری"@fa ;
+mdhn:MythologicalCreature a owl:Class ;
+    rdfs:label "MythologicalCreature"@en , "موجود اساطيری"@fa ;
     rdfs:subClassOf mdhn:EpicEntity, mdhn:IconographicEntity .         
 
 
@@ -426,14 +457,14 @@ mdhn:depicts a owl:ObjectProperty ;
     rdfs:label "depicts"@en , "تصویر می‌کند"@fa ;
     rdfs:range mdhn:IconographicEntity .
 
-mdhn:hasVisualAttribute  a owl:ObjectProperty ;
+mdhn:hasMaterialObject  a owl:ObjectProperty ;
     rdfs:domain mdhn:Painting ;
-    rdfs:label "has visual attribute"@en ;
-    rdfs:range mdhn:VisualAttribute ;
+    rdfs:label "has material object"@en ;
+    rdfs:range mdhn:MaterialObject ;
     rdfs:subPropertyOf mdhn:depicts .    
 
 mdhn:hasNarrativeEpisode a owl:ObjectProperty ;
-    rdfs:domain mdhn:Painting ;
+    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:ZoomedScene) ] .
     rdfs:label "has narrative episode"@en ;
     rdfs:range mdhn:NarrativeEpisode ;
     rdfs:subPropertyOf mdhn:depicts .
@@ -445,7 +476,7 @@ mdhn:episodeAppearsIn a owl:ObjectProperty ;
     owl:inverseOf mdhn:hasNarrativeEpisode . 
 
 mdhn:hasReferredTo a owl:ObjectProperty ;
-    rdfs:domain mdhn:Painting ;
+    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:FigureCrop mdhn:ZoomedScene) ] .
     rdfs:label "has referred to"@en ;
     rdfs:range mdhn:EpicEntity ;
     rdfs:subPropertyOf mdhn:depicts .    
