@@ -291,6 +291,34 @@ mdhn:MaterialObject a owl:Class ;
     rdfs:label "Material Object"@en , "شیء مادی"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
+mdhn:Tableware a owl:Class ;
+    rdfs:label "Tableware"@en , "لوازم غذاخوری"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject . 
+
+mdhn:MusicalInstrument a owl:Class ;
+    rdfs:label "Musical Instrument"@en , "ابزار موسیقی"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .
+    
+mdhn:MilitaryEquipment a owl:Class ;
+    rdfs:label "Military Equipment"@en , "تجهیزات نظامی"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject . 
+
+mdhn:DomesticGoods a owl:Class ;
+    rdfs:label "Domestic Goods"@en , "کالاهای خانگی"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .
+
+mdhn:ArchitecturalDecoration a owl:Class ;
+    rdfs:label "Architectural Decoration"@en , "تزئینات معماری"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .  
+
+mdhn:NaturalElement a owl:Class ;
+    rdfs:label "Natural Element"@en , "عنصر طبیعی"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject . 
+
+mdhn:LuxuryCeremony a owl:Class ;
+    rdfs:label "Luxury Ceremony"@en , "مراسم لوکس"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .                     
+
 mdhn:wikidataItem a owl:ObjectProperty ;
     rdfs:label "Wikidata item"@en ;
     rdfs:domain owl:Thing ;
