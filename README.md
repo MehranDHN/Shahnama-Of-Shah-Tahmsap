@@ -495,7 +495,7 @@ Future extensions may include:
 
 
 
-## Semantic Architecture of the Material World: A Report and RDF OWL Model for the Shahnama of Shah Tahmasp
+## Semantic Architecture of the Material World
 
 ### 1. The Prototypical Safavid Universe: Introduction and Strategic Context
 
