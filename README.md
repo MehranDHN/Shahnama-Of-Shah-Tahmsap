@@ -26,13 +26,14 @@
    - [Integration Architecture](#integration-architecture)
    - [Classes and Properties mappings](#class-and-property-mappings)
    - [Example of the mythological dynasty](#integration-example--the-mythological-dynasty-turtle)
-   - [SPARQL Queries](#sparql-queries--genealogy-aware)   
-7. [Sample Data Overview](#sample-data-overview)
-8. [SPARQL Query Examples](#sparql-query-examples)
-9. [Getting Started](#getting-started)
-10. [Contributing](#contributing)
-11. [Citation](#citation)
-12. [License](#license)
+   - [SPARQL Queries](#sparql-queries--genealogy-aware)      
+7. [Semantic Architecture of the Material World](#semantic-architecture-of-the-material-world)   
+8. [Sample Data Overview](#sample-data-overview)
+9. [SPARQL Query Examples](#sparql-query-examples)
+10. [Getting Started](#getting-started)
+11. [Contributing](#contributing)
+12. [Citation](#citation)
+13. [License](#license)
 
 ---
 
