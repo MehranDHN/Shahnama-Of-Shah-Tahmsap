@@ -173,51 +173,74 @@ mdhn:Abd_al_Aziz
     mdhn:wikidataItem wd:Q21663724 .   
 
 mdhn:Derafsh_Kaviani
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Derafsh Kaviani"@en , "درفش کاويانی"@fa ;
     mdhn:wikidataItem wd:Q1199905 .
 
 mdhn:Bow_and_Arrow
-    a mdhn:VisualItem, owl:NamedIndividual ;
-    rdfs:label "Bow and Arrow"@en , "تير و کمان"@fa 
+    a mdhn:MaterialObject, owl:NamedIndividual ;
+    rdfs:label "Bow and Arrow"@en , "تير و کمان"@fa ;
     mdhn:wikidataItem wd:Q19827042 .   
 
 mdhn:Body_Armour
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Body Armour"@en , "زره و لباس رزم"@fa ;
     mdhn:exactMatch aat:300036746 .
     mdhn:wikidataItem wd:Q485027 .
 
 mdhn:Combat_Helmet
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Combat Helmet"@en , "کلاهخود"@fa ;
     mdhn:exactMatch aat:300391023 .
     mdhn:wikidataItem wd:Q3579211 . 
 
 mdhn:Architectural_Structure
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Architectural Structure"@en , "بنای معماری"@fa ;
     mdhn:wikidataItem wd:Q811979 . 
 
+     
+
+mdhn:Feasting a mdhn:MaterialObject, owl:NamedIndividual ;
+    rdfs:label "Feasting"@en , "بزم"@fa ;
+    mdhn:wikidataItem wd:Q200538 .  
+
 mdhn:Soldier
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Soldier"@en , "جنگجو"@fa ;
-    mdhn:exactMatch aat:300185678 .
+    mdhn:exactMatch aat:300185678 ;
     mdhn:wikidataItem wd:Q4991371 .      
-mdhn:War
-    a mdhn:VisualItem, owl:NamedIndividual ;
-    rdfs:label "War"@en , "نبرد"@fa ;
-    mdhn:exactMatch aat:300185692 .
+mdhn:Battle
+    a mdhn:MaterialObject, owl:NamedIndividual ;
+    rdfs:label "Battle"@en , "زرم و نبرد"@fa ;
+    mdhn:exactMatch aat:300185692 ;
     mdhn:wikidataItem wd:Q198 .  
 
+mdhn:Battle_Field
+    a mdhn:MaterialObject, owl:NamedIndividual ;
+    rdfs:label "Battle Field"@en , "میدان نبرد"@fa ;
+    mdhn:exactMatch aat:300000835 ;
+    mdhn:wikidataItem wd:Q4895508 . 
+
+mdhn:Enthronement
+    a mdhn:MaterialObject, owl:NamedIndividual ;
+    rdfs:label "Enthronement"@en , "تاجگذاری"@fa ;
+    mdhn:exactMatch aat:300054754 ;
+    mdhn:wikidataItem wd:Q1671499 .   
+
+mdhn:Royal_Court
+    a mdhn:MaterialObject, owl:NamedIndividual ;
+    rdfs:label "Royal Court"@en , "بارگاه پادشاهی"@fa ;
+    mdhn:wikidataItem wd:Q1134237 .          
+
 mdhn:Mace
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Mace"@en , "گرز"@fa ;
     mdhn:exactMatch aat:300037214 .
     mdhn:wikidataItem wd:Q272990 . 
 
 mdhn:Bugle
-    a mdhn:VisualItem, owl:NamedIndividual ;
+    a mdhn:MaterialObject, owl:NamedIndividual ;
     rdfs:label "Bugle"@en , "شيپور"@fa ;
     mdhn:exactMatch aat:300042281 .
     mdhn:wikidataItem wd:Q943488 .                               
@@ -508,7 +531,8 @@ mdhn:Painting7r a mdhn:Painting;
   mdhn:hasReferredTo  mdhn:Ferdowsi,
                       mdhn:AbuMansurDaqiqi,
                       mdhn:Unsuri,
-                      mdhn:Asjadi;                     
+                      mdhn:Asjadi;  
+   mdhn:hasVisualItem mdhn:Feasting;                   
    mdhn:hasWorkshop_director  mdhn:Aqa_Mīrak ;
    mdhn:wikidataItem wd:Q64689329 ;
    mdhn:attributionCertainty "probable"@en;
@@ -559,6 +583,7 @@ mdhn:Painting20v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:TahmurasDefeatsKingdomOfKeyumars;
    mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang, mdhn:BlackDiv , mdhn:Div;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:hasVisualItem mdhn:Royal_Court, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Enthronement;
    mdhn:wikidataItem wd:Q64689329 ;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
@@ -610,7 +635,7 @@ mdhn:Painting21v a mdhn:Painting;
       mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
       mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
       mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-      mdhn:hasVisualItem mdhn:Bugle, mdhn:Body_Armour,  mdhn:Soldier, mdhn:War, mdhn:Mace;
+      mdhn:hasVisualItem mdhn:Bugle, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle_Field,mdhn:Battle mdhn:Mace;
       mdhn:attributionCertainty "certain"@en;
       mdhn:hasPainter mdhn:Sultan_Muhammad . 
 
@@ -688,6 +713,7 @@ mdhn:Painting22v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:HushangInFeastOfSada;
    mdhn:hasReferredTo mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
+   mdhn:hasVisualItem mdhn:Feasting;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .      
 
@@ -720,7 +746,7 @@ mdhn:Folio23v a mdhn:Verso;
    mdhn:folioNumber 23; 
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
    mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;
-   mdhn:hasVisualItem mdhn:Mace, mdhn:Body_Armour,  mdhn:Soldier, mdhn:War;  
+   mdhn:hasVisualItem mdhn:Mace, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle;  
    mdhn:hasReferredTo mdhn:Tahmuras;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-23v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_23v. 
