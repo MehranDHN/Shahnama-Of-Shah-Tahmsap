@@ -185,13 +185,13 @@ mdhn:Bow_and_Arrow
 mdhn:Body_Armour
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
     rdfs:label "Body Armour"@en , "زره و لباس رزم"@fa ;
-    mdhn:exactMatch aat:300036746 .
+    mdhn:exactMatch aat:300036746 ;
     mdhn:wikidataItem wd:Q485027 .
 
 mdhn:Combat_Helmet
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
     rdfs:label "Combat Helmet"@en , "کلاهخود"@fa ;
-    mdhn:exactMatch aat:300391023 .
+    mdhn:exactMatch aat:300391023 ;
     mdhn:wikidataItem wd:Q3579211 . 
 
 mdhn:Architectural_Structure
@@ -199,6 +199,19 @@ mdhn:Architectural_Structure
     rdfs:label "Architectural Structure"@en , "بنای معماری"@fa ;
     mdhn:wikidataItem wd:Q811979 . 
 
+mdhn:Balcony
+    a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
+    rdfs:label "Balcony"@en , "بالکن"@fa ;
+    mdhn:exactMatch aat:300002588 ;
+    mdhn:wikidataItem wd:Q170552 .  
+
+mdhn:Pool
+    a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
+    rdfs:label "Pool"@en , "حوض"@fa ;
+    mdhn:exactMatch aat:300008692 ;
+    mdhn:wikidataItem wd:Q1501 .        
+
+ 
      
 mdhn:Feasting a mdhn:LuxuryCeremony, owl:NamedIndividual ;
     rdfs:label "Feasting"@en , "بزم"@fa ;
@@ -648,7 +661,7 @@ mdhn:Painting21v a mdhn:Painting;
       mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
       mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
       mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-      mdhn:hasVisualItem mdhn:Bugle, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle_Field,mdhn:Battle mdhn:Mace;
+      mdhn:hasVisualItem mdhn:Bugle, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle_Field,mdhn:Battle, mdhn:Mace;
       mdhn:attributionCertainty "certain"@en;
       mdhn:hasPainter mdhn:Sultan_Muhammad . 
 
@@ -1192,7 +1205,7 @@ mdhn:Folio102v a mdhn:Verso;
 mdhn:Painting102v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:QaranFig102v, mdhn:BarmanFig102v;
    mdhn:hasNarrativeEpisode mdhn:Qaran_Slays_Barman;
-   mdhn:hasReferredTo mdhn:Qaran, mdhn:Barman,;
+   mdhn:hasReferredTo mdhn:Qaran, mdhn:Barman;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:hasMaterialObject mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow, mdhn:Spear, mdhn:Horse_Armour, mdhn:Battle_Field;
    mdhn:hasZoomedScene mdhn:BattleZoomScene102v ;
