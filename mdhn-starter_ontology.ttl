@@ -492,7 +492,7 @@ mdhn:hasMaterialObject  a owl:ObjectProperty ;
     rdfs:subPropertyOf mdhn:depicts .    
 
 mdhn:hasNarrativeEpisode a owl:ObjectProperty ;
-    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:ZoomedScene) ] .
+    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:ZoomedScene) ] ;
     rdfs:label "has narrative episode"@en ;
     rdfs:range mdhn:NarrativeEpisode ;
     rdfs:subPropertyOf mdhn:depicts .
@@ -504,7 +504,7 @@ mdhn:episodeAppearsIn a owl:ObjectProperty ;
     owl:inverseOf mdhn:hasNarrativeEpisode . 
 
 mdhn:hasReferredTo a owl:ObjectProperty ;
-    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:FigureCrop mdhn:ZoomedScene) ] .
+    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:FigureCrop mdhn:ZoomedScene) ] ;
     rdfs:label "has referred to"@en ;
     rdfs:range mdhn:EpicEntity ;
     rdfs:subPropertyOf mdhn:depicts .    
