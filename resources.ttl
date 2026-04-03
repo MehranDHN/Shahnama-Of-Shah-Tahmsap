@@ -170,7 +170,18 @@ mdhn:Qadimi
 mdhn:Abd_al_Aziz
     a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Abd al-Aziz"@en , "عبدالعزيز"@fa ;
-    mdhn:wikidataItem wd:Q21663724 .   
+    mdhn:wikidataItem wd:Q21663724 .
+      
+
+mdhn:Abd_al_Vahhab
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Abd al-Vahhab"@en , "عبدالوهاب"@fa ;
+    mdhn:wikidataItem wd:Q59482128 .       
+
+mdhn:Mir_Mossavvir
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mir Mossavvir"@en , "میر مصور"@fa ;
+    mdhn:wikidataItem wd:Q4295446 .       
 
 mdhn:Derafsh_Kaviani
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
@@ -444,13 +455,52 @@ mdhn:Qaran
 mdhn:Barman
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Barman"@en , "بارمان"@fa ;
-    mdhn:wikidataItem wd:Q138832420.        
+    mdhn:wikidataItem wd:Q138832420.  
+
+mdhn:Afrasiab
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Afrasiab"@en , "افراسیاب"@fa ;
+    fhkb:hasDaughter mdhn:Manizheh;
+    mdhn:wikidataItem wd:Q383717.
+
+mdhn:Giv
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Giv"@en , "گیو"@fa ;
+    fhkb:hasSon mdhn:Bizhan;
+    mdhn:wikidataItem wd:Q1528771. 
+
+mdhn:Goudarz
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Goudarz"@en , "گودرز"@fa ;
+    fhkb:hasSon mdhn:Giv;
+    mdhn:wikidataItem wd:Q5767416.  
+
+mdhn:Keshvad
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Keshvad"@en , "کشواد"@fa ;
+    fhkb:hasSon mdhn:Giv;
+    mdhn:wikidataItem wd:Q6395074.        
+
+mdhn:Bizhan
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Bizhan"@en , "بیژن"@fa ;
+    mdhn:wikidataItem wd:Q6415987. 
+
+mdhn:Manizheh
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Manizheh"@en , "منیزه"@fa ;
+    mdhn:wikidataItem wd:Q1890442.                          
          
     
 mdhn:Iblis
     a mdhn:MythologicalCreature, owl:NamedIndividual ;
     rdfs:label "Iblis"@en , "ابلیس"@fa ;
     mdhn:wikidataItem wd:Q273101. 
+
+mdhn:Wild_Boars
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Wild Boars"@en , "گرازهای وحشی"@fa ;
+    mdhn:wikidataItem wd:Q138863005.
 
 mdhn:Div
     a mdhn:MythologicalCreature, owl:NamedIndividual ;
@@ -1234,7 +1284,53 @@ mdhn:BattleZoomScene102v a mdhn:ZoomedScene;
 
 mdhn:Qaran_Slays_Barman a mdhn:NarrativeEpisode;
    rdfs:label "Qaran Slays Barman"@en, "کشته شدن بارمان به دست قاران"@fa;
-   mdhn:wikidataItem wd:Q138847591 .     
+   mdhn:wikidataItem wd:Q138847591 . 
+
+   # -- Folio 299r -----------------------------------------------------
+mdhn:RE_299r a mdhn:RegisterEntry;
+    rdfs:label "Bizhan Slaughters the Wild Boars of Irman"@en, "کشته شدن گرازهای وحشی به دست بيژن"@fa;
+    rdfs:comment "In the remote land of Irman, a herd of enormous wild boars is destroying, fields and flocks. A delegation seeks the help of Kay Khusrau, who offers a reward to the paladin who can rid Irman of this scourge. Young Bizhan eagerly takes up the challenge and departs with Gurgin as his guide. Singlehandedly he pursues the boars in the forest, slicing in two the head of one and intimidating the rest. Thus, Bizhan easily puts them to the sword."@en;
+    mdhn:entryFolioNumber "299r";
+    mdhn:entryPartOf mdhn:painting_Index.  
+
+mdhn:Folio299r a mdhn:Recto;
+   rdfs:label "Folio 299r"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio299v ;
+   mdhn:folioNumber 299;
+   mdhn:keptIn mdhn:Dallas_Museum_of_Art;
+   mdhn:hasContentElement mdhn:Painting299r, mdhn:Poems299r; 
+   mdhn:wikidataItem wd:Q131241829; 
+   mdhn:hasReferredTo mdhn:Bizhan, mdhn:Giv, mdhn:Wild_Boars;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-299r/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_299r.  
+
+mdhn:Painting299r a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:BizhanFig299r, mdhn:WildBoarFig299r;
+   mdhn:hasNarrativeEpisode mdhn:Bizhan_Slaughters_the_Wild_Boars_of_Irman;
+   mdhn:hasReferredTo mdhn:Bizhan, mdhn:Wild_Boars;
+   mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
+   mdhn:hasMaterialObject mdhn:Bow_and_Arrow;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Abd_al_Vahhab .  
+
+mdhn:Poems299r a mdhn:LinguisticObject;
+  mdhn:startVerse 15830;
+  mdhn:endVerse 15835.
+
+mdhn:BizhanFig299r a mdhn:FigureCrop;
+   rdfs:label "Bizhan cropped figure from f299r"@en;
+   mdhn:hasReferredTo mdhn:Bizhan;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-299r%2FFolio299r.jpeg/647,1997,724,675/max/0/default.jpg".
+
+mdhn:WildBoarFig299r a mdhn:FigureCrop;
+   rdfs:label "Wild Boar cropped figure from f299r"@en;
+   mdhn:hasReferredTo mdhn:Wild_Boars;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-299r%2FFolio299r.jpeg/1189,2209,891,531/max/0/default.jpg".
+
+mdhn:Bizhan_Slaughters_the_Wild_Boars_of_Irman a mdhn:NarrativeEpisode;
+   rdfs:label "Bizhan Slaughters the Wild Boars of Irman"@en, "کشته شدن گرازهای وحشی ایرمن به دست بیژان"@fa;
+   mdhn:wikidataItem wd:Q138863131 .      
 
 mdhn:Folio26v a mdhn:Folio. 
 mdhn:Folio28v a mdhn:Folio. 
@@ -1242,6 +1338,7 @@ mdhn:Folio10r a mdhn:Folio.
 mdhn:Folio39v a mdhn:Folio.   
 mdhn:Folio83v a mdhn:Folio. 
 mdhn:Folio103v a mdhn:Folio. 
+mdhn:Folio299v a mdhn:Folio. 
 
 mdhn:Tehran_Museum_of_Contemporary_Art a mdhn:GLAMHolder;
 rdfs:label "Tehran Museum of Contemporary Art"@en;
@@ -1269,6 +1366,11 @@ mdhn:Museum_of_Islamic_Art_Doha a mdhn:GLAMHolder;
 mdhn:Victoria_and_Albert_Museum a mdhn:GLAMHolder;
   rdfs:label "Victoria and Albert Museum"@en;
   mdhn:wikidataItem wd:Q213322.  
+
+mdhn:Dallas_Museum_of_Art a mdhn:GLAMHolder;
+  rdfs:label "Dallas Museum of Art"@en;
+  mdhn:wikidataItem wd:Q745866. 
+
 mdhn:Private_Collection a mdhn:GLAMHolder;
   rdfs:label "Private Collection"@en.
 mdhn:Sarikhani_Collection a mdhn:GLAMHolder;
