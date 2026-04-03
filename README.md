@@ -635,7 +635,10 @@ The `resources.ttl` file provides sample instance data covering **six folios** f
 | `27v` | Zahhak Receives the Daughters of Jamshid | Sultan Muhammad | Khalili Collection |
 | `38v` | Faranak Sends Gifts to Faridun | Qadimi | Khalili Collection |
 | `76v` | Rudaba Confesses to Sindukht | Abd al Aziz  | Tehran Museum of Contemporary Art |
-| `102v`| Qaran Slays Barman| Abd al Aziz  | Victoria & Albert Museum |
+| `102v`| Qaran Slays Barman | Abd al Aziz  | Victoria & Albert Museum |
+| `299r`| Bizhan Slaughters the Wild Boars of Irman | Abd al Vahhab  | Dallas Museum of Art |
+
+
 
 ![Sample Data Graph](SampleData.png)
 The sample data also encodes:
