@@ -897,7 +897,7 @@ mdhn:Painting20v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:KingdomOfKeyumars;
    mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:hasVisualItem mdhn:Royal_Court, mdhn:LeopardSkinDress,  mdhn:Throne, mdhn:Enthronement, mdhn:Turban, mdhn:Rock;
+   mdhn:hasVisualItem mdhn:Royal_Court, mdhn:LeopardSkinDress,  mdhn:Throne, mdhn:Enthronement, mdhn:Turban, mdhn:Rock, mdhn:Tree, mdhn:Plant, mdhn:Cloud, mdhn:Bird, mdhn:Leopard, mdhn:Lion;
    mdhn:wikidataItem wd:Q64689329 ;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .

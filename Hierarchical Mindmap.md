@@ -40,6 +40,12 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
   - mdhn:Enthronement
   - mdhn:Turban
   - mdhn:Rock
+  - mdhn:Tree
+  - mdhn:Plant
+  - mdhn:Cloud
+  - mdhn:Bird
+  - mdhn:Leopard
+  - mdhn:Lion
 - **Content Elements**
   - **Painting** (`mdhn:Painting`) 
     - **ُSultan Muhammad** WD:Q6712884
