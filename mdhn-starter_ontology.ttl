@@ -292,7 +292,7 @@ mdhn:MaterialObject a owl:Class ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
 mdhn:Tableware a owl:Class ;
-    rdfs:label "Tableware"@en , "لوازم غذاخوری"@fa ;
+    rdfs:label "Tableware"@en , "لوازم نوشيدن و خوردن"@fa ;
     rdfs:subClassOf mdhn:MaterialObject . 
 
 mdhn:MusicalInstrument a owl:Class ;

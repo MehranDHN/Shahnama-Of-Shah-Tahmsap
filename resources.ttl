@@ -205,6 +205,12 @@ mdhn:Combat_Helmet
     mdhn:exactMatch aat:300391023 ;
     mdhn:wikidataItem wd:Q3579211 . 
 
+mdhn:Lasso
+    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    rdfs:label "Lasso"@en , "کمند"@fa ;
+    mdhn:exactMatch aat:300255575 ;
+    mdhn:wikidataItem wd:Q840507 .    
+
 mdhn:Architectural_Structure
     a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
     rdfs:label "Architectural Structure"@en , "بنای معماری"@fa ;
@@ -310,6 +316,11 @@ mdhn:Axe
     mdhn:exactMatch aat:300036982 ;
     mdhn:wikidataItem wd:Q39397 .
 
+mdhn:Club
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Club"@en , "چوبدست"@fa ;
+    mdhn:wikidataItem wd:Q392326 .    
+
 mdhn:Dagger
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Dagger"@en , "خنجر"@fa ;
@@ -351,6 +362,26 @@ mdhn:Headgear
      rdfs:label "Headgear"@en , "سرپوش"@fa ;
      mdhn:wikidataItem wd:Q14952 . 
 
+mdhn:GemEncrustedCrown
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted Crown"@en , "تاج مرصع"@fa ;
+     mdhn:wikidataItem wd:Q170984 .  
+
+mdhn:GemEncrustedBelt
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted Belt"@en , "کمربند مرصع"@fa ;
+     mdhn:wikidataItem wd:Q134560 .
+
+mdhn:GemEncrustedArmBand
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted ArmBand"@en , "بازوبند مرصع"@fa ;
+     mdhn:wikidataItem wd:Q680343 .
+
+mdhn:GemEncrustedBracelet
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted Bracelet"@en , "دستبند مرصع"@fa ;
+     mdhn:wikidataItem wd:Q201664 .     
+
 mdhn:Turban
     a mdhn:ClothingAndDress, owl:NamedIndividual ;
     rdfs:label "Turban"@en , "عمامه"@fa ;
@@ -379,6 +410,32 @@ mdhn:Cloud
     a mdhn:NaturalElement, owl:NamedIndividual ;
     rdfs:label "Cloud"@en , "ابر"@fa ;
     mdhn:wikidataItem wd:Q8074 .
+
+mdhn:Flower
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Flower"@en , "گل"@fa ;
+    mdhn:wikidataItem wd:Q506 .  
+
+mdhn:Blossom
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Blossom"@en , "شکوفه"@fa ;
+    mdhn:wikidataItem wd:Q2047589 .          
+
+mdhn:Plant
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Plant"@en , "گیاه"@fa ;
+    mdhn:wikidataItem wd:Q10884 . 
+
+mdhn:Tree
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Tree"@en , "درخت"@fa ;
+    mdhn:wikidataItem wd:Q10884 . 
+
+mdhn:Wind
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Wind"@en , "باد"@fa ;
+    mdhn:exactMatch aat:300055395 ;
+    mdhn:wikidataItem wd:Q8094 .          
 
 mdhn:Bird_Nest
     a mdhn:NaturalElement, owl:NamedIndividual ;
@@ -417,8 +474,51 @@ mdhn:Cow
 mdhn:Snake
     a mdhn:Animals, owl:NamedIndividual ;
     rdfs:label "Snake"@en , "مار"@fa ;
-    mdhn:wikidataItem wd:Q2102 .                              
-                
+    mdhn:wikidataItem wd:Q2102 . 
+mdhn:Dog
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Dog"@en , "سگ"@fa ;
+    mdhn:wikidataItem wd:Q144 .
+
+mdhn:Horse
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Horse"@en , "اسب"@fa ;
+    mdhn:wikidataItem wd:Q726 .                                     
+
+mdhn:Goat
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Goat"@en , "بز"@fa ;
+    mdhn:wikidataItem wd:Q2934 .  
+
+mdhn:Leopard
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Leopard"@en , "پلنگ"@fa ;
+    mdhn:wikidataItem wd:Q34706 .                   
+
+mdhn:LongNeckedBottle
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Long-necked Bottle"@en , "بطری گردن بلند"@fa ;
+    mdhn:wikidataItem wd:Q116274271 .
+
+mdhn:LongNeckedJar
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Long-necked Jar"@en , "جام گردن بلند"@fa ;
+    mdhn:wikidataItem wd:Q2413314 . 
+
+mdhn:GoldVessel
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Gold Vessel"@en , "ظرف طلا"@fa ;
+    mdhn:wikidataItem wd:Q96952903 .  
+
+mdhn:Bowl
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Bowl"@en , "کاسه"@fa ;
+    mdhn:wikidataItem wd:Q153988 . 
+
+mdhn:Carpet
+    a mdhn:TextilesAndCarpets, owl:NamedIndividual ;
+    rdfs:label "Carpet"@en , "فرش"@fa ;
+    mdhn:wikidataItem wd:Q163446 .            
 
 mdhn:Faridun
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
@@ -849,7 +949,7 @@ mdhn:Painting21v a mdhn:Painting;
       mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
       mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
       mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-      mdhn:hasVisualItem mdhn:Blowing_Horn, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle_Field,mdhn:Battle, mdhn:Mace;
+      mdhn:hasVisualItem mdhn:Blowing_Horn, mdhn:Headgear, mdhn:LeopardSkinDress,  mdhn:Deer, mdhn:Gazzele,mdhn:Battle, mdhn:Lion, mdhn:Bird, mdhn:Horse, mdhn:Plant, mdhn:Tree, mdhn:Cloud, mdhn:Blossom, mdhn:Flower, mdhn:Bird_Nest, mdhn:Club;
       mdhn:attributionCertainty "certain"@en;
       mdhn:hasPainter mdhn:Sultan_Muhammad . 
 
@@ -904,6 +1004,11 @@ mdhn:Angel2_Fig21v a mdhn:FigureCrop;
    rdfs:label "Angel cropped figure from f21v"@en;
    mdhn:hasReferredTo mdhn:Angel;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/524,926,136,100/max/0/default.jpg". 
+
+mdhn:IlluminatedUnwan21v a mdhn:IlluminatedUnwan;
+   rdfs:label "Hushang\'s Battle with the Divs"@en, "جنگ هوشنگ با ديوها"@fa;
+   mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/400,735,408,140/max/0/default.jpg".
+
 # -- Folio 22v -----------------------------------------------------
 mdhn:RE_22v a mdhn:RegisterEntry;
     rdfs:label "The Feast of Sada"@en, "جشن سده"@fa;
@@ -927,7 +1032,7 @@ mdhn:Painting22v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:HushangInFeastOfSada;
    mdhn:hasReferredTo mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:hasVisualItem mdhn:Feasting;
+   mdhn:hasVisualItem mdhn:Feasting, mdhn:Cloud, mdhn:Rock, mdhn:LeopardSkinDress, mdhn:Turban, mdhn:Fire, mdhn:Blossom, mdhn:Flower, mdhn:Tree, mdhn:Sheep, mdhn:Goat, mdhn:Deer, mdhn:Gazzele, mdhn:Bird, mdhn:LongNeckedBottle, mdhn:Bowl, mdhn:Leopard, mdhn:LongNeckedJar, mdhn:GoldVessel, mdhn:Carpet, mdhn:GemEncrustedBelt, mdhn:GemEncrustedCrown, mdhn:Dagger;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .      
 
@@ -959,9 +1064,9 @@ mdhn:Folio23v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio24v ;  
    mdhn:folioNumber 23; 
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
-   mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;
-   mdhn:hasVisualItem mdhn:Mace, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle;  
+   mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;     
    mdhn:hasReferredTo mdhn:Tahmuras;
+   mdhn:wikidataItem wd:Q29385199;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-23v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_23v. 
 
@@ -973,6 +1078,7 @@ mdhn:Painting23v a mdhn:Painting;
                       mdhn:Div3Figure23v,
                       mdhn:Div4Figure23v;
    mdhn:hasReferredTo mdhn:Tahmuras, mdhn:Div1, mdhn:Div2, mdhn:Div3, mdhn:Div4;
+   mdhn:hasVisualItem mdhn:Mace, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle, mdhn:Wind, mdhn:Cloud, mdhn:Horse, mdhn:Lasso, mdhn:Turban, mdhn:Flower, mdhn:Tree, mdhn:, mdhn:PlantRock, mdhn:Blossom, mdhn:Bird, mdhn:Gazzele, mdhn:Plant;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
 
