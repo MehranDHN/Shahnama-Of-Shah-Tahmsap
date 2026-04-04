@@ -229,27 +229,45 @@ mdhn:Feasting a mdhn:LuxuryCeremony, owl:NamedIndividual ;
     mdhn:wikidataItem wd:Q200538 .  
 
 mdhn:Soldier
-    a mdhn:MaterialObject, owl:NamedIndividual ;
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Soldier"@en , "جنگجو"@fa ;
     mdhn:exactMatch aat:300185678 ;
     mdhn:wikidataItem wd:Q4991371 .      
 mdhn:Battle
-    a mdhn:MaterialObject, owl:NamedIndividual ;
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Battle"@en , "زرم و نبرد"@fa ;
     mdhn:exactMatch aat:300185692 ;
     mdhn:wikidataItem wd:Q198 .  
 
+mdhn:Duel
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Duel"@en , "دوئل"@fa ;
+    mdhn:exactMatch aat:300230815 ;
+    mdhn:wikidataItem wd:Q191503 .     
+
 mdhn:Battle_Field
-    a mdhn:MaterialObject, owl:NamedIndividual ;
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Battle Field"@en , "میدان نبرد"@fa ;
     mdhn:exactMatch aat:300000835 ;
     mdhn:wikidataItem wd:Q4895508 . 
+
+mdhn:Decapitation
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Decapitation"@en , "بريدن سر"@fa ;
+    mdhn:wikidataItem wd:Q204933 .   
+     
 
 mdhn:Enthronement
     a mdhn:LuxuryCeremony, owl:NamedIndividual ;
     rdfs:label "Enthronement"@en , "تاجگذاری"@fa ;
     mdhn:exactMatch aat:300054754 ;
-    mdhn:wikidataItem wd:Q1671499 .   
+    mdhn:wikidataItem wd:Q1671499 .
+
+mdhn:Throne
+    a mdhn:LuxuryCeremony, owl:NamedIndividual ;
+    rdfs:label "Throne"@en , "تخت پادشاهی"@fa ;
+    mdhn:exactMatch aat:300038141 ;
+    mdhn:wikidataItem wd:Q189233 .          
 
 mdhn:Royal_Court
     a mdhn:LuxuryCeremony, owl:NamedIndividual ;
@@ -257,31 +275,71 @@ mdhn:Royal_Court
     mdhn:wikidataItem wd:Q1134237 .          
 
 mdhn:Mace
-    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Mace"@en , "گرز"@fa ;
     mdhn:exactMatch aat:300037214 ;
     mdhn:wikidataItem wd:Q272990 .
 
 mdhn:Spear
-    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
-    rdfs:label "Spear"@en , "نيزه"@fa ;
-    mdhn:exactMatch aat:300037033 ;
-    mdhn:wikidataItem wd:Q44475 . 
+      a mdhn:BattleEquipment, owl:NamedIndividual ;
+      rdfs:label "Spear"@en , "نيزه"@fa ;
+      mdhn:exactMatch aat:300037033 ;
+      mdhn:wikidataItem wd:Q44475 . 
+
+mdhn:Shield
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Shield"@en , "سپر"@fa ;
+    mdhn:exactMatch aat:300222454 ;
+    mdhn:wikidataItem wd:Q131559 .    
 
 mdhn:Horse_Armour
-    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Horse Armour"@en , "زره اسب"@fa ;
     mdhn:exactMatch aat:300036900 ;
-    mdhn:wikidataItem wd:Q50364603 .        
+    mdhn:wikidataItem wd:Q50364603 .
 
-   
+mdhn:Sword
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Sword"@en , "شمشير"@fa ;
+    mdhn:exactMatch aat:300037048 ;
+    mdhn:wikidataItem wd:Q12791 .   
 
-mdhn:Bugle
+mdhn:Axe
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Axe"@en , "تبر"@fa ;
+    mdhn:exactMatch aat:300036982 ;
+    mdhn:wikidataItem wd:Q39397 .
+
+mdhn:Dagger
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Dagger"@en , "خنجر"@fa ;
+    mdhn:exactMatch aat:300037048 ;
+    mdhn:wikidataItem wd:Q182780 .   
+
+mdhn:Blowing_Horn
     a mdhn:MusicalInstrument, owl:NamedIndividual ;
-    rdfs:label "Bugle"@en , "شيپور"@fa ;
-    mdhn:exactMatch aat:300042281 .
-    mdhn:wikidataItem wd:Q943488 .                               
-      
+    rdfs:label "Blowing Horn"@en , "شاخ بوقی"@fa ;
+    mdhn:exactMatch aat:300426074 .
+    mdhn:wikidataItem wd:Q2665724 . 
+
+mdhn:Tamborim   a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Tamborim"@en , "طبلک"@fa ;
+    mdhn:wikidataItem wd:Q1751598 . 
+
+
+mdhn:Tanbur  a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Tanbur"@en , "تنبور"@fa ;
+    mdhn:exactMatch aat:300042864 ;
+    mdhn:wikidataItem wd:Q3424319 . 
+
+mdhn:Sorna  a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Sorna"@en , "سرنا"@fa ;
+    mdhn:wikidataItem wd:Q825246 .          
+
+mdhn:Qanun a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Qanun"@en , "قانون"@fa ;
+    mdhn:exactMatch aat:300212193 ;
+    mdhn:wikidataItem wd:Q904646 .         
 
 mdhn:Faridun
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
@@ -1302,7 +1360,7 @@ mdhn:Folio299r a mdhn:Recto;
    mdhn:hasContentElement mdhn:Painting299r, mdhn:Poems299r; 
    mdhn:wikidataItem wd:Q131241829; 
    mdhn:hasReferredTo mdhn:Bizhan, mdhn:Giv, mdhn:Wild_Boars;
-   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-299r/manifest.json"; 
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp--299r/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_299r.  
 
 mdhn:Painting299r a mdhn:Painting;
@@ -1321,12 +1379,12 @@ mdhn:Poems299r a mdhn:LinguisticObject;
 mdhn:BizhanFig299r a mdhn:FigureCrop;
    rdfs:label "Bizhan cropped figure from f299r"@en;
    mdhn:hasReferredTo mdhn:Bizhan;
-   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-299r%2FFolio299r.jpeg/647,1997,724,675/max/0/default.jpg".
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp--299r%2FFolio299r.jpg/3670,4709,1689,1548/max/0/default.jpg".
 
 mdhn:WildBoarFig299r a mdhn:FigureCrop;
    rdfs:label "Wild Boar cropped figure from f299r"@en;
    mdhn:hasReferredTo mdhn:Wild_Boars;
-   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-299r%2FFolio299r.jpeg/1189,2209,891,531/max/0/default.jpg".
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp--299r%2FFolio299r.jpg/2571,5053,1034,631/max/0/default.jpg".
 
 mdhn:Bizhan_Slaughters_the_Wild_Boars_of_Irman a mdhn:NarrativeEpisode;
    rdfs:label "Bizhan Slaughters the Wild Boars of Irman"@en, "کشته شدن گرازهای وحشی ایرمن به دست بیژان"@fa;
