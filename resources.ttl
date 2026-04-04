@@ -341,6 +341,85 @@ mdhn:Qanun a mdhn:MusicalInstrument, owl:NamedIndividual ;
     mdhn:exactMatch aat:300212193 ;
     mdhn:wikidataItem wd:Q904646 .         
 
+mdhn:LeopardSkinDress
+    a mdhn:ClothingAndDress, owl:NamedIndividual ;
+    rdfs:label "Leopard Skin Dress"@en , "لباس پوست پلنگ"@fa ;
+    mdhn:wikidataItem wd:Q3564428 .
+
+mdhn:Headgear
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Headgear"@en , "سرپوش"@fa ;
+     mdhn:wikidataItem wd:Q14952 . 
+
+mdhn:Turban
+    a mdhn:ClothingAndDress, owl:NamedIndividual ;
+    rdfs:label "Turban"@en , "عمامه"@fa ;
+    mdhn:wikidataItem wd:Q2460567 .     
+   
+
+mdhn:Rocks
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Rocks"@en , "صخره"@fa ;
+    mdhn:wikidataItem wd:Q8063 .  
+
+mdhn:Fire
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Fire"@en , "آتش"@fa ;
+    mdhn:wikidataItem wd:Q3196 .
+mdhn:Water
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Water"@en , "آب"@fa ;
+    mdhn:wikidataItem wd:Q283 . 
+mdhn:River
+     a mdhn:NaturalElement, owl:NamedIndividual ;
+     rdfs:label "River"@en , "رودخانه"@fa ;
+     mdhn:wikidataItem wd:Q4022 . 
+
+mdhn:Cloud
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Cloud"@en , "ابر"@fa ;
+    mdhn:wikidataItem wd:Q8074 .
+
+mdhn:Bird_Nest
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Bird Nest"@en , "لانه پرنده"@fa ;
+    mdhn:wikidataItem wd:Q1137226 .
+
+mdhn:Lion
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Lion"@en , "شیر"@fa ;
+    mdhn:wikidataItem wd:Q140 . 
+mdhn:Bird
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Bird"@en , "پرندگان"@fa ;
+    mdhn:wikidataItem wd:Q5113 .
+mdhn:Deer
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Deer"@en , "گوزن"@fa ;
+    mdhn:wikidataItem wd:Q29838690 .  
+
+mdhn:Gazelle
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Gazelle"@en , "آهو"@fa ;
+    mdhn:wikidataItem wd:Q29001815 . 
+
+
+mdhn:Sheep
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Sheep"@en , "گوسفند"@fa ;
+    mdhn:wikidataItem wd:Q7368 . 
+
+mdhn:Cow
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Cow"@en , "گاو"@fa ;
+    mdhn:wikidataItem wd:Q11748378 . 
+
+mdhn:Snake
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Snake"@en , "مار"@fa ;
+    mdhn:wikidataItem wd:Q2102 .                              
+                
+
 mdhn:Faridun
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Faridun"@en , "فريدون"@fa ;
@@ -708,21 +787,22 @@ mdhn:Folio20v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio21v ;
    mdhn:folioNumber 21;
    mdhn:keptIn mdhn:Aga_Khan_Museum;
+   mdhn:wikidataItem wd:Q64665898;
    mdhn:hasContentElement mdhn:Painting20v, mdhn:Poems20v;  
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-20v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_20v.
 
 mdhn:Painting20v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:KeyumarsFig20v, mdhn:SiamakFig20v, mdhn:HushangFig20v;
-   mdhn:hasNarrativeEpisode mdhn:TahmurasDefeatsKingdomOfKeyumars;
-   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang, mdhn:BlackDiv , mdhn:Div;
+   mdhn:hasNarrativeEpisode mdhn:KingdomOfKeyumars;
+   mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:hasVisualItem mdhn:Royal_Court, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Enthronement;
+   mdhn:hasVisualItem mdhn:Royal_Court, mdhn:LeopardSkinDress,  mdhn:Throne, mdhn:Enthronement, mdhn:Turban, mdhn:Rock;
    mdhn:wikidataItem wd:Q64689329 ;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
 
-mdhn:TahmurasDefeatsKingdomOfKeyumars a mdhn:NarrativeEpisode;
+mdhn:KingdomOfKeyumars a mdhn:NarrativeEpisode;
    rdfs:label "The Court of Kayumars"@en, "پادشاهی کيومرث"@fa;
    mdhn:wikidataItem wd:Q138719971 .  
 
@@ -769,7 +849,7 @@ mdhn:Painting21v a mdhn:Painting;
       mdhn:hasNarrativeEpisode mdhn:HushangSlaysTheBlackDiv;
       mdhn:hasReferredTo mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
       mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-      mdhn:hasVisualItem mdhn:Bugle, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle_Field,mdhn:Battle, mdhn:Mace;
+      mdhn:hasVisualItem mdhn:Blowing_Horn, mdhn:Body_Armour,  mdhn:Soldier, mdhn:Battle_Field,mdhn:Battle, mdhn:Mace;
       mdhn:attributionCertainty "certain"@en;
       mdhn:hasPainter mdhn:Sultan_Muhammad . 
 
