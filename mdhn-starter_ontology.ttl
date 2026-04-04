@@ -317,11 +317,19 @@ mdhn:ArchitecturalDecoration a owl:Class ;
 
 mdhn:NaturalElement a owl:Class ;
     rdfs:label "Natural Element"@en , "عنصر طبیعی"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject . 
+    rdfs:subClassOf mdhn:MaterialObject .
+
+mdhn:Animals a owl:Class ;
+    rdfs:label "Animals"@en , "حیوانات"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .      
 
 mdhn:LuxuryCeremony a owl:Class ;
     rdfs:label "Luxury Ceremony"@en , "مراسم لوکس"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .                     
+    rdfs:subClassOf mdhn:MaterialObject .
+                         
+mdhn:ClothingAndDress a owl:Class ;
+    rdfs:label "Clothing and Dress"@en , "لباس و پوشش"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject . 
 
 mdhn:wikidataItem a owl:ObjectProperty ;
     rdfs:label "Wikidata item"@en ;

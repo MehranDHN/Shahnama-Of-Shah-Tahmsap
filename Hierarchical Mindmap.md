@@ -41,33 +41,89 @@
     ![Asjadi cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-7r%2FFolio7r.jpg/489,682,110,164/max/0/default.jpg)
 - **Inscriptions**: None
 
-### Folio 20v
-![Folio 20v Thumbnail](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/full/!500,0/0/default.jpg)  
-**IIIF Manifest**: [https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-20v/manifest.json](https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-20v/manifest.json)  
-- **Cropped Figures** (3 × `mdhn:FigureCrop`):
-  - Keyumars  
-    ![Keyumars cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/332,517,120,165/max/0/default.jpg)
-  - Siamak  
-    ![Siamak cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/489,642,106,133/max/0/default.jpg)
-  - Hushang  
-    ![Hushang cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/205,582,90,180/max/0/default.jpg)
-- **Inscriptions**: None
+### Folio 20v (The Court of Kayumars)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-20v/manifest.json)
+- **Aga Khan Museum** 
+  - Instance of Illuminated Folio WD:Q64665898
+- **Narrative Episode**
+  - WD:Q138719971
+- **Depicts**
+  - mdhn:Keyumars
+  - mdhn:Siamak
+  - mdhn:Hushang
+- **Visual Items**
+  - mdhn:Royal_Court
+  - mdhn:LeopardSkinDress
+  - mdhn:Throne
+  - mdhn:Enthronement
+  - mdhn:Turban
+  - mdhn:Rock
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **ُSultan Muhammad** WD:Q6712884
+    - **Cropped Figures** (3 × `mdhn:FigureCrop`)
+      - Keyumars  
+        ![Keyumars cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/332,517,120,165/max/0/default.jpg)
+      - Siamak  
+        ![Siamak cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/489,642,106,133/max/0/default.jpg)
+      - Hushang  
+        ![Hushang cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-20v%2F20v.jpg/205,582,90,180/max/0/default.jpg)    
+  - **LinguisticObject**: Verse 232-236 based on Ganjoor
+
+
+
 
 ### Folio 21v
-![Folio 21v Thumbnail](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/full/!500,0/0/default.jpg)  
-**IIIF Manifest**: [https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-21v/manifest.json](https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-21v/manifest.json)  
-- **Cropped Figures** (multiple `mdhn:FigureCrop`):
-  - Hushang  
-    ![Hushang cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/508,1280,195,129/max/0/default.jpg)
-  - Black Div  
-    ![Black Div cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/522,1370,343,204/max/0/default.jpg)
-  - Div (1)  
-    ![Div cropped 1](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/253,1462,176,244/max/0/default.jpg)
-  - Div (2)  
-    ![Div cropped 2](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/710,1637,219,208/max/0/default.jpg)
-  - Div (3)  
-    ![Div cropped 3](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/710,1637,219,208/max/0/default.jpg) *(additional Div crops follow the same pattern)*
-- **Inscriptions**: None
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-20v/manifest.json)
+- **S C Welch Family Collection** 
+  - Instance of Illuminated Folio WD:Q131281679
+- **Narrative Episode**
+  - WD:Q138757163
+- **Depicts**
+  - mdhn:Hushang
+  - mdhn:BlackDiv
+  - mdhn:Siamak
+- **Visual Items** 
+  - mdhn:Blowing_Horn
+  - mdhn:LeopardSkinDress
+  - mdhn:Deer
+  - mdhn:Gazzele
+  - mdhn:Battle
+  - mdhn:Lion
+  - mdhn:Bird
+  - mdhn:Horse
+  - mdhn:Plant
+  - mdhn:Tree
+  - mdhn:Cloud
+  - mdhn:Blossom
+  - mdhn:Flower
+  - mdhn:Bird_Nest
+  - mdhn:Club 
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **ُSultan Muhammad** WD:Q6712884
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Hushang  
+        ![Hushang cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/508,1280,195,129/max/0/default.jpg)
+      - Black Div  
+        ![Black Div cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/522,1370,343,204/max/0/default.jpg)
+      - Div (1)  
+        ![Div cropped 1](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/253,1462,176,244/max/0/default.jpg)
+      - Div (2)  
+        ![Div cropped 2](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/710,1637,219,208/max/0/default.jpg)
+      - Div (3)  
+        ![Div cropped 3](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/240,1239,268,227/max/0/default.jpg)
+      - Div (4)  
+        ![Div cropped 4](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/657,1228,275,151/max/0/default.jpg) 
+      - Angel (1)  
+        ![Angel cropped 1](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/238,949,474,188/max/0/default.jpg)    
+      - Angel (2)  
+        ![Angel cropped 2](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/524,926,136,100/max/0/default.jpg)              
+  - **Inscriptions**: None
+  - **Illuminated Unwan**
+      - Battle of Hushang against the Divs  
+        ![Battle of Hushang against the Divs](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/402,737,407,133/max/0/default.jpg)
+  - **LinguisticObject**: Verse 277-289 based on Ganjoor
 
 ### Remaining Folios (structure only — no cropped figures/inscriptions defined in sample data)
 - **Folio 22v** — [IIIF Manifest](https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-22v/manifest.json)  
