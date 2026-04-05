@@ -295,6 +295,10 @@ mdhn:Tableware a owl:Class ;
     rdfs:label "Tableware"@en , "لوازم نوشيدن و خوردن"@fa ;
     rdfs:subClassOf mdhn:MaterialObject . 
 
+mdhn:TextilesAndCarpets a owl:Class ;
+    rdfs:label "Textiles and Carpets"@en , "پارچه ها و فرش ها"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .     
+
 mdhn:MusicalInstrument a owl:Class ;
     rdfs:label "Musical Instrument"@en , "ابزار موسیقی"@fa ;
     rdfs:subClassOf mdhn:MaterialObject .
@@ -339,7 +343,7 @@ mdhn:wikidataItem a owl:ObjectProperty ;
 
 mdhn:hasOwnershipInterval
     a owl:ObjectProperty ;
-    rdfs:domain owl:Thing ;
+    rdfs:domain [ owl:unionOf (mdhn:Manuscript mdhn:Folio) ] ;
     rdfs:range  mdhn:OwnershipInterval ;
     rdfs:label  "has ownership interval"@en , "دارای دوره مالکیت"@fa .  
 
