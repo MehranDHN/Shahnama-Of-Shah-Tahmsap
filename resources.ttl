@@ -82,6 +82,8 @@ mdhn:confiscation a mdhn:TransferType ; rdfs:label "Confiscation"@en , "مصاد
 mdhn:bequest      a mdhn:TransferType ; rdfs:label "Bequest"@en , "وصیت"@fa .
 mdhn:dispersal    a mdhn:TransferType ; rdfs:label "Dispersal (folio removal)"@en , "جداسازی برگ"@fa .
 mdhn:deposit      a mdhn:TransferType ; rdfs:label "Deposit / Loan"@en , "امانت"@fa .       
+mdhn:exchange      a mdhn:TransferType ; rdfs:label "Exchange"@en , "معاوضه"@fa .       
+
 
 mdhn:painting_Index a mdhn:PaintingRegister ;
     mdhn:registerFor mdhn:manuscript_shahnama_shah_tahmasp ;
@@ -117,6 +119,24 @@ mdhn:houghton_collection
     mdhn:ownershipEnd   "1972"^^xsd:gYear ;
     mdhn:transferType   mdhn:purchase ;
     rdfs:comment  "Purchased; 78 folios donated to the Metropolitan Museum of Art; remainder sold."@en .
+
+mdhn:MetropolitanMuseumofArt
+     a mdhn:OwnershipInterval ;
+     rdfs:label        "Metropolitan Museum of Art"@en ;
+     mdhn:owner        mdhn:Metropolitan_Museum_of_Art ;
+     mdhn:ownershipStart "1972"^^xsd:gYear ;
+     mdhn:ownershipEnd   "present"^^xsd:string ;
+     mdhn:transferType   mdhn:gift ;
+     rdfs:comment  "78 folios donated by Arthur A. Houghton Jr. in 1972."@en .
+
+mdhn:TehranMuseumofContemporaryArt
+     a mdhn:OwnershipInterval ;
+     rdfs:label        "Tehran Museum of Contemporary Art"@en ;
+     mdhn:owner        mdhn:Tehran_Museum_of_Contemporary_Art ;
+     mdhn:ownershipStart "1977"^^xsd:gYear ;
+     mdhn:ownershipEnd   "present"^^xsd:string ;
+     mdhn:transferType   mdhn:exchange ;
+     rdfs:comment  "126 folios exchanged in 1972."@en .
 
 mdhn:arthur_houghton
     a mdhn:Person, owl:NamedIndividual , fhkb:Man;
@@ -1022,6 +1042,7 @@ mdhn:Folio22v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio23v ;
    mdhn:folioNumber 22;
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
+   mdhn:hasOwnershipInterval mdhn:MetropolitanMuseumofArt;
    mdhn:hasContentElement mdhn:Painting22v, mdhn:Poems22v; 
    mdhn:wikidataItem wd:Q29385197; 
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-22v/manifest.json"; 
@@ -1066,6 +1087,7 @@ mdhn:Folio23v a mdhn:Verso;
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
    mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;     
    mdhn:hasReferredTo mdhn:Tahmuras;
+   mdhn:hasOwnershipInterval mdhn:MetropolitanMuseumofArt;
    mdhn:wikidataItem wd:Q29385199;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-23v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_23v. 
@@ -1327,6 +1349,7 @@ mdhn:Folio76v a mdhn:Verso;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
    mdhn:nextFolio mdhn:Folio77v ;
    mdhn:folioNumber 76;
+   mdhn:hasOwnershipInterval mdhn:TehranMuseumofContemporaryArt;
    mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
    mdhn:hasReferredTo mdhn:Rudaba, mdhn:Sindukht, mdhn:Zal , mdhn:Mihrab, mdhn:Manuchehr;
    mdhn:hasContentElement mdhn:Painting76v, mdhn:Poems76v, mdhn:IlluminatedUnwan76v  ;
