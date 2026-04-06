@@ -295,6 +295,10 @@ mdhn:Tableware a owl:Class ;
     rdfs:label "Tableware"@en , "لوازم نوشيدن و خوردن"@fa ;
     rdfs:subClassOf mdhn:MaterialObject . 
 
+mdhn:AccessoriesAndTools a owl:Class ;
+    rdfs:label "Accessories and Tools"@en , "لوازم و ابزارها"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .     
+
 mdhn:TextilesAndCarpets a owl:Class ;
     rdfs:label "Textiles and Carpets"@en , "پارچه ها و فرش ها"@fa ;
     rdfs:subClassOf mdhn:MaterialObject .     
@@ -321,6 +325,10 @@ mdhn:ArchitecturalDecoration a owl:Class ;
 
 mdhn:NaturalElement a owl:Class ;
     rdfs:label "Natural Element"@en , "عنصر طبیعی"@fa ;
+    rdfs:subClassOf mdhn:MaterialObject .
+    
+mdhn:GameAndHobby a owl:Class ;
+    rdfs:label "Game and Hobby"@en , "بازی و سرگرمی"@fa ;
     rdfs:subClassOf mdhn:MaterialObject .
 
 mdhn:Animals a owl:Class ;
