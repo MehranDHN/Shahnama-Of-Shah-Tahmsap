@@ -1,0 +1,912 @@
+# ── Project namespaces ────────────────────────────────────────────────────────
+@prefix mdhn: <http://example.com/mdhn/> .
+
+# Resource sub-namespaces — each gets its own prefix for clean local names
+@prefix mdhnr:    <http://example.com/mdhn/resource/> .
+@prefix foliotype: <http://example.com/mdhn/resource/folioType/> .
+@prefix illumtype: <http://example.com/mdhn/resource/illumType/> .
+@prefix role:      <http://example.com/mdhn/resource/role/> .
+@prefix xfertype:  <http://example.com/mdhn/resource/transferType/> .
+@prefix script:    <http://example.com/mdhn/resource/script/> .
+@prefix agent:     <http://example.com/mdhn/resource/agent/> .
+@prefix place:     <http://example.com/mdhn/resource/place/> .
+@prefix repo:      <http://example.com/mdhn/resource/repo/> .
+@prefix folio:     <http://example.com/mdhn/resource/folio/> .
+@prefix leaf:      <http://example.com/mdhn/resource/leaf/> .
+@prefix manifest:  <http://example.com/mdhn/resource/manifest/> .
+@prefix painting:  <http://example.com/mdhn/resource/painting/> .
+@prefix illum:     <http://example.com/mdhn/resource/illum/> .
+@prefix text:      <http://example.com/mdhn/resource/text/> .
+@prefix episode:   <http://example.com/mdhn/resource/episode/> .
+@prefix character: <http://example.com/mdhn/resource/character/> .
+@prefix motif:     <http://example.com/mdhn/resource/motif/> .
+@prefix crop:      <http://example.com/mdhn/resource/crop/> .
+@prefix register:  <http://example.com/mdhn/resource/register/> .
+@prefix entry:     <http://example.com/mdhn/resource/entry/> .
+@prefix event:     <http://example.com/mdhn/resource/event/> .
+@prefix air:       <http://example.com/mdhn/resource/air/> .
+@prefix ownership: <http://example.com/mdhn/resource/ownership/> .
+@prefix timespan:  <http://example.com/mdhn/resource/timespan/> .
+@prefix concept:   <http://example.com/mdhn/resource/concept/> .
+@prefix annot:     <http://example.com/mdhn/resource/annot/> .
+
+# ── W3C standards ─────────────────────────────────────────────────────────────
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix schema:  <https://schema.org/> .
+
+# ── CIDOC-CRM 7.1 ─────────────────────────────────────────────────────────────
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+
+# ── Linked Art ────────────────────────────────────────────────────────────────
+@prefix la:     <https://linked.art/ns/terms/> .
+
+# ── IIIF Presentation API 3 ───────────────────────────────────────────────────
+@prefix iiif:   <http://iiif.io/api/presentation/3#> .
+
+# ── Getty Vocabularies ────────────────────────────────────────────────────────
+@prefix aat:    <http://vocab.getty.edu/aat/> .
+@prefix tgn:    <http://vocab.getty.edu/tgn/> .
+@prefix ulan:   <http://vocab.getty.edu/ulan/> .
+
+# ── Wikidata ──────────────────────────────────────────────────────────────────
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix wdt:    <http://www.wikidata.org/prop/direct/> .
+# ── Family History Knowledge Base (FHKB) ──────────────────────────────────────
+@prefix fhkb: <http://www.example.com/genealogy.owl#> .
+
+
+
+mdhn:gift         a mdhn:TransferType ; rdfs:label "Gift"@en , "هدیه"@fa .
+mdhn:purchase     a mdhn:TransferType ; rdfs:label "Purchase"@en , "خرید"@fa .
+mdhn:auction      a mdhn:TransferType ; rdfs:label "Auction"@en , "حراج"@fa .
+mdhn:confiscation a mdhn:TransferType ; rdfs:label "Confiscation"@en , "مصادره"@fa .
+mdhn:bequest      a mdhn:TransferType ; rdfs:label "Bequest"@en , "وصیت"@fa .
+mdhn:dispersal    a mdhn:TransferType ; rdfs:label "Dispersal (folio removal)"@en , "جداسازی برگ"@fa .
+mdhn:deposit      a mdhn:TransferType ; rdfs:label "Deposit / Loan"@en , "امانت"@fa .       
+mdhn:exchange      a mdhn:TransferType ; rdfs:label "Exchange"@en , "معاوضه"@fa .       
+
+
+
+mdhn:painting_Index a mdhn:PaintingRegister ;
+    mdhn:registerFor mdhn:manuscript_shahnama_shah_tahmasp ;
+    dcterms:description """Complete checklist of the 268 identified paintings. 
+    Each entry links to a folio resource if the painting is located and digitised, 
+    or remains unlinked if the painting is missing or unaccounted for."""@en ;
+    dcterms:source "Dickson, Martin B. and Welch, Stuart Cary. The Houghton Shahnameh. 1981."@en ;
+    rdfs:label "Authoritative register of 268 paintings — Shahnama of Shah Tahmasp"@en , "فهرست معتبر ۲۶۸ نگاره — شاهنامه شاه طهماسپ"@fa .    
+
+mdhn:safavid_library
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Safavid Royal Library (Tabriz / Qazvin)"@en ;
+    mdhn:owner        mdhn:shah_tahmasp ;
+    mdhn:ownershipStart "1522"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1576"^^xsd:gYear ;
+    mdhn:transferType   mdhn:gift ;
+    rdfs:comment  "Gifted to Ottoman Sultan Selim II in 1568."@en .
+
+mdhn:ottoman_topkapi
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Topkapi Palace Library"@en ;
+    mdhn:owner        mdhn:sultan_Murad_III, mdhn:sultan_selim_ii ;
+    mdhn:ownershipStart "1576"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1903"^^xsd:gYear ;
+    mdhn:transferType   mdhn:gift ;
+    rdfs:comment  "Held in Topkapı. Ottoman annotations added during this period."@en .
+
+mdhn:Edmond_de_Rothschild
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Edmond de Rothschild collection"@en ;
+    mdhn:owner        mdhn:Edmond_de_Rothschild ;
+    mdhn:ownershipStart "1903"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1959"^^xsd:gYear ;
+    mdhn:transferType   mdhn:purchase ;
+    rdfs:comment  "Purchased from the Ottoman Topkapi Palace Library in 1903."@en .
+
+mdhn:houghton_collection
+    a mdhn:OwnershipInterval ;
+    rdfs:label        "Arthur A. Houghton Jr. collection"@en ;
+    mdhn:owner        mdhn:arthur_houghton ;
+    mdhn:ownershipStart "1959"^^xsd:gYear ;
+    mdhn:ownershipEnd   "1972"^^xsd:gYear ;
+    mdhn:transferType   mdhn:purchase ;
+    rdfs:comment  "Purchased; 78 folios donated to the Metropolitan Museum of Art; remainder sold."@en .
+
+mdhn:MetropolitanMuseumofArt
+     a mdhn:OwnershipInterval ;
+     rdfs:label        "Metropolitan Museum of Art"@en ;
+     mdhn:owner        mdhn:Metropolitan_Museum_of_Art ;
+     mdhn:ownershipStart "1972"^^xsd:gYear ;
+     mdhn:ownershipEnd   "present"^^xsd:string ;
+     mdhn:transferType   mdhn:gift ;
+     rdfs:comment  "78 folios donated by Arthur A. Houghton Jr. in 1972."@en .
+
+mdhn:TehranMuseumofContemporaryArt
+     a mdhn:OwnershipInterval ;
+     rdfs:label        "Tehran Museum of Contemporary Art"@en ;
+     mdhn:owner        mdhn:Tehran_Museum_of_Contemporary_Art ;
+     mdhn:ownershipStart "1977"^^xsd:gYear ;
+     mdhn:ownershipEnd   "present"^^xsd:string ;
+     mdhn:transferType   mdhn:exchange ;
+     rdfs:comment  "126 folios exchanged in 1972."@en .
+
+mdhn:Edmond_de_Rothschild
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+      rdfs:label "Edmond de Rothschild"@en , "ادموند دو روتشیلد"@fa ;   
+      mdhn:wikidataItem wd:Q467167 .
+
+mdhn:arthur_houghton
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Arthur A. Houghton Jr."@en ;
+    mdhn:wikidataItem wd:Q562846 .    
+
+mdhn:sultan_selim_ii
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Sultan Selim II"@en, "سلطان سلیم دوم"@fa ;
+    mdhn:wikidataItem wd:Q81672 . 
+
+mdhn:sultan_Murad_III
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Sultan Murad III"@en, "سلطان مراد سوم"@fa ;
+    mdhn:wikidataItem wd:Q159934 . 
+mdhn:shah_tahmasp
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Shah Tahmasp I"@en , "شاه طهماسپ اول"@fa ;
+    mdhn:ulanAgent ulan:500344029 ;
+    mdhn:wikidataItem wd:Q221500 .  
+
+mdhn:Ferdowsi
+    a mdhn:Person, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Ferdowsi"@en , "فردوسی"@fa ;
+    mdhn:wikidataItem wd:Q43459 . 
+
+mdhn:AbuMansurDaqiqi
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Abu Mansur Daqiqi"@en , "ابو منصور دقيقی"@fa ;
+    mdhn:wikidataItem wd:Q538902 . 
+mdhn:Unsuri
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Unsuri"@en , "عنصری"@fa ;
+    mdhn:wikidataItem wd:Q32842 . 
+
+mdhn:Asjadi
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Asjadi"@en , "عسجدی"@fa ;
+    mdhn:wikidataItem wd:Q4807055 . 
+
+mdhn:Sultan_Muhammad
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Sultan Muhammad"@en , "سلطان محمد"@fa ;
+    fhkb:hasSon mdhn:Mirza_Ali ;
+    mdhn:wikidataItem wd:Q6712884 . 
+
+mdhn:Aqa_Mīrak
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Āqā Mīrak"@en , "آقا ميرک"@fa ;
+    mdhn:wikidataItem wd:Q4056503 .   
+mdhn:Qadimi
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Qadimi"@en , "قديمی"@fa ;
+    mdhn:wikidataItem wd:Q113680330 . 
+
+mdhn:Abd_al_Aziz
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Abd al-Aziz"@en , "عبدالعزيز"@fa ;
+    mdhn:wikidataItem wd:Q21663724 .
+      
+
+mdhn:Abd_al_Vahhab
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Abd al-Vahhab"@en , "عبدالوهاب"@fa ;
+    mdhn:wikidataItem wd:Q59482128 .       
+
+mdhn:Mir_Mossavvir
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mir Mossavvir"@en , "میر مصور"@fa ;
+    fhkb:hasSon mdhn:Mir_Sayyid_Ali ;
+    mdhn:wikidataItem wd:Q4295446 . 
+
+mdhn:Mir_Sayyid_Ali
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mir Sayyid Ali"@en , "میر سید علی"@fa ;
+    mdhn:wikidataItem wd:Q2783517 .              
+
+mdhn:Mirza_Ali
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mirza Ali"@en , "میرزا علی"@fa ;
+    mdhn:wikidataItem wd:Q2783517 .              
+
+mdhn:Derafsh_Kaviani
+    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    rdfs:label "Derafsh Kaviani"@en , "درفش کاويانی"@fa ;
+    mdhn:wikidataItem wd:Q1199905 .
+
+mdhn:Bow_and_Arrow
+    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    rdfs:label "Bow and Arrow"@en , "تير و کمان"@fa ;
+    mdhn:wikidataItem wd:Q19827042 .   
+
+mdhn:Body_Armour
+    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    rdfs:label "Body Armour"@en , "زره و لباس رزم"@fa ;
+    mdhn:exactMatch aat:300036746 ;
+    mdhn:wikidataItem wd:Q485027 .
+
+mdhn:Combat_Helmet
+    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    rdfs:label "Combat Helmet"@en , "کلاهخود"@fa ;
+    mdhn:exactMatch aat:300391023 ;
+    mdhn:wikidataItem wd:Q3579211 . 
+
+mdhn:Lasso
+    a mdhn:MilitaryEquipment, owl:NamedIndividual ;
+    rdfs:label "Lasso"@en , "کمند"@fa ;
+    mdhn:exactMatch aat:300255575 ;
+    mdhn:wikidataItem wd:Q840507 .    
+
+mdhn:Architectural_Structure
+    a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
+    rdfs:label "Architectural Structure"@en , "بنای معماری"@fa ;
+    mdhn:wikidataItem wd:Q811979 . 
+
+mdhn:Balcony
+    a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
+    rdfs:label "Balcony"@en , "بالکن"@fa ;
+    mdhn:exactMatch aat:300002588 ;
+    mdhn:wikidataItem wd:Q170552 .  
+
+mdhn:Pool
+    a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
+    rdfs:label "Pool"@en , "حوض"@fa ;
+    mdhn:exactMatch aat:300008692 ;
+    mdhn:wikidataItem wd:Q1501 .   
+
+mdhn:Glazed_Tile
+    a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
+    rdfs:label "Glazed Tile"@en , "کاشی لعابدار"@fa ;
+    mdhn:exactMatch aat:300457833 ;
+    mdhn:wikidataItem wd:Q76827920 .         
+
+ 
+     
+mdhn:Feasting a mdhn:LuxuryCeremony, owl:NamedIndividual ;
+    rdfs:label "Feasting"@en , "بزم"@fa ;
+    mdhn:wikidataItem wd:Q200538 .  
+
+mdhn:Soldier
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Soldier"@en , "جنگجو"@fa ;
+    mdhn:exactMatch aat:300185678 ;
+    mdhn:wikidataItem wd:Q4991371 .      
+mdhn:Battle
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Battle"@en , "زرم و نبرد"@fa ;
+    mdhn:exactMatch aat:300185692 ;
+    mdhn:wikidataItem wd:Q198 .  
+
+mdhn:Duel
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Duel"@en , "دوئل"@fa ;
+    mdhn:exactMatch aat:300230815 ;
+    mdhn:wikidataItem wd:Q191503 .     
+
+mdhn:Battle_Field
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Battle Field"@en , "میدان نبرد"@fa ;
+    mdhn:exactMatch aat:300000835 ;
+    mdhn:wikidataItem wd:Q4895508 . 
+
+mdhn:Decapitation
+    a mdhn:BattleAndCombat, owl:NamedIndividual ;
+    rdfs:label "Decapitation"@en , "بريدن سر"@fa ;
+    mdhn:wikidataItem wd:Q204933 .   
+     
+
+mdhn:Enthronement
+    a mdhn:LuxuryCeremony, owl:NamedIndividual ;
+    rdfs:label "Enthronement"@en , "تاجگذاری"@fa ;
+    mdhn:exactMatch aat:300054754 ;
+    mdhn:wikidataItem wd:Q1671499 .
+
+mdhn:Throne
+    a mdhn:LuxuryCeremony, owl:NamedIndividual ;
+    rdfs:label "Throne"@en , "تخت پادشاهی"@fa ;
+    mdhn:exactMatch aat:300038141 ;
+    mdhn:wikidataItem wd:Q189233 .          
+
+mdhn:Royal_Court
+    a mdhn:LuxuryCeremony, owl:NamedIndividual ;
+    rdfs:label "Royal Court"@en , "بارگاه پادشاهی"@fa ;
+    mdhn:wikidataItem wd:Q1134237 .  
+
+mdhn:Tent
+     a mdhn:LuxuryCeremony, owl:NamedIndividual ;
+     rdfs:label "Tent"@en , "چادر"@fa ;
+     mdhn:exactMatch aat:300263692 ;
+     mdhn:wikidataItem wd:Q170544 .
+  
+
+mdhn:Polo
+    a mdhn:GameAndHobby, owl:NamedIndividual ;
+    rdfs:label "Polo"@en , "چوگان"@fa ;
+    mdhn:exactMatch aat:300222762 ;
+    mdhn:wikidataItem wd:Q134211 .
+
+mdhn:Chess
+     a mdhn:GameAndHobby, owl:NamedIndividual ;
+     rdfs:label "Chess"@en , "شطرنج"@fa ;
+     mdhn:exactMatch aat:300222748 ;
+     mdhn:wikidataItem wd:Q718 .
+
+               
+
+mdhn:Mace
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Mace"@en , "گرز"@fa ;
+    mdhn:exactMatch aat:300037214 ;
+    mdhn:wikidataItem wd:Q272990 .
+
+mdhn:Spear
+      a mdhn:BattleEquipment, owl:NamedIndividual ;
+      rdfs:label "Spear"@en , "نيزه"@fa ;
+      mdhn:exactMatch aat:300037033 ;
+      mdhn:wikidataItem wd:Q44475 . 
+
+mdhn:Shield
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Shield"@en , "سپر"@fa ;
+    mdhn:exactMatch aat:300222454 ;
+    mdhn:wikidataItem wd:Q131559 .    
+
+mdhn:Horse_Armour
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Horse Armour"@en , "زره اسب"@fa ;
+    mdhn:exactMatch aat:300036900 ;
+    mdhn:wikidataItem wd:Q50364603 .
+
+mdhn:Sword
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Sword"@en , "شمشير"@fa ;
+    mdhn:exactMatch aat:300037048 ;
+    mdhn:wikidataItem wd:Q12791 .   
+
+mdhn:Axe
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Axe"@en , "تبر"@fa ;
+    mdhn:exactMatch aat:300036982 ;
+    mdhn:wikidataItem wd:Q39397 .
+
+mdhn:Club
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Club"@en , "چوبدست"@fa ;
+    mdhn:wikidataItem wd:Q392326 .    
+
+mdhn:Dagger
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Dagger"@en , "خنجر"@fa ;
+    mdhn:exactMatch aat:300037048 ;
+    mdhn:wikidataItem wd:Q182780 .  
+
+mdhn:Flag
+     a mdhn:BattleEquipment, owl:NamedIndividual ;
+     rdfs:label "Flag"@en , "پرچم/بيرق"@fa ;
+     mdhn:exactMatch aat:300195678 ;
+     mdhn:wikidataItem wd:Q14660 .
+
+mdhn:HorseStirrup
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Horse Stirrup"@en , "رکاب"@fa ;
+    mdhn:exactMatch aat:300255573 ;
+    mdhn:wikidataItem wd:Q116240973 .
+
+mdhn:HorseSaddle
+    a mdhn:BattleEquipment, owl:NamedIndividual ;
+    rdfs:label "Horse Saddle"@en , "زین اسب"@fa ;
+    mdhn:exactMatch aat:300212972 ;
+    mdhn:wikidataItem wd:Q192249 .         
+   
+
+mdhn:Blowing_Horn
+    a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Blowing Horn"@en , "شاخ بوقی"@fa ;
+    mdhn:exactMatch aat:300426074 .
+    mdhn:wikidataItem wd:Q2665724 . 
+
+mdhn:Tamborim   a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Tamborim"@en , "طبلک"@fa ;
+    mdhn:wikidataItem wd:Q1751598 . 
+
+
+mdhn:Tanbur  a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Tanbur"@en , "تنبور"@fa ;
+    mdhn:exactMatch aat:300042864 ;
+    mdhn:wikidataItem wd:Q3424319 . 
+
+mdhn:Sorna  a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Sorna"@en , "سرنا"@fa ;
+    mdhn:wikidataItem wd:Q825246 .          
+
+mdhn:Qanun a mdhn:MusicalInstrument, owl:NamedIndividual ;
+    rdfs:label "Qanun"@en , "قانون"@fa ;
+    mdhn:exactMatch aat:300212193 ;
+    mdhn:wikidataItem wd:Q904646 .         
+
+mdhn:LeopardSkinDress
+    a mdhn:ClothingAndDress, owl:NamedIndividual ;
+    rdfs:label "Leopard Skin Dress"@en , "لباس پوست پلنگ"@fa ;
+    mdhn:wikidataItem wd:Q3564428 .
+
+mdhn:Headgear
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Headgear"@en , "سرپوش"@fa ;
+     mdhn:wikidataItem wd:Q14952 . 
+
+mdhn:GemEncrustedCrown
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted Crown"@en , "تاج مرصع"@fa ;
+     mdhn:wikidataItem wd:Q170984 .  
+
+mdhn:GemEncrustedBelt
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted Belt"@en , "کمربند مرصع"@fa ;
+     mdhn:wikidataItem wd:Q134560 .
+
+mdhn:GemEncrustedArmBand
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted ArmBand"@en , "بازوبند مرصع"@fa ;
+     mdhn:wikidataItem wd:Q680343 .
+
+mdhn:GemEncrustedBracelet
+     a mdhn:ClothingAndDress, owl:NamedIndividual ;
+     rdfs:label "Gem-Encrusted Bracelet"@en , "دستبند مرصع"@fa ;
+     mdhn:wikidataItem wd:Q201664 .     
+
+mdhn:Turban
+    a mdhn:ClothingAndDress, owl:NamedIndividual ;
+    rdfs:label "Turban"@en , "عمامه"@fa ;
+    mdhn:wikidataItem wd:Q2460567 .     
+   
+
+mdhn:Rocks
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Rocks"@en , "صخره"@fa ;
+    mdhn:wikidataItem wd:Q8063 .  
+
+mdhn:Fire
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Fire"@en , "آتش"@fa ;
+    mdhn:wikidataItem wd:Q3196 .
+mdhn:Water
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Water"@en , "آب"@fa ;
+    mdhn:wikidataItem wd:Q283 . 
+mdhn:River
+     a mdhn:NaturalElement, owl:NamedIndividual ;
+     rdfs:label "River"@en , "رودخانه"@fa ;
+     mdhn:wikidataItem wd:Q4022 . 
+
+mdhn:Cloud
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Cloud"@en , "ابر"@fa ;
+    mdhn:wikidataItem wd:Q8074 .
+
+mdhn:Flower
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Flower"@en , "گل"@fa ;
+    mdhn:wikidataItem wd:Q506 .  
+
+mdhn:Blossom
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Blossom"@en , "شکوفه"@fa ;
+    mdhn:wikidataItem wd:Q2047589 .          
+
+mdhn:Plant
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Plant"@en , "گیاه"@fa ;
+    mdhn:wikidataItem wd:Q10884 . 
+
+mdhn:Tree
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Tree"@en , "درخت"@fa ;
+    mdhn:wikidataItem wd:Q10884 . 
+
+mdhn:Wind
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Wind"@en , "باد"@fa ;
+    mdhn:exactMatch aat:300055395 ;
+    mdhn:wikidataItem wd:Q8094 .          
+
+mdhn:Bird_Nest
+    a mdhn:NaturalElement, owl:NamedIndividual ;
+    rdfs:label "Bird Nest"@en , "لانه پرنده"@fa ;
+    mdhn:wikidataItem wd:Q1137226 .
+
+mdhn:Lion
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Lion"@en , "شیر"@fa ;
+    mdhn:wikidataItem wd:Q140 . 
+mdhn:Bird
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Bird"@en , "پرندگان"@fa ;
+    mdhn:wikidataItem wd:Q5113 .
+mdhn:Deer
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Deer"@en , "گوزن"@fa ;
+    mdhn:wikidataItem wd:Q29838690 .  
+
+mdhn:Gazelle
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Gazelle"@en , "آهو"@fa ;
+    mdhn:wikidataItem wd:Q29001815 . 
+
+
+mdhn:Sheep
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Sheep"@en , "گوسفند"@fa ;
+    mdhn:wikidataItem wd:Q7368 . 
+
+mdhn:Cow
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Cow"@en , "گاو"@fa ;
+    mdhn:wikidataItem wd:Q11748378 . 
+
+mdhn:Snake
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Snake"@en , "مار"@fa ;
+    mdhn:wikidataItem wd:Q2102 . 
+mdhn:Dog
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Dog"@en , "سگ"@fa ;
+    mdhn:wikidataItem wd:Q144 .
+
+mdhn:Horse
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Horse"@en , "اسب"@fa ;
+    mdhn:wikidataItem wd:Q726 .                                     
+
+mdhn:Goat
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Goat"@en , "بز"@fa ;
+    mdhn:wikidataItem wd:Q2934 .  
+
+mdhn:Leopard
+    a mdhn:Animals, owl:NamedIndividual ;
+    rdfs:label "Leopard"@en , "پلنگ"@fa ;
+    mdhn:wikidataItem wd:Q34706 .                   
+
+mdhn:LongNeckedBottle
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Long-necked Bottle"@en , "بطری گردن بلند"@fa ;
+    mdhn:wikidataItem wd:Q116274271 .
+
+mdhn:LongNeckedJar
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Long-necked Jar"@en , "جام گردن بلند"@fa ;
+    mdhn:wikidataItem wd:Q2413314 . 
+
+mdhn:GoldVessel
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Gold Vessel"@en , "ظرف طلا"@fa ;
+    mdhn:wikidataItem wd:Q96952903 .  
+
+mdhn:Bowl
+    a mdhn:Tableware, owl:NamedIndividual ;
+    rdfs:label "Bowl"@en , "کاسه"@fa ;
+    mdhn:wikidataItem wd:Q153988 . 
+
+mdhn:Carpet
+    a mdhn:TextilesAndCarpets, owl:NamedIndividual ;
+    rdfs:label "Carpet"@en , "فرش"@fa ;
+    mdhn:wikidataItem wd:Q163446 . 
+
+mdhn:CandleHolder
+    a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
+    rdfs:label "Candle Holder"@en , "شمعدان"@fa ;
+    mdhn:exactMatch aat:300037583 ;
+    mdhn:wikidataItem wd:Q111324670 . 
+
+mdhn:DoorKnocker
+    a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
+    rdfs:label "Door Knocker"@en , "چکش در"@fa ;
+    mdhn:exactMatch aat:300080114 ;
+    mdhn:wikidataItem wd:Q12180 .                  
+
+mdhn:Faridun
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Faridun"@en , "فريدون"@fa ;
+    fhkb:hasSon mdhn:Salm, mdhn:Tur, mdhn:Iraj;
+    mdhn:wikidataItem wd:Q1150281. 
+
+mdhn:Faranak
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
+    rdfs:label "Faranak"@en , "فرانک"@fa ;
+    fhkb:isMotherOf mdhn:Faridun;
+    mdhn:wikidataItem wd:Q137687. 
+
+mdhn:Salm
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Salm"@en , "سلم"@fa ;
+    fhkb:isBrotherOf mdhn:Tur, mdhn:Iraj;
+    mdhn:wikidataItem wd:Q3543323. 
+
+   mdhn:Tur
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Tur"@en , "تور"@fa ;
+    fhkb:isBrotherOf mdhn:Salm, mdhn:Iraj;
+    mdhn:wikidataItem wd:Q3543320.
+
+mdhn:Iraj
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Iraj"@en , "ايرج"@fa ;
+    fhkb:isBrotherOf mdhn:Salm, mdhn:Tur;
+    fhkb:hasSon mdhn:Manuchehr;
+    mdhn:wikidataItem wd:Q1300562.
+
+mdhn:Jamshid
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Man;
+    rdfs:label "Jamshid"@en , "جمشيد"@fa ;
+    fhkb:hasDaughter mdhn:Arnavaz, mdhn:Shahrnaz;
+    mdhn:wikidataItem wd:Q155755.
+
+mdhn:Arnavaz
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
+    rdfs:label "Arnavazr"@en , "ارنواز"@fa ;
+    fhkb:isSpouseOf mdhn:Zahhak;
+    fhkb:isSisterOf mdhn:Shahrnaz;
+    mdhn:wikidataItem wd:Q5744657.
+
+mdhn:Shahrnaz
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
+    rdfs:label "Shahrnaz"@en , "شهرناز"@fa ;
+    fhkb:isSisterOf mdhn:Arnavaz;
+    mdhn:wikidataItem wd:Q5662082.    
+
+mdhn:Gordafarid
+    a mdhn:FictionalHuman, owl:NamedIndividual , fhkb:Woman;
+    rdfs:label "Gordafarid"@en , "گردافرید"@fa ;
+    mdhn:wikidataItem wd:Q1537907.
+
+mdhn:Gazhdaham
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Gazhdaham"@en , "گژدهم"@fa ; 
+    fhkb:hasDaughter mdhn:Gordafarid;    
+    mdhn:wikidataItem wd:Q5667217.                         
+
+mdhn:Tahmuras
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Tahmuras"@en , "طهمورث"@fa ; 
+    fhkb:hasSon mdhn:Jamshid;    
+    mdhn:wikidataItem wd:Q519239. 
+
+mdhn:Keyumars
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Keyumars"@en , "کيومرث"@fa ;
+    fhkb:hasSon mdhn:Siamak;
+    mdhn:wikidataItem wd:Q1077286. 
+
+mdhn:Siamak
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Siamak"@en , "سيامک"@fa ;
+    fhkb:hasSon mdhn:Hushang;
+    mdhn:wikidataItem wd:Q1551577. 
+
+mdhn:Hushang
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Hushang"@en , "هوشنگ"@fa ;
+    fhkb:hasSon mdhn:Tahmuras;
+    mdhn:wikidataItem wd:Q1638892.   
+
+mdhn:Mardas
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mardas"@en , "مرداس"@fa ;
+    fhkb:hasSon mdhn:Zahhak;
+    mdhn:wikidataItem wd:Q5665501. 
+
+mdhn:Zahhak
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Zahhak"@en , "ضحاک"@fa ;
+    mdhn:wikidataItem wd:Q1200843. 
+
+mdhn:Manuchehr
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Manuchehr"@en , "منوچهر"@fa ;
+    fhkb:hasSon mdhn:Nowzar;
+    mdhn:wikidataItem wd:Q1376677.
+    
+mdhn:Mahafarid
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Mahafarid"@en , "مهافرید"@fa ;
+    fhkb:isSpouseOf mdhn:Iraj;
+    fhkb:ismotherOf mdhn:Manuchehr;
+    mdhn:wikidataItem wd:Q138829412.      
+
+mdhn:Nowzar
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Nowzar"@en , "نوذر"@fa ;
+    mdhn:wikidataItem wd:Q1338935.        
+
+mdhn:Sam
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Sam"@en , "سام"@fa ;
+    fhkb:hasSon mdhn:Zal;
+    mdhn:wikidataItem wd:Q2003157. 
+mdhn:Zal
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Zal"@en , "زال"@fa ;
+    fhkb:hasSon mdhn:Rostam, mdhn:Shaghad ;
+    mdhn:wikidataItem wd:Q144903.  
+mdhn:Rudaba
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Rudaba"@en , "رودابه"@fa ;
+    fhkb:isSpouseOf mdhn:Zal;
+    fhkb:isMotherOf mdhn:Rostam;
+    mdhn:wikidataItem wd:Q144903. 
+mdhn:Mihrab
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Mihrab"@en , "مهراب"@fa ;
+    fhkb:hasDaughter mdhn:Rudaba;
+    mdhn:wikidataItem wd:Q1383989. 
+mdhn:Sindukht
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Sindukht"@en , "سيندخت"@fa ;
+    fhkb:isSpouseOf mdhn:Mihrab;
+    fhkb:isMotherOf mdhn:Rudaba;
+    mdhn:wikidataItem wd:Q5665309.     
+
+mdhn:Rostam
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Rostam"@en , "رستم"@fa ;
+    fhkb:hasSon mdhn:Sohrab;
+    fhkb:isBrotherOf mdhn:Shaghad ;
+    mdhn:wikidataItem wd:Q60062.
+mdhn:Shaghad
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Shaghad"@en , "شغاد"@fa ;
+    fhkb:isBrotherOf mdhn:Rostam ;
+    mdhn:wikidataItem wd:Q3543285.          
+mdhn:Tahmina
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Tahmina"@en , "تهمينه"@fa ;
+    fhkb:isSpouseOf mdhn:Rostam;
+    fhkb:isMotherOf mdhn:Sohrab;
+    mdhn:wikidataItem wd:Q144903. 
+mdhn:Sohrab
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Sohrab"@en , "سهراب"@fa ;
+    mdhn:wikidataItem wd:Q2065184.  
+
+mdhn:Kaveh_the_Blacksmith
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Kaveh the Blacksmith"@en , "کاوه آهنگر"@fa ;
+    fhkb:hasSon mdhn:Qubad, mdhn:Qaran;
+    mdhn:wikidataItem wd:Q1128478. 
+mdhn:Qubad
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Qubad"@en , "قباد"@fa ;
+    fhkb:isBrotherOf mdhn:Qaran;
+    mdhn:wikidataItem wd:Q138830690. 
+mdhn:Qaran
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Qaran"@en , "قارن"@fa ;
+    fhkb:isBrotherOf mdhn:Qubad;
+    mdhn:wikidataItem wd:Q138831115. 
+
+mdhn:Barman
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Barman"@en , "بارمان"@fa ;
+    mdhn:wikidataItem wd:Q138832420.  
+
+mdhn:Afrasiab
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Afrasiab"@en , "افراسیاب"@fa ;
+    fhkb:hasDaughter mdhn:Manizheh;
+    mdhn:wikidataItem wd:Q383717.
+
+mdhn:Giv
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Giv"@en , "گیو"@fa ;
+    fhkb:hasSon mdhn:Bizhan;
+    mdhn:wikidataItem wd:Q1528771. 
+
+mdhn:Roham
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Roham"@en , "روهام"@fa ;
+    mdhn:wikidataItem wd:Q7359658.     
+
+mdhn:Goudarz
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Goudarz"@en , "گودرز"@fa ;
+    fhkb:hasSon mdhn:Giv, mdhn:Roham;
+    mdhn:wikidataItem wd:Q5767416.  
+
+mdhn:Keshvad
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Keshvad"@en , "کشواد"@fa ;
+    fhkb:hasSon mdhn:Giv;
+    mdhn:wikidataItem wd:Q6395074.        
+
+mdhn:Bizhan
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Bizhan"@en , "بیژن"@fa ;
+    mdhn:wikidataItem wd:Q6415987. 
+
+mdhn:Manizheh
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Manizheh"@en , "منیزه"@fa ;
+    mdhn:wikidataItem wd:Q1890442.                          
+         
+    
+mdhn:Iblis
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Iblis"@en , "ابلیس"@fa ;
+    mdhn:wikidataItem wd:Q273101. 
+
+mdhn:Wild_Boars
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Wild Boars"@en , "گرازهای وحشی"@fa ;
+    mdhn:wikidataItem wd:Q138863005.
+
+mdhn:Div
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Div"@en , "ديو"@fa ;
+    mdhn:wikidataItem wd:Q1157107. 
+
+
+mdhn:Angel
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Angel"@en , "فرشته"@fa ;
+    mdhn:wikidataItem wd:Q235113. 
+                       
+
+mdhn:BlackDiv
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Black Div"@en , "ديو سياه"@fa ;
+    mdhn:wikidataItem wd:Q5599492.  
+
+mdhn:Dragon
+    a mdhn:MythologicalCreature, owl:NamedIndividual ;
+    rdfs:label "Dragon"@en , "اژدها"@fa ;
+    mdhn:wikidataItem wd:Q7559. 
+   
+mdhn:Tehran_Museum_of_Contemporary_Art a mdhn:GLAMHolder;
+rdfs:label "Tehran Museum of Contemporary Art"@en;
+  mdhn:wikidataItem wd:Q1756399.
+mdhn:Metropolitan_Museum_of_Art a mdhn:GLAMHolder;
+  rdfs:label "Metropolitan Museum of Art"@en;
+  mdhn:wikidataItem wd:Q160236.
+mdhn:Aga_Khan_Museum a mdhn:GLAMHolder;
+  rdfs:label "Aga Khan Museum"@en;
+  mdhn:wikidataItem wd:Q4690937.
+mdhn:Cincinnati_Art_Museum a mdhn:GLAMHolder;
+  rdfs:label "Cincinnati Art Museum"@en;
+  mdhn:wikidataItem wd:Q2970522.
+mdhn:Khalili_Collection a mdhn:GLAMHolder;
+   rdfs:label "Khalili Collection"@en;
+  mdhn:wikidataItem wd:Q66455355.
+mdhn:S_C_Welch_Family_Collection a mdhn:GLAMHolder;
+  rdfs:label "S. C. Welch Family Collection"@en.
+mdhn:National_Museum_of_Asian_Art a mdhn:GLAMHolder;
+  rdfs:label "National Museum of Asian Art"@en;
+  mdhn:wikidataItem wd:Q105749808.
+mdhn:Museum_of_Islamic_Art_Doha a mdhn:GLAMHolder;
+  rdfs:label "Museum of Islamic Art Doha"@en;
+  mdhn:wikidataItem wd:Q1148353.
+mdhn:Victoria_and_Albert_Museum a mdhn:GLAMHolder;
+  rdfs:label "Victoria and Albert Museum"@en;
+  mdhn:wikidataItem wd:Q213322.  
+
+mdhn:Dallas_Museum_of_Art a mdhn:GLAMHolder;
+  rdfs:label "Dallas Museum of Art"@en;
+  mdhn:wikidataItem wd:Q745866. 
+
+mdhn:Private_Collection a mdhn:GLAMHolder;
+  rdfs:label "Private Collection"@en.
+mdhn:Sarikhani_Collection a mdhn:GLAMHolder;
+  rdfs:label "Sarikhani Collection"@en.  
