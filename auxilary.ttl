@@ -221,7 +221,12 @@ mdhn:Mir_Sayyid_Ali
 mdhn:Mirza_Ali
     a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Mirza Ali"@en , "میرزا علی"@fa ;
-    mdhn:wikidataItem wd:Q2783517 .              
+    mdhn:wikidataItem wd:Q2783517 . 
+
+mdhn:Shaykh_Mohammad_Sabzevari
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Shaykh Mohammad Sabzevari"@en , "شیخ محمد سبزواری"@fa ;
+    mdhn:wikidataItem wd:Q4522484 .                  
 
 mdhn:Derafsh_Kaviani
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
@@ -818,7 +823,8 @@ mdhn:BarmanTuranied
 mdhn:PiranViseh
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Piran Viseh"@en , "پیران ویسه"@fa ;
-    fhkb:hasBrother mdhn:BarmanTuranied;    
+    fhkb:hasBrother mdhn:BarmanTuranied;
+    mdhn:hasSon mdhn:Colbad_Viseh;    
     mdhn:wikidataItem wd:Q5678604.          
 
 mdhn:Afrasiab
@@ -837,7 +843,12 @@ mdhn:KayKavus
 mdhn:Fariburz
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Fariburz"@en , "فريبرز"@fa ;
-    mdhn:wikidataItem wd:Q5684621.  
+    mdhn:wikidataItem wd:Q5684621. 
+
+mdhn:Colbad_Viseh
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Colbad Viseh"@en , "کلبد ویسه"@fa ;
+    mdhn:wikidataItem wd:Q138949791.      
 
 
 mdhn:Farangis

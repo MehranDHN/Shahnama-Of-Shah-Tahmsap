@@ -215,7 +215,7 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
 - **National Museum of Asian Art** 
   - Instance of Illuminated Folio WD:Q29385197
 - **Narrative Episode**
-  - WD:Q138964950
+  - WD:Q5935469
 - **Depicts**
   - mdhn:KayKhosrow
   - mdhn:Goudarz
@@ -226,6 +226,7 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
   - mdhn:LongNeckedBottle
   - mdhn:LongNeckedJar
   - mdhn:Dagger
+  - mdhn:Sword
   - mdhn:Headgear
   - mdhn:Horse
   - mdhn:SunShade
@@ -235,13 +236,60 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
   - mdhn:Tree
 - **Content Elements**
   - **Painting** (`mdhn:Painting`) 
-    - **ُMirza Ali** WD:Q67Q278351712884
+    - **ُMirza Ali** WD:Q2783517
     - **Cropped Figures** (multiple `mdhn:FigureCrop`)
       - Goudarz  
         ![Goudarz cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1504,1731,436,717/max/0/default.jpg) 
       - Piran Viseh  
-        ![Piran Viseh](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1178,1859,304,581/max/0/default.jpg)   
+        ![Piran Viseh cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1178,1859,304,581/max/0/default.jpg)   
                                             
   - **Inscriptions**: None
   - **Illuminated Unwan**: None
   - **LinguisticObject**: Verse 18750-18758 based on Ganjoor
+
+
+### Folio 341v (The First 'Joust of the Rooks': Fariburz versus Kalbad)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-341v/manifest.json)
+- **Aga Khan Museum** 
+  - Instance of Illuminated Folio WD:Q113699030
+- **Narrative Episode**
+  - WD:Q5935469 and WD:Q138949719
+- **Depicts**
+  - mdhn:KayKhosrow
+  - mdhn:Goudarz
+  - mdhn:Afrasiab
+  - mdhn:Fariburz
+  - mdhn:Colbad_Viseh
+- **Visual Items** 
+  - mdhn:Bow_and_Arrow
+  - mdhn:Sword
+  - mdhn:Shield
+  - mdhn:Horse_Armour
+  - mdhn:Helmet 
+  - mdhn:Battle_Field
+  - mdhn:Duel
+  - mdhn:Flag
+  - mdehn:Horse
+  - mdhn:Saddle
+  - mdhn:HorseStirrup
+  - mdhn:Rock
+  - mdhn:Tree
+  - mdhn:Flower
+  - mdhn:Plant
+  - mdhn:Goat
+  - mdhn:Bird
+  - mdhn:Bird_Nest
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **ُMirza Ali** WD:Q4522484
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Fariburz  
+        ![Firuz cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/791,1384,513,500/max/0/default.jpg) 
+      - Piran Viseh  
+        ![Kalbad cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/344,1385,505,527/max/0/default.jpg)   
+                                            
+  - **Inscriptions**: None
+  - **Illuminated Unwan**
+      - Slaying Kalbad By Fariburz 
+        ![Slaying Kalbad By Fariburz](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/552,708,503,228/max/0/default.jpg)
+  - **LinguisticObject**: Verse 18780-18783 based on Ganjoor

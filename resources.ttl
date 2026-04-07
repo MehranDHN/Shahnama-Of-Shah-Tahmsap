@@ -922,7 +922,7 @@ mdhn:Painting339r a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh;
    mdhn:hasReferredTo mdhn:Goudarz, mdhn:PiranViseh;
    mdhn:hasWorkshop_director  mdhn:Mirza_Ali ;
-   mdhn:hasMaterialObject mdhn:Tent, mdhn:LongNeckedBottle, mdhn:LongNeckedJar, mdhn:Dagger, mdhn:Headgear, mdhn:Horse, mdhn:SunShade, mdhn:Carpet, mdhn:Flower, mdhn:Plant, mdhn:Tree;
+   mdhn:hasMaterialObject mdhn:Tent, mdhn:LongNeckedBottle, mdhn:LongNeckedJar,mdhn:Sword, mdhn:Dagger, mdhn:Headgear, mdhn:Horse, mdhn:SunShade, mdhn:Carpet, mdhn:Flower, mdhn:Plant, mdhn:Tree;
     mdhn:wikidataItem wd:Q64690774 ;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Mir_Mossavvir .  
@@ -941,7 +941,51 @@ mdhn:PiranVisehFig339r a mdhn:FigureCrop;
    mdhn:hasReferredTo mdhn:PiranViseh;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1178,1859,304,581/max/0/default.jpg".       
 
+   # -- Folio 341v -----------------------------------------------------
+mdhn:RE_341v a mdhn:RegisterEntry;
+    rdfs:label "The First 'Joust of the Rooks': Fariburz versus Kalbad"@en, "رويارويی اول فريبرز و کلباد"@fa;
+    rdfs:comment "The first rivals are Fariburz, uncle of Kay Khusrau, and Kalbad, brother of Piram When the arrows Fariburz shoots at his foe miss their mark, he draws his sword and slices Kalbad in two, from neck to waist. He then ascends the mound and places the first Iranian flag on it"@en;
+    mdhn:entryFolioNumber "341v";
+    mdhn:entryPartOf mdhn:painting_Index.  
 
+mdhn:Folio341v a mdhn:Recto;
+   rdfs:label "Folio 341v"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio342r ;
+   mdhn:folioNumber 341;
+   mdhn:keptIn mdhn:Aga_Khan_Museum;
+   mdhn:hasContentElement mdhn:Painting341v, mdhn:Poems341v, mdhn:IlluminatedUnwan341v; 
+   mdhn:wikidataItem wd:Q113699030; 
+   mdhn:hasReferredTo mdhn:KayKhosrow, mdhn:Goudarz, mdhn:Afrasiab, mdhn:Fariburz, mdhn:Colbad_Viseh;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp--341v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_341v.  
+
+mdhn:Painting341v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:FariburzFig341v, mdhn:Kalbad_VisehFig341v;
+   mdhn:hasNarrativeEpisode mdhn:DavazdahRokhو mdhn:FirsthRokh;
+   mdhn:hasReferredTo  mdhn:Fariburz, mdhn:Colbad_Viseh;
+   mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
+   mdhn:hasMaterialObject mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdehn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Shaykh_Mohammad_Sabzevari .  
+
+mdhn:Poems341v a mdhn:LinguisticObject;
+  mdhn:startVerse 18780;
+  mdhn:endVerse 18783.
+
+mdhn:FariburzFig341v a mdhn:FigureCrop;
+   rdfs:label "Fariburz cropped figure from f341v"@en;
+   mdhn:hasReferredTo mdhn:Fariburz;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/791,1384,513,500/max/0/default.jpg".
+
+mdhn:Kalbad_VisehFig341v a mdhn:FigureCrop;
+   rdfs:label "Kalbad Viseh cropped figure from f341v"@en;
+   mdhn:hasReferredTo mdhn:Colbad_Viseh;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/344,1385,505,527/max/0/default.jpg".
+  
+mdhn:IlluminatedUnwan341v a mdhn:IlluminatedUnwan;
+   rdfs:label "Slaying Kalbad By Fariburz"@en, "کشته شدن کلباد به دست فريبرز"@fa;
+   mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/552,708,503,228/max/0/default.jpg".
 
 mdhn:DavazdahRokh a mdhn:NarrativeEpisode;
    rdfs:label "Davazdah Rokh"@en, "دوازده رخ"@fa;

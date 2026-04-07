@@ -638,6 +638,7 @@ The `resources.ttl` file provides sample instance data covering **six folios** f
 | `102v`| Qaran Slays Barman | Abd al Aziz  | Victoria & Albert Museum |
 | `299r`| Bizhan Slaughters the Wild Boars of Irman | Abd al Vahhab  | Dallas Museum of Art |
 | `339r`| Planning for the Joust of the Twelve Rooks | Mirza Ali  | National Museum of Asian Art |
+| `341v`| The First 'Joust of the Rooks': Fariburz versus Kalbad | Shaykh Mohammad Sabzevari   | Aga Khan Museum |
 
 
 
