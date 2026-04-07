@@ -612,6 +612,13 @@ mdhn:CandleHolder
     mdhn:exactMatch aat:300037583 ;
     mdhn:wikidataItem wd:Q111324670 . 
 
+mdhn:SunShade
+    a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
+    rdfs:label "Sun Shade"@en , "چتر آفتاب"@fa ;
+    mdhn:exactMatch aat:300428884 ;
+    mdhn:wikidataItem wd:Q1762975 .
+
+
 mdhn:DoorKnocker
     a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
     rdfs:label "Door Knocker"@en , "چکش در"@fa ;
@@ -801,13 +808,54 @@ mdhn:Qaran
 mdhn:Barman
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Barman"@en , "بارمان"@fa ;
-    mdhn:wikidataItem wd:Q138832420.  
+    mdhn:wikidataItem wd:Q138832420.
+
+mdhn:BarmanTuranied
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Barman Turanied"@en , "بارمان"@fa ;
+    mdhn:wikidataItem wd:Q138964479. 
+
+mdhn:PiranViseh
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Piran Viseh"@en , "پیران ویسه"@fa ;
+    fhkb:hasBrother mdhn:BarmanTuranied;    
+    mdhn:wikidataItem wd:Q5678604.          
 
 mdhn:Afrasiab
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Afrasiab"@en , "افراسیاب"@fa ;
-    fhkb:hasDaughter mdhn:Manizheh;
+    fhkb:hasDaughter mdhn:Manizhe, mdhn:Farangis;
     mdhn:wikidataItem wd:Q383717.
+
+
+mdhn:KayKavus
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "KayKavus"@en , "کایکاووس"@fa ;
+    fhkb:hasSon mdhn:Siyavash , mdhn:Fariburz;
+    mdhn:wikidataItem wd:Q1338913. 
+
+mdhn:Fariburz
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Fariburz"@en , "فريبرز"@fa ;
+    mdhn:wikidataItem wd:Q5684621.  
+
+
+mdhn:Farangis
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Woman;
+    rdfs:label "Farangis"@en , "فرنگيس"@fa ;
+    fhkb:isSpouseOf mdhn:Siyavash;
+    mdhn:wikidataItem wd:Q3066786.      
+
+mdhn:Siyavash 
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Siyavash"@en , "سياوش"@fa ;
+    fhkb:hasSon mdhn:KayKhosrow;
+    mdhn:wikidataItem wd:Q1338926.
+
+mdhn:KayKhosrow 
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Kay Khosrow"@en , "کيخسرو"@fa ;
+    mdhn:wikidataItem wd:Q163183.    
 
 mdhn:Giv
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;

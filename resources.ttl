@@ -891,7 +891,55 @@ mdhn:WildBoarFig299r a mdhn:FigureCrop;
 
 mdhn:Bizhan_Slaughters_the_Wild_Boars_of_Irman a mdhn:NarrativeEpisode;
    rdfs:label "Bizhan Slaughters the Wild Boars of Irman"@en, "کشته شدن گرازهای وحشی ایرمن به دست بیژان"@fa;
-   mdhn:wikidataItem wd:Q138863131 .      
+   mdhn:wikidataItem wd:Q138863131 .  
+
+   # -- Folio 339r -----------------------------------------------------
+mdhn:RE_339r a mdhn:RegisterEntry;
+    rdfs:label "Planning for the Joust of the Twelve Rooks"@en, "توافق بر نبرد دوازده رخ"@fa;
+    rdfs:comment "In reaction to the stalemate between their armies, Gudarz and Piran hold a parlev and agree on a series of eleven jousts to decide the winner of the war. In cach camp the commanders choose the ten champions who, in addition to themselves, will oust. As a venue, they select a field between two mounds so that the winners can plant their flags on their respective peaks "@en;
+    mdhn:entryFolioNumber "339r";
+    mdhn:entryPartOf mdhn:painting_Index.  
+
+mdhn:Folio339r a mdhn:Recto;
+   rdfs:label "Folio 339r"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio341v ;
+   mdhn:folioNumber 339;
+   mdhn:keptIn mdhn:National_Museum_of_Asian_Art;
+   mdhn:hasContentElement mdhn:Painting339r, mdhn:Poems339r; 
+   mdhn:wikidataItem wd:Q138964950; 
+   mdhn:hasReferredTo mdhn:KayKhosrow, mdhn:Goudarz, mdhn:Afrasiab, mdhn:PiranViseh;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_339r. 
+
+mdhn:AltFolio339r a mdhn:AlternateFolio;
+   rdfs:label "Alternate Folio 339r"@en;
+    mdhn:isAlternateVersionOf mdhn:Folio339r;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r-alt/manifest.json".   
+
+mdhn:Painting339r a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:GoudarzFig339r, mdhn:PiranVisehFig339r;
+   mdhn:hasNarrativeEpisode mdhn:DavazdahRokh;
+   mdhn:hasReferredTo mdhn:Goudarz, mdhn:PiranViseh;
+   mdhn:hasWorkshop_director  mdhn:Mirza_Ali ;
+   mdhn:hasMaterialObject mdhn:Tent, mdhn:LongNeckedBottle, mdhn:LongNeckedJar, mdhn:Dagger, mdhn:Headgear, mdhn:Horse, mdhn:SunShade, mdhn:Carpet, mdhn:Flower, mdhn:Plant, mdhn:Tree;
+    mdhn:wikidataItem wd:Q64690774 ;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Mir_Mossavvir .  
+
+mdhn:Poems339r a mdhn:LinguisticObject;
+  mdhn:startVerse 18750;
+  mdhn:endVerse 18758.
+
+mdhn:GoudarzFig339r a mdhn:FigureCrop;
+   rdfs:label "Goudarz cropped figure from f339r"@en;
+   mdhn:hasReferredTo mdhn:Goudarz;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1504,1731,436,717/max/0/default.jpg".
+
+mdhn:PiranVisehFig339r a mdhn:FigureCrop;
+   rdfs:label "Piran Viseh cropped figure from f339r"@en;
+   mdhn:hasReferredTo mdhn:PiranViseh;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1178,1859,304,581/max/0/default.jpg".       
 
 
 
@@ -905,7 +953,19 @@ mdhn:FirsthRokh a mdhn:NarrativeEpisode;
 
 mdhn:SecondRokh a mdhn:NarrativeEpisode;
    rdfs:label "Second Rokh"@en, "رخ دوم. رويارويی گيو و گروی زره"@fa;
-   mdhn:wikidataItem wd:Q138949919.        
+
+mdhn:ThirdRokh a mdhn:NarrativeEpisode;
+   rdfs:label "Third Rokh"@en, "رخ سوم. رويارويی گرازه و سيامک تورانی"@fa;
+   mdhn:wikidataItem wd:Q138963595.   
+
+mdhn:FourthRokh a mdhn:NarrativeEpisode;
+   rdfs:label "Fourth Rokh"@en, "رخ چهارم. رويارويی فرهول و زنگله"@fa;
+   mdhn:wikidataItem wd:Q138964109.  
+
+mdhn:FifthRokh a mdhn:NarrativeEpisode;
+   rdfs:label "Fifth Rokh"@en, "رخ پنجم. رويارويی رهام و بارمان"@fa;
+   mdhn:wikidataItem wd:Q138964110.    
+      
 
 mdhn:Folio26v a mdhn:Folio. 
 mdhn:Folio28v a mdhn:Folio. 

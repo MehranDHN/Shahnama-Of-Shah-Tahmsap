@@ -208,3 +208,40 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
 
 
 
+### Folio 339r (Planning for the Joust of the Twelve Rooks)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r/manifest.json)
+  - Has Alternate 
+    - [IIIF Manifest](https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r-alt/manifest.json)
+- **National Museum of Asian Art** 
+  - Instance of Illuminated Folio WD:Q29385197
+- **Narrative Episode**
+  - WD:Q138964950
+- **Depicts**
+  - mdhn:KayKhosrow
+  - mdhn:Goudarz
+  - mdhn:Afrasiab
+  - mdhn:PiranViseh
+- **Visual Items** 
+  - mdhn:Tent
+  - mdhn:LongNeckedBottle
+  - mdhn:LongNeckedJar
+  - mdhn:Dagger
+  - mdhn:Headgear
+  - mdhn:Horse
+  - mdhn:SunShade
+  - mdhn:Carpet
+  - mdhn:Flower
+  - mdhn:Plant
+  - mdhn:Tree
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **ُMirza Ali** WD:Q67Q278351712884
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Goudarz  
+        ![Goudarz cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1504,1731,436,717/max/0/default.jpg) 
+      - Piran Viseh  
+        ![Piran Viseh](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-339r-alt%2FFolio339r_alt.jpg/1178,1859,304,581/max/0/default.jpg)   
+                                            
+  - **Inscriptions**: None
+  - **Illuminated Unwan**: None
+  - **LinguisticObject**: Verse 18750-18758 based on Ganjoor
