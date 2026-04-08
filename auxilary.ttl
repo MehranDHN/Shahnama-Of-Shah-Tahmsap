@@ -241,19 +241,19 @@ mdhn:Bow_and_Arrow
 mdhn:Body_Armour
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
     rdfs:label "Body Armour"@en , "زره و لباس رزم"@fa ;
-    mdhn:exactMatch aat:300036746 ;
+    skos:exactMatch aat:300036746 ;skos
     mdhn:wikidataItem wd:Q485027 .
 
 mdhn:Combat_Helmet
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
     rdfs:label "Combat Helmet"@en , "کلاهخود"@fa ;
-    mdhn:exactMatch aat:300391023 ;
+    skos:exactMatch aat:300391023 ;
     mdhn:wikidataItem wd:Q3579211 . 
 
 mdhn:Lasso
     a mdhn:MilitaryEquipment, owl:NamedIndividual ;
     rdfs:label "Lasso"@en , "کمند"@fa ;
-    mdhn:exactMatch aat:300255575 ;
+    skos:exactMatch aat:300255575 ;
     mdhn:wikidataItem wd:Q840507 .    
 
 mdhn:Architectural_Structure
@@ -264,19 +264,19 @@ mdhn:Architectural_Structure
 mdhn:Balcony
     a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
     rdfs:label "Balcony"@en , "بالکن"@fa ;
-    mdhn:exactMatch aat:300002588 ;
+    skos:exactMatch aat:300002588 ;
     mdhn:wikidataItem wd:Q170552 .  
 
 mdhn:Pool
     a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
     rdfs:label "Pool"@en , "حوض"@fa ;
-    mdhn:exactMatch aat:300008692 ;
+    skos:exactMatch aat:300008692 ;
     mdhn:wikidataItem wd:Q1501 .   
 
 mdhn:Glazed_Tile
     a mdhn:ArchitecturalDecoration, owl:NamedIndividual ;
     rdfs:label "Glazed Tile"@en , "کاشی لعابدار"@fa ;
-    mdhn:exactMatch aat:300457833 ;
+    skos:exactMatch aat:300457833 ;
     mdhn:wikidataItem wd:Q76827920 .         
 
  
@@ -288,24 +288,24 @@ mdhn:Feasting a mdhn:LuxuryCeremony, owl:NamedIndividual ;
 mdhn:Soldier
     a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Soldier"@en , "جنگجو"@fa ;
-    mdhn:exactMatch aat:300185678 ;
+    skos:exactMatch aat:300185678 ;
     mdhn:wikidataItem wd:Q4991371 .      
 mdhn:Battle
     a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Battle"@en , "زرم و نبرد"@fa ;
-    mdhn:exactMatch aat:300185692 ;
+    skos:exactMatch aat:300185692 ;
     mdhn:wikidataItem wd:Q198 .  
 
 mdhn:Duel
     a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Duel"@en , "دوئل"@fa ;
-    mdhn:exactMatch aat:300230815 ;
+    skos:exactMatch aat:300230815 ;
     mdhn:wikidataItem wd:Q191503 .     
 
 mdhn:Battle_Field
     a mdhn:BattleAndCombat, owl:NamedIndividual ;
     rdfs:label "Battle Field"@en , "میدان نبرد"@fa ;
-    mdhn:exactMatch aat:300000835 ;
+    skos:exactMatch aat:300000835 ;
     mdhn:wikidataItem wd:Q4895508 . 
 
 mdhn:Decapitation
@@ -317,13 +317,13 @@ mdhn:Decapitation
 mdhn:Enthronement
     a mdhn:LuxuryCeremony, owl:NamedIndividual ;
     rdfs:label "Enthronement"@en , "تاجگذاری"@fa ;
-    mdhn:exactMatch aat:300054754 ;
+    skos:exactMatch aat:300054754 ;
     mdhn:wikidataItem wd:Q1671499 .
 
 mdhn:Throne
     a mdhn:LuxuryCeremony, owl:NamedIndividual ;
     rdfs:label "Throne"@en , "تخت پادشاهی"@fa ;
-    mdhn:exactMatch aat:300038141 ;
+    skos:exactMatch aat:300038141 ;
     mdhn:wikidataItem wd:Q189233 .          
 
 mdhn:Royal_Court
@@ -334,20 +334,20 @@ mdhn:Royal_Court
 mdhn:Tent
      a mdhn:LuxuryCeremony, owl:NamedIndividual ;
      rdfs:label "Tent"@en , "چادر"@fa ;
-     mdhn:exactMatch aat:300263692 ;
+     skos:exactMatch aat:300263692 ;
      mdhn:wikidataItem wd:Q170544 .
   
 
 mdhn:Polo
     a mdhn:GameAndHobby, owl:NamedIndividual ;
     rdfs:label "Polo"@en , "چوگان"@fa ;
-    mdhn:exactMatch aat:300222762 ;
+    skos:exactMatch aat:300222762 ;
     mdhn:wikidataItem wd:Q134211 .
 
 mdhn:Chess
      a mdhn:GameAndHobby, owl:NamedIndividual ;
      rdfs:label "Chess"@en , "شطرنج"@fa ;
-     mdhn:exactMatch aat:300222748 ;
+     skos:exactMatch aat:300222748 ;
      mdhn:wikidataItem wd:Q718 .
 
                
@@ -355,37 +355,37 @@ mdhn:Chess
 mdhn:Mace
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Mace"@en , "گرز"@fa ;
-    mdhn:exactMatch aat:300037214 ;
+    skos:exactMatch aat:300037214 ;
     mdhn:wikidataItem wd:Q272990 .
 
 mdhn:Spear
       a mdhn:BattleEquipment, owl:NamedIndividual ;
       rdfs:label "Spear"@en , "نيزه"@fa ;
-      mdhn:exactMatch aat:300037033 ;
+      skos:exactMatch aat:300037033 ;
       mdhn:wikidataItem wd:Q44475 . 
 
 mdhn:Shield
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Shield"@en , "سپر"@fa ;
-    mdhn:exactMatch aat:300222454 ;
+    skos:exactMatch aat:300222454 ;
     mdhn:wikidataItem wd:Q131559 .    
 
 mdhn:Horse_Armour
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Horse Armour"@en , "زره اسب"@fa ;
-    mdhn:exactMatch aat:300036900 ;
+    skos:exactMatch aat:300036900 ;
     mdhn:wikidataItem wd:Q50364603 .
 
 mdhn:Sword
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Sword"@en , "شمشير"@fa ;
-    mdhn:exactMatch aat:300037048 ;
+    skos:exactMatch aat:300037048 ;
     mdhn:wikidataItem wd:Q12791 .   
 
 mdhn:Axe
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Axe"@en , "تبر"@fa ;
-    mdhn:exactMatch aat:300036982 ;
+    skos:exactMatch aat:300036982 ;
     mdhn:wikidataItem wd:Q39397 .
 
 mdhn:Club
@@ -396,32 +396,32 @@ mdhn:Club
 mdhn:Dagger
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Dagger"@en , "خنجر"@fa ;
-    mdhn:exactMatch aat:300037048 ;
+    skos:exactMatch aat:300037048 ;
     mdhn:wikidataItem wd:Q182780 .  
 
 mdhn:Flag
      a mdhn:BattleEquipment, owl:NamedIndividual ;
      rdfs:label "Flag"@en , "پرچم/بيرق"@fa ;
-     mdhn:exactMatch aat:300195678 ;
+     skos:exactMatch aat:300195678 ;
      mdhn:wikidataItem wd:Q14660 .
 
 mdhn:HorseStirrup
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Horse Stirrup"@en , "رکاب"@fa ;
-    mdhn:exactMatch aat:300255573 ;
+    skos:exactMatch aat:300255573 ;
     mdhn:wikidataItem wd:Q116240973 .
 
 mdhn:HorseSaddle
     a mdhn:BattleEquipment, owl:NamedIndividual ;
     rdfs:label "Horse Saddle"@en , "زین اسب"@fa ;
-    mdhn:exactMatch aat:300212972 ;
+    skos:exactMatch aat:300212972 ;
     mdhn:wikidataItem wd:Q192249 .         
    
 
 mdhn:Blowing_Horn
     a mdhn:MusicalInstrument, owl:NamedIndividual ;
     rdfs:label "Blowing Horn"@en , "شاخ بوقی"@fa ;
-    mdhn:exactMatch aat:300426074 .
+    skos:exactMatch aat:300426074 .
     mdhn:wikidataItem wd:Q2665724 . 
 
 mdhn:Tamborim   a mdhn:MusicalInstrument, owl:NamedIndividual ;
@@ -431,7 +431,7 @@ mdhn:Tamborim   a mdhn:MusicalInstrument, owl:NamedIndividual ;
 
 mdhn:Tanbur  a mdhn:MusicalInstrument, owl:NamedIndividual ;
     rdfs:label "Tanbur"@en , "تنبور"@fa ;
-    mdhn:exactMatch aat:300042864 ;
+    skos:exactMatch aat:300042864 ;
     mdhn:wikidataItem wd:Q3424319 . 
 
 mdhn:Sorna  a mdhn:MusicalInstrument, owl:NamedIndividual ;
@@ -440,7 +440,7 @@ mdhn:Sorna  a mdhn:MusicalInstrument, owl:NamedIndividual ;
 
 mdhn:Qanun a mdhn:MusicalInstrument, owl:NamedIndividual ;
     rdfs:label "Qanun"@en , "قانون"@fa ;
-    mdhn:exactMatch aat:300212193 ;
+    skos:exactMatch aat:300212193 ;
     mdhn:wikidataItem wd:Q904646 .         
 
 mdhn:LeopardSkinDress
@@ -525,7 +525,7 @@ mdhn:Tree
 mdhn:Wind
     a mdhn:NaturalElement, owl:NamedIndividual ;
     rdfs:label "Wind"@en , "باد"@fa ;
-    mdhn:exactMatch aat:300055395 ;
+    skos:exactMatch aat:300055395 ;
     mdhn:wikidataItem wd:Q8094 .          
 
 mdhn:Bird_Nest
@@ -614,20 +614,20 @@ mdhn:Carpet
 mdhn:CandleHolder
     a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
     rdfs:label "Candle Holder"@en , "شمعدان"@fa ;
-    mdhn:exactMatch aat:300037583 ;
+    skos:exactMatch aat:300037583 ;
     mdhn:wikidataItem wd:Q111324670 . 
 
 mdhn:SunShade
     a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
     rdfs:label "Sun Shade"@en , "چتر آفتاب"@fa ;
-    mdhn:exactMatch aat:300428884 ;
+    skos:exactMatch aat:300428884 ;
     mdhn:wikidataItem wd:Q1762975 .
 
 
 mdhn:DoorKnocker
     a mdhn:AccessoriesAndTools, owl:NamedIndividual ;
     rdfs:label "Door Knocker"@en , "چکش در"@fa ;
-    mdhn:exactMatch aat:300080114 ;
+    skos:exactMatch aat:300080114 ;
     mdhn:wikidataItem wd:Q12180 .                  
 
 mdhn:Faridun
@@ -742,7 +742,33 @@ mdhn:Mahafarid
 mdhn:Nowzar
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Nowzar"@en , "نوذر"@fa ;
-    mdhn:wikidataItem wd:Q1338935.        
+    mdhn:wikidataItem wd:Q1338935.
+
+mdhn:Goruye_Zereh
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Goruye Zereh"@en , "گوروی زره"@fa ;
+    mdhn:wikidataItem wd:Q138949845. 
+
+mdhn:Garazeh                  
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Garazeh"@en , "گرازه"@fa ;
+    mdhn:wikidataItem wd:Q5674730. 
+
+mdhn:Siamak_Turani                  
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Siamak Turani"@en , "سيامک توراني"@fa ;
+    mdhn:wikidataItem wd:Q138963545. 
+
+mdhn:Ferehoul                  
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Ferehoul"@en , "فرهول"@fa ;
+    mdhn:wikidataItem wd:Q85973492. 
+
+mdhn:Zangaleh                  
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Zangaleh"@en , "زنگله"@fa ;
+    mdhn:wikidataItem wd:Q138964058. 
+      
 
 mdhn:Sam
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;

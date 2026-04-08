@@ -63,17 +63,24 @@
 @prefix fhkb: <http://www.example.com/genealogy.owl#> .
 
 
+mdhn:Shahnameh a mdhn:LiteraryEpicWork , owl:NamedIndividual ;
+    mdhn:aatConcept aat:300404209 ;
+    mdhn:wikidataItem wd:Q8279 ;
+    dcterms:created "c. 1010" ;
+    rdfs:comment """The Shahnameh, or Book of Kings, is an epic poem written by the Persian poet Ferdowsi around 1010 CE. It is one of the most important works of Persian literature and tells the mythical and historical past of Persia from the creation of the world until the Islamic conquest in the 7th century."""@en ;
+    rdfs:label "Shahnameh"@en , "شاهنامه"@fa .
+
 mdhn:manuscript_shahnama_shah_tahmasp a mdhn:Manuscript , owl:NamedIndividual ;
     mdhn:aatConcept aat:300028569 ;
     mdhn:hasOwnershipInterval mdhn:houghton_collection , mdhn:ottoman_topkapi , mdhn:safavid_library ;
     mdhn:hasPaintingRegister mdhn:painting_Index ;
-    mdhn:wikidataItem wd:Q3114572, wd:Q64675957 ;
+    mdhn:wikidataItem wd:Q3114572;
     dcterms:created "1522/1535" ;
     rdfs:comment """The Houghton Shahnama. Royal Persian manuscript produced 
     c. 1522-1535 CE in Tabriz under Shah Tahmasp I. Contains 268 full-page paintings. 
     Now dispersed across 30+ collections."""@en ;
     rdfs:label "Shahnama of Shah Tahmasp"@en , "شاهنامه شاه طهماسپ"@fa ;
-    skos:related wd:Q8279 .
+    skos:related wd:Q64675957 .
 
 
 # -- Folio 2v -----------------------------------------------------
@@ -208,7 +215,7 @@ mdhn:Folio20v a mdhn:Verso;
 
 mdhn:Painting20v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:KeyumarsFig20v, mdhn:SiamakFig20v, mdhn:HushangFig20v;
-   mdhn:hasNarrativeEpisode mdhn:KingdomOfKeyumars;
+   mdhn:hasNarrativeEpisode mdhn:KeyumarsEnthroned;
    mdhn:hasReferredTo mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:hasVisualItem mdhn:Royal_Court, mdhn:LeopardSkinDress,  mdhn:Throne, mdhn:Enthronement, mdhn:Turban, mdhn:Rocks, mdhn:Tree, mdhn:Plant, mdhn:Cloud, mdhn:Bird, mdhn:Leopard, mdhn:Lion;
@@ -218,7 +225,14 @@ mdhn:Painting20v a mdhn:Painting;
 
 mdhn:KingdomOfKeyumars a mdhn:NarrativeEpisode;
    rdfs:label "The Court of Kayumars"@en, "پادشاهی کيومرث"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
    mdhn:wikidataItem wd:Q138719971 .  
+
+mdhn:KeyumarsEnthroned a mdhn:NarrativeEpisode;
+   rdfs:label "Keyumars Enthroned"@en, "بارگاه کيومرث"@fa;
+   mdhn:isPartOf mdhn:KingdomOfKeyumars ;
+   mdhn:charactersInvolved mdhn:Keyumars, mdhn:Siamak, mdhn:Hushang;
+   mdhn:wikidataItem wd:Q138719971 .     
 
 mdhn:Poems20v a mdhn:LinguisticObject;
    rdfs:label "Poems appear in folio 20v"@en;
@@ -272,8 +286,15 @@ mdhn:IlluminatedUnwan21v a mdhn:IlluminatedUnwan;
    mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-21v%2F21v.jpg/402,737,407,133/max/0/default.jpg".
 
 
+mdhn:KingdomOfHushang a mdhn:NarrativeEpisode;
+   rdfs:label "The Kingdom of Hushang"@en, "پادشاهی هوشنگ"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:wikidataItem wd:Q138720021 .
+
 mdhn:HushangSlaysTheBlackDiv a mdhn:NarrativeEpisode;
    rdfs:label "Hushang Slays the Black Div"@en, "کشته شدن ديو سياه به دست هوشنگ"@fa;
+   mdhn:isPartOf mdhn:KingdomOfHushang ;
+   mdhn:characterInvolved mdhn:Hushang, mdhn:BlackDiv, mdhn:Siamak;
    mdhn:wikidataItem wd:Q138757163 .  
 
 mdhn:Poems21v a mdhn:LinguisticObject;
@@ -353,6 +374,8 @@ mdhn:Painting22v a mdhn:Painting;
 
 mdhn:HushangInFeastOfSada a mdhn:NarrativeEpisode;
    rdfs:label "The Feast of Sada"@en, "جشن سده"@fa;
+   mdhn:isPartOf mdhn:KingdomOfHushang ;
+   mdhn:characterInvolved mdhn:Hushang;
    mdhn:wikidataItem wd:Q138757360 .  
 
 mdhn:Poems22v a mdhn:LinguisticObject;
@@ -380,7 +403,6 @@ mdhn:Folio23v a mdhn:Verso;
    mdhn:folioNumber 23; 
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
    mdhn:hasContentElement mdhn:Painting23v, mdhn:Poems23v;     
-   mdhn:hasReferredTo mdhn:Tahmuras;
    mdhn:hasOwnershipInterval mdhn:MetropolitanMuseumofArt;
    mdhn:wikidataItem wd:Q29385199;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-23v/manifest.json"; 
@@ -398,8 +420,15 @@ mdhn:Painting23v a mdhn:Painting;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:hasPainter mdhn:Sultan_Muhammad .
 
+mdhn:KingdomOfTahmuras a mdhn:NarrativeEpisode;
+   rdfs:label "The Kingdom of Tahmuras"@en, "پادشاهی طهمورث"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:wikidataItem wd:Q138676359 .
+
 mdhn:TahmurasDefeatsDivs a mdhn:NarrativeEpisode;
-rdfs:label "Tahmuras Defeats the Divs"@en, "هزيمت ديوها به دست طهمورث"@fa;
+   rdfs:label "Tahmuras Defeats the Divs"@en, "هزيمت ديوها به دست طهمورث"@fa;
+   mdhn:isPartOf mdhn:KingdomOfTahmuras ;
+   mdhn:charactersInvolved mdhn:Tahmuras, mdhn:mdhn:Div;
    mdhn:wikidataItem wd:Q138676508 .   
 
 mdhn:TahmurasFigure23v a mdhn:FigureCrop;
@@ -446,13 +475,12 @@ mdhn:Folio24v a mdhn:Verso;
    mdhn:keptIn mdhn:S_C_Welch_Family_Collection;
    mdhn:hasContentElement mdhn:Painting24v, mdhn:Poems24v; 
    mdhn:wikidataItem wd:Q131253793; 
-   mdhn:hasReferredTo mdhn:Jamshid, mdhn:Zahhak;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-24v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_24v.  
 
 mdhn:Painting24v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:JamshidFig24v, mdhn:Div1_Fig24v, mdhn:Div2_Fig24v;
-   mdhn:hasNarrativeEpisode mdhn:KingdomOfJJamshid;
+   mdhn:hasNarrativeEpisode mdhn:EnthronementOfJamshid;
    mdhn:hasReferredTo mdhn:Jamshid, mdhn:Hushang;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:attributionCertainty "possible"@en;
@@ -478,9 +506,16 @@ mdhn:Div2_Fig24v a mdhn:FigureCrop;
    mdhn:hasReferredTo mdhn:Div;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-24v%2FFolio_24v.jpg/794,1128,132,166/max/0/default.jpg". 
    
-mdhn:KingdomOfJJamshid a mdhn:NarrativeEpisode;
-   rdfs:label "The Court of Jamshid"@en, "بارگاه جمشيد"@fa;
+mdhn:KingdomOfJamshid a mdhn:NarrativeEpisode;
+   rdfs:label "The Court of Jamshid"@en, "پادشاهی جمشيد"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
    mdhn:wikidataItem wd:Q138724581 . 
+
+mdhn:EnthronementOfJamshid a mdhn:NarrativeEpisode;
+   rdfs:label "The Enthronement of Jamshid"@en, "تاجگذاری جمشيد"@fa;
+   mdhn:isPartOf mdhn:KingdomOfJamshid ;
+   mdhn:charactersInvolved mdhn:Jamshid, mdhn:Hushang;
+   mdhn:wikidataItem wd:Q138724581 .   
 
 # -- Folio 25v -----------------------------------------------------
 mdhn:RE_25v a mdhn:RegisterEntry;
@@ -497,7 +532,6 @@ mdhn:Folio25v a mdhn:Verso;
    mdhn:keptIn mdhn:Khalili_Collection;
    mdhn:hasContentElement mdhn:Painting25v, mdhn:Poems25v; 
    mdhn:wikidataItem wd:Q107663637; 
-   mdhn:hasReferredTo mdhn:Mirdas, mdhn:Zahhak, mdhn:Iblis;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-25v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_25v.  
 
@@ -521,19 +555,31 @@ mdhn:MirdasFig25v a mdhn:FigureCrop;
    mdhn:hasReferredTo mdhn:Mardas;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-25v%2F25v.jpg/490,2078,403,359/max/0/default.jpg".
 
-   mdhn:IblisFig25v a mdhn:FigureCrop;
+mdhn:IblisFig25v a mdhn:FigureCrop;
       rdfs:label "Iblis cropped figure from f25v"@en;
       mdhn:hasReferredTo mdhn:Iblis;   
       mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-25v%2F25v.jpg/192,1464,212,312/max/0/default.jpg". 
 
-   mdhn:ZahhakFig25v a mdhn:FigureCrop;
+mdhn:ZahhakFig25v a mdhn:FigureCrop;
    rdfs:label "Zahhak cropped figure from f25v"@en;
    mdhn:hasReferredTo mdhn:Zahhak;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-25v%2F25v.jpg/623,1431,248,395/max/0/default.jpg". 
    
 mdhn:ZahhakKillsHisOwnFather a mdhn:NarrativeEpisode;
    rdfs:label "Zahhak Kills His Own Father Mardas"@en, "کشته شدن مرداس با حيله ضحاک"@fa;
-   mdhn:wikidataItem wd:Q138841520 .      
+   mdhn:isPartOf mdhn:ZahhakStory ;
+   mdhn:charactersInvolved mdhn:Zahhak, mdhn:Mirdas, mdhn:Iblis;
+   mdhn:wikidataItem wd:Q138841520 . 
+
+mdhn:ZahhakStory a mdhn:NarrativeEpisode;
+   rdfs:label "The Story of Zahhak"@en, "داستان ضحاک"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:wikidataItem wd:Q40466998 .
+
+mdhn:KingdomOfZahhak a mdhn:NarrativeEpisode;
+   rdfs:label "The Kingdom of Zahhak"@en, "پادشاهی ضحاک"@fa;
+   mdhn:isPartOf mdhn:ZahhakStory ;
+   mdhn:wikidataItem wd:Q40466998 .           
 
 # -- Folio 27v -----------------------------------------------------
 mdhn:RE_27v a mdhn:RegisterEntry;
@@ -550,7 +596,6 @@ mdhn:Folio27v a mdhn:Verso;
    mdhn:keptIn mdhn:Khalili_Collection;
    mdhn:hasContentElement mdhn:Painting27v, mdhn:Poems27v, mdhn:Inscription1_27v, mdhn:Inscription2_27v;
    mdhn:wikidataItem wd:Q107663638; 
-   mdhn:hasReferredTo mdhn:Jamshid, mdhn:Zahhak, mdhn:Shahrnaz, mdhn:Arnavaz;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-27v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_27v.  
 
@@ -589,6 +634,8 @@ mdhn:Inscription2_27v a mdhn:Inscription;
 
 mdhn:Zahhak_and_Daughters_of_Jamshid a mdhn:NarrativeEpisode;
    rdfs:label "Zahhak Receives the Daughters of Jamshid"@en, "دختران جمشيد در بارگاه ضحاک"@fa;
+   mdhn:isPartOf mdhn:KingdomOfZahhak ;
+   mdhn:charactersInvolved mdhn:Jamshid, mdhn:Zahhak, mdhn:Shahrnaz, mdhn:Arnavaz;
    mdhn:wikidataItem wd:Q138841381 .     
 
 
@@ -628,8 +675,16 @@ mdhn:FereydunFig38v a mdhn:FigureCrop;
    mdhn:hasReferredTo mdhn:Faridun;   
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-38v%2FFolio38v.jpg/420,943,160,246/max/0/default.jpg". 
 
+mdhn:KingdomOfFaridun a mdhn:NarrativeEpisode;
+   rdfs:label "The Kingdom of Faridun"@en, "پادشاهی فريدون"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:charactersInvolved mdhn:Faridun, mdhn:Faranak, mdhn:Salm, mdhn:Tur, mdhn:Iraj, mdhn:Zahhak, mdhn:Manuchihr, mdhn:Arnavaz, mdhn:Shahrnaz;
+   mdhn:wikidataItem wd:Q139004602 .
+
 mdhn:The_Court_of_Faridun a mdhn:NarrativeEpisode;
    rdfs:label "The Court of Faridun"@en, "بارگاه فريدون"@fa;
+   mdhn:isPartOf mdhn:KingdomOfFaridun ;
+   mdhn:charactersInvolved mdhn:Faridun, mdhn:Faranak
    mdhn:wikidataItem wd:Q138821815 .
 # -- Folio 76v -----------------------------------------------------
 mdhn:RE_76v a mdhn:RegisterEntry;
@@ -645,7 +700,6 @@ mdhn:Folio76v a mdhn:Verso;
    mdhn:folioNumber 76;
    mdhn:hasOwnershipInterval mdhn:TehranMuseumofContemporaryArt;
    mdhn:keptIn mdhn:Tehran_Museum_of_Contemporary_Art;
-   mdhn:hasReferredTo mdhn:Rudaba, mdhn:Sindukht, mdhn:Zal , mdhn:Mihrab, mdhn:Manuchehr;
    mdhn:hasContentElement mdhn:Painting76v, mdhn:Poems76v, mdhn:IlluminatedUnwan76v  ;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-76v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_76v.  
@@ -677,8 +731,16 @@ mdhn:IlluminatedUnwan76v a mdhn:IlluminatedUnwan;
    rdfs:label "Rudaba confesses about Zal to her mother"@en, "باز گفتن رودابه با مادرش حال زال را"@fa;
    mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-76v%2FFolio76v.jp2/724,501,848,284/max/0/default.jpg".
 
+mdhn:ZalAndRudaba a mdhn:NarrativeEpisode;
+   rdfs:label "Zal and Rudaba"@en, "زال و رودابه"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:charactersInvolved mdhn:Zal, mdhn:Rudaba, mdhn:Sam, mdhn:Sindukht, mdhn:Mihrab, mdhn:Manuchihr;
+   mdhn:wikidataItem wd:Q5960418 .
+
 mdhn:RudabaConfesses : mdhn:NarrativeEpisode;
    rdfs:label "Rudaba Confesses to Sindukht"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
+   mdhn:isPartOf mdhn:ZalAndRudaba ;
+   mdhn:charactersInvolved mdhn:Rudaba, mdhn:Sindukht;
    mdhn:wikidataItem wd:Q138800292.
 
 # -- Folio 77v -----------------------------------------------------
@@ -748,6 +810,8 @@ mdhn:Inscription5_77v a mdhn:Inscription;
 
 mdhn:MihrabHearsRudaba a mdhn:NarrativeEpisode;
    rdfs:label "Mihrab Hears of Rudaba Folly"@en, "رودابه در مورد زال در نزد مادر خود اعتراف می کند"@fa;
+   mdhn:isPartOf mdhn:ZalAndRudaba ;
+   mdhn:charactersInvolved mdhn:Mihrab, mdhn:Rudaba;
    mdhn:wikidataItem wd:Q138801485.   
 # -- Folio 82v -----------------------------------------------------
 mdhn:RE_82v a mdhn:RegisterEntry;
@@ -762,7 +826,6 @@ mdhn:Folio82v a mdhn:Verso;
    mdhn:nextFolio mdhn:Folio83v ;
    mdhn:folioNumber 82;
    mdhn:keptIn mdhn:Private_Collection;  
-   mdhn:hasReferredTo mdhn:Sam, mdhn:Manuchehr, mdhn:Dragon;
    mdhn:hasContentElement mdhn:Painting82v, mdhn:Poems82v;  
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-82v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_82v.  
@@ -792,6 +855,8 @@ mdhn:DragonFig82v a mdhn:FigureCrop;
 
 mdhn:SamSlaysDragon : mdhn:NarrativeEpisode;
    rdfs:label "One Blow, Sam Recounts How He Slew a Dragon"@en, "کشته شدن اژدها به دست سام و سبب لقب او به یک زخم"@fa;
+   mdhn:isPartOf mdhn:ZalAndRudaba ;
+   mdhn:charactersInvolved mdhn:Sam, mdhn:Dragon;
    mdhn:wikidataItem wd:Q138799749.
 
 # -- Folio 102v -----------------------------------------------------
@@ -809,7 +874,6 @@ mdhn:Folio102v a mdhn:Verso;
    mdhn:keptIn mdhn:Victoria_and_Albert_Museum;
    mdhn:hasContentElement mdhn:Painting102v, mdhn:Poems102v; 
    mdhn:wikidataItem wd:Q64690773; 
-   mdhn:hasReferredTo mdhn:Qaran, mdhn:Barman, mdhn:Qubad;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-102v/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_102v.  
 
@@ -843,8 +907,16 @@ mdhn:BattleZoomScene102v a mdhn:ZoomedScene;
    rdfs:comment "This battle scene, with its eerie nocturnal palette, is the last picture in the sequence of the manuscript that can be assigned to Sultan Muhammad, and it would seem that he was assisted in coloring it by a younger artist, Mir Sayyid Ali, one of the masters of the second generation. The hand of the younger man is evident in the treatment of many of the faces, also in the treatment of some of the horses and their trappings. While Sultan Muhammad invariably gave his characters life, the younger man, who was a brilliant designer and an almost miraculously fine craftsman, painted people and animals as still life. Later, Mir Sayyid AH went to India and became one of the founders of the Mughal school of painting"@en;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/AKingsBookofKingsTheShahnamehofShahTahmasp%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2.zip%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2%2FAKingsBookofKingsTheShahnamehofShahTahmasp_0138.jp2/full/max/0/default.jpg".
 
+mdhn:KingdomOfNauzar a mdhn:NarrativeEpisode;
+   rdfs:label "The Kingdom of Nauzar"@en, "پادشاهی نوزار"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:charactersInvolved mdhn:Nauzar, mdhn:Qaran, mdhn:Qubad, mdhn:Barman;
+   mdhn:wikidataItem wd:Q40466986 .
+
 mdhn:Qaran_Slays_Barman a mdhn:NarrativeEpisode;
    rdfs:label "Qaran Slays Barman"@en, "کشته شدن بارمان به دست قاران"@fa;
+   mdhn:isPartOf mdhn:KingdomOfNauzar ;
+   mdhn:charactersInvolved mdhn:Qaran, mdhn:Barman, mdhn:Qubad;
    mdhn:wikidataItem wd:Q138847591 . 
 
    # -- Folio 299r -----------------------------------------------------
@@ -862,7 +934,6 @@ mdhn:Folio299r a mdhn:Recto;
    mdhn:keptIn mdhn:Dallas_Museum_of_Art;
    mdhn:hasContentElement mdhn:Painting299r, mdhn:Poems299r; 
    mdhn:wikidataItem wd:Q131241829; 
-   mdhn:hasReferredTo mdhn:Bizhan, mdhn:Giv, mdhn:Wild_Boars;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp--299r/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_299r.  
 
@@ -891,6 +962,8 @@ mdhn:WildBoarFig299r a mdhn:FigureCrop;
 
 mdhn:Bizhan_Slaughters_the_Wild_Boars_of_Irman a mdhn:NarrativeEpisode;
    rdfs:label "Bizhan Slaughters the Wild Boars of Irman"@en, "کشته شدن گرازهای وحشی ایرمن به دست بیژان"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:charactersInvolved mdhn:Bizhan, mdhn:Giv, mdhn:Wild_Boars;
    mdhn:wikidataItem wd:Q138863131 .  
 
    # -- Folio 339r -----------------------------------------------------
@@ -908,7 +981,6 @@ mdhn:Folio339r a mdhn:Recto;
    mdhn:keptIn mdhn:National_Museum_of_Asian_Art;
    mdhn:hasContentElement mdhn:Painting339r, mdhn:Poems339r; 
    mdhn:wikidataItem wd:Q138964950; 
-   mdhn:hasReferredTo mdhn:KayKhosrow, mdhn:Goudarz, mdhn:Afrasiab, mdhn:PiranViseh;
    mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r/manifest.json"; 
    mdhn:hasRegisterEntry mdhn:RE_339r. 
 
@@ -962,10 +1034,10 @@ mdhn:Folio341v a mdhn:Recto;
 
 mdhn:Painting341v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:FariburzFig341v, mdhn:Kalbad_VisehFig341v;
-   mdhn:hasNarrativeEpisode mdhn:DavazdahRokhو mdhn:FirsthRokh;
+   mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:FirsthRokh;
    mdhn:hasReferredTo  mdhn:Fariburz, mdhn:Colbad_Viseh;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
-   mdhn:hasMaterialObject mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdehn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
+   mdhn:hasMaterialObject mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Shaykh_Mohammad_Sabzevari .  
 
@@ -989,25 +1061,38 @@ mdhn:IlluminatedUnwan341v a mdhn:IlluminatedUnwan;
 
 mdhn:DavazdahRokh a mdhn:NarrativeEpisode;
    rdfs:label "Davazdah Rokh"@en, "دوازده رخ"@fa;
+   mdhn:isPartOf mdhn:Shahnameh ;
+   mdhn:charactersInvolved mdhn:KayKhosrow, mdhn:Goudarz, mdhn:Afrasiab, mdhn:Fariburz, mdhn:Colbad_Viseh, mdhn:Giv, mdhn:Goruye_Zereh, mdhn:Garazeh, mdhn:Siamak_Turani, mdhn:Ferehoul, mdhn:Zangaleh, mdhn:Roham, mdhn:BarmanTuranied;   
    mdhn:wikidataItem wd:Q5935469.
 
 mdhn:FirsthRokh a mdhn:NarrativeEpisode;
    rdfs:label "First Rokh"@en, "رخ اول. رويارويی فريبرز و کلباد ويسه"@fa;
+   mdhn:isPartOf mdhn:DavazdahRokh;
+   mdhn:charactersInvolved mdhn:Fariburz, mdhn:Colbad_Viseh;
    mdhn:wikidataItem wd:Q138949719.
 
 mdhn:SecondRokh a mdhn:NarrativeEpisode;
    rdfs:label "Second Rokh"@en, "رخ دوم. رويارويی گيو و گروی زره"@fa;
+   mdhn:isPartOf mdhn:DavazdahRokh;
+   mdhn:charactersInvolved mdhn:Giv, mdhn:Goruye_Zereh;
+   mdhn:wikidataItem wd:Q138949919.    
 
 mdhn:ThirdRokh a mdhn:NarrativeEpisode;
    rdfs:label "Third Rokh"@en, "رخ سوم. رويارويی گرازه و سيامک تورانی"@fa;
+   mdhn:isPartOf mdhn:DavazdahRokh;
+   mdhn:charactersInvolved mdhn:Garazeh, mdhn:Siamak_Turani;
    mdhn:wikidataItem wd:Q138963595.   
 
 mdhn:FourthRokh a mdhn:NarrativeEpisode;
    rdfs:label "Fourth Rokh"@en, "رخ چهارم. رويارويی فرهول و زنگله"@fa;
+   mdhn:isPartOf mdhn:DavazdahRokh;
+   mdhn:charactersInvolved mdhn:Ferehoul, mdhn:Zangaleh;
    mdhn:wikidataItem wd:Q138964109.  
 
 mdhn:FifthRokh a mdhn:NarrativeEpisode;
    rdfs:label "Fifth Rokh"@en, "رخ پنجم. رويارويی رهام و بارمان"@fa;
+   mdhn:isPartOf mdhn:DavazdahRokh;
+   mdhn:charactersInvolved mdhn:Roham, mdhn:BarmanTuranied;
    mdhn:wikidataItem wd:Q138964110.    
       
 

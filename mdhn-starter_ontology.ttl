@@ -92,6 +92,11 @@ mdhn:ontology a owl:Ontology ;
     owl:versionIRI <http://example.com/mdhn/ontology/3.0.0> ;
     owl:versionInfo "3.0.0" .
 
+mdhn:LiteraryEpicWork a owl:Class ;
+    rdfs:comment "A literary work of epic proportions."@en ;
+    rdfs:label "Literary Epic Work"@en , "منظومه حماسی شاهنامه"@fa ;
+    skos:exactMatch aat:300404209 .
+
 mdhn:Manuscript a owl:Class ;
     rdfs:comment "A unique illuminated codex — the top-level physical object."@en ;
     rdfs:label "Manuscript"@en , "نسخه خطی"@fa ;
@@ -100,6 +105,7 @@ mdhn:Manuscript a owl:Class ;
 mdhn:Folio a owl:Class ;
     rdfs:comment """A physical Folio (recto or verso), modelled as an 
     independent resource. ALL subclasses inherit mdhn:hasIIIFManifest."""@en ;
+    skos:exactMatch aat:300189604 ;
     rdfs:label "Folio"@en , "صفحه"@fa .
 
 mdhn:Recto a owl:Class ;
@@ -286,6 +292,12 @@ mdhn:entryFolioNumber a owl:DatatypeProperty ;
 mdhn:NarrativeEpisode a owl:Class ;
     rdfs:label "Narrative Episode"@en , "روایت"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
+
+mdhn:isPartOf a owl:DatatypeProperty ;
+    rdfs:comment "Associated narrative episode to which the iconographic entity belongs."@en ;
+    rdfs:domain mdhn:NarrativeEpisode ;
+    rdfs:label "is part of"@en , "بخشی از"@fa ;
+    rdfs:range [ owl:unionOf (mdhn:LiteraryEpicWork mdhn:NarrativeEpisode) ] ; .    
 
 mdhn:MaterialObject a owl:Class ;
     rdfs:label "Material Object"@en , "شیء مادی"@fa ;
@@ -537,7 +549,18 @@ mdhn:personaAppearsIn a owl:ObjectProperty ;
     rdfs:domain mdhn:EpicEntity ;
     rdfs:range  mdhn:Painting ;
     rdfs:label  "persona appears in"@en ;
-    owl:inverseOf mdhn:hasReferredTo .     
+    owl:inverseOf mdhn:hasReferredTo .  
+
+mdhn:charactersInvolve a owl:ObjectProperty ;
+    rdfs:domain mdhn:NarrativeEpisode ;
+    rdfs:label "characters Involve"@en ;
+    rdfs:range mdhn:EpicEntity . 
+
+mdhn:hasPartIn a owl:ObjectProperty ; 
+    rdfs:domain mdhn:EpicEntity ;
+    rdfs:range  mdhn:NarrativeEpisode ;
+    rdfs:label  "persona appears in"@en ;
+    owl:inverseOf mdhn:charactersInvolve .             
 
 mdhn:personaAppearsIn a owl:ObjectProperty ; 
     rdfs:domain mdhn:EpicEntity ;
