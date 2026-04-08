@@ -27,7 +27,7 @@
    - [Classes and Properties mappings](#class-and-property-mappings)
    - [Example of the mythological dynasty](#integration-example--the-mythological-dynasty-turtle)
    - [SPARQL Queries](#sparql-queries--genealogy-aware)      
-7. [Semantic Architecture of the Material World](#semantic-architecture-of-the-material-world)   
+7. [Semantic Architecture of the Visual Items](#semantic-architecture-of-the-material-world)   
 8. [Sample Data Overview](#sample-data-overview)
 9. [SPARQL Query Examples](#sparql-query-examples)
 10. [Getting Started](#getting-started)
@@ -67,6 +67,132 @@ This repository provides a **Linked Open Usable Data (LOUD)** and **FAIR**-compl
 
 **Primary reference:** Dickson, Martin B. and Welch, Stuart Cary. *The Houghton Shahnameh*. Harvard University Press, 1981.
 
+```mermaid
+graph TB
+    subgraph "Shahnama Knowledge Graph Architecture"
+        
+        subgraph "Core Ontology Layer"
+            ONT[MDHN Ontology v3.0.0<br/>OWL 2 DL]
+            ONT --> MS[Manuscript Class<br/>aat:300028569]
+            ONT --> FOL[Folio Hierarchy]
+            ONT --> CE[ContentElement]
+            ONT --> FHKB[FHKB Integration<br/>Genealogy Ontology]
+            
+            FOL --> REC[Recto]
+            FOL --> VER[Verso]
+            FOL --> ALT[AlternateFolio]
+            FOL --> OTT[OttomanAnnotationLeaf]
+            
+            CE --> PAINT[Painting<br/>aat:300033799]
+            CE --> ILLUM[Illumination<br/>aat:300053433]
+            CE --> LING[LinguisticObject]
+            CE --> ZOOM[ZoomedScene]
+            
+            PAINT --> CROP[FigureCrop<br/>aat:300404983]
+        end
+        
+        subgraph "Standards Alignment"
+            CRM[CIDOC-CRM 7.1<br/>Museum Standard]
+            LA[Linked Art]
+            IIIF[IIIF Presentation API 3]
+            GETTY[Getty Vocabularies<br/>AAT/TGN/ULAN]
+            WD[Wikidata]
+            
+            ONT -.-> CRM
+            ONT -.-> LA
+            FOL -.-> IIIF
+            ONT -.-> GETTY
+            ONT -.-> WD
+        end
+        
+        subgraph "Resource Instance Data"
+            RES[resources.ttl<br/>Sample Folios]
+            AUX[auxiliary.ttl<br/>Supporting Data]
+            
+            RES --> F7R[folio:7r]
+            RES --> F20V[folio:20v]
+            RES --> F21V[folio:21v]
+            RES --> F22V[folio:22v]
+            RES --> F23V[folio:23v]
+            RES --> F38V[folio:38v]
+            
+            F20V --> P20V[painting:20v<br/>Tahmineh Comes to Rustam]
+            F21V --> P21V[painting:21v<br/>Rustam Fights Ashkabus]
+            F22V --> P22V[painting:22v<br/>Rustam Lassoes Rakhsh]
+            
+            P20V --> CROP1[crops with IIIF regions]
+            P21V --> CROP2[character extractions]
+            
+            P20V --> EP1[episode: Tahmineh's Visit]
+            P21V --> EP2[episode: Combat Scene]
+            
+            EP1 --> CHAR1[character: Tahmineh]
+            EP1 --> CHAR2[character: Rustam]
+            EP2 --> CHAR2
+        end
+        
+        subgraph "FHKB Genealogy Integration"
+            FHKB --> PERS[fhkb:Person]
+            FHKB --> MAR[fhkb:Marriage]
+            FHKB --> SEX[fhkb:Sex]
+            
+            PERS --> MAN[fhkb:Man]
+            PERS --> WOM[fhkb:Woman]
+            
+            PERS -.property chains.-> PARENT[Parent Relations]
+            PERS -.property chains.-> SIB[Sibling Relations]
+            PERS -.property chains.-> COUSIN[Cousin Relations]
+            PERS -.property chains.-> GRAND[Grandparent Relations]
+            
+            CHAR1 -.mapped to.-> PERS
+            CHAR2 -.mapped to.-> PERS
+        end
+        
+        subgraph "External Integration Points"
+            IA[Internet Archive<br/>IIIF Repository]
+            GLAM[30+ GLAM Institutions]
+            
+            IA --> IAMAN[IIIF Manifests]
+            GLAM --> MET[Met Museum]
+            GLAM --> AKM[Aga Khan Museum]
+            GLAM --> TMC[Tehran Museum]
+            GLAM --> KHA[Khalili Collection]
+            
+            F20V -.hasIIIFManifest.-> IAMAN
+            F20V -.keptIn.-> MET
+        end
+        
+        subgraph "Data Pipeline"
+            SOURCE[Source: 268 Paintings<br/>Dispersed Manuscript]
+            SOURCE --> DIG[Digitization]
+            DIG --> IIIFPUB[IIIF Publishing<br/>Internet Archive]
+            IIIFPUB --> META[Metadata Extraction]
+            META --> RDF[RDF Triple Generation]
+            RDF --> VALID[OWL Reasoning<br/>& Validation]
+            VALID --> QUERY[SPARQL Endpoint]
+        end
+        
+        subgraph "Query Capabilities"
+            QUERY --> Q1[Folio Location Queries]
+            QUERY --> Q2[Painting Analysis]
+            QUERY --> Q3[Character Identification]
+            QUERY --> Q4[Genealogy Queries]
+            QUERY --> Q5[Provenance Tracking]
+            QUERY --> Q6[IIIF Image Retrieval]
+        end
+    end
+    
+    style ONT fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
+    style MS fill:#7ED321,stroke:#5FA319,stroke-width:2px
+    style PAINT fill:#F5A623,stroke:#C77E1A,stroke-width:2px
+    style CROP fill:#BD10E0,stroke:#8B0AA8,stroke-width:2px
+    style FHKB fill:#D0021B,stroke:#9A0114,stroke-width:2px
+    style IIIF fill:#50E3C2,stroke:#3AAA92,stroke-width:2px
+    style IA fill:#4A4A4A,stroke:#2E2E2E,stroke-width:2px
+    style QUERY fill:#417505,stroke:#2E5204,stroke-width:2px
+
+
+```
 ---
 
 ## Project Goals & Design Principles
@@ -496,7 +622,7 @@ Future extensions may include:
 
 
 
-## Semantic Architecture of the Material World
+## Semantic Architecture of the Visual Items
 
   ### 1. The Prototypical Safavid Universe: Introduction and Strategic Context
 
@@ -508,13 +634,13 @@ Future extensions may include:
 
   A defining characteristic of this visual record is the productive tension between historical anachronism and contemporary representation. Although the Shahnama chronicles ancient kings, Safavid artists depicted the tools, weapons, and textiles of their own era. This deliberate use of 16th-century material culture to illustrate prehistoric epics provides the ground truth for our ontological categorization: every object rendered is a contemporary Safavid "type." This synthesis of the mythic and the material forms the basis for a formal taxonomy of the objects identified within the manuscript.
 
-  ### 2. Taxonomy of the Material World: Hierarchical Class Structures
+  ### 2. Taxonomy of the Visual Items: Hierarchical Class Structures
 
   Hierarchical classification is the essential mechanism for resolving the "myriad details" of the illustrations into a structured knowledge base. The ontology must distinguish between generic types and the highly specialized luxury items that defined the environment of the Safavid elite.
 
   The following structure defines the primary RDF Class and Subclass hierarchy for the material world of Shah Tahmasp:
 
-  - **Class:** `MaterialObject`
+  - **Class:** `VisualTaxonomy`
     - **Subclass:** `Tableware` (Prototypical Folio: 638r)
       - `Long-neckedBottle`: Spherical or ovoid body with a neck nearly the length of a man’s torso (see Folio 80v).
       - `High-neckedJug`: Short jugs with bulbous bodies, wide necks, and lids; often used for water or wine service.
@@ -550,7 +676,7 @@ Future extensions may include:
   | Tableware/Platter     | Gold, Silver               | Fluting, Incised motifs               | RoyalLuxury          |
   | Mace                  | Steel, Iron                | Polished, Functional                  | MilitaryElite        |
 
-  The "luxury indicators"—specifically the encrustation of rubies, turquoise, pearls, and emeralds—function as critical semantic markers. Within this ontology, a `MaterialObject` linked to specific combinations of these gems denotes a high level of craftsmanship and status. For instance, while silver bottles appear in various scenes, kings are served exclusively from gold bottles. These material attributes act as ontological rules defining the hierarchical relationships between characters and their environment, transitioning naturally into the functional relationships within the *Bazm u Razm* cycle.
+  The "luxury indicators"—specifically the encrustation of rubies, turquoise, pearls, and emeralds—function as critical semantic markers. Within this ontology, a `VisualTaxonomy` linked to specific combinations of these gems denotes a high level of craftsmanship and status. For instance, while silver bottles appear in various scenes, kings are served exclusively from gold bottles. These visual attributes act as ontological rules defining the hierarchical relationships between characters and their environment, transitioning naturally into the functional relationships within the *Bazm u Razm* cycle.
 
   ### 4. Relational Ontology: Modeling the Socio-Cultural Context (Bazm and Razm)
 
@@ -562,7 +688,7 @@ Future extensions may include:
   - `servedTo`: A restricted relationship connecting `GoldBottle` specifically to the King.
   - `isServedBy`: The inverse property of `servedTo`, connecting the King to a Servant (as seen in Folio 80v).
   - `depictsStatus`: Connects `GemEncrustedObject` or `LeopardSkin` to `RoyalStatus`.
-  - `occupiesSetting`: Connects `MaterialObject` to `GardenPavilion` or `TiledInterior`.
+  - `occupiesSetting`: Connects `VisualTaxonomy` to `GardenPavilion` or `TiledInterior`.
 
   A significant temporal constraint in the model is the "**Edict of Sincere Repentance**" (1532–33). Before this date, the model reflects public wine drinking and "wild revelry." The ontology employs the property `mdhn:postEdictStatus` to track the shift in behavior. While the Shah forswore alcohol, the model must account for "private indulgence." For example, Bahram Mirza’s repast (1540) illustrates that royal status allowed for the bypassing of religious constraints in private settings, shifting wine-related individuals like the `Long-neckedBottle` from public *Bazm* to private, indulgent events. This relational logic provides the final layer of complexity required for a formal OWL specification.
 
@@ -572,23 +698,23 @@ Future extensions may include:
 
 
   #### 1. Class Definitions
-  - `mdhn:MaterialObject`
-  - `mdhn:Tableware` (Subclass of `MaterialObject`)
-  - `mdhn:MusicalInstrument` (Subclass of `MaterialObject`)
+  - `mdhn:VisualTaxonomy`
+  - `mdhn:Tableware` (Subclass of `VisualTaxonomy`)
+  - `mdhn:MusicalInstrument` (Subclass of `VisualTaxonomy`)
   - `mdhn:RoyalPersonage`
   - `mdhn:CourtEvent` (Subclasses: `Bazm`, `Razm`, `PrivateRepast`)
-  - `mdhn:StatusIndicator` (Subclass of `MaterialObject`)
+  - `mdhn:StatusIndicator` (Subclass of `VisualTaxonomy`)
 
   #### 2. Property Definitions
 
   **Object Properties:**
   - `mdhn:servedTo` (Domain: `mdhn:Tableware`, Range: `mdhn:RoyalPersonage`)
   - `mdhn:isServedBy` (Inverse of `servedTo`; Range: `mdhn:Servant`)
-  - `mdhn:usedIn` (Domain: `mdhn:MaterialObject`, Range: `mdhn:CourtEvent`)
-  - `mdhn:capturedAt` (Domain: `mdhn:MaterialObject`, Range: `mdhn:HistoricalEvent`)
+  - `mdhn:usedIn` (Domain: `mdhn:VisualTaxonomy`, Range: `mdhn:CourtEvent`)
+  - `mdhn:capturedAt` (Domain: `mdhn:VisualTaxonomy`, Range: `mdhn:HistoricalEvent`)
 
   **Data Properties:**
-  - `mdhn:hasMaterial` (Values: Gold, Silver, Brass, Zinc)
+  - `mdhn:hasVisualTaxonomy` (Values: Gold, Silver, Brass, Zinc)
   - `mdhn:hasGemEncrustation` (Values: Rubies, Turquoise, Pearls, Emeralds)
   - `mdhn:contains` (Value: `mdhn:SpiritOfCinnamon`, Wine, Water)
   - `mdhn:postEdictStatus` (Values: Prohibited, PrivateIndulgence)
@@ -597,14 +723,14 @@ Future extensions may include:
 
   - **Individual:** `ZincWineBottle_Chaldiran`
     - Type: `mdhn:Long-neckedBottle`
-    - `mdhn:hasMaterial`: "Zinc"
+    - `mdhn:hasVisualTaxonomy`: "Zinc"
     - `mdhn:hasGemEncrustation`: "Turquoise", "Rubies", "Emeralds"
     - `mdhn:capturedAt`: "Battle of Chaldiran (1514)"
     - `mdhn:status`: "Royal/Looted"
 
   - **Individual:** `GoldBottle_Folio385v`
     - Type: `mdhn:Long-neckedBottle`
-    - `mdhn:hasMaterial`: "Gold"
+    - `mdhn:hasVisualTaxonomy`: "Gold"
     - `mdhn:hasGemEncrustation`: "Rubies", "Turquoise", "Pearls"
     - `mdhn:servedTo`: `mdhn:King_Individual`
     - `mdhn:contains`: "Wine"
