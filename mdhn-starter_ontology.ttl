@@ -299,61 +299,61 @@ mdhn:isPartOf a owl:DatatypeProperty ;
     rdfs:label "is part of"@en , "بخشی از"@fa ;
     rdfs:range [ owl:unionOf (mdhn:LiteraryEpicWork mdhn:NarrativeEpisode) ] ; .    
 
-mdhn:MaterialObject a owl:Class ;
-    rdfs:label "Material Object"@en , "شیء مادی"@fa ;
+mdhn:VisualTaxonomy a owl:Class ;
+    rdfs:label "Visual Taxonomy"@en , "عناصر تصويری سلسله مراتبیی"@fa ;
     rdfs:subClassOf mdhn:IconographicEntity .
 
 mdhn:Tableware a owl:Class ;
     rdfs:label "Tableware"@en , "لوازم نوشيدن و خوردن"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject . 
+    rdfs:subClassOf mdhn:VisualTaxonomy . 
 
 mdhn:AccessoriesAndTools a owl:Class ;
     rdfs:label "Accessories and Tools"@en , "لوازم و ابزارها"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .     
+    rdfs:subClassOf mdhn:VisualTaxonomy .     
 
 mdhn:TextilesAndCarpets a owl:Class ;
     rdfs:label "Textiles and Carpets"@en , "پارچه ها و فرش ها"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .     
+    rdfs:subClassOf mdhn:VisualTaxonomy .     
 
 mdhn:MusicalInstrument a owl:Class ;
     rdfs:label "Musical Instrument"@en , "ابزار موسیقی"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .
+    rdfs:subClassOf mdhn:VisualTaxonomy .
     
 mdhn:BattleEquipment a owl:Class ;
     rdfs:label "Battle Equipment"@en , "تجهیزات جنگ"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject . 
+    rdfs:subClassOf mdhn:VisualTaxonomy . 
 
 mdhn:BattleAndCombat a owl:Class ;
     rdfs:label "Battle and Combat"@en , "نبرد و مبارزه"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .     
+    rdfs:subClassOf mdhn:VisualTaxonomy .     
 
 mdhn:DomesticGoods a owl:Class ;
     rdfs:label "Domestic Goods"@en , "کالاهای خانگی"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .
+    rdfs:subClassOf mdhn:VisualTaxonomy .
 
 mdhn:ArchitecturalDecoration a owl:Class ;
     rdfs:label "Architectural Decoration"@en , "تزئینات معماری"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .  
+    rdfs:subClassOf mdhn:VisualTaxonomy .  
 
 mdhn:NaturalElement a owl:Class ;
     rdfs:label "Natural Element"@en , "عنصر طبیعی"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .
+    rdfs:subClassOf mdhn:VisualTaxonomy .
     
 mdhn:GameAndHobby a owl:Class ;
     rdfs:label "Game and Hobby"@en , "بازی و سرگرمی"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .
+    rdfs:subClassOf mdhn:VisualTaxonomy .
 
 mdhn:Animals a owl:Class ;
     rdfs:label "Animals"@en , "حیوانات"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .      
+    rdfs:subClassOf mdhn:VisualTaxonomy .      
 
 mdhn:LuxuryCeremony a owl:Class ;
     rdfs:label "Luxury Ceremony"@en , "مراسم لوکس"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject .
+    rdfs:subClassOf mdhn:VisualTaxonomy .
                          
 mdhn:ClothingAndDress a owl:Class ;
     rdfs:label "Clothing and Dress"@en , "لباس و پوشش"@fa ;
-    rdfs:subClassOf mdhn:MaterialObject . 
+    rdfs:subClassOf mdhn:VisualTaxonomy . 
 
 mdhn:wikidataItem a owl:ObjectProperty ;
     rdfs:label "Wikidata item"@en ;
@@ -521,22 +521,21 @@ mdhn:depicts a owl:ObjectProperty ;
     rdfs:label "depicts"@en , "تصویر می‌کند"@fa ;
     rdfs:range mdhn:IconographicEntity .
 
-mdhn:hasMaterialObject  a owl:ObjectProperty ;
+mdhn:hasVisualTaxonomy  a owl:ObjectProperty ;
     rdfs:domain mdhn:Painting ;
-    rdfs:label "has material object"@en ;
-    rdfs:range mdhn:MaterialObject ;
+    rdfs:label "has visual taxonomy"@en ;
+    rdfs:range mdhn:VisualTaxonomy ;
     rdfs:subPropertyOf mdhn:depicts .    
 
 mdhn:hasNarrativeEpisode a owl:ObjectProperty ;
-    rdfs:domain [ owl:unionOf (mdhn:Painting mdhn:ZoomedScene) ] ;
+    rdfs:domain [ owl:unionOf (mdhn:Folio, mdhn:Painting mdhn:ZoomedScene) ] ;
     rdfs:label "has narrative episode"@en ;
-    rdfs:range mdhn:NarrativeEpisode ;
-    rdfs:subPropertyOf mdhn:depicts .
+    rdfs:range mdhn:NarrativeEpisode .
 
-mdhn:episodeAppearsIn a owl:ObjectProperty ; 
+mdhn:episodeRelatesTo a owl:ObjectProperty ; 
     rdfs:domain mdhn:NarrativeEpisode ;
-    rdfs:range  mdhn:Painting ;
-    rdfs:label  "episodeAppearsIn"@en ;
+    rdfs:range  [ owl:unionOf (mdhn:Folio, mdhn:Painting mdhn:ZoomedScene) ] ;
+    rdfs:label  "episodeRelatesTo"@en ;
     owl:inverseOf mdhn:hasNarrativeEpisode . 
 
 mdhn:hasReferredTo a owl:ObjectProperty ;
@@ -592,50 +591,8 @@ mdhn:registryHasPart a owl:ObjectProperty ;
     rdfs:range  mdhn:RegisterEntry ;
     rdfs:label  "Root registry has entry"@en ;
     owl:inverseOf mdhn:entryPartOf .  
-
-mdhn:registerFor
-    a owl:ObjectProperty ;
-    rdfs:domain mdhn:PaintingRegister ;
-    rdfs:range  mdhn:Manuscript ;
-    rdfs:label  "Root register for manuscript"@en ;
-    owl:inverseOf mdhn:hasPaintingRegister .
-
-mdhn:hasPaintingRegister
-    a owl:ObjectProperty ;
-    rdfs:domain mdhn:Manuscript ;
-    rdfs:range  mdhn:PaintingRegister ;
-    rdfs:label  "has painting register"@en , "دارای فهرست نگاره‌ها"@fa . 
-
-
-
-
-mdhn:anEpisodeOf
-    a owl:ObjectProperty ;
-    rdfs:domain mdhn:NarrativeEpisode  ;
-    rdfs:range  mdhn:Manuscript ;
-    rdfs:label  "An Episode Of"@en , "روايتی از شاهنامه"@fa .  
-
-mdhn:hasEpisode
-    a owl:ObjectProperty ;
-    rdfs:domain mdhn:Manuscript;
-    rdfs:range  mdhn:NarrativeEpisode  ;
-    rdfs:label  "has Episode"@en ;
-    owl:inverseOf mdhn:anEpisodeOf . 
-
-mdhn:hasSubEpisode
-    a owl:ObjectProperty ;
-    rdfs:domain mdhn:NarrativeEpisode;
-    rdfs:range  mdhn:NarrativeEpisode  ;
-    rdfs:label  "has sub Episode"@en . 
-
- mdhn:belongToBiggerEpisode
-    a owl:ObjectProperty ;
-    rdfs:domain mdhn:NarrativeEpisode;
-    rdfs:range  mdhn:NarrativeEpisode  ;
-    rdfs:label  "belongs to bigger episode"@en ;
-    owl:inverseOf mdhn:hasSubEpisode .             
+       
            
-
 mdhn:illuminated a mdhn:FolioType ;
     rdfs:label "Illuminated"@en , "مذهّب"@fa ;
     skos:exactMatch aat:300053433 .

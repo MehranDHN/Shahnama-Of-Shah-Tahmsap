@@ -211,7 +211,7 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
 ### Folio 339r (Planning for the Joust of the Twelve Rooks)
 - [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r/manifest.json)
   - Has Alternate 
-    - [IIIF Manifest](https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r-alt/manifest.json)
+    - [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-339r-alt/manifest.json)
 - **National Museum of Asian Art** 
   - Instance of Illuminated Folio WD:Q29385197
 - **Narrative Episode**
@@ -293,3 +293,49 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
       - Slaying Kalbad By Fariburz 
         ![Slaying Kalbad By Fariburz](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/552,708,503,228/max/0/default.jpg)
   - **LinguisticObject**: Verse 18780-18783 based on Ganjoor
+
+
+### Folio 342r (The Fourth 'Joust of the Rooks': Faruhil versus Zangula)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-342r/manifest.json)
+  - Has Alternate 
+    - [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-342r-alt/manifest.json)
+- **Metropolitan Museum Of Art** 
+  - Instance of Illuminated Folio WD:Q139055183
+- **Narrative Episode**
+  - WD:Q5935469 and WD:Q138964109
+- **Depicts**
+  - mdhn:KayKhosrow
+  - mdhn:Goudarz
+  - mdhn:Afrasiab
+  - mdhn:Ferehoul
+  - mdhn:Zangaleh
+- **Visual Items** 
+  - mdhn:Bow_and_Arrow
+  - mdhn:Sword
+  - mdhn:Horse_Armour
+  - mdhn:Helmet 
+  - mdhn:Battle_Field
+  - mdhn:Duel
+  - mdhn:Flag
+  - mdehn:Horse
+  - mdhn:Saddle
+  - mdhn:HorseStirrup
+  - mdhn:Rock
+  - mdhn:Tree
+  - mdhn:Cloud
+  - mdhn:Flower
+  - mdhn:Plant
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **Qasim ibn Ali** WD:Q60311831
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Ferehoul  
+        ![Ferehoul cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/335,1918,836,901/max/0/default.jpg) 
+      - Zangaleh 
+        ![Zangaleh cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/1269,1833,938,843/max/0/default.jpg)   
+                                            
+  - **Inscriptions**: None
+  - **Illuminated Unwan**
+      - Slaying Kalbad By Fariburz 
+        ![Slaying Kalbad By Fariburz](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/788,284,942,393/max/0/default.jpg)
+  - **LinguisticObject**: Verse 18887-18898 based on Ganjoor  

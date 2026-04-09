@@ -223,6 +223,11 @@ mdhn:Mirza_Ali
     rdfs:label "Mirza Ali"@en , "میرزا علی"@fa ;
     mdhn:wikidataItem wd:Q2783517 . 
 
+mdhn:Qasim_ibn_Ali
+    a mdhn:Person, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Qasim ibn Ali"@en , "قاسم بن علی"@fa ;
+    mdhn:wikidataItem wd:Q60311831 . 
+
 mdhn:Shaykh_Mohammad_Sabzevari
     a mdhn:Person, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Shaykh Mohammad Sabzevari"@en , "شیخ محمد سبزواری"@fa ;

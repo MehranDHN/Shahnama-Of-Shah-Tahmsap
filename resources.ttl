@@ -684,7 +684,7 @@ mdhn:KingdomOfFaridun a mdhn:NarrativeEpisode;
 mdhn:The_Court_of_Faridun a mdhn:NarrativeEpisode;
    rdfs:label "The Court of Faridun"@en, "بارگاه فريدون"@fa;
    mdhn:isPartOf mdhn:KingdomOfFaridun ;
-   mdhn:charactersInvolved mdhn:Faridun, mdhn:Faranak
+   mdhn:charactersInvolved mdhn:Faridun, mdhn:Faranak;
    mdhn:wikidataItem wd:Q138821815 .
 # -- Folio 76v -----------------------------------------------------
 mdhn:RE_76v a mdhn:RegisterEntry;
@@ -882,7 +882,7 @@ mdhn:Painting102v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:Qaran_Slays_Barman;
    mdhn:hasReferredTo mdhn:Qaran, mdhn:Barman;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:hasMaterialObject mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow, mdhn:Spear, mdhn:Horse_Armour, mdhn:Battle_Field;
+   mdhn:hasVisualTaxonomy mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow, mdhn:Spear, mdhn:Horse_Armour, mdhn:Battle_Field;
    mdhn:hasZoomedScene mdhn:BattleZoomScene102v ;
    mdhn:attributionCertainty "possible"@en;
    mdhn:hasPainter mdhn:Abd_al_Aziz .  
@@ -942,7 +942,7 @@ mdhn:Painting299r a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:Bizhan_Slaughters_the_Wild_Boars_of_Irman;
    mdhn:hasReferredTo mdhn:Bizhan, mdhn:Wild_Boars;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
-   mdhn:hasMaterialObject mdhn:Bow_and_Arrow;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Abd_al_Vahhab .  
 
@@ -994,7 +994,7 @@ mdhn:Painting339r a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh;
    mdhn:hasReferredTo mdhn:Goudarz, mdhn:PiranViseh;
    mdhn:hasWorkshop_director  mdhn:Mirza_Ali ;
-   mdhn:hasMaterialObject mdhn:Tent, mdhn:LongNeckedBottle, mdhn:LongNeckedJar,mdhn:Sword, mdhn:Dagger, mdhn:Headgear, mdhn:Horse, mdhn:SunShade, mdhn:Carpet, mdhn:Flower, mdhn:Plant, mdhn:Tree;
+   mdhn:hasVisualTaxonomy mdhn:Tent, mdhn:LongNeckedBottle, mdhn:LongNeckedJar,mdhn:Sword, mdhn:Dagger, mdhn:Headgear, mdhn:Horse, mdhn:SunShade, mdhn:Carpet, mdhn:Flower, mdhn:Plant, mdhn:Tree;
     mdhn:wikidataItem wd:Q64690774 ;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Mir_Mossavvir .  
@@ -1037,7 +1037,7 @@ mdhn:Painting341v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:FirsthRokh;
    mdhn:hasReferredTo  mdhn:Fariburz, mdhn:Colbad_Viseh;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
-   mdhn:hasMaterialObject mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Shaykh_Mohammad_Sabzevari .  
 
@@ -1058,6 +1058,58 @@ mdhn:Kalbad_VisehFig341v a mdhn:FigureCrop;
 mdhn:IlluminatedUnwan341v a mdhn:IlluminatedUnwan;
    rdfs:label "Slaying Kalbad By Fariburz"@en, "کشته شدن کلباد به دست فريبرز"@fa;
    mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-341v%2FFolio341v.jpg/552,708,503,228/max/0/default.jpg".
+
+    # -- Folio 342r -----------------------------------------------------
+mdhn:RE_342r a mdhn:RegisterEntry;
+    rdfs:label "The Fourth 'Joust of the Rooks': Faruhil versus Zangula"@en, "رويارويی چهارم فرهول و زنگله"@fa;
+    rdfs:comment "The fourth joust features Faruhil, an Iranian champion known for his skill with the bow, against the Turanian Zangula. After peppering Zangula with arrows, Karuhil shoots one that hits both Zangula and his horse, which falls forward, throwing its rider. Zangula falls on his head and dies instantly "@en;
+    mdhn:entryFolioNumber "342r";
+    mdhn:entryPartOf mdhn:painting_Index.  
+
+mdhn:Folio342r a mdhn:Recto;
+   rdfs:label "Folio 342r"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio342r ;
+   mdhn:folioNumber 342;
+   mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
+   mdhn:hasContentElement mdhn:Painting342r, mdhn:Poems342r, mdhn:IlluminatedUnwan342r; 
+   mdhn:wikidataItem wd:Q139055183; 
+   mdhn:hasReferredTo mdhn:KayKhosrow, mdhn:Goudarz, mdhn:Afrasiab, mdhn:Ferehoul , mdhn:Zangaleh;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp--342r/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_342r.  
+
+mdhn:AltFolio342r a mdhn:AlternateFolio;
+   rdfs:label "Alternate Folio 342r"@en;
+    mdhn:isAlternateVersionOf mdhn:Folio342r;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-342r-alt/manifest.json".   
+
+
+mdhn:Painting342r a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:FarhoulFig342r, mdhn:ZangalehFig342r;
+   mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:FourthRokh;
+   mdhn:hasReferredTo  dhn:Ferehoul , mdhn:Zangaleh;
+   mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Qasim_ibn_Ali .  
+
+mdhn:Poems342r a mdhn:LinguisticObject;
+  mdhn:startVerse 18887;
+  mdhn:endVerse 18898.
+
+mdhn:FarhoulFig342r a mdhn:FigureCrop;
+   rdfs:label "Farhoul cropped figure from f342r"@en;
+   mdhn:hasReferredTo mdhn:Farhoul;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/335,1918,836,901/max/0/default.jpg".
+
+mdhn:ZangalehFig342r a mdhn:FigureCrop;
+   rdfs:label "Zangaleh cropped figure from f342r"@en;
+   mdhn:hasReferredTo mdhn:Zangaleh;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/1269,1833,938,843/max/0/default.jpg".
+  
+mdhn:IlluminatedUnwan342r a mdhn:IlluminatedUnwan;
+   rdfs:label "Battle between Farhoul and Zangaleh"@en, "رزم فروهل با زنگوله"@fa;
+   mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/788,284,942,393/max/0/default.jpg".
 
 mdhn:DavazdahRokh a mdhn:NarrativeEpisode;
    rdfs:label "Davazdah Rokh"@en, "دوازده رخ"@fa;
