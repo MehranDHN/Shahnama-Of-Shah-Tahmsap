@@ -336,6 +336,53 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
                                             
   - **Inscriptions**: None
   - **Illuminated Unwan**
-      - Slaying Kalbad By Fariburz 
-        ![Slaying Kalbad By Fariburz](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/788,284,942,393/max/0/default.jpg)
+      - Slaying Zangaleh By Ferehoul 
+        ![Slaying Zangaleh By Ferehoul](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/788,284,942,393/max/0/default.jpg)
   - **LinguisticObject**: Verse 18887-18898 based on Ganjoor  
+
+
+
+### Folio 343r (The Seventh 'Joust of the Rooks': Hajir versus Sipahram)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-343r/manifest.json)
+  - Has Alternate 
+    - [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-343r-alt/manifest.json)
+- **Metropolitan Museum Of Art** 
+  - Instance of Illuminated Folio WD:Q139073014
+- **Narrative Episode**
+  - WD:Q5935469 and WD:Q139072642
+- **Depicts**
+  - mdhn:KayKhosrow
+  - mdhn:Goudarz
+  - mdhn:Afrasiab
+  - mdhn:Hojir
+  - mdhn:Sepahram
+- **Visual Items** 
+  - mdhn:Bow_and_Arrow
+  - mdhn:Sword
+  - mdhn:Horse_Armour
+  - mdhn:Helmet 
+  - mdhn:Battle_Field
+  - mdhn:Duel
+  - mdhn:Flag
+  - mdehn:Horse
+  - mdhn:Saddle
+  - mdhn:HorseStirrup
+  - mdhn:Rock
+  - mdhn:Tree
+  - mdhn:Cloud
+  - mdhn:Flower
+  - mdhn:Plant
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **Abd al Vahhab** WD:Q59482128
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Hojir  
+        ![Hojir cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-343v-alt%2FFolio343v_alt.jpg/1177,2064,825,796/max/0/default.jpg) 
+      - Sepahram 
+        ![Sepahram cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-343v-alt%2FFolio343v_alt.jpg/445,2021,835,598/max/0/default.jpg)   
+                                            
+  - **Inscriptions**: None
+  - **Illuminated Unwan**
+      - Slaying Sepahram By Sepahram
+        ![Slaying Sepahram By Sepahram](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-343v-alt%2FFolio343v_alt.jpg/744,254,932,308/max/0/default.jpg)
+  - **LinguisticObject**: Verse 18933-18945 based on Ganjoor  

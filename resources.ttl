@@ -1069,7 +1069,7 @@ mdhn:RE_342r a mdhn:RegisterEntry;
 mdhn:Folio342r a mdhn:Recto;
    rdfs:label "Folio 342r"@en;
    mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
-   mdhn:nextFolio mdhn:Folio342r ;
+   mdhn:nextFolio mdhn:Folio343r ;
    mdhn:folioNumber 342;
    mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
    mdhn:hasContentElement mdhn:Painting342r, mdhn:Poems342r, mdhn:IlluminatedUnwan342r; 
@@ -1087,7 +1087,7 @@ mdhn:AltFolio342r a mdhn:AlternateFolio;
 mdhn:Painting342r a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:FarhoulFig342r, mdhn:ZangalehFig342r;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:FourthRokh;
-   mdhn:hasReferredTo  dhn:Ferehoul , mdhn:Zangaleh;
+   mdhn:hasReferredTo  mdhn:Ferehoul , mdhn:Zangaleh;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
    mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
    mdhn:attributionCertainty "certain"@en;
@@ -1110,6 +1110,60 @@ mdhn:ZangalehFig342r a mdhn:FigureCrop;
 mdhn:IlluminatedUnwan342r a mdhn:IlluminatedUnwan;
    rdfs:label "Battle between Farhoul and Zangaleh"@en, "رزم فروهل با زنگوله"@fa;
    mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-342r-alt%2FFolio342r_alt.jpg/788,284,942,393/max/0/default.jpg".
+
+  # -- Folio 343v -----------------------------------------------------
+mdhn:RE_343v a mdhn:RegisterEntry;
+    rdfs:label "The Seventh 'Joust of the Rooks': Hajir versus Sipahram"@en, "رويارويی هفتم هچير و سپهرام"@fa;
+    rdfs:comment "The seventh champion, Hajir, another son of Gudarz, is pitted against Sipahram, a famous Turanian paladin, They draw their swords and battle furiously until Hajir strikes Sipahram's head and he breathes his last. Once again a banner is fixed on the Iranian mound "@en;
+    mdhn:entryFolioNumber "343v";
+    mdhn:entryPartOf mdhn:painting_Index.  
+
+mdhn:Folio343v a mdhn:Recto;
+   rdfs:label "Folio 343v"@en;
+   mdhn:isFolioOf mdhn:manuscript_shahnama_shah_tahmasp;
+   mdhn:nextFolio mdhn:Folio345v ;
+   mdhn:folioNumber 343;
+   mdhn:keptIn mdhn:Metropolitan_Museum_of_Art;
+   mdhn:hasContentElement mdhn:Painting343v, mdhn:Poems343v, mdhn:IlluminatedUnwan343v; 
+   mdhn:wikidataItem wd:Q139073014; 
+   mdhn:hasReferredTo mdhn:KayKhosrow, mdhn:Goudarz, mdhn:Afrasiab, mdhn:Hojir , mdhn:Sepahram;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp--343v/manifest.json"; 
+   mdhn:hasRegisterEntry mdhn:RE_343v.  
+
+mdhn:AltFolio343v a mdhn:AlternateFolio;
+   rdfs:label "Alternate Folio 343v"@en;
+    mdhn:isAlternateVersionOf mdhn:Folio343v;
+   mdhn:hasIIIFManifest "https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-343v-alt/manifest.json".   
+
+
+mdhn:Painting343v a mdhn:Painting;
+   mdhn:hasFigureCrop mdhn:HojirFig343v, mdhn:SepahramFig343v;
+   mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:SeventhRokh;
+   mdhn:hasReferredTo  mdhn:Hojir , mdhn:Sepahram;
+   mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
+   mdhn:attributionCertainty "certain"@en;
+   mdhn:hasPainter mdhn:Abd_al_Vahhab .  
+
+mdhn:Poems343v a mdhn:LinguisticObject;
+  mdhn:startVerse 18933;
+  mdhn:endVerse 18945.
+
+mdhn:HojirFig343v a mdhn:FigureCrop;
+   rdfs:label "Hojir cropped figure from f343v"@en;
+   mdhn:hasReferredTo mdhn:Hojir;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-343v-alt%2FFolio343v_alt.jpg/1177,2064,825,796/max/0/default.jpg".
+
+mdhn:SepahramFig343v a mdhn:FigureCrop;
+   rdfs:label "Sepahram cropped figure from f343v"@en;
+   mdhn:hasReferredTo mdhn:Sepahram;
+   mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-343v-alt%2FFolio343v_alt.jpg/445,2021,835,598/max/0/default.jpg".
+  
+mdhn:IlluminatedUnwan343v a mdhn:IlluminatedUnwan;
+   rdfs:label "Battle between Hojir and Sepahram"@en, "رزم هجير با سپهرم"@fa;
+   mdhn:hasIiifIlluminatedURL "https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-343v-alt%2FFolio343v_alt.jpg/744,254,932,308/max/0/default.jpg".
+
+
 
 mdhn:DavazdahRokh a mdhn:NarrativeEpisode;
    rdfs:label "Davazdah Rokh"@en, "دوازده رخ"@fa;
@@ -1145,7 +1199,13 @@ mdhn:FifthRokh a mdhn:NarrativeEpisode;
    rdfs:label "Fifth Rokh"@en, "رخ پنجم. رويارويی رهام و بارمان"@fa;
    mdhn:isPartOf mdhn:DavazdahRokh;
    mdhn:charactersInvolved mdhn:Roham, mdhn:BarmanTuranied;
-   mdhn:wikidataItem wd:Q138964110.    
+   mdhn:wikidataItem wd:Q138964110.  
+
+mdhn:SeventhRokh a mdhn:NarrativeEpisode;
+   rdfs:label "Seventh Rokh"@en, "رخ هفتم. رويارويی هجير و سپهرام"@fa;
+   mdhn:isPartOf mdhn:DavazdahRokh;
+   mdhn:charactersInvolved mdhn:Hojir, mdhn:Sepahram;
+   mdhn:wikidataItem wd:Q139072642.       
       
 
 mdhn:Folio26v a mdhn:Folio. 

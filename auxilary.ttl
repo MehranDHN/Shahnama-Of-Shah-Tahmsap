@@ -908,12 +908,22 @@ mdhn:Giv
 mdhn:Roham
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Roham"@en , "روهام"@fa ;
-    mdhn:wikidataItem wd:Q7359658.     
+    mdhn:wikidataItem wd:Q7359658. 
 
+mdhn:Hojir
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Hojir"@en , "هوجير"@fa ;
+    mdhn:wikidataItem wd:Q5669637.           
+
+mdhn:Sepahram
+    a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
+    rdfs:label "Sepahram"@en , "سپهرام"@fa ;
+    mdhn:wikidataItem wd:Q139072819.  
+ 
 mdhn:Goudarz
     a mdhn:FictionalHuman, owl:NamedIndividual, fhkb:Man;
     rdfs:label "Goudarz"@en , "گودرز"@fa ;
-    fhkb:hasSon mdhn:Giv, mdhn:Roham;
+    fhkb:hasSon mdhn:Giv, mdhn:Roham, mdhn:Hojir;
     mdhn:wikidataItem wd:Q5767416.  
 
 mdhn:Keshvad
