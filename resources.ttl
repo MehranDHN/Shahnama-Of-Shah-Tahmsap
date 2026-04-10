@@ -882,7 +882,7 @@ mdhn:Painting102v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:Qaran_Slays_Barman;
    mdhn:hasReferredTo mdhn:Qaran, mdhn:Barman;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
-   mdhn:hasVisualTaxonomy mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow, mdhn:Spear, mdhn:Horse_Armour, mdhn:Battle_Field;
+   mdhn:hasVisualTaxonomy mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow, mdhn:Spear, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:CurvedSorna, mdhn:Sorna, mdhn:Horse, mdhn:Camel, mdhn:Tamborim, mdhn:Flag, mdhn:Fire, mdhn:Rock, mdhn:Shield, mdhn:Saddle, mdhn:HorseStirrup, mdhn:Dagger, mdhn:Sword, mdhn:Moon, mdhn:Star, mdhn:Blossom, mdhn:Tree,mdhn:Wind, mdhn:Flower;
    mdhn:hasZoomedScene mdhn:BattleZoomScene102v ;
    mdhn:attributionCertainty "possible"@en;
    mdhn:hasPainter mdhn:Abd_al_Aziz .  
@@ -908,7 +908,7 @@ mdhn:BattleZoomScene102v a mdhn:ZoomedScene;
    mdhn:iiifRegionURL "https://iiif.archive.org/image/iiif/3/AKingsBookofKingsTheShahnamehofShahTahmasp%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2.zip%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2%2FAKingsBookofKingsTheShahnamehofShahTahmasp_0138.jp2/full/max/0/default.jpg".
 
 mdhn:KingdomOfNauzar a mdhn:NarrativeEpisode;
-   rdfs:label "The Kingdom of Nauzar"@en, "پادشاهی نوزار"@fa;
+   rdfs:label "The Kingdom of Nauzar"@en, "پادشاهی نوذر"@fa;
    mdhn:isPartOf mdhn:Shahnameh ;
    mdhn:charactersInvolved mdhn:Nauzar, mdhn:Qaran, mdhn:Qubad, mdhn:Barman;
    mdhn:wikidataItem wd:Q40466986 .

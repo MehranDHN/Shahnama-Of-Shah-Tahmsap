@@ -61,7 +61,7 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
 
 
 
-### Folio 21v
+### Folio 21v (Hushang Slays the Black Div)
 - [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-21v/manifest.json)
 - **S C Welch Family Collection** 
   - Instance of Illuminated Folio WD:Q131281679
@@ -204,6 +204,60 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
   - **Inscriptions**: None
   - **Illuminated Unwan**: None
   - **LinguisticObject**: Verse 370-381 based on Ganjoor
+
+
+
+### Folio 102v (Qaran Slays Barman)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-102v/manifest.json)
+  - Has Zoomed Scene 
+    - ![Scene 1](https://iiif.archive.org/image/iiif/3/AKingsBookofKingsTheShahnamehofShahTahmasp%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2.zip%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2%2FAKingsBookofKingsTheShahnamehofShahTahmasp_0138.jp2/full/300,/0/default.jpg)
+      - [Full Size](https://iiif.archive.org/image/iiif/3/AKingsBookofKingsTheShahnamehofShahTahmasp%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2.zip%2FAKingsBookofKingsTheShahnamehofShahTahmasp_jp2%2FAKingsBookofKingsTheShahnamehofShahTahmasp_0138.jp2/full/max/0/default.jpg)
+- **Victoria and Albert Museum** 
+  - Instance of Illuminated Folio WD:Q64690773
+- **Narrative Episode**
+  - WD:Q138847591
+- **Depicts**
+  - mdhn:Qaran
+  - mdhn:Barman
+  - mdhn:Qubad
+- **Visual Items** 
+  - mdhn:Body_Armour
+  - mdhn:Combat_Helmet
+  - mdhn:Bow_and_Arrow
+  - mdhn:Spear
+  - mdhn:Horse_Armour
+  - mdhn:Battle_Field
+  - mdhn:CurvedSorna
+  - mdhn:Sorna
+  - mdhn:Horse
+  - mdhn:Camel
+  - mdhn:Tamborim
+  - mdhn:Flag
+  - mdhn:Fire
+  - mdhn:Shield
+  - mdhn:Saddle
+  - mdhn:HorseStirrup
+  - mdhn:Dagger
+  - mdhn:Sword
+  - mdhn:Moon
+  - mdhn:Star
+  - mdhn:Blossom
+  - mdhn:Tree
+  - mdhn:Wind
+  - mdhn:Flower
+  - mdhn:Rock
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **Abd al Aziz** WD:Q21663724
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Qaran  
+        ![Qaran cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-102v%2FFolio102v.jpeg/647,1997,724,675/max/0/default.jpg) 
+      - Barman 
+        ![Barman cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-102v%2FFolio102v.jpeg/1189,2209,891,531/max/0/default.jpg)   
+                                            
+  - **Inscriptions**: None
+  - **Illuminated Unwan** None
+  - **LinguisticObject**: Verse 3781-3791 based on Ganjoor  
 
 
 
