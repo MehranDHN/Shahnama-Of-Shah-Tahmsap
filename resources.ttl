@@ -834,7 +834,7 @@ mdhn:Painting82v a mdhn:Painting;
    mdhn:hasFigureCrop mdhn:SamFig82v , mdhn:DragonFig82v;
    mdhn:hasReferredTo mdhn:Sam, mdhn:Dragon;
    mdhn:hasNarrativeEpisode mdhn:SamSlaysDragon;
-   mdhn:hasVisualItem mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow;
+   mdhn:hasVisualItem mdhn:Body_Armour, mdhn:Combat_Helmet,mdhn:Bow_and_Arrow, mdhn:Turban, mdhn:Mace, mdhn:Fire, mdhn:Rock, mdhn:Saddle, mdhn:HorseStirrup, mdhn:Sword,mdhn:Tree,mdhn:Wind, mdhn:Plant, mdhn:Axe;
    mdhn:hasWorkshop_director  mdhn:Sultan_Muhammad ;
    mdhn:attributionCertainty "probable"@en;
    mdhn:hasPainter mdhn:Qadimi . 
@@ -1037,7 +1037,7 @@ mdhn:Painting341v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:FirsthRokh;
    mdhn:hasReferredTo  mdhn:Fariburz, mdhn:Colbad_Viseh;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
-   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Shield, mdhn:Combat_Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree,  mdhn:Flower, mdhn:Plant, mdhn:Goat, mdhn:Bird, mdhn:Bird_Nest;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Shaykh_Mohammad_Sabzevari .  
 
@@ -1089,7 +1089,7 @@ mdhn:Painting342r a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:FourthRokh;
    mdhn:hasReferredTo  mdhn:Ferehoul , mdhn:Zangaleh;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
-   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Combat_Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Qasim_ibn_Ali .  
 
@@ -1141,7 +1141,7 @@ mdhn:Painting343v a mdhn:Painting;
    mdhn:hasNarrativeEpisode mdhn:DavazdahRokh, mdhn:SeventhRokh;
    mdhn:hasReferredTo  mdhn:Hojir , mdhn:Sepahram;
    mdhn:hasWorkshop_director  mdhn:Mir_Mossavvir ;
-   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
+   mdhn:hasVisualTaxonomy mdhn:Bow_and_Arrow, mdhn:Sword, mdhn:Combat_Helmet, mdhn:HorseStirrup, mdhn:Horse_Armour, mdhn:Battle_Field, mdhn:Duel, mdhn:Flag, mdhn:Horse, mdhn:Saddle, mdhn:Rock, mdhn:Tree, mdhn:Cloud,  mdhn:Flower, mdhn:Plant;
    mdhn:attributionCertainty "certain"@en;
    mdhn:hasPainter mdhn:Abd_al_Vahhab .  
 

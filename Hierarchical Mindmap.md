@@ -205,6 +205,42 @@ You can copy-paste this entire markdown into any GitHub README, Obsidian, Typora
   - **Illuminated Unwan**: None
   - **LinguisticObject**: Verse 370-381 based on Ganjoor
 
+### Folio 82v (One Blow, Sam Recounts How He Slew a Dragon)
+- [IIIF Manifest](https://demo.viewer.glycerine.io/viewer?iiif-content=https://iiif.archive.org/iiif/3/shahnama-shah-tahmasp-82v/manifest.json)
+- **Tehran Museum of Contemporary Art** 
+  - Instance of Illuminated Folio (None)
+- **Narrative Episode**
+  - WD:Q138799749
+- **Depicts**
+  - mdhn:Sam
+  - mdhn:Dragon
+- **Visual Items** 
+  - mdhn:Body_Armour
+  - mdhn:Combat_Helmet
+  - mdhn:Bow_and_Arrow
+  - mdhn:Turban
+  - mdhn:Mace
+  - mdhn:Fire
+  - mdhn:Rock
+  - mdhn:Saddle
+  - mdhn:HorseStirrup
+  - mdhn:Sword
+  - mdhn:Plant
+  - mdhn:Tree
+  - mdhn:Wind
+  - mdhn:Axe
+- **Content Elements**
+  - **Painting** (`mdhn:Painting`) 
+    - **ُQadimi** WD:Q113680330
+    - **Cropped Figures** (multiple `mdhn:FigureCrop`)
+      - Sam  
+        ![Sam cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/1434,2782,852,838/max/0/default.jpg) 
+      - Dragon  
+        ![Dragon cropped](https://iiif.archive.org/image/iiif/3/shahnama-shah-tahmasp-82v%2FFolio82v.jpg/311,2237,1188,1528/max/0/default.jpg)                                           
+  - **Inscriptions**: None
+  - **Illuminated Unwan**: None
+  - **LinguisticObject**: Verse 2968-2976 based on Ganjoor
+
 
 
 ### Folio 102v (Qaran Slays Barman)
